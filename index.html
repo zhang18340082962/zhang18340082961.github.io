@@ -155,11 +155,24 @@
     <article id="post-requests乱码问题解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">python中requests使用中中文乱码的解决方案</a>
+    </h1>
+  
+
+        
+        <a href="/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="archive-article-date">
+  	<time datetime="2021-12-02T15:30:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-02</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: python中requests使用中中文乱码的解决方案</p>
-<p>date: 2021-12-02 23:30:02</p>
-<ul>
+        <ul>
 <li> 中文乱码处理<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.baidu.com&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 自动选择合适的编码方式</span><br><span class="line">r.encoding = r.apparent_encoding</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
 中文乱码显示正常了！！</li>
 </ul>
@@ -181,7 +194,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/12/04/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">展开全文 >></a>
         </p>
       
 
