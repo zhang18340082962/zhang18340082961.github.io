@@ -152,6 +152,65 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-requests乱码问题解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: python中requests使用中中文乱码的解决方案</p>
+<p>date: 2021-12-02 23:30:02</p>
+<ul>
+<li> 中文乱码处理<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.baidu.com&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 自动选择合适的编码方式</span><br><span class="line">r.encoding = r.apparent_encoding</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+中文乱码显示正常了！！</li>
+</ul>
+<p>有时候，我们还会遇到通过这个操作后无法解决的情况，比如新浪首页的表现：<br>出现这种情况，据说是使用gzip将网页压缩了，必须先对其解码，使用r.content会自动解码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.sina.com.cn/&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 指定编码解码方式</span><br><span class="line">html = r.content.decode(&#x27;UTF-8&#x27;)</span><br><span class="line"># r.encoding = &#x27;utf-8&#x27;</span><br></pre></td></tr></table></figure>
+<p>其实吧，处理的方式有很多，大家注意一点，那就是看请求的html数据中最前面对的charset设置的是啥！！</p>
+<ul>
+<li> html实体编码解析<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">In [1]: s = &#x27;目前玩的挺好的，就&amp;hellip;&amp;hellip;&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br><span class="line">#可以看到，有个&#x27;&amp;hellip;&#x27;，这玩意是html实体表示省略号&#x27;...&#x27;，因此需要进行处理！</span><br><span class="line">In [2]: import html</span><br><span class="line"></span><br><span class="line">In [3]: html.unescape(s)</span><br><span class="line">Out[3]: &#x27;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/12/04/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
