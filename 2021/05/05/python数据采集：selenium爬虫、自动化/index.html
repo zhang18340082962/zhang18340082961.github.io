@@ -9,7 +9,7 @@
     
     <title>
         
-            python办公自动化：邮件发送 |
+            python数据采集：selenium爬虫、自动化 |
         
         弦好想断
     </title>
@@ -142,7 +142,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">python办公自动化：邮件发送</span>
+            <span class="title-hover-animation">python数据采集：selenium爬虫、自动化</span>
         </div>
 
         
@@ -160,7 +160,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-12-05 10:24:12
+        <i class="fas fa-edit"></i>&nbsp;2021-05-05 10:34:57
     </span>
     
     
@@ -169,7 +169,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/">python办公自动化</a>&nbsp;
+                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">python数据分析</a>&nbsp;
                     </li>
                 
             </ul>
@@ -179,12 +179,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>689 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>296 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>3 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -200,11 +200,11 @@
         
 
         <div class="article-content markdown-body">
-            <ul>
-<li>邮件批量发送<br>调用smtp.exmail.qq.com批量自动发送邮件<br>注意文件路径，逗号分隔符，csv中不要有多余回车和空格<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import csv</span><br><span class="line">import smtplib</span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">from email.mime.base import MIMEBase</span><br><span class="line">from email.mime.image import MIMEImage</span><br><span class="line">from email.utils import formataddr</span><br><span class="line">from email import encoders</span><br><span class="line">import time,datetime</span><br><span class="line">import smtplib</span><br><span class="line">import email.mime.multipart</span><br><span class="line">import email.mime.text</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">from email.mime.application import MIMEApplication</span><br><span class="line">from email.header import Header</span><br><span class="line"></span><br><span class="line">def get_current_date():</span><br><span class="line">    &quot;&quot;&quot;获取当前时间&quot;&quot;&quot;</span><br><span class="line">    return str(time.strftime(&#x27;%Y%m%d&#x27;))</span><br><span class="line"></span><br><span class="line">def getAddrBook(addrBook):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">        @作用：根据输入的CSV文件，形成相应的通讯录字典</span><br><span class="line">        @返回：字典类型，name为人名，value为对应的邮件地址</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    with open(addrBook,&#x27;r&#x27;,encoding=&#x27;UTF-8&#x27;) as addrFile:</span><br><span class="line">        #将文件名和邮件接收人邮箱地址分行存放在csv文件中，用逗号分隔</span><br><span class="line">        reader = csv.reader(addrFile)</span><br><span class="line">        name = []</span><br><span class="line">        value = []</span><br><span class="line">        for row in reader:</span><br><span class="line">            name.append(row[0])</span><br><span class="line">            value.append(row[1])</span><br><span class="line">    addrs = dict(zip(name, value))</span><br><span class="line">    return addrs</span><br><span class="line"></span><br><span class="line">def send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs, subject, content,attachfilename):</span><br><span class="line">    &quot;&quot;&quot;定义并配置好发邮件的函数&quot;&quot;&quot;</span><br><span class="line">    msg = email.mime.multipart.MIMEMultipart()</span><br><span class="line">    msg[&#x27;from&#x27;] =sendAddr #发件人</span><br><span class="line">    msg[&#x27;to&#x27;] =recipientAddrs #接收人</span><br><span class="line">    # msg[&#x27;cc&#x27;] =cc_name #抄送人名称</span><br><span class="line">    msg[&#x27;subject&#x27;] =subject #主题</span><br><span class="line">    content=content</span><br><span class="line">    txt = email.mime.text.MIMEText(content, &#x27;plain&#x27;, &#x27;UTF-8&#x27;)</span><br><span class="line">    msg.attach(txt)</span><br><span class="line">    print(&quot;准备添加附件...&quot;)</span><br><span class="line">    inputfile=inputpath+attachfilename #文件路径</span><br><span class="line">    part = MIMEText(open(inputfile,&#x27;rb&#x27;).read(),&#x27;base64&#x27;, &#x27;utf-8&#x27;)</span><br><span class="line">    part[&quot;Content-Type&quot;] = &#x27;application/octet-stream&#x27;</span><br><span class="line">    part.add_header(&#x27;Content-Disposition&#x27;, &#x27;attachment&#x27;, filename=Header(attachfilename,&#x27;utf-8&#x27;).encode())</span><br><span class="line">    msg.attach(part)</span><br><span class="line">    smtp = smtplib.SMTP_SSL(smtpHost, port)</span><br><span class="line">    smtp.login(sendAddr, password)</span><br><span class="line">    smtp.sendmail(sendAddr, recipientAddrs.split(&#x27;,&#x27;), str(msg))   #+cc_name.split(&#x27;,&#x27;)</span><br><span class="line">    #print(&quot;发送成功！&quot;)</span><br><span class="line">    smtp.quit()</span><br><span class="line"></span><br><span class="line">if __name__==&#x27;__main__&#x27;:</span><br><span class="line">    #这里需要定义send_email函数中传入的所有变量</span><br><span class="line">    inputpath = &quot;r&#x27;D:/&quot; #数据存放的文件路径（这里是绝对路径）</span><br><span class="line">    smtpHost = &#x27;smtp.exmail.qq.com&#x27;  # 默认服务器地址及端口</span><br><span class="line">    port=465</span><br><span class="line">    sendAddr =&quot;&quot;    #自己也就是发件人的邮箱账号</span><br><span class="line">    password = &quot;&quot;   #自己的邮箱密码</span><br><span class="line">    subject=&quot; &quot;+current_date  #主题+当前日期</span><br><span class="line">    content=&#x27;&#x27;&#x27;附件为测试文件&#x27;&#x27;&#x27;+current_date# 正文内容+当前日期</span><br><span class="line"></span><br><span class="line">    addrBook=r&#x27;D:\邮箱联系人表单.csv&#x27;  #联系人表单文件路径</span><br><span class="line">    addrs=getAddrBook(addrBook)</span><br><span class="line">    for i in addrs:</span><br><span class="line">        attachfilename=i+&#x27;.xlsx&#x27; #将要发送的文件添加为附件</span><br><span class="line">        recipientAddrs=addrs[i] #接收人的邮箱地址</span><br><span class="line">        result = os.path.exists(inputpath+i+&#x27;.xlsx&#x27;) #判断当前目录是否存在该文件</span><br><span class="line">        if result:</span><br><span class="line">            #存在就执行邮件</span><br><span class="line">            send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs,</span><br><span class="line">            subject,content,attachfilename)</span><br><span class="line">            print ((&#x27;发给 %s 的邮件执行成功&#x27;) %(recipientAddrs))</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42350212/article/details/118751583" >https://blog.csdn.net/weixin_42350212/article/details/118751583<i class="fas fa-external-link-alt"></i></a><br>Python smtp发送邮件怎么设置抄送人<br><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/shiyixirui/p/14692146.html" >https://www.cnblogs.com/shiyixirui/p/14692146.html<i class="fas fa-external-link-alt"></i></a></p>
-
+            <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">中文文档https://python-selenium-zh.readthedocs.io/zh_CN/latest/</span><br></pre></td></tr></table></figure>
+<p>装包：pip install selenium<br>下载chrome：<a class="link"   target="_blank" rel="noopener" href="https://www.google.cn/chrome/" >https://www.google.cn/chrome/<i class="fas fa-external-link-alt"></i></a><br>下驱动：<a class="link"   target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html" >https://chromedriver.storage.googleapis.com/index.html<i class="fas fa-external-link-alt"></i></a>  注意浏览器驱动 必须要和浏览器版本匹配<br>这是个zip包，下载下来之后，解压里面的程序文件 chromedriver.exe 到scripts路径下<br>跑一下看看感觉来了没有</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">from selenium.webdriver.support import expected_conditions as EC</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line">try:</span><br><span class="line">    browser.get(&#x27;https://www.baidu.com&#x27;)</span><br><span class="line">    input = browser.find_element_by_id(&#x27;kw&#x27;)</span><br><span class="line">    input.send_keys(&#x27;Python&#x27;)</span><br><span class="line">    input.send_keys(Keys.ENTER)</span><br><span class="line">    wait = WebDriverWait(browser, 10)</span><br><span class="line">    wait.until(EC.presence_of_element_located((By.ID, &#x27;content_left&#x27;)))</span><br><span class="line">    print(browser.current_url)</span><br><span class="line">    print(browser.get_cookies())</span><br><span class="line">    print(browser.page_source)</span><br><span class="line">finally:hexo</span><br><span class="line">    browser.close()</span><br></pre></td></tr></table></figure>
+<p>不可能一下就会的，慢慢来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/weixin_54733110/article/details/119027005  python万字博文教你玩嗨selenium库</span><br><span class="line">https://mp.weixin.qq.com/s?__biz=MzI0OTc0MzAwNA==&amp;mid=2247487680&amp;idx=1&amp;sn=e40947f382116ff59761f250ee45dce3  模拟登录淘宝</span><br><span class="line">https://www.pianshen.com/article/345981989/  判断元素16种方法expected_conditions</span><br><span class="line">https://github.com/Python3WebSpider/Python3WebSpider/blob/master/7.1-Selenium%E7%9A%84%E4%BD%BF%E7%94%A8.md</span><br><span class="line">http://www.byhy.net/tut/auto/selenium/01/这个作者写的很好</span><br><span class="line">https://www.bilibili.com/video/av64421994/?p=1简直是保姆级教学，</span><br><span class="line">希望你学会了不要乱搞</span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -215,7 +215,7 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/12/05/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9Apyecharts-v1%E7%89%88%E6%9C%AC/"
+                           href="/2021/06/05/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9Apyecharts-v1%E7%89%88%E6%9C%AC/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
@@ -231,10 +231,10 @@
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/12/04/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9Apandas%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E3%80%81%E9%A2%84%E5%A4%84%E7%90%86%E3%80%81%E7%AD%9B%E9%80%89%E3%80%81%E8%AE%A1%E7%AE%97%EF%BC%8C%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E3%80%81%E9%80%8F%E8%A7%86%E3%80%81%E6%8B%BC%E6%8E%A5%E3%80%81%E5%AF%BC%E5%87%BA/"
+                           href="/2021/04/05/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Python数据分析 :pandas数据读取、预处理、筛选、计算，时间序列、透视、拼接、导出</span>
+                                <span class="post-nav-title-item">python办公自动化：邮件发送</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
