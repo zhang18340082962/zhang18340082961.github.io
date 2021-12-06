@@ -9,7 +9,7 @@
     
     <title>
         
-            python中requests使用中中文乱码的解决方案 |
+            python关联分析（apriori算法） |
         
         弦好想断
     </title>
@@ -142,7 +142,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">python中requests使用中中文乱码的解决方案</span>
+            <span class="title-hover-animation">python关联分析（apriori算法）</span>
         </div>
 
         
@@ -160,20 +160,31 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-12-02 23:30:02
+        <i class="fas fa-edit"></i>&nbsp;2021-02-28 22:05:20
     </span>
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">python数据分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>308 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -189,16 +200,38 @@
         
 
         <div class="article-content markdown-body">
-            <ul>
-<li> 中文乱码处理<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.baidu.com&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 自动选择合适的编码方式</span><br><span class="line">r.encoding = r.apparent_encoding</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
-中文乱码显示正常了！！</li>
-</ul>
-<p>有时候，我们还会遇到通过这个操作后无法解决的情况，比如新浪首页的表现：<br>出现这种情况，据说是使用gzip将网页压缩了，必须先对其解码，使用r.content会自动解码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.sina.com.cn/&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 指定编码解码方式</span><br><span class="line">html = r.content.decode(&#x27;UTF-8&#x27;)</span><br><span class="line"># r.encoding = &#x27;utf-8&#x27;</span><br></pre></td></tr></table></figure>
-<p>其实吧，处理的方式有很多，大家注意一点，那就是看请求的html数据中最前面对的charset设置的是啥！！</p>
-<ul>
-<li> html实体编码解析<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">In [1]: s = &#x27;目前玩的挺好的，就&amp;hellip;&amp;hellip;&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br><span class="line">#可以看到，有个&#x27;&amp;hellip;&#x27;，这玩意是html实体表示省略号&#x27;...&#x27;，因此需要进行处理！</span><br><span class="line">In [2]: import html</span><br><span class="line"></span><br><span class="line">In [3]: html.unescape(s)</span><br><span class="line">Out[3]: &#x27;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
+            <p>若两个或多个变量的取值之间存在某种规律性，就称为关联。关联规则是寻找在同一个事件中出现的不同项的相关性，比如在一次购买活动中所买不同商品的相关性。例如：“在购买计算机的顾客中，有30％的人也同时购买了打印机”。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\supermanzwg\AppData\Roaming\Typora\typora-user-images\image-20211207005033327.png"
+                      alt="image-20211207005033327"
+                ></p>
+<p>一个样本称为一个“事务”<br>每个事务由多个属性来确定，这里的属性称为“项”<br>多个项组成的集合称为“项集”<br>####由k个项构成的集合<br>{牛奶}、{啤酒}都是1-项集；<br>{牛奶，果冻}是2-项集；<br>{啤酒，面包，牛奶}是3-项集<br>####X==&gt;Y含义：<br>X和Y是项集<br>X称为规则前项（antecedent）<br>Y称为规则后项（consequent）<br>####支持度（support）：一个项集或者规则在所有事务中出现的频率，σ(X):表示项集X的支持度计数<br>项集X的支持度：s(X)=σ(X)/N<br>规则X==&gt;Y表示物品集X对物品集Y的支持度，也就是物品集X和物品集Y同时出现的概率<br>某天共有100个顾客到商场购买物品，其中有30个顾客同时购买了啤酒和尿布，那么上述的关联规则的支持度就是30％<br>####置信度（confidence）：确定Y在包含X的事务中出现的频繁程度。c(X → Y) = σ(X∪Y)/σ(X)<br>p（Y│X）＝p（XY）/p(X)。<br>置信度反应了关联规则的可信度—购买了项目集X中的商品的顾客同时也购买了Y中商品的可能性有多大<br>购买薯片的顾客中有50％的人购买了可乐,则置信度为50％</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://upload-images.jianshu.io/upload_images/6460608-3dcd7e03045254b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+                     
+                ></p>
+<p>####(X , Y)==&gt;Z :<br>支持度:交易中包含{X 、 Y 、 Z}的可能性<br>置信度:包含{X 、 Y}的交易中也包含Z的条件概率<br>####设最小支持度为50%, 最小可信度为 50%, 则可得到 :<br>A==&gt;C (50%, 66.6%)<br>C==&gt;A (50%, 100%)</p>
+<p>若关联规则X-&gt;Y的支持度和置信度分别大于或等于用户指定的最小支持率minsupport和最小置信度minconfidence，则称关联规则X-&gt;Y为强关联规则，否则称关联规则X-&gt;Y为弱关联规则。</p>
+<p>####提升度（lift）：物品集A的出现对物品集B的出现概率发生了多大的变化<br>lift（A==&gt;B）=confidence（A==&gt;B）/support(B)=p(B|A)/p(B)<br>现在有** 1000 ** 个消费者，有** 500** 人购买了茶叶，其中有** 450人同时** 购买了咖啡，另** 50人** 没有。由于** confidence(茶叶=&gt;咖啡)=450/500=90%** ，由此可能会认为喜欢喝茶的人往往喜欢喝咖啡。但如果另外没有购买茶叶的** 500人** ，其中同样有** 450人** 购买了咖啡，同样是很高的** 置信度90%** ,由此，得到不爱喝茶的也爱喝咖啡。这样看来，其实是否购买咖啡，与有没有购买茶叶并没有关联，两者是相互独立的，其** 提升度90%/[(450+450)/1000]=1** 。<br>由此可见，lift正是弥补了confidence的这一缺陷，if lift=1,X与Y独立，X对Y出现的可能性没有提升作用，其值越大(lift&gt;1),则表明X对Y的提升程度越大，也表明关联性越强。<br>####Leverage 与 Conviction的作用和lift类似，都是值越大代表越关联<br>Leverage : P(A,B)-P(A)P(B)<br>Conviction:P(A)P(!B)/P(A,!B）<br>####所有指标的计算公式：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://upload-images.jianshu.io/upload_images/6460608-7a4b805215c66bda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+                     
+                ></p>
+<p>接下来获取电影数据集中个电影类型之间的关联关系：<br>anaconda安装mlxtend包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge mlxtend</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line">movies_ohe.shape#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line">len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;4)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://upload-images.jianshu.io/upload_images/6460608-670393b30a7888a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+                     
+                ></p>
+<p>也挺符合常理哈。</p>
 
         </div>
 
@@ -207,14 +240,29 @@
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/03/06/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python办公自动化：文件和目录操作</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/10/04/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9Apandas%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E3%80%81%E9%A2%84%E5%A4%84%E7%90%86%E3%80%81%E7%AD%9B%E9%80%89%E3%80%81%E8%AE%A1%E7%AE%97%EF%BC%8C%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E3%80%81%E9%80%8F%E8%A7%86%E3%80%81%E6%8B%BC%E6%8E%A5%E3%80%81%E5%AF%BC%E5%87%BA/"
+                           href="/2019/12/05/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Python数据分析 :pandas数据读取、预处理、筛选、计算，时间序列、透视、拼接、导出</span>
+                                <span class="post-nav-title-item">大学里，最丧的时候</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
