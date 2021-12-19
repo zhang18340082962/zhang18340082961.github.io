@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="WenGe Zhang">
+    
+    <title>
+        
+            python面向对象习题 |
+        
+        弦好想断
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":"true# shadow effect when the mouse hover","scale":"true# scale effect when the mouse hover"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"她肯定像你一样，锋芒里露着柔情，身影中透着坚定。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                弦好想断
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">python面向对象习题</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">WenGe Zhang</span>
+                        
+                            <span class="author-label">干饭分析师</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2019-11-19 12:59:17
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">python数据分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>写完对对象这个东西了解很多了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">一：定义一个学生类。有下面的类属性：</span><br><span class="line">1 姓名</span><br><span class="line">2 年龄</span><br><span class="line">3 成绩（语文，数学，英语)[每课成绩的类型为整数]</span><br><span class="line">类方法：</span><br><span class="line">1 获取学生的姓名：get_name() 返回类型:str</span><br><span class="line">2 获取学生的年龄：get_age() 返回类型:int</span><br><span class="line">3 返回3门科目中最高的分数。get_course() 返回类型:int</span><br><span class="line">写好类以后，可以定义2个同学测试下:</span><br><span class="line">zm = Student(&#x27;zhangming&#x27;,20,[69,88,100])</span><br><span class="line">返回结果：</span><br><span class="line">zhangming</span><br><span class="line">20</span><br><span class="line">100</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, age, scores):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.scores = scores</span><br><span class="line">    def get_name(self):</span><br><span class="line">        return self.name</span><br><span class="line">    def get_age(self):</span><br><span class="line">        return self.age</span><br><span class="line">    def get_course(self):</span><br><span class="line">        return max(self.scores)</span><br><span class="line">zm = Student(&#x27;zhangming&#x27;, 20, [69, 88, 100])</span><br><span class="line">print zm.get_name()</span><br><span class="line">print zm.get_age()</span><br><span class="line">print zm.get_course()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">二：定义一个字典类：dictclass。完成下面的功能：</span><br><span class="line">dict = dictclass(&#123;你需要操作的字典对象&#125;)</span><br><span class="line">1 删除某个key</span><br><span class="line">del_dict(key)</span><br><span class="line">2 判断某个键是否在字典里，如果在返回键对应的值，不存在则返回&quot;not found&quot;</span><br><span class="line">get_dict(key)</span><br><span class="line">3 返回键组成的列表：返回类型;(list)</span><br><span class="line">get_key()</span><br><span class="line">4 合并字典，并且返回合并后字典的values组成的列表。返回类型:(list)</span><br><span class="line">update_dict(&#123;要合并的字典&#125;)</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class dictclass(object):</span><br><span class="line">    def __init__(self, dict):</span><br><span class="line">        self.dict = dict</span><br><span class="line">    def get_dict(self, key):</span><br><span class="line">        if self.dict. has_key(key):</span><br><span class="line">            return self.dict[key]</span><br><span class="line">        return &#x27;not found&#x27;</span><br><span class="line">    def del_dict(self, key):</span><br><span class="line">        if self.dict.has_key(key):</span><br><span class="line">            self.dict.pop(key)</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;no that key&#x27;</span><br><span class="line">    def get_key(self):</span><br><span class="line">        return self.dict.keys()</span><br><span class="line">    def updata_dict(self, dict2):</span><br><span class="line">        self.dict = dict(self.dict, **dict2)</span><br><span class="line">        return self.dict.values()</span><br><span class="line"> </span><br><span class="line">A = dictclass(&#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;)</span><br><span class="line">print A.get_dict(&#x27;c&#x27;)</span><br><span class="line">print A.del_dict(&#x27;c&#x27;)</span><br><span class="line">print A.get_key()</span><br><span class="line">print A.updata_dict(&#123;&#x27;c&#x27;: 3, &#x27;d&#x27;: 4&#125;)</span><br><span class="line"> </span><br><span class="line"># 关于删除字典中的元素</span><br><span class="line"># pop 删除并返回对应的value值</span><br><span class="line">B = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;</span><br><span class="line">print B.pop(&#x27;b&#x27;)</span><br><span class="line">print B</span><br><span class="line"># del void不返回值</span><br><span class="line">C = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;</span><br><span class="line">del C[&#x27;a&#x27;]</span><br><span class="line">print C</span><br><span class="line"># del dict 删除字典，不存在这个字典</span><br><span class="line"># dict.clear()删除字典内所有元素但字典还是存在只是没有元素</span><br><span class="line">D = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3&#125;</span><br><span class="line">D.clear()</span><br><span class="line"># 关于合并字典</span><br><span class="line">A = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3&#125;</span><br><span class="line">B = &#123;&#x27;d&#x27;: 4, &#x27;e&#x27;: 5, &#x27;f&#x27;: 6&#125;</span><br><span class="line">C = dict(A.items() + B.items())</span><br><span class="line">D = dict(A, **B)  # 这种合并方法会比上一种快很多对于重复的key，B会覆盖A</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">定义一个列表的操作类：Listinfo</span><br><span class="line">包括的方法:</span><br><span class="line">1 列表元素添加: add_key(keyname)  [keyname:字符串或者整数类型]</span><br><span class="line">2 列表元素取值：get_key(num) [num:整数类型]</span><br><span class="line">3 列表合并：update_list(list)	  [list:列表类型]</span><br><span class="line">4 删除并且返回最后一个元素：del_key()</span><br><span class="line">list_info = Listinfo([44,222,111,333,454,&#x27;sss&#x27;,&#x27;333&#x27;])</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Listinfo(object):</span><br><span class="line">    def __init__(self, list_val):</span><br><span class="line">        self.varlist = list_val</span><br><span class="line"> </span><br><span class="line">    def add_key(self, key_name):</span><br><span class="line">        if isinstance(key_name, (str, int)):</span><br><span class="line">            self.varlist.append(key_name)</span><br><span class="line">            return self.varlist</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def get_key(self, num):</span><br><span class="line">        if num &gt;= 0 and num &lt; len(self.varlist):</span><br><span class="line">            return self.varlist[num]</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def update_list(self, List_et):</span><br><span class="line">        self.varlist.extend(List_et)</span><br><span class="line">        return self.varlist</span><br><span class="line"> </span><br><span class="line">    def del_key(self):</span><br><span class="line">        if len(self.varlist) &gt;= 0:</span><br><span class="line">            return self.varlist.pop(-1)</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;error&#x27;</span><br><span class="line">list_info = Listinfo([44, 222, 111, 333, 454, &#x27;sss&#x27;, &#x27;333&#x27;])</span><br><span class="line">print list_info.add_key(&#x27;1111&#x27;)</span><br><span class="line">print list_info.get_key(4)</span><br><span class="line">print list_info.update_list([&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;])</span><br><span class="line">print list_info.del_key()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">定义一个集合的操作类：Setinfo</span><br><span class="line">包括的方法:</span><br><span class="line">1 集合元素添加: add_setinfo(keyname)  [keyname:字符串或者整数类型]</span><br><span class="line">2 集合的交集：get_intersection(unioninfo) [unioninfo :集合类型]</span><br><span class="line">3 集合的并集： get_union(unioninfo)[unioninfo :集合类型]</span><br><span class="line">4 集合的差集：del_difference(unioninfo) [unioninfo :集合类型]</span><br><span class="line">set_info =  Setinfo(你要操作的集合)</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Setinfo(object):</span><br><span class="line">    def __init__(self, my_Set):</span><br><span class="line">        self.Sett = my_Set</span><br><span class="line"> </span><br><span class="line">    def add_setinfo(self, keyname):</span><br><span class="line">        if isinstance(keyname, (int, str)):</span><br><span class="line">            self.Sett.add(keyname)</span><br><span class="line">            return self.Sett</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def get_intersection(self, unioninfo):</span><br><span class="line">        if isinstance(unioninfo, set):</span><br><span class="line">            return self.Sett &amp; unioninfo</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def get_union(self, unioninfo):</span><br><span class="line">        if isinstance(unioninfo, set):</span><br><span class="line">            return self.Sett | unioninfo</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def del_difference(self, unioninfo):</span><br><span class="line">        if isinstance(unioninfo, set):</span><br><span class="line">            return self.Sett - unioninfo</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">A = set([1, 2, 3, 4, 5, 2])</span><br><span class="line">B = set([5, 6, 3])</span><br><span class="line">set_info = Setinfo(A)</span><br><span class="line">print set_info.add_setinfo(&#x27;f&#x27;)</span><br><span class="line">print set_info.get_intersection(B)</span><br><span class="line">print set_info.get_union(B)</span><br><span class="line">print set_info.del_difference(B)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">题目一： 写一个网页数据操作类。完成下面的功能：</span><br><span class="line">提示：需要用到urllib模块</span><br><span class="line">get_httpcode()获取网页的状态码，返回结果例如：200,301,404等 类型为int</span><br><span class="line">get_htmlcontent() 获取网页的内容。返回类型:str</span><br><span class="line">get_linknum()计算网页的链接数目。</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import urllib</span><br><span class="line">import urllib2</span><br><span class="line">class page_data(object):</span><br><span class="line">    def __init__(self, url_add):</span><br><span class="line">        self.url = url_add</span><br><span class="line"> </span><br><span class="line">    def get_httpcode(self):</span><br><span class="line">        status = urllib.urlopen(self.url).code</span><br><span class="line">        return status</span><br><span class="line"> </span><br><span class="line">    def get_htmlcontent(self):</span><br><span class="line">        contentstr = urllib2.urlopen(self.url).read()</span><br><span class="line">        return contentstr</span><br><span class="line"> </span><br><span class="line">    def get_linknum(self):</span><br><span class="line">        content = urllib2.urlopen(self.url).read()</span><br><span class="line">        return len(content.split(&#x27;&lt;a href=&#x27;)) - 1</span><br><span class="line"> </span><br><span class="line">A = page_data(&quot;http://www.baidu.com&quot;)</span><br><span class="line">print A.get_httpcode()</span><br><span class="line">print A.get_htmlcontent()</span><br><span class="line">print A.get_linknum()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line">class SchoolMember:</span><br><span class="line">    # Represents any school member.</span><br><span class="line">    def __init__(self, name, age):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        print &#x27;(Initialized SchoolMember: %s)&#x27; % self.name</span><br><span class="line"> </span><br><span class="line">    def tell(self):</span><br><span class="line">        # Tell my details.</span><br><span class="line">        print &#x27;Name:&quot;%s&quot; Age:&quot;%s&quot;&#x27; % (self.name, self.age),</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class Teacher(SchoolMember):</span><br><span class="line">    # Represents a teacher.</span><br><span class="line">    def __init__(self, name, age, salary):</span><br><span class="line">        SchoolMember.__init__(self, name, age)</span><br><span class="line">        self.salary = salary</span><br><span class="line">        print &#x27;(Initialized Teacher: %s)&#x27; % self.name</span><br><span class="line"> </span><br><span class="line">    def tell(self):</span><br><span class="line">        SchoolMember.tell(self)</span><br><span class="line">        print &#x27;Salary: &quot;%d&quot;&#x27; % self.salary</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class Student(SchoolMember):</span><br><span class="line">    # Represents a student.</span><br><span class="line">    def __init__(self, name, age, marks):</span><br><span class="line">        SchoolMember.__init__(self, name, age)</span><br><span class="line">        self.marks = marks</span><br><span class="line">        print &#x27;(Initialized Student: %s)&#x27; % self.name</span><br><span class="line"> </span><br><span class="line">    def tell(self):</span><br><span class="line">        SchoolMember.tell(self)</span><br><span class="line">        print &#x27;Marks: &quot;%d&quot;&#x27; % self.marks</span><br><span class="line"> </span><br><span class="line">t = Teacher(&#x27;Mrs. Shrividya&#x27;, 40, 30000)</span><br><span class="line">s = Student(&#x27;Swaroop&#x27;, 22, 75)</span><br><span class="line">c = SchoolMember(&#x27;Swar&#x27;, 22)</span><br><span class="line">t.tell()</span><br><span class="line">s.tell()</span><br><span class="line">c.tell()</span><br></pre></td></tr></table></figure>
+
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/bullpride/article/details/52022701" >https://blog.csdn.net/bullpride/article/details/52022701<i class="fas fa-external-link-alt"></i></a></p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/09/16/python-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%AD%A6%E7%9A%84%E6%98%AF%E6%80%9D%E7%BB%B4%EF%BC%89/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python-学生信息管理系统（学的是思维）</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">WenGe Zhang</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
