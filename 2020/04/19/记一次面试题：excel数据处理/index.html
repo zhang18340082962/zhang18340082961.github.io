@@ -160,7 +160,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-12-19 16:43:39
+        <i class="fas fa-edit"></i>&nbsp;2020-04-19 16:43:39
     </span>
     
     
@@ -179,12 +179,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>381 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>373 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -229,7 +229,7 @@
                      
                 ></p>
 <p>Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import openpyxl </span><br><span class="line">path = r&#x27;C:\Users\谢谢你的爱1998\Desktop\Excel能力测试解答-章文格.xlsx&#x27;</span><br><span class="line">df = pd.read_excel(path,sheet_name= &#x27;Sales&#x27;)</span><br><span class="line">df = df[pd.to_datetime(df.SalesDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df2 = pd.read_excel(path,sheet_name= &#x27;Institution&#x27;)</span><br><span class="line"># print(df2.info())</span><br><span class="line">#检查并发现两表之间连接键出现不一致</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    if df.loc[i,&#x27;InstitutionCode&#x27;]== &#x27;F6302 &#x27;:</span><br><span class="line">        df.loc[i,&#x27;InstitutionCode&#x27;] = &#x27;F6302&#x27;</span><br><span class="line">    else:</span><br><span class="line">        pass</span><br><span class="line">df_12 = pd.merge(df,df2,on=&#x27;InstitutionCode&#x27;,how=&#x27;left&#x27;)</span><br><span class="line"># print(df_12.info())</span><br><span class="line"># a = df_12[df_12.Province.isnull()] 检查是否还存在缺失值</span><br><span class="line"># a.InstitutionCode.unique()</span><br><span class="line">df4 = pd.read_excel(path,sheet_name= &#x27;Price&#x27;)</span><br><span class="line">df4 = df4[pd.to_datetime(df4.EffectiveDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df4 = df4.drop_duplicates([&#x27;SKU&#x27;])#删去重复SKU值</span><br><span class="line">ddff = pd.merge(df_12,df4,on=&#x27;SKU&#x27;)</span><br><span class="line">ddff[&#x27;money&#x27;] = ddff[&#x27;Quantity&#x27;]*ddff[&#x27;Price&#x27;]</span><br><span class="line"># print(ddff.money.sum())#销售额总和</span><br><span class="line">groupby_ddff = ddff.groupby([&#x27;Province&#x27;,&#x27;InstitutionName&#x27;])[&#x27;money&#x27;].sum().reset_index()</span><br><span class="line">groupby_ddff[&#x27;group_sort&#x27;]=groupby_ddff[&#x27;money&#x27;].groupby(groupby_ddff[&#x27;Province&#x27;]).rank(ascending=False,method=&#x27;first&#x27;)</span><br><span class="line">groupby_ddff_top1 = groupby_ddff[groupby_ddff[&#x27;group_sort&#x27;]==1]</span><br><span class="line">groupby_ddff_top1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import openpyxl </span><br><span class="line">path = r&#x27;C:\Users\supermanzwg\Desktop\Excel能力测试解答.xlsx&#x27;</span><br><span class="line">df = pd.read_excel(path,sheet_name= &#x27;Sales&#x27;)</span><br><span class="line">df = df[pd.to_datetime(df.SalesDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df2 = pd.read_excel(path,sheet_name= &#x27;Institution&#x27;)</span><br><span class="line"># print(df2.info())</span><br><span class="line">#检查并发现两表之间连接键出现不一致</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    if df.loc[i,&#x27;InstitutionCode&#x27;]== &#x27;F6302 &#x27;:</span><br><span class="line">        df.loc[i,&#x27;InstitutionCode&#x27;] = &#x27;F6302&#x27;</span><br><span class="line">    else:</span><br><span class="line">        pass</span><br><span class="line">df_12 = pd.merge(df,df2,on=&#x27;InstitutionCode&#x27;,how=&#x27;left&#x27;)</span><br><span class="line"># print(df_12.info())</span><br><span class="line"># a = df_12[df_12.Province.isnull()] 检查是否还存在缺失值</span><br><span class="line"># a.InstitutionCode.unique()</span><br><span class="line">df4 = pd.read_excel(path,sheet_name= &#x27;Price&#x27;)</span><br><span class="line">df4 = df4[pd.to_datetime(df4.EffectiveDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df4 = df4.drop_duplicates([&#x27;SKU&#x27;])#删去重复SKU值</span><br><span class="line">ddff = pd.merge(df_12,df4,on=&#x27;SKU&#x27;)</span><br><span class="line">ddff[&#x27;money&#x27;] = ddff[&#x27;Quantity&#x27;]*ddff[&#x27;Price&#x27;]</span><br><span class="line"># print(ddff.money.sum())#销售额总和</span><br><span class="line">groupby_ddff = ddff.groupby([&#x27;Province&#x27;,&#x27;InstitutionName&#x27;])[&#x27;money&#x27;].sum().reset_index()</span><br><span class="line">groupby_ddff[&#x27;group_sort&#x27;]=groupby_ddff[&#x27;money&#x27;].groupby(groupby_ddff[&#x27;Province&#x27;]).rank(ascending=False,method=&#x27;first&#x27;)</span><br><span class="line">groupby_ddff_top1 = groupby_ddff[groupby_ddff[&#x27;group_sort&#x27;]==1]</span><br><span class="line">groupby_ddff_top1</span><br></pre></td></tr></table></figure>
 <p>写入到原excel</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># import xlwings as xw</span><br><span class="line">book = openpyxl.load_workbook(path)   #读取你要写入的workbook</span><br><span class="line">#和pd.read_excel() 用于将Dataframe写入excel。xls用xlwt。xlsx用openpyxl</span><br><span class="line">writer = pd.ExcelWriter(path, engine=&#x27;openpyxl&#x27;)   </span><br><span class="line">##此时的writer里还只是读写器. 然后将上面读取的book复制给writer  </span><br><span class="line">writer.book = book</span><br><span class="line">#转化为字典的形式</span><br><span class="line">writer.sheets = dict((ws.title, ws) for ws in book.worksheets)</span><br><span class="line">#将data写入writer</span><br><span class="line">groupby_ddff_top1.to_excel(writer,sheet_name=&quot;Answer_Python&quot;,index=False)</span><br><span class="line">writer.save()</span><br></pre></td></tr></table></figure>
 
@@ -247,14 +247,29 @@
         
             <div class="article-nav">
                 
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/04/20/sql%E4%BA%92%E8%81%94%E7%BD%91%E6%B8%B8%E6%88%8F%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">sql互联网游戏数据分析</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/12/13/mysql-tips/"
+                           href="/2020/03/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">mysql_tips</span>
+                                <span class="post-nav-title-item">至少你，存在过我的记忆</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
