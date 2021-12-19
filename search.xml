@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>mysql_tips</title>
+    <url>/2021/12/13/mysql-tips/</url>
+    <content><![CDATA[<ul>
+<li><p>mysql基础<br><a class="link"   href="https://blog.csdn.net/weixin_45108087/article/details/102766281" >https://blog.csdn.net/weixin_45108087/article/details/102766281<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MYSQL中的COLLATE是什么？<br><a class="link"   href="https://blog.csdn.net/weixin_34194317/article/details/92720517" >https://blog.csdn.net/weixin_34194317/article/details/92720517<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>mysql中key 、primary key 、unique key 与index区别<br><a class="link"   href="https://blog.csdn.net/nanaMasuda/article/details/52543177" >https://blog.csdn.net/nanaMasuda/article/details/52543177<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL中REGEXP正则表达式<br><a class="link"   href="https://blog.csdn.net/u011271894/article/details/79705869" >https://blog.csdn.net/u011271894/article/details/79705869<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>mysql中distinct后面两个字段:同时作用了两个字段，也就是必须得这两个字段都相同的才会被排除</p>
+</li>
+<li><p>MySql中把一个表的数据插入到另一个表中<br><a class="link"   href="https://www.cnblogs.com/jiangxiaobo/p/7722691.html" >https://www.cnblogs.com/jiangxiaobo/p/7722691.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Mysql 根据一个表数据更新另外一个表<br><a class="link"   href="https://www.cnblogs.com/wu628/p/4948833.html" >https://www.cnblogs.com/wu628/p/4948833.html<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">insert into table_2 (promotion_price,promotion) SELECT 字段1，字段2，...  FROM table_1 where table_1.id is not in (</span><br><span class="line">select id from  table_2 );</span><br></pre></td></tr></table></figure></li>
+<li><p>concat以及group_concat的用法<br><a class="link"   href="https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc" >https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>字符串截取总结：left()、right()、substring()、substring_index()<br><a class="link"   href="https://blog.csdn.net/wolinxuebin/article/details/7845917" >https://blog.csdn.net/wolinxuebin/article/details/7845917<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>replace的用法<br><a class="link"   href="https://www.cnblogs.com/to-creat/p/6516375.html" >https://www.cnblogs.com/to-creat/p/6516375.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>mysql中join的用法<br><a class="link"   href="https://www.cnblogs.com/beili/p/9140019.html" >https://www.cnblogs.com/beili/p/9140019.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL计算日期的函数DATE_SUB(d,INTERVAL expr type)<br><a class="link"   href="https://blog.csdn.net/sinat_34979528/article/details/54571316" >https://blog.csdn.net/sinat_34979528/article/details/54571316<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL DATE_ADD() 函数<br><a class="link"   href="https://www.w3school.com.cn/sql/func_date_add.asp" >https://www.w3school.com.cn/sql/func_date_add.asp<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>sql中interval用法总结<br><a class="link"   href="https://blog.csdn.net/weixin_42586373/article/details/107467914" >https://blog.csdn.net/weixin_42586373/article/details/107467914<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>SQL中的cast()函数<br><a class="link"   href="https://www.jianshu.com/p/e8ed290426b6" >https://www.jianshu.com/p/e8ed290426b6<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL UNION 操作符<br><a class="link"   href="https://www.runoob.com/mysql/mysql-union-operation.html" >https://www.runoob.com/mysql/mysql-union-operation.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>ROW_NUMBER() OVER()函数用法详解 （分组排序 例子多）<br><a class="link"   href="https://blog.csdn.net/qq_25221835/article/details/82762416" >https://blog.csdn.net/qq_25221835/article/details/82762416<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>hive中regexp_extract的用法总结<br><a class="link"   href="https://blog.csdn.net/jv_rookie/article/details/55211955" >https://blog.csdn.net/jv_rookie/article/details/55211955<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>sql数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python-flask疫情数据可视化</title>
+    <url>/2021/07/21/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
+    <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a class="link"   href="https://www.bilibili.com/video/BV177411j7qJ%E5%A4%A7%E4%BD%AC%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%8C%E7%85%A7%E7%9D%80%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE,%EF%BC%88%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95%E5%B0%8F%E7%9C%8B%E7%9D%80%E6%9C%89%E7%82%B9%E6%8B%A5%E6%8C%A4%E3%80%82%E5%A4%A7%E5%B1%8F%E5%B1%95%E7%A4%BA%E8%BF%98%E6%98%AF%E6%8C%BA%E5%A5%BD%E7%9C%8B%E7%9A%84%EF%BC%89%EF%BC%8C%E7%83%AD%E6%90%9C%E8%AF%8D%E4%BA%91%E7%9A%84%E6%95%B0%E6%8D%AE%E6%89%BE%E4%B8%8D%E5%88%B0%E7%BD%91%E7%AB%99%E4%BA%86%EF%BC%8C%E5%B0%B1%E5%BC%84%E4%BA%86%E4%B8%AA%E8%A1%A8%E6%A0%BC%EF%BC%9B%E8%87%AA%E5%B7%B1%E4%BF%AE%E6%94%B9%E4%BA%86%E4%B8%80%E4%BA%9B%E9%83%A8%E5%88%86%EF%BC%8C%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%8E%BB%E5%BA%B7%E5%BA%B7%E8%A7%86%E9%A2%91%EF%BC%8C%E5%90%8E%E7%BB%AD%E6%9C%89%E6%97%B6%E9%97%B4%E5%86%8D%E5%86%99%E7%82%B9%E6%80%BB%E7%BB%93%E3%80%82" >https://www.bilibili.com/video/BV177411j7qJ大佬的视频，照着做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。<i class="fas fa-external-link-alt"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"
+                     
+                ></p>
+<p>关于flask：<br><a class="link"   href="https://www.cnblogs.com/songboriceboy/category/1867414.html" >https://www.cnblogs.com/songboriceboy/category/1867414.html<i class="fas fa-external-link-alt"></i></a><br><a class="link"   href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482" >https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482<i class="fas fa-external-link-alt"></i></a></p>
+]]></content>
+      <tags>
+        <tag>python数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python数据分析 :pandas数据读取、预处理、筛选、计算，时间序列、透视、拼接、导出</title>
     <url>/2021/10/04/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9Apandas%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E3%80%81%E9%A2%84%E5%A4%84%E7%90%86%E3%80%81%E7%AD%9B%E9%80%89%E3%80%81%E8%AE%A1%E7%AE%97%EF%BC%8C%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E3%80%81%E9%80%8F%E8%A7%86%E3%80%81%E6%8B%BC%E6%8E%A5%E3%80%81%E5%AF%BC%E5%87%BA/</url>
     <content><![CDATA[<h3 id="一、Pandas数据结构"><a href="#一、Pandas数据结构" class="headerlink" title="一、Pandas数据结构"></a>一、Pandas数据结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">S1=pd.Series([‘a’,’b’,’c’]) series是一组数据与一组索引（行索引）组成的数据结构</span><br><span class="line">S1=pd.Series([‘a’,’b’,’c’],index=(1,3,4)) 指定索引</span><br><span class="line">S1=pd.Series(&#123;1:‘a’,2:’b’,3:’c’&#125;) 用字典形式指定索引</span><br><span class="line">S1.index() 返回索引</span><br><span class="line">S1.values() 返回值</span><br><span class="line">Df=pd.DataFrame([‘a’,’b’,’c’]) dataframe是一组数据与两组索引（行列索引）组成的数据结构</span><br><span class="line">Df=pd.DataFrame([[a,A],[b,B],[c,C]],columns=[‘小写’,’大写’]，index=[‘一’,’二’,’三’])</span><br><span class="line">Columms 为列索引，index为行索引</span><br><span class="line">pip install -i [https://pypi.tuna.tsinghua.edu.cn/simple](https://link.zhihu.com/?target=https%3A//pypi.tuna.tsinghua.edu.cn/simple) pyspider 清华镜像</span><br></pre></td></tr></table></figure>
@@ -124,49 +186,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python-flask疫情数据可视化</title>
-    <url>/2021/07/21/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
-    <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a class="link"   href="https://www.bilibili.com/video/BV177411j7qJ%E5%A4%A7%E4%BD%AC%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%8C%E7%85%A7%E7%9D%80%E5%81%9A%E7%9A%84%E4%B8%80%E4%B8%AA%E7%96%AB%E6%83%85%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE,%EF%BC%88%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95%E5%B0%8F%E7%9C%8B%E7%9D%80%E6%9C%89%E7%82%B9%E6%8B%A5%E6%8C%A4%E3%80%82%E5%A4%A7%E5%B1%8F%E5%B1%95%E7%A4%BA%E8%BF%98%E6%98%AF%E6%8C%BA%E5%A5%BD%E7%9C%8B%E7%9A%84%EF%BC%89%EF%BC%8C%E7%83%AD%E6%90%9C%E8%AF%8D%E4%BA%91%E7%9A%84%E6%95%B0%E6%8D%AE%E6%89%BE%E4%B8%8D%E5%88%B0%E7%BD%91%E7%AB%99%E4%BA%86%EF%BC%8C%E5%B0%B1%E5%BC%84%E4%BA%86%E4%B8%AA%E8%A1%A8%E6%A0%BC%EF%BC%9B%E8%87%AA%E5%B7%B1%E4%BF%AE%E6%94%B9%E4%BA%86%E4%B8%80%E4%BA%9B%E9%83%A8%E5%88%86%EF%BC%8C%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E5%8F%AF%E4%BB%A5%E5%8E%BB%E5%BA%B7%E5%BA%B7%E8%A7%86%E9%A2%91%EF%BC%8C%E5%90%8E%E7%BB%AD%E6%9C%89%E6%97%B6%E9%97%B4%E5%86%8D%E5%86%99%E7%82%B9%E6%80%BB%E7%BB%93%E3%80%82" >https://www.bilibili.com/video/BV177411j7qJ大佬的视频，照着做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。<i class="fas fa-external-link-alt"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"
-                     
-                ></p>
-<p>关于flask：<br><a class="link"   href="https://www.cnblogs.com/songboriceboy/category/1867414.html" >https://www.cnblogs.com/songboriceboy/category/1867414.html<i class="fas fa-external-link-alt"></i></a><br><a class="link"   href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482" >https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <tags>
-        <tag>python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python-学生信息管理系统（学的是思维）</title>
-    <url>/2020/09/16/python-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%AD%A6%E7%9A%84%E6%98%AF%E6%80%9D%E7%BB%B4%EF%BC%89/</url>
-    <content><![CDATA[<h3 id="学生管理系统应具备的功能"><a href="#学生管理系统应具备的功能" class="headerlink" title="学生管理系统应具备的功能"></a>学生管理系统应具备的功能</h3><ul>
-<li>添加学生及成绩信息</li>
-<li>将学生信息保存到文件中</li>
-<li>修改和删除学生信息</li>
-<li>查询学生信息</li>
-<li>根据学生成绩进行排序</li>
-<li>统计学生的总分</li>
-</ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/image-20211219123240293.1zbrdjhj57ts.png"
-                     
-                ></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">filename = &#x27;student.txt&#x27;</span><br><span class="line">def main():</span><br><span class="line">    while True:</span><br><span class="line">        menum()</span><br><span class="line">        choice = int(input(&quot;请选择:&quot;))</span><br><span class="line">        if choice in [0,1,2,3,4,5,6,7]:</span><br><span class="line">            if choice==0:</span><br><span class="line">                answer = input(&quot;您确定要退出系统吗?y/n&quot;)</span><br><span class="line">                if answer == &#x27;y&#x27; or answer == &#x27;Y&#x27;:</span><br><span class="line">                    print(&quot;谢谢您的使用！&quot;)</span><br><span class="line">                    break #退出系统</span><br><span class="line">                else:</span><br><span class="line">                    continue</span><br><span class="line">            elif choice==1:</span><br><span class="line">                insert()</span><br><span class="line">            elif choice==2:</span><br><span class="line">                search()</span><br><span class="line">            elif choice==3:</span><br><span class="line">                delete()</span><br><span class="line">            elif choice==4:</span><br><span class="line">                modify()</span><br><span class="line">            elif choice ==5:</span><br><span class="line">                sort()</span><br><span class="line">            elif choice ==6:</span><br><span class="line">                total()</span><br><span class="line">            elif choice==7:</span><br><span class="line">                show()</span><br><span class="line">def menum():</span><br><span class="line">    print(&quot;===============================学生信息管理系统===============================&quot;)</span><br><span class="line">    print(&quot;----------------------------------功能菜单-----------------------------------&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t1.录入学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t2.查找学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t3.删除学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t4.修改学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t5.排序&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t6.统计学生总人数&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t7.显示所有学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t0.退出&quot;)</span><br><span class="line">    print(&quot;----------------------------------------------------------------------------&quot;)</span><br><span class="line"></span><br><span class="line">def save(lst):</span><br><span class="line">    try:</span><br><span class="line">        stu_txt = open(filename,&#x27;a&#x27;,encoding=&#x27;utf-8&#x27;)#以追加的模式进行打开</span><br><span class="line">    except:</span><br><span class="line">        stu_txt = open(filename,&#x27;w&#x27;,encoding = &#x27;utf-8&#x27;)</span><br><span class="line">    for item in lst:</span><br><span class="line">        stu_txt.write(str(item)+&#x27;\n&#x27;)</span><br><span class="line">    stu_txt.close()</span><br><span class="line"></span><br><span class="line">def insert():</span><br><span class="line">    student_list = []</span><br><span class="line">    while True:</span><br><span class="line">        id = input(&#x27;请输入ID(如1001):&#x27;)</span><br><span class="line">        if not id:</span><br><span class="line">            break</span><br><span class="line">        name = input(&quot;请输入姓名:&quot;)</span><br><span class="line">        if not name:</span><br><span class="line">            break</span><br><span class="line">        try:</span><br><span class="line">            english_score = int(input(&quot;请输入英语成绩:&quot;))</span><br><span class="line">            python_score= int(input(&quot;请输入Python成绩:&quot;))</span><br><span class="line">            java_score = int(input(&quot;请输入Java成绩:&quot;))</span><br><span class="line">        except:</span><br><span class="line">            print(&quot;输入无效，不是整数类型，请重新输入...&quot;)</span><br><span class="line">            continue</span><br><span class="line">        #将录入的学生信息保存到字典中</span><br><span class="line">        student = &#123;&#x27;id&#x27;:id,&#x27;name&#x27;:name,&#x27;english&#x27;:english_score,&#x27;python&#x27;:python_score,&#x27;java&#x27;:java_score&#125;</span><br><span class="line">        #将学生信息添加到列表中</span><br><span class="line">        student_list.append(student)</span><br><span class="line">        answer = input(&quot;是否将继续添加？y/n\n&quot;)</span><br><span class="line">        if answer==&#x27;y&#x27;:</span><br><span class="line">            continue</span><br><span class="line">        else:</span><br><span class="line">            break</span><br><span class="line">    #调用save()函数</span><br><span class="line">    save(student_list)</span><br><span class="line">    print(&quot;学生信息录入完毕！！！&quot;)</span><br><span class="line"></span><br><span class="line">def search():</span><br><span class="line">    student_query = []</span><br><span class="line">    while True:</span><br><span class="line">        id = &#x27;&#x27;</span><br><span class="line">        name = &#x27;&#x27;</span><br><span class="line">        if os.path.exists(filename):</span><br><span class="line">            mode = input(&quot;按ID查找请输入1，按姓名查找请输入2&quot;)</span><br><span class="line">            if mode ==&#x27;1&#x27;:</span><br><span class="line">                id = input(&quot;请输入学生ID&quot;)</span><br><span class="line">            elif mode ==&#x27;2&#x27;:</span><br><span class="line">                name = input(&quot;请输入学生姓名&quot;)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;您的输入有误，请重新输入&quot;)</span><br><span class="line">                search()</span><br><span class="line">            with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">                student = rfile.readlines()</span><br><span class="line">                for item in student:</span><br><span class="line">                    d = dict(eval(item))</span><br><span class="line">                    if id!=&#x27;&#x27;:</span><br><span class="line">                        if d[&#x27;id&#x27;] == id:</span><br><span class="line">                            student_query.append(d)</span><br><span class="line">                    if name!=&#x27;&#x27;:</span><br><span class="line">                        if d[&#x27;name&#x27;] ==name:</span><br><span class="line">                            student_query.append(d)</span><br><span class="line">            #显示查询结果</span><br><span class="line">            show_student(student_query)</span><br><span class="line">            #清空列表</span><br><span class="line">            student_query.clear()</span><br><span class="line">            answer = input(&quot;是否继续查询y/n\n&quot;)</span><br><span class="line">            if answer==&#x27;y&#x27; or answer==&#x27;Y&#x27;:</span><br><span class="line">                continue</span><br><span class="line">            else:</span><br><span class="line">                break</span><br><span class="line">        else:</span><br><span class="line">            print(&quot;暂未保存学生信息&quot;)</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">def show_student(lst):</span><br><span class="line">    if len(lst) ==0:</span><br><span class="line">        print(&quot;没有查询到学生信息，无数据显示！！！&quot;)</span><br><span class="line">        return</span><br><span class="line">    #定义标题显示格式</span><br><span class="line">    format_title = &#x27;&#123;:^6&#125;\t&#123;:^12&#125;\t&#123;:^8&#125;\t&#123;:^10&#125;\t&#123;:^10&#125;\t&#123;:^8&#125;&#x27;</span><br><span class="line">    print(format_title.format(&#x27;ID&#x27;,&#x27;姓名&#x27;,&#x27;英语成绩&#x27;,&#x27;Python成绩&#x27;,&#x27;Java成绩&#x27;,&#x27;总成绩&#x27;))</span><br><span class="line">    #定义内容显示格式</span><br><span class="line">    format_data = &#x27;&#123;:^6&#125;\t&#123;:^12&#125;\t&#123;:^8&#125;\t&#123;:^10&#125;\t&#123;:^10&#125;\t&#123;:^8&#125;&#x27;</span><br><span class="line">    for item in lst:</span><br><span class="line">        print(format_data.format(item.get(&#x27;id&#x27;),</span><br><span class="line">                                item.get(&#x27;name&#x27;),</span><br><span class="line">                                  item.get(&#x27;english&#x27;),</span><br><span class="line">                                  item.get(&#x27;python&#x27;),</span><br><span class="line">                                  item.get(&#x27;java&#x27;),</span><br><span class="line">                                 int(item.get(&#x27;english&#x27;))+int(item.get(&#x27;python&#x27;))+int(item.get(&#x27;java&#x27;))</span><br><span class="line">                                 ))</span><br><span class="line"></span><br><span class="line">def delete():</span><br><span class="line">    while True:</span><br><span class="line">        student_id = input(&quot;请输入要删除的学生的ID：&quot;)</span><br><span class="line">        if student_id !=&#x27;&#x27;:</span><br><span class="line">            if os.path.exists(filename):</span><br><span class="line">                with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as file:</span><br><span class="line">                    student_old = file.readlines()#逐行读取，按行生成一个列表</span><br><span class="line">            else:</span><br><span class="line">                student_old =[]</span><br><span class="line">            flag = False#标记是否删除</span><br><span class="line">            if student_old:#判断原有文件内容是否为空，如果有内容就打开并写入东西</span><br><span class="line">                with open(filename,&#x27;w&#x27;,encoding=&#x27;utf-8&#x27;) as wfile:</span><br><span class="line">                    d=&#123;&#125;</span><br><span class="line">                    for item in student_old:</span><br><span class="line">                        d = dict(eval(item))#将字符串转换为字典</span><br><span class="line">                        if d[&#x27;id&#x27;]!=student_id:</span><br><span class="line">                            wfile.write(str(d)+&quot;\n&quot;)</span><br><span class="line">                        else:</span><br><span class="line">                            flag=True#定义这个标志，同时也没有将变量进行写入，即为删除</span><br><span class="line">                    if flag:</span><br><span class="line">                        print(f&quot;id为&#123;student_id&#125;的学生信息已经被删除。&quot;)</span><br><span class="line">                    else:</span><br><span class="line">                        print(f&quot;没有找到ID为&#123;student_id&#125;的学生信息。&quot;)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;无学生信息。&quot;)</span><br><span class="line">                break</span><br><span class="line">            show()#删完之后要重新显示学生信息</span><br><span class="line">            answer = input(&quot;是否继续删除？y/n\n&quot;)</span><br><span class="line">            if answer==&#x27;y&#x27; or answer == &quot;Y&quot;:</span><br><span class="line">                continue</span><br><span class="line">            else:</span><br><span class="line">                break</span><br><span class="line"></span><br><span class="line">def modify():</span><br><span class="line">    show()</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            student_old = rfile.readlines()</span><br><span class="line">    else:</span><br><span class="line">        return</span><br><span class="line">    student_id = input(&quot;请输入要修改的学员的ID：&quot;)</span><br><span class="line">    with open(filename,&#x27;w&#x27;,encoding=&#x27;utf-8&#x27;) as wfile:</span><br><span class="line">        for item in student_old:</span><br><span class="line">            d = dict(eval(item))</span><br><span class="line">            if d[&#x27;id&#x27;]==student_id:#找到要修改的相关id</span><br><span class="line">                print(&quot;找到学生信息，可以修改他的相关信息了！&quot;)</span><br><span class="line">                while True:</span><br><span class="line">                    try:</span><br><span class="line">                        d[&#x27;name&#x27;]=input(&quot;请输入姓名：&quot;)</span><br><span class="line">                        d[&#x27;english&#x27;] =input(&quot;请输入英语成绩：&quot;)</span><br><span class="line">                        d[&#x27;python&#x27;] = input(&quot;请输入Python成绩：&quot;)</span><br><span class="line">                        d[&#x27;Java&#x27;] = input(&quot;请输入Java成绩：&quot;)</span><br><span class="line">                    except:</span><br><span class="line">                        print(&quot;您的输入有误，请重新输入！！！&quot;)</span><br><span class="line">                    wfile.write(str(d)+&quot;\n&quot;)</span><br><span class="line">                    print(&quot;修改成功&quot;)</span><br><span class="line"></span><br><span class="line">            else:</span><br><span class="line">                wfile.write(str(d)+&quot;\n&quot;)</span><br><span class="line">        answer = input(&quot;是否继续修改其他学校信息？y/n\n&quot;)</span><br><span class="line">        if answer==&#x27;y&#x27; or answer ==&#x27;Y&#x27;:</span><br><span class="line">            modify()</span><br><span class="line"></span><br><span class="line">def sort():</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename, &#x27;r&#x27;, encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            student = rfile.readlines()</span><br><span class="line">        student_new = []</span><br><span class="line">        for item in student:</span><br><span class="line">            d = dict(eval(item))</span><br><span class="line">            student_new.append(d)</span><br><span class="line">    else:</span><br><span class="line">        return</span><br><span class="line">    asc_or_desc = input(&quot;请选择(0.升序 1.降序)&quot;)</span><br><span class="line">    if asc_or_desc==&#x27;0&#x27;:</span><br><span class="line">        asc_or_desc_bool = False</span><br><span class="line">        pass</span><br><span class="line">    elif asc_or_desc==&#x27;1&#x27;:</span><br><span class="line">        asc_or_desc_bool = True</span><br><span class="line">        pass</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;您的输入有误，请重新输入！&quot;)</span><br><span class="line">        sort()</span><br><span class="line">    mode = input(&quot;请选择排序方式(1.按英语成绩排序 2.按Python成绩排序 3.按Java程序排序 0.按总成绩排序)&quot;)</span><br><span class="line">    if mode==&#x27;1&#x27;:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;english&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    elif mode==&#x27;2&#x27;:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;python&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    elif mode==3:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;java&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    elif mode==&#x27;0&#x27;:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;english&#x27;]+x[&#x27;python&#x27;]+x[&#x27;java&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;你的输入有误，请重新输入&quot;)</span><br><span class="line">        sort()</span><br><span class="line">    show_student(student_new)</span><br><span class="line"></span><br><span class="line">def total():</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            students = rfile.readlines()</span><br><span class="line">            if students:</span><br><span class="line">                print(f&quot;一共有&#123;len(students)&#125;名学生&quot;)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;还没有录入学生信息&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;暂未存学生相关信息&quot;)</span><br><span class="line">def show():</span><br><span class="line">    student_ls = []</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            students = rfile.readlines()</span><br><span class="line">            for item in students:</span><br><span class="line">                student_ls.append(eval(item))</span><br><span class="line">            if student_ls:</span><br><span class="line">                show_student(student_ls)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;还没有保存学生信息&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;没有发现相应数据文件&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ ==&#x27;__main__&#x27;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<ul>
-<li>打包成exe需要在终端激活环境后运行 pip install PyIntaller<br>下载好之后再执行 pyinstaller -F D:\Studentsys\stusystem.py  </li>
-</ul>
-<p>-F后面是完整路径以及文件名<br><a class="link"   href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver" >https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver<i class="fas fa-external-link-alt"></i></a><br>娟姐yyds! </p>
-]]></content>
-      <tags>
-        <tag>python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python关联分析（apriori算法）</title>
     <url>/2021/02/28/python%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90%EF%BC%88apriori%E7%AE%97%E6%B3%95%EF%BC%89/</url>
     <content><![CDATA[<p>若两个或多个变量的取值之间存在某种规律性，就称为关联。关联规则是寻找在同一个事件中出现的不同项的相关性，比如在一次购买活动中所买不同商品的相关性。例如：“在购买计算机的顾客中，有30％的人也同时购买了打印机”。</p>
@@ -262,15 +281,30 @@
       </tags>
   </entry>
   <entry>
-    <title>python办公自动化：邮件发送</title>
-    <url>/2021/04/05/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/</url>
-    <content><![CDATA[<ul>
-<li>邮件批量发送<br>调用smtp.exmail.qq.com批量自动发送邮件<br>注意文件路径，逗号分隔符，csv中不要有多余回车和空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import csv</span><br><span class="line">import smtplib</span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">from email.mime.base import MIMEBase</span><br><span class="line">from email.mime.image import MIMEImage</span><br><span class="line">from email.utils import formataddr</span><br><span class="line">from email import encoders</span><br><span class="line">import time,datetime</span><br><span class="line">import smtplib</span><br><span class="line">import email.mime.multipart</span><br><span class="line">import email.mime.text</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">from email.mime.application import MIMEApplication</span><br><span class="line">from email.header import Header</span><br><span class="line"></span><br><span class="line">def get_current_date():</span><br><span class="line">    &quot;&quot;&quot;获取当前时间&quot;&quot;&quot;</span><br><span class="line">    return str(time.strftime(&#x27;%Y%m%d&#x27;))</span><br><span class="line"></span><br><span class="line">def getAddrBook(addrBook):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">        @作用：根据输入的CSV文件，形成相应的通讯录字典</span><br><span class="line">        @返回：字典类型，name为人名，value为对应的邮件地址</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    with open(addrBook,&#x27;r&#x27;,encoding=&#x27;UTF-8&#x27;) as addrFile:</span><br><span class="line">        #将文件名和邮件接收人邮箱地址分行存放在csv文件中，用逗号分隔</span><br><span class="line">        reader = csv.reader(addrFile)</span><br><span class="line">        name = []</span><br><span class="line">        value = []</span><br><span class="line">        for row in reader:</span><br><span class="line">            name.append(row[0])</span><br><span class="line">            value.append(row[1])</span><br><span class="line">    addrs = dict(zip(name, value))</span><br><span class="line">    return addrs</span><br><span class="line"></span><br><span class="line">def send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs, subject, content,attachfilename):</span><br><span class="line">    &quot;&quot;&quot;定义并配置好发邮件的函数&quot;&quot;&quot;</span><br><span class="line">    msg = email.mime.multipart.MIMEMultipart()</span><br><span class="line">    msg[&#x27;from&#x27;] =sendAddr #发件人</span><br><span class="line">    msg[&#x27;to&#x27;] =recipientAddrs #接收人</span><br><span class="line">    # msg[&#x27;cc&#x27;] =cc_name #抄送人名称</span><br><span class="line">    msg[&#x27;subject&#x27;] =subject #主题</span><br><span class="line">    content=content</span><br><span class="line">    txt = email.mime.text.MIMEText(content, &#x27;plain&#x27;, &#x27;UTF-8&#x27;)</span><br><span class="line">    msg.attach(txt)</span><br><span class="line">    print(&quot;准备添加附件...&quot;)</span><br><span class="line">    inputfile=inputpath+attachfilename #文件路径</span><br><span class="line">    part = MIMEText(open(inputfile,&#x27;rb&#x27;).read(),&#x27;base64&#x27;, &#x27;utf-8&#x27;)</span><br><span class="line">    part[&quot;Content-Type&quot;] = &#x27;application/octet-stream&#x27;</span><br><span class="line">    part.add_header(&#x27;Content-Disposition&#x27;, &#x27;attachment&#x27;, filename=Header(attachfilename,&#x27;utf-8&#x27;).encode())</span><br><span class="line">    msg.attach(part)</span><br><span class="line">    smtp = smtplib.SMTP_SSL(smtpHost, port)</span><br><span class="line">    smtp.login(sendAddr, password)</span><br><span class="line">    smtp.sendmail(sendAddr, recipientAddrs.split(&#x27;,&#x27;), str(msg))   #+cc_name.split(&#x27;,&#x27;)</span><br><span class="line">    #print(&quot;发送成功！&quot;)</span><br><span class="line">    smtp.quit()</span><br><span class="line"></span><br><span class="line">if __name__==&#x27;__main__&#x27;:</span><br><span class="line">    #这里需要定义send_email函数中传入的所有变量</span><br><span class="line">    inputpath = &quot;r&#x27;D:/&quot; #数据存放的文件路径（这里是绝对路径）</span><br><span class="line">    smtpHost = &#x27;smtp.exmail.qq.com&#x27;  # 默认服务器地址及端口</span><br><span class="line">    port=465</span><br><span class="line">    sendAddr =&quot;&quot;    #自己也就是发件人的邮箱账号</span><br><span class="line">    password = &quot;&quot;   #自己的邮箱密码</span><br><span class="line">    subject=&quot; &quot;+current_date  #主题+当前日期</span><br><span class="line">    content=&#x27;&#x27;&#x27;附件为测试文件&#x27;&#x27;&#x27;+current_date# 正文内容+当前日期</span><br><span class="line"></span><br><span class="line">    addrBook=r&#x27;D:\邮箱联系人表单.csv&#x27;  #联系人表单文件路径</span><br><span class="line">    addrs=getAddrBook(addrBook)</span><br><span class="line">    for i in addrs:</span><br><span class="line">        attachfilename=i+&#x27;.xlsx&#x27; #将要发送的文件添加为附件</span><br><span class="line">        recipientAddrs=addrs[i] #接收人的邮箱地址</span><br><span class="line">        result = os.path.exists(inputpath+i+&#x27;.xlsx&#x27;) #判断当前目录是否存在该文件</span><br><span class="line">        if result:</span><br><span class="line">            #存在就执行邮件</span><br><span class="line">            send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs,</span><br><span class="line">            subject,content,attachfilename)</span><br><span class="line">            print ((&#x27;发给 %s 的邮件执行成功&#x27;) %(recipientAddrs))</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+    <title>python-学生信息管理系统（学的是思维）</title>
+    <url>/2020/09/16/python-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%AD%A6%E7%9A%84%E6%98%AF%E6%80%9D%E7%BB%B4%EF%BC%89/</url>
+    <content><![CDATA[<h3 id="学生管理系统应具备的功能"><a href="#学生管理系统应具备的功能" class="headerlink" title="学生管理系统应具备的功能"></a>学生管理系统应具备的功能</h3><ul>
+<li>添加学生及成绩信息</li>
+<li>将学生信息保存到文件中</li>
+<li>修改和删除学生信息</li>
+<li>查询学生信息</li>
+<li>根据学生成绩进行排序</li>
+<li>统计学生的总分</li>
 </ul>
-<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a class="link"   href="https://blog.csdn.net/weixin_42350212/article/details/118751583" >https://blog.csdn.net/weixin_42350212/article/details/118751583<i class="fas fa-external-link-alt"></i></a><br>Python smtp发送邮件怎么设置抄送人<br><a class="link"   href="https://www.cnblogs.com/shiyixirui/p/14692146.html" >https://www.cnblogs.com/shiyixirui/p/14692146.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/image-20211219123240293.1zbrdjhj57ts.png"
+                     
+                ></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">filename = &#x27;student.txt&#x27;</span><br><span class="line">def main():</span><br><span class="line">    while True:</span><br><span class="line">        menum()</span><br><span class="line">        choice = int(input(&quot;请选择:&quot;))</span><br><span class="line">        if choice in [0,1,2,3,4,5,6,7]:</span><br><span class="line">            if choice==0:</span><br><span class="line">                answer = input(&quot;您确定要退出系统吗?y/n&quot;)</span><br><span class="line">                if answer == &#x27;y&#x27; or answer == &#x27;Y&#x27;:</span><br><span class="line">                    print(&quot;谢谢您的使用！&quot;)</span><br><span class="line">                    break #退出系统</span><br><span class="line">                else:</span><br><span class="line">                    continue</span><br><span class="line">            elif choice==1:</span><br><span class="line">                insert()</span><br><span class="line">            elif choice==2:</span><br><span class="line">                search()</span><br><span class="line">            elif choice==3:</span><br><span class="line">                delete()</span><br><span class="line">            elif choice==4:</span><br><span class="line">                modify()</span><br><span class="line">            elif choice ==5:</span><br><span class="line">                sort()</span><br><span class="line">            elif choice ==6:</span><br><span class="line">                total()</span><br><span class="line">            elif choice==7:</span><br><span class="line">                show()</span><br><span class="line">def menum():</span><br><span class="line">    print(&quot;===============================学生信息管理系统===============================&quot;)</span><br><span class="line">    print(&quot;----------------------------------功能菜单-----------------------------------&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t1.录入学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t2.查找学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t3.删除学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t4.修改学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t5.排序&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t6.统计学生总人数&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t7.显示所有学生信息&quot;)</span><br><span class="line">    print(&quot;\t\t\t\t\t\t0.退出&quot;)</span><br><span class="line">    print(&quot;----------------------------------------------------------------------------&quot;)</span><br><span class="line"></span><br><span class="line">def save(lst):</span><br><span class="line">    try:</span><br><span class="line">        stu_txt = open(filename,&#x27;a&#x27;,encoding=&#x27;utf-8&#x27;)#以追加的模式进行打开</span><br><span class="line">    except:</span><br><span class="line">        stu_txt = open(filename,&#x27;w&#x27;,encoding = &#x27;utf-8&#x27;)</span><br><span class="line">    for item in lst:</span><br><span class="line">        stu_txt.write(str(item)+&#x27;\n&#x27;)</span><br><span class="line">    stu_txt.close()</span><br><span class="line"></span><br><span class="line">def insert():</span><br><span class="line">    student_list = []</span><br><span class="line">    while True:</span><br><span class="line">        id = input(&#x27;请输入ID(如1001):&#x27;)</span><br><span class="line">        if not id:</span><br><span class="line">            break</span><br><span class="line">        name = input(&quot;请输入姓名:&quot;)</span><br><span class="line">        if not name:</span><br><span class="line">            break</span><br><span class="line">        try:</span><br><span class="line">            english_score = int(input(&quot;请输入英语成绩:&quot;))</span><br><span class="line">            python_score= int(input(&quot;请输入Python成绩:&quot;))</span><br><span class="line">            java_score = int(input(&quot;请输入Java成绩:&quot;))</span><br><span class="line">        except:</span><br><span class="line">            print(&quot;输入无效，不是整数类型，请重新输入...&quot;)</span><br><span class="line">            continue</span><br><span class="line">        #将录入的学生信息保存到字典中</span><br><span class="line">        student = &#123;&#x27;id&#x27;:id,&#x27;name&#x27;:name,&#x27;english&#x27;:english_score,&#x27;python&#x27;:python_score,&#x27;java&#x27;:java_score&#125;</span><br><span class="line">        #将学生信息添加到列表中</span><br><span class="line">        student_list.append(student)</span><br><span class="line">        answer = input(&quot;是否将继续添加？y/n\n&quot;)</span><br><span class="line">        if answer==&#x27;y&#x27;:</span><br><span class="line">            continue</span><br><span class="line">        else:</span><br><span class="line">            break</span><br><span class="line">    #调用save()函数</span><br><span class="line">    save(student_list)</span><br><span class="line">    print(&quot;学生信息录入完毕！！！&quot;)</span><br><span class="line"></span><br><span class="line">def search():</span><br><span class="line">    student_query = []</span><br><span class="line">    while True:</span><br><span class="line">        id = &#x27;&#x27;</span><br><span class="line">        name = &#x27;&#x27;</span><br><span class="line">        if os.path.exists(filename):</span><br><span class="line">            mode = input(&quot;按ID查找请输入1，按姓名查找请输入2&quot;)</span><br><span class="line">            if mode ==&#x27;1&#x27;:</span><br><span class="line">                id = input(&quot;请输入学生ID&quot;)</span><br><span class="line">            elif mode ==&#x27;2&#x27;:</span><br><span class="line">                name = input(&quot;请输入学生姓名&quot;)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;您的输入有误，请重新输入&quot;)</span><br><span class="line">                search()</span><br><span class="line">            with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">                student = rfile.readlines()</span><br><span class="line">                for item in student:</span><br><span class="line">                    d = dict(eval(item))</span><br><span class="line">                    if id!=&#x27;&#x27;:</span><br><span class="line">                        if d[&#x27;id&#x27;] == id:</span><br><span class="line">                            student_query.append(d)</span><br><span class="line">                    if name!=&#x27;&#x27;:</span><br><span class="line">                        if d[&#x27;name&#x27;] ==name:</span><br><span class="line">                            student_query.append(d)</span><br><span class="line">            #显示查询结果</span><br><span class="line">            show_student(student_query)</span><br><span class="line">            #清空列表</span><br><span class="line">            student_query.clear()</span><br><span class="line">            answer = input(&quot;是否继续查询y/n\n&quot;)</span><br><span class="line">            if answer==&#x27;y&#x27; or answer==&#x27;Y&#x27;:</span><br><span class="line">                continue</span><br><span class="line">            else:</span><br><span class="line">                break</span><br><span class="line">        else:</span><br><span class="line">            print(&quot;暂未保存学生信息&quot;)</span><br><span class="line">            return</span><br><span class="line"></span><br><span class="line">def show_student(lst):</span><br><span class="line">    if len(lst) ==0:</span><br><span class="line">        print(&quot;没有查询到学生信息，无数据显示！！！&quot;)</span><br><span class="line">        return</span><br><span class="line">    #定义标题显示格式</span><br><span class="line">    format_title = &#x27;&#123;:^6&#125;\t&#123;:^12&#125;\t&#123;:^8&#125;\t&#123;:^10&#125;\t&#123;:^10&#125;\t&#123;:^8&#125;&#x27;</span><br><span class="line">    print(format_title.format(&#x27;ID&#x27;,&#x27;姓名&#x27;,&#x27;英语成绩&#x27;,&#x27;Python成绩&#x27;,&#x27;Java成绩&#x27;,&#x27;总成绩&#x27;))</span><br><span class="line">    #定义内容显示格式</span><br><span class="line">    format_data = &#x27;&#123;:^6&#125;\t&#123;:^12&#125;\t&#123;:^8&#125;\t&#123;:^10&#125;\t&#123;:^10&#125;\t&#123;:^8&#125;&#x27;</span><br><span class="line">    for item in lst:</span><br><span class="line">        print(format_data.format(item.get(&#x27;id&#x27;),</span><br><span class="line">                                item.get(&#x27;name&#x27;),</span><br><span class="line">                                  item.get(&#x27;english&#x27;),</span><br><span class="line">                                  item.get(&#x27;python&#x27;),</span><br><span class="line">                                  item.get(&#x27;java&#x27;),</span><br><span class="line">                                 int(item.get(&#x27;english&#x27;))+int(item.get(&#x27;python&#x27;))+int(item.get(&#x27;java&#x27;))</span><br><span class="line">                                 ))</span><br><span class="line"></span><br><span class="line">def delete():</span><br><span class="line">    while True:</span><br><span class="line">        student_id = input(&quot;请输入要删除的学生的ID：&quot;)</span><br><span class="line">        if student_id !=&#x27;&#x27;:</span><br><span class="line">            if os.path.exists(filename):</span><br><span class="line">                with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as file:</span><br><span class="line">                    student_old = file.readlines()#逐行读取，按行生成一个列表</span><br><span class="line">            else:</span><br><span class="line">                student_old =[]</span><br><span class="line">            flag = False#标记是否删除</span><br><span class="line">            if student_old:#判断原有文件内容是否为空，如果有内容就打开并写入东西</span><br><span class="line">                with open(filename,&#x27;w&#x27;,encoding=&#x27;utf-8&#x27;) as wfile:</span><br><span class="line">                    d=&#123;&#125;</span><br><span class="line">                    for item in student_old:</span><br><span class="line">                        d = dict(eval(item))#将字符串转换为字典</span><br><span class="line">                        if d[&#x27;id&#x27;]!=student_id:</span><br><span class="line">                            wfile.write(str(d)+&quot;\n&quot;)</span><br><span class="line">                        else:</span><br><span class="line">                            flag=True#定义这个标志，同时也没有将变量进行写入，即为删除</span><br><span class="line">                    if flag:</span><br><span class="line">                        print(f&quot;id为&#123;student_id&#125;的学生信息已经被删除。&quot;)</span><br><span class="line">                    else:</span><br><span class="line">                        print(f&quot;没有找到ID为&#123;student_id&#125;的学生信息。&quot;)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;无学生信息。&quot;)</span><br><span class="line">                break</span><br><span class="line">            show()#删完之后要重新显示学生信息</span><br><span class="line">            answer = input(&quot;是否继续删除？y/n\n&quot;)</span><br><span class="line">            if answer==&#x27;y&#x27; or answer == &quot;Y&quot;:</span><br><span class="line">                continue</span><br><span class="line">            else:</span><br><span class="line">                break</span><br><span class="line"></span><br><span class="line">def modify():</span><br><span class="line">    show()</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            student_old = rfile.readlines()</span><br><span class="line">    else:</span><br><span class="line">        return</span><br><span class="line">    student_id = input(&quot;请输入要修改的学员的ID：&quot;)</span><br><span class="line">    with open(filename,&#x27;w&#x27;,encoding=&#x27;utf-8&#x27;) as wfile:</span><br><span class="line">        for item in student_old:</span><br><span class="line">            d = dict(eval(item))</span><br><span class="line">            if d[&#x27;id&#x27;]==student_id:#找到要修改的相关id</span><br><span class="line">                print(&quot;找到学生信息，可以修改他的相关信息了！&quot;)</span><br><span class="line">                while True:</span><br><span class="line">                    try:</span><br><span class="line">                        d[&#x27;name&#x27;]=input(&quot;请输入姓名：&quot;)</span><br><span class="line">                        d[&#x27;english&#x27;] =input(&quot;请输入英语成绩：&quot;)</span><br><span class="line">                        d[&#x27;python&#x27;] = input(&quot;请输入Python成绩：&quot;)</span><br><span class="line">                        d[&#x27;Java&#x27;] = input(&quot;请输入Java成绩：&quot;)</span><br><span class="line">                    except:</span><br><span class="line">                        print(&quot;您的输入有误，请重新输入！！！&quot;)</span><br><span class="line">                    wfile.write(str(d)+&quot;\n&quot;)</span><br><span class="line">                    print(&quot;修改成功&quot;)</span><br><span class="line"></span><br><span class="line">            else:</span><br><span class="line">                wfile.write(str(d)+&quot;\n&quot;)</span><br><span class="line">        answer = input(&quot;是否继续修改其他学校信息？y/n\n&quot;)</span><br><span class="line">        if answer==&#x27;y&#x27; or answer ==&#x27;Y&#x27;:</span><br><span class="line">            modify()</span><br><span class="line"></span><br><span class="line">def sort():</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename, &#x27;r&#x27;, encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            student = rfile.readlines()</span><br><span class="line">        student_new = []</span><br><span class="line">        for item in student:</span><br><span class="line">            d = dict(eval(item))</span><br><span class="line">            student_new.append(d)</span><br><span class="line">    else:</span><br><span class="line">        return</span><br><span class="line">    asc_or_desc = input(&quot;请选择(0.升序 1.降序)&quot;)</span><br><span class="line">    if asc_or_desc==&#x27;0&#x27;:</span><br><span class="line">        asc_or_desc_bool = False</span><br><span class="line">        pass</span><br><span class="line">    elif asc_or_desc==&#x27;1&#x27;:</span><br><span class="line">        asc_or_desc_bool = True</span><br><span class="line">        pass</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;您的输入有误，请重新输入！&quot;)</span><br><span class="line">        sort()</span><br><span class="line">    mode = input(&quot;请选择排序方式(1.按英语成绩排序 2.按Python成绩排序 3.按Java程序排序 0.按总成绩排序)&quot;)</span><br><span class="line">    if mode==&#x27;1&#x27;:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;english&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    elif mode==&#x27;2&#x27;:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;python&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    elif mode==3:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;java&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    elif mode==&#x27;0&#x27;:</span><br><span class="line">        student_new.sort(key=lambda x:x[&#x27;english&#x27;]+x[&#x27;python&#x27;]+x[&#x27;java&#x27;],reverse=asc_or_desc_bool)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;你的输入有误，请重新输入&quot;)</span><br><span class="line">        sort()</span><br><span class="line">    show_student(student_new)</span><br><span class="line"></span><br><span class="line">def total():</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            students = rfile.readlines()</span><br><span class="line">            if students:</span><br><span class="line">                print(f&quot;一共有&#123;len(students)&#125;名学生&quot;)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;还没有录入学生信息&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;暂未存学生相关信息&quot;)</span><br><span class="line">def show():</span><br><span class="line">    student_ls = []</span><br><span class="line">    if os.path.exists(filename):</span><br><span class="line">        with open(filename,&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as rfile:</span><br><span class="line">            students = rfile.readlines()</span><br><span class="line">            for item in students:</span><br><span class="line">                student_ls.append(eval(item))</span><br><span class="line">            if student_ls:</span><br><span class="line">                show_student(student_ls)</span><br><span class="line">            else:</span><br><span class="line">                print(&quot;还没有保存学生信息&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;没有发现相应数据文件&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ ==&#x27;__main__&#x27;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>打包成exe需要在终端激活环境后运行 pip install PyIntaller<br>下载好之后再执行 pyinstaller -F D:\Studentsys\stusystem.py  </li>
+</ul>
+<p>-F后面是完整路径以及文件名<br><a class="link"   href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver" >https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver<i class="fas fa-external-link-alt"></i></a><br>娟姐yyds! </p>
 ]]></content>
       <tags>
-        <tag>python办公自动化</tag>
+        <tag>python数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -423,6 +457,18 @@
       </tags>
   </entry>
   <entry>
+    <title>python数据采集：selenium爬虫、自动化</title>
+    <url>/2021/05/05/python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%EF%BC%9Aselenium%E7%88%AC%E8%99%AB%E3%80%81%E8%87%AA%E5%8A%A8%E5%8C%96/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">中文文档https://python-selenium-zh.readthedocs.io/zh_CN/latest/</span><br></pre></td></tr></table></figure>
+<p>装包：pip install selenium<br>下载chrome：<a class="link"   href="https://www.google.cn/chrome/" >https://www.google.cn/chrome/<i class="fas fa-external-link-alt"></i></a><br>下驱动：<a class="link"   href="https://chromedriver.storage.googleapis.com/index.html" >https://chromedriver.storage.googleapis.com/index.html<i class="fas fa-external-link-alt"></i></a>  注意浏览器驱动 必须要和浏览器版本匹配<br>这是个zip包，下载下来之后，解压里面的程序文件 chromedriver.exe 到scripts路径下<br>跑一下看看感觉来了没有</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">from selenium.webdriver.support import expected_conditions as EC</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line">try:</span><br><span class="line">    browser.get(&#x27;https://www.baidu.com&#x27;)</span><br><span class="line">    input = browser.find_element_by_id(&#x27;kw&#x27;)</span><br><span class="line">    input.send_keys(&#x27;Python&#x27;)</span><br><span class="line">    input.send_keys(Keys.ENTER)</span><br><span class="line">    wait = WebDriverWait(browser, 10)</span><br><span class="line">    wait.until(EC.presence_of_element_located((By.ID, &#x27;content_left&#x27;)))</span><br><span class="line">    print(browser.current_url)</span><br><span class="line">    print(browser.get_cookies())</span><br><span class="line">    print(browser.page_source)</span><br><span class="line">finally:hexo</span><br><span class="line">    browser.close()</span><br></pre></td></tr></table></figure>
+<p>不可能一下就会的，慢慢来</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/weixin_54733110/article/details/119027005  python万字博文教你玩嗨selenium库</span><br><span class="line">https://mp.weixin.qq.com/s?__biz=MzI0OTc0MzAwNA==&amp;mid=2247487680&amp;idx=1&amp;sn=e40947f382116ff59761f250ee45dce3  模拟登录淘宝</span><br><span class="line">https://www.pianshen.com/article/345981989/  判断元素16种方法expected_conditions</span><br><span class="line">https://github.com/Python3WebSpider/Python3WebSpider/blob/master/7.1-Selenium%E7%9A%84%E4%BD%BF%E7%94%A8.md</span><br><span class="line">http://www.byhy.net/tut/auto/selenium/01/这个作者写的很好</span><br><span class="line">https://www.bilibili.com/video/av64421994/?p=1简直是保姆级教学，</span><br><span class="line">希望你学会了不要乱搞</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>python数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python数据可视化：pyecharts v1版本</title>
     <url>/2021/06/05/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9Apyecharts-v1%E7%89%88%E6%9C%AC/</url>
     <content><![CDATA[<p><a class="link"   href="https://github.com/ecomfe/echarts" >Echarts<i class="fas fa-external-link-alt"></i></a>是一个由百度开源的数据可视化，结合巧妙的交互性，精巧的图表设计；而 Python 是一门富有表达力的语言，很适合用于数据处理。分析遇上数据可视化时，<a class="link"   href="https://github.com/pyecharts/pyecharts" >pyecharts<i class="fas fa-external-link-alt"></i></a>诞生了。<br>个人觉得可视化最好用的，不接受反驳，毕竟用echarts的都那么多；<br>官方文档<a class="link"   href="https://pyecharts.org/#/zh-cn/intro" >https://pyecharts.org/#/zh-cn/intro<i class="fas fa-external-link-alt"></i></a></p>
@@ -505,6 +551,18 @@
       </tags>
   </entry>
   <entry>
+    <title>python办公自动化：邮件发送</title>
+    <url>/2021/04/05/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/</url>
+    <content><![CDATA[<ul>
+<li>邮件批量发送<br>调用smtp.exmail.qq.com批量自动发送邮件<br>注意文件路径，逗号分隔符，csv中不要有多余回车和空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import csv</span><br><span class="line">import smtplib</span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">from email.mime.base import MIMEBase</span><br><span class="line">from email.mime.image import MIMEImage</span><br><span class="line">from email.utils import formataddr</span><br><span class="line">from email import encoders</span><br><span class="line">import time,datetime</span><br><span class="line">import smtplib</span><br><span class="line">import email.mime.multipart</span><br><span class="line">import email.mime.text</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">from email.mime.application import MIMEApplication</span><br><span class="line">from email.header import Header</span><br><span class="line"></span><br><span class="line">def get_current_date():</span><br><span class="line">    &quot;&quot;&quot;获取当前时间&quot;&quot;&quot;</span><br><span class="line">    return str(time.strftime(&#x27;%Y%m%d&#x27;))</span><br><span class="line"></span><br><span class="line">def getAddrBook(addrBook):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">        @作用：根据输入的CSV文件，形成相应的通讯录字典</span><br><span class="line">        @返回：字典类型，name为人名，value为对应的邮件地址</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    with open(addrBook,&#x27;r&#x27;,encoding=&#x27;UTF-8&#x27;) as addrFile:</span><br><span class="line">        #将文件名和邮件接收人邮箱地址分行存放在csv文件中，用逗号分隔</span><br><span class="line">        reader = csv.reader(addrFile)</span><br><span class="line">        name = []</span><br><span class="line">        value = []</span><br><span class="line">        for row in reader:</span><br><span class="line">            name.append(row[0])</span><br><span class="line">            value.append(row[1])</span><br><span class="line">    addrs = dict(zip(name, value))</span><br><span class="line">    return addrs</span><br><span class="line"></span><br><span class="line">def send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs, subject, content,attachfilename):</span><br><span class="line">    &quot;&quot;&quot;定义并配置好发邮件的函数&quot;&quot;&quot;</span><br><span class="line">    msg = email.mime.multipart.MIMEMultipart()</span><br><span class="line">    msg[&#x27;from&#x27;] =sendAddr #发件人</span><br><span class="line">    msg[&#x27;to&#x27;] =recipientAddrs #接收人</span><br><span class="line">    # msg[&#x27;cc&#x27;] =cc_name #抄送人名称</span><br><span class="line">    msg[&#x27;subject&#x27;] =subject #主题</span><br><span class="line">    content=content</span><br><span class="line">    txt = email.mime.text.MIMEText(content, &#x27;plain&#x27;, &#x27;UTF-8&#x27;)</span><br><span class="line">    msg.attach(txt)</span><br><span class="line">    print(&quot;准备添加附件...&quot;)</span><br><span class="line">    inputfile=inputpath+attachfilename #文件路径</span><br><span class="line">    part = MIMEText(open(inputfile,&#x27;rb&#x27;).read(),&#x27;base64&#x27;, &#x27;utf-8&#x27;)</span><br><span class="line">    part[&quot;Content-Type&quot;] = &#x27;application/octet-stream&#x27;</span><br><span class="line">    part.add_header(&#x27;Content-Disposition&#x27;, &#x27;attachment&#x27;, filename=Header(attachfilename,&#x27;utf-8&#x27;).encode())</span><br><span class="line">    msg.attach(part)</span><br><span class="line">    smtp = smtplib.SMTP_SSL(smtpHost, port)</span><br><span class="line">    smtp.login(sendAddr, password)</span><br><span class="line">    smtp.sendmail(sendAddr, recipientAddrs.split(&#x27;,&#x27;), str(msg))   #+cc_name.split(&#x27;,&#x27;)</span><br><span class="line">    #print(&quot;发送成功！&quot;)</span><br><span class="line">    smtp.quit()</span><br><span class="line"></span><br><span class="line">if __name__==&#x27;__main__&#x27;:</span><br><span class="line">    #这里需要定义send_email函数中传入的所有变量</span><br><span class="line">    inputpath = &quot;r&#x27;D:/&quot; #数据存放的文件路径（这里是绝对路径）</span><br><span class="line">    smtpHost = &#x27;smtp.exmail.qq.com&#x27;  # 默认服务器地址及端口</span><br><span class="line">    port=465</span><br><span class="line">    sendAddr =&quot;&quot;    #自己也就是发件人的邮箱账号</span><br><span class="line">    password = &quot;&quot;   #自己的邮箱密码</span><br><span class="line">    subject=&quot; &quot;+current_date  #主题+当前日期</span><br><span class="line">    content=&#x27;&#x27;&#x27;附件为测试文件&#x27;&#x27;&#x27;+current_date# 正文内容+当前日期</span><br><span class="line"></span><br><span class="line">    addrBook=r&#x27;D:\邮箱联系人表单.csv&#x27;  #联系人表单文件路径</span><br><span class="line">    addrs=getAddrBook(addrBook)</span><br><span class="line">    for i in addrs:</span><br><span class="line">        attachfilename=i+&#x27;.xlsx&#x27; #将要发送的文件添加为附件</span><br><span class="line">        recipientAddrs=addrs[i] #接收人的邮箱地址</span><br><span class="line">        result = os.path.exists(inputpath+i+&#x27;.xlsx&#x27;) #判断当前目录是否存在该文件</span><br><span class="line">        if result:</span><br><span class="line">            #存在就执行邮件</span><br><span class="line">            send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs,</span><br><span class="line">            subject,content,attachfilename)</span><br><span class="line">            print ((&#x27;发给 %s 的邮件执行成功&#x27;) %(recipientAddrs))</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a class="link"   href="https://blog.csdn.net/weixin_42350212/article/details/118751583" >https://blog.csdn.net/weixin_42350212/article/details/118751583<i class="fas fa-external-link-alt"></i></a><br>Python smtp发送邮件怎么设置抄送人<br><a class="link"   href="https://www.cnblogs.com/shiyixirui/p/14692146.html" >https://www.cnblogs.com/shiyixirui/p/14692146.html<i class="fas fa-external-link-alt"></i></a></p>
+]]></content>
+      <tags>
+        <tag>python办公自动化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python连接mysql:读取、写入、更新、删除</title>
     <url>/2021/07/04/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9A%E8%BF%9E%E6%8E%A5mysql%EF%BC%8C%E8%AF%BB%E5%8F%96%E3%80%81%E5%86%99%E5%85%A5%E3%80%81%E6%9B%B4%E6%96%B0%E3%80%81%E5%88%A0%E9%99%A4/</url>
     <content><![CDATA[<h2 id="1、连接读取数据"><a href="#1、连接读取数据" class="headerlink" title="1、连接读取数据"></a>1、连接读取数据</h2><h3 id="第一种：用pymysql连接"><a href="#第一种：用pymysql连接" class="headerlink" title="第一种：用pymysql连接"></a>第一种：用pymysql连接</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#安装pymysql</span><br><span class="line">conda install pymysql</span><br><span class="line">#或者</span><br><span class="line">pip install pymysql</span><br></pre></td></tr></table></figure>
@@ -560,8 +618,289 @@
       </tags>
   </entry>
   <entry>
+    <title>python中requests使用中中文乱码的解决方案</title>
+    <url>/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<ul>
+<li> 中文乱码处理<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.baidu.com&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 自动选择合适的编码方式</span><br><span class="line">r.encoding = r.apparent_encoding</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+中文乱码显示正常了！！</li>
+</ul>
+<p>有时候，我们还会遇到通过这个操作后无法解决的情况，比如新浪首页的表现：<br>出现这种情况，据说是使用gzip将网页压缩了，必须先对其解码，使用r.content会自动解码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.sina.com.cn/&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 指定编码解码方式</span><br><span class="line">html = r.content.decode(&#x27;UTF-8&#x27;)</span><br><span class="line"># r.encoding = &#x27;utf-8&#x27;</span><br></pre></td></tr></table></figure>
+<p>其实吧，处理的方式有很多，大家注意一点，那就是看请求的html数据中最前面对的charset设置的是啥！！</p>
+<ul>
+<li> html实体编码解析<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">In [1]: s = &#x27;目前玩的挺好的，就&amp;hellip;&amp;hellip;&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br><span class="line">#可以看到，有个&#x27;&amp;hellip;&#x27;，这玩意是html实体表示省略号&#x27;...&#x27;，因此需要进行处理！</span><br><span class="line">In [2]: import html</span><br><span class="line"></span><br><span class="line">In [3]: html.unescape(s)</span><br><span class="line">Out[3]: &#x27;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>python酒类数据分析</title>
+    <url>/2020/05/06/python%E9%85%92%E7%B1%BB%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://upload-images.jianshu.io/upload_images/6460608-24862be43f990229.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+                     
+                ></p>
+<h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>‘id’,’name’,’price’,’sales’,’ad_word’,’buy_act’,’vote_count’,’url’,’date’,’brand’分别为销售数据的商品ID，商品名称，单价，销量，广告词，促销活动，链接，日期，品牌。<br>以及自构属性‘amount’：销售额，‘month’：月份，‘price_level’：价格区间。</p>
+<h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>1、行业大盘近期（2018/2/27）表现？各价位段表现？<br>总体表现，各价位表现，哪个价位的产品最火，各厂家表现？<br>近期各行业的广告词、促销活动怎么样<br>2、行业大盘总体态势怎样？<br>销量与评论数、单价的关系？<br>时间序列下的行业产品走势？<br>3、如何评价泸州老窖品牌？(可从多角度，规模增长趋势、产品结构等)<br>产品规模、增长趋势、友商竞争、行业水平？</p>
+<h1 id="三、行业大盘近周期（2018-2-27）表现？各价位段表现？"><a href="#三、行业大盘近周期（2018-2-27）表现？各价位段表现？" class="headerlink" title="三、行业大盘近周期（2018/2/27）表现？各价位段表现？"></a>三、行业大盘近周期（2018/2/27）表现？各价位段表现？</h1><h3 id="行业大盘2018-2-27总体表现"><a href="#行业大盘2018-2-27总体表现" class="headerlink" title="行业大盘2018/2/27总体表现"></a>行业大盘2018/2/27总体表现</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4jvl2phdo45c.png"
+                     
+                ></p>
+<h6 id="2018-2-27行业的总销售量为5-663030e-05，总评价数为1-255655e-06，总销售额达1-842307e-08。"><a href="#2018-2-27行业的总销售量为5-663030e-05，总评价数为1-255655e-06，总销售额达1-842307e-08。" class="headerlink" title="2018/2/27行业的总销售量为5.663030e+05，总评价数为1.255655e+06，总销售额达1.842307e+08。"></a>2018/2/27行业的总销售量为5.663030e+05，总评价数为1.255655e+06，总销售额达1.842307e+08。</h6><h6 id="平均单价价格为417元，平均销售642份，平均销售额达209115-4元"><a href="#平均单价价格为417元，平均销售642份，平均销售额达209115-4元" class="headerlink" title="平均单价价格为417元，平均销售642份，平均销售额达209115.4元"></a>平均单价价格为417元，平均销售642份，平均销售额达209115.4元</h6><h6 id="单价中位数199，说明少数高价位的酒提高了总体均值"><a href="#单价中位数199，说明少数高价位的酒提高了总体均值" class="headerlink" title="单价中位数199，说明少数高价位的酒提高了总体均值"></a>单价中位数199，说明少数高价位的酒提高了总体均值</h6><h6 id="销量中位数为148，说明少数及销量高的天数提升了平均交易量"><a href="#销量中位数为148，说明少数及销量高的天数提升了平均交易量" class="headerlink" title="销量中位数为148，说明少数及销量高的天数提升了平均交易量"></a>销量中位数为148，说明少数及销量高的天数提升了平均交易量</h6><h6 id="销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。"><a href="#销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。" class="headerlink" title="销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。"></a>销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。</h6><h6 id="一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。"><a href="#一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。" class="headerlink" title="一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。"></a>一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。</h6><h3 id="各价位表现"><a href="#各价位表现" class="headerlink" title="各价位表现"></a>各价位表现</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6dcpqx9r3pts.png"
+                     
+                ></p>
+<p>在行业大盘最近一个周期内，可以看到销量最好和评论数最高的均是是100-200价位的白酒。<br>在价位50以下白酒销量和评论数出现大反差，在销量差距悬殊的情况下，该类白酒的评论数超过200-500价位白酒的评论数，但是销量偏低说明该类白酒在市场中有较高流行度的同时可能也存在较多的槽点。<br>中等价位（100-500）是市场的主要潮流所在，由中价位向低价位过度的产品（50-100）同样能稳住市场，获得较高的销量与人气。<br>3000以上的销量与评论数极低，符合当今社会人们财富资源分配或生活消费水平的差距，高消费人群只占极少数。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3ltt1wzyecxs.png"
+                     
+                ></p>
+<p>1000-3000价位席卷市场，高单价情况下即时在低销量时也能远超越其他价位销售额。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2gkvdbfp9w3k.png"
+                     
+                ></p>
+<p>基本呈现单价越高，评论数越少。人们总是低价商品的要求过于执着？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.52y9ub6wn7gg.png"
+                     
+                ></p>
+<p>由于其1000-3000单价基数大，导致金额最大</p>
+<h3 id="各厂家表现"><a href="#各厂家表现" class="headerlink" title="各厂家表现"></a>各厂家表现</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4sep09ocakcg.png"
+                     
+                ></p>
+<p>最近一周期五粮液销量最高达到10万瓶以上，远领先于其他厂家。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3nszvh59q70g.png"
+                     
+                ></p>
+<p>五粮液产品市场评论数最高，应该是广告宣传或者产品质量做得好。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3ar839q1g2io.png"
+                     
+                ></p>
+<p>茅台近期销售总额位于行业最高水平，销售额近7500万。五粮液可能由于产品单价偏低，销售总额位居第三，接近2000万。</p>
+<h3 id="最近一个周期广告、促销活动怎么做的？"><a href="#最近一个周期广告、促销活动怎么做的？" class="headerlink" title="最近一个周期广告、促销活动怎么做的？"></a>最近一个周期广告、促销活动怎么做的？</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6gq0tn4yo9og.png"
+                     
+                ></p>
+<p>广告词一以‘天猫配送’，‘正品保证’等为主要标语，‘东方习酒’，‘猫超自营’，‘地道北京味’也是主要宣传方向。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5ancn0q8cccg.png"
+                     
+                ></p>
+<p>促销活动主要以‘满一1或2送任意一件赠品，赠完为止’作为主要促销活动。</p>
+<h1 id="四、行业大盘总体态势怎样？"><a href="#四、行业大盘总体态势怎样？" class="headerlink" title="四、行业大盘总体态势怎样？"></a>四、行业大盘总体态势怎样？</h1><h3 id="销量与单价、评论数的关系"><a href="#销量与单价、评论数的关系" class="headerlink" title="销量与单价、评论数的关系"></a>销量与单价、评论数的关系</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3mw3xybva7nk.png"
+                     
+                ></p>
+<p>评论数量变化与销量基本呈线性变化。评论数代表市场反应，市场热度越高，销量越高。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4o6xp1btc9g.png"
+                     
+                ></p>
+<p>单价与销量基本成反比例变化。单价越高，销量越低，单价越低，销量越高。<br>###时间序列下的行业产品走势<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3dp2nbjq0t34.png"
+                     
+                ></p>
+<p>200-500价位段的商品销量呈上升趋势，0-50和50-100的商品在2017年11月上升后出现持续下降，100-200的商品在上升后保持平稳，基本站稳市场。500-3000区间内商品在同年12月后出现小范围增长，因其单价基数较大，可能引起销售额大幅增长。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5ucvrzq2vfcw.png"
+                     
+                ></p>
+<p>除0-50和3000以上产品外，其他商品都在2017年11月后出现销售额显著增长，推测可能是双十一以及其他促销活动，但是对0-50和3000以上的商品销售状态基本无影响。1000-3000区间商品在2017年12月过后出现直线式增长，100-500区间产品作为市场主力也出现增长趋势。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4ucsu4issccg.png"
+                     
+                ></p>
+<p>3000月以上的酒类在11月出现价格大额下跌，其他区间商品单价均走势平稳。</p>
+<h1 id="五、泸州老窖自身增长的趋势，产品结构，行业水平"><a href="#五、泸州老窖自身增长的趋势，产品结构，行业水平" class="headerlink" title="五、泸州老窖自身增长的趋势，产品结构，行业水平"></a>五、泸州老窖自身增长的趋势，产品结构，行业水平</h1><h3 id="泸州老窖产品规模"><a href="#泸州老窖产品规模" class="headerlink" title="泸州老窖产品规模"></a>泸州老窖产品规模</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.t3dlkrd7ojk.png"
+                     
+                ></p>
+<p>泸州老窖品牌主打50-500价位产品覆盖市场，其中3000+超高价酒类占比与0-50低价品类占比最低，均低于500-3000档位，说明泸州老窖在市场的品牌形象与战略目标是做好中高端酒类产品。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2jviql0m0lc0.png"
+                     
+                ></p>
+<p>在2017年12月产品规模突然增大，应该是与行业竞争或市场需求相关。 </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkodwqpgads.png"
+                     
+                ></p>
+<p>销量在十一月份出现大幅增长，持续到次年一月份出现显著下降。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hxptteb9rh.png"
+                     
+                ></p>
+<p>总销售额与销量表现相似，也是在十一月份出现大幅增长，持续到次年一月份出现显著下降。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5cjonwptotq8.png"
+                     
+                ></p>
+<p>0-50区间产品在十一月后大幅增长，后持续衰弱。50-500区间商品同期均出现显著增长，后缓慢下降趋于稳定。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2n30ocmjuzr4.png"
+                     
+                ></p>
+<p>200-500与1000-3000区间商品由于其单价基数较大，在同年十一月销量保证的前提下，出现大幅增长。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4843aw978akg.png"
+                     
+                ></p>
+<p>3000+产品在2017年7月-9月出现波动后趋于平稳。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3g6dp00zw7cw.png"
+                     
+                ></p>
+<p>17年9月可能出现了一些问题，除500-1000区间外，都出现了先增后降的趋势。</p>
+<h3 id="那种广告词、促销标语出现的最多"><a href="#那种广告词、促销标语出现的最多" class="headerlink" title="那种广告词、促销标语出现的最多"></a>那种广告词、促销标语出现的最多</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.79nh5qchwhds.png"
+                     
+                ></p>
+<p>该品牌主打广告关键词： ‘’限时直降‘’，‘甄选好货’，‘厂家直供’。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6vpepnq4p2m8.png"
+                     
+                ></p>
+<p>主打的促销标语为 ‘’送任意一件赠品，赠完即止‘’。</p>
+<h3 id="选择牛栏山作为泸州老窖竞争对手"><a href="#选择牛栏山作为泸州老窖竞争对手" class="headerlink" title="选择牛栏山作为泸州老窖竞争对手"></a>选择牛栏山作为泸州老窖竞争对手</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7k75jdss8f0g.png"
+                     
+                ></p>
+<p>牛栏山品牌在产品布局上和泸州老窖都是主打50-500价位段商品布局，但是牛栏山在0-50上的产品数多于500-1000价位的产品数量。且没有3000元以上产品上市，可见牛栏山品牌试图留住中端价位产品客户，拉拢低价位产品客户的战略方针。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.585gbomsxjsw.png"
+                     
+                ></p>
+<p>与泸州老窖相似均在十二月出现了较大幅度的增长。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5tcjs54m9rwg.png"
+                     
+                ></p>
+<p>泸州老窖只在200-300和超1000元以上的产品销量小范围领先友商，但由于单价基数较大，可能会有意想不到的效果哦</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.696y93qi0eps.png"
+                     
+                ></p>
+<p>泸州老窖销售额仅在200-500和1000元以上三个价位段领先友商，在50-200价位，销售额较大程度低于友商。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.65kolxn2i16o.png"
+                     
+                ></p>
+<p>除了200-500和1000以上价位的产品，泸州老窖品牌产品收到的市场评论与反馈均低于友商，可见友商的宣传力度或产品口碑在市场中占有较高热度 。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1ebr4yfjo2n4.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6uo6tbp5jfk0.png"
+                     
+                ></p>
+<p>可以看到两个品牌的销售额主要来源产品类别有明显差异。</p>
+<h3 id="泸州老窖在行业的水平如何"><a href="#泸州老窖在行业的水平如何" class="headerlink" title="泸州老窖在行业的水平如何"></a>泸州老窖在行业的水平如何</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.23phzpw6q96o.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.535us8b7xog0.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6n2czq2ijcow.png"
+                     
+                ><br>泸州老窖位于行业的上游水平，产品规模完善，各价位商品数量布局体现了明确的行业目标：要做中高端酒类产品的佼佼者。且不放弃低价位的0-50系列产品，全面覆盖市场，在给定的时间数据中，各区间段产品除0-50与3000+以外，其他商品的销量与销售额均呈持续缓慢上升趋势。可以看到该企业处于一个蓬勃向上，逐步冲向高端的行业发展状态。</p>
+<h1 id="六、分析结论"><a href="#六、分析结论" class="headerlink" title="六、分析结论"></a>六、分析结论</h1><p>1、近期行业呈现蓬勃向上的发展状态，0-50价位产品的销量与评论数出现较大市场反差，100-200价位段的商品销量最火，位于市场销量及销售额榜首的是茅台品牌，五粮液以市场获评数最高位居榜首。行业广告词以‘天猫配送’，‘正品保证’等作为主要标语，以‘满1或2件送任意一件赠品，赠完为止’作为主要促销活动。<br>2、行业总体发展十分成熟，各品牌产品竞争力都十分明显，销量与评论基本呈正相关线性关系，与单价成反比例关系，100-500区间产品销量作为市场主流，1000元以上产品可能在销售额上反超其他高销量产品，双十一对市场的刺激反响极为强烈。<br>3、泸州老窖主打中高端酒类产品，全价位品类布局全面，综合实力处于全行业上游水平。销量受双十一影响显著，导致200-500与1000-3000区间商品销售额大幅增长。该品牌主打广告关键词： ‘’限时直降‘’，‘甄选好货’，‘厂家直供’。主要促销活动为 ‘’送任意一件赠品，赠完即止‘’。其总体销售额主要来源于100-3000价位产品，相比牛栏山不相上下，在中高价位品类优势明显，0-100价位段还有较大进步空间。</p>
+<h1 id="七、python代码"><a href="#七、python代码" class="headerlink" title="七、python代码"></a>七、python代码</h1><h3 id="导入包，设定字体和画图风格"><a href="#导入包，设定字体和画图风格" class="headerlink" title="导入包，设定字体和画图风格"></a>导入包，设定字体和画图风格</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import seaborn as sns</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]#显示中文</span><br><span class="line">plt.style.use(&#x27;ggplot&#x27;)</span><br></pre></td></tr></table></figure>
+<h3 id="导入并清洗数据"><a href="#导入并清洗数据" class="headerlink" title="导入并清洗数据"></a>导入并清洗数据</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#导入数据</span><br><span class="line">path = &#x27;D:/python_data_file/Alcohol.xlsx&#x27;</span><br><span class="line">def load_alcohol_data(path):</span><br><span class="line">    df = pd.read_excel(path)</span><br><span class="line">    df.columns = [&#x27;id&#x27;,&#x27;name&#x27;,&#x27;price&#x27;,&#x27;sales&#x27;,&#x27;ad_word&#x27;,&#x27;buy_act&#x27;,&#x27;vote_count&#x27;,&#x27;url&#x27;,&#x27;date&#x27;,&#x27;brand&#x27;]</span><br><span class="line">    df = df[df.price.notnull()]</span><br><span class="line">    df[&#x27;amount&#x27;] = df[&#x27;sales&#x27;]*df[&#x27;price&#x27;]</span><br><span class="line">    df[&#x27;month&#x27;] = df.date.values.astype(&#x27;datetime64[M]&#x27;)#日期时间序列转化为月份时间序列</span><br><span class="line">    return df</span><br><span class="line">df = load_alcohol_data(path)</span><br><span class="line">#对酒类单价分层</span><br><span class="line">def price_level(data):</span><br><span class="line">    a=[]</span><br><span class="line">    for i in data.price:</span><br><span class="line">        if i &lt;50:</span><br><span class="line">            a.append(&#x27;0-50&#x27;)</span><br><span class="line">        elif i &lt;100:</span><br><span class="line">            a.append(&#x27;50-100&#x27;)</span><br><span class="line">        elif i &lt;200:</span><br><span class="line">            a.append(&#x27;100-200&#x27;)</span><br><span class="line">        elif i&lt;500:</span><br><span class="line">            a.append(&#x27;200-500&#x27;)</span><br><span class="line">        elif i &lt;1000:</span><br><span class="line">            a.append(&#x27;500-1000&#x27;)</span><br><span class="line">        elif i&lt;3000:</span><br><span class="line">            a.append(&#x27;1000-3000&#x27;)</span><br><span class="line">        else:</span><br><span class="line">            a.append(&#x27;3000+&#x27;)</span><br><span class="line">    data[&#x27;price_level&#x27;] = a</span><br><span class="line">    data = data.reset_index(drop=True)</span><br><span class="line">    return data</span><br><span class="line">df = price_level(df)</span><br><span class="line">recent_df = df[df.date==&#x27;2018-02-27&#x27;]</span><br><span class="line">recent_df[[&#x27;sales&#x27;,&#x27;vote_count&#x27;,&#x27;amount&#x27;]].sum()</span><br><span class="line">recent_df.describe()</span><br><span class="line">lzlj_df = df[df.brand==&#x27;泸州老窖&#x27;].reset_index(drop=True)</span><br><span class="line">lzlj_df = price_level(lzlj_df)</span><br><span class="line">lzlj_df.describe()</span><br></pre></td></tr></table></figure>
+<h3 id="近期各厂家的表现"><a href="#近期各厂家的表现" class="headerlink" title="近期各厂家的表现"></a>近期各厂家的表现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#各厂家的表现就在这了</span><br><span class="line">all_brand = recent_df.groupby(&#x27;brand&#x27;)[[&#x27;sales&#x27;,&#x27;vote_count&#x27;,&#x27;amount&#x27;]].sum().sort_values(by=</span><br><span class="line">&#x27;amount&#x27;,ascending = True).reset_index()</span><br><span class="line">all_brand.sales.plot.bar()</span><br><span class="line">plt.title(&#x27;各厂家销量对比&#x27;)</span><br><span class="line">all_brand.vote_count.plot.bar()</span><br><span class="line">plt.title(&#x27;各厂家评论数&#x27;)</span><br><span class="line">all_brand.amount.plot.bar()</span><br><span class="line">plt.title(&#x27;各厂家销售额&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="画柱状图"><a href="#画柱状图" class="headerlink" title="画柱状图"></a>画柱状图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#x写个画图函数，不然太麻烦了</span><br><span class="line">def pic_barh(data,tit,xbel,ybel):</span><br><span class="line">    data.sort_values().plot.barh(figsize=(12,6))</span><br><span class="line">    plt.title(tit,fontsize = 20)</span><br><span class="line">    plt.xlabel(xbel,fontsize = 20)</span><br><span class="line">    plt.ylabel(ybel,fontsize = 20)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_barh(level_performance_mean.price,&#x27;近期平均价格表现&#x27;,&#x27;价格&#x27;,&#x27;区间&#x27;)</span><br><span class="line">pic_barh(level_performance_sum.amount,&#x27;近期销售额表现&#x27;,&#x27;金额&#x27;,&#x27;区间&#x27;)</span><br><span class="line">pic_barh(level_performance_mean.vote_count,&#x27;近期评论表现&#x27;,&#x27;评论数&#x27;,&#x27;区间&#x27;)</span><br><span class="line">pic_barh(level_performance_mean.amount,&#x27;近期平均金额表现&#x27;,&#x27;金额&#x27;,&#x27;区间&#x27;)</span><br></pre></td></tr></table></figure>
+<h3 id="近期各价位段表现"><a href="#近期各价位段表现" class="headerlink" title="近期各价位段表现"></a>近期各价位段表现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">level_performance_sum = recent_df.groupby(&#x27;price_level&#x27;)[</span><br><span class="line">&#x27;sales&#x27;,&#x27;vote_count&#x27;,&#x27;amount&#x27;].sum().sort_values(by=&#x27;sales&#x27;,ascending=False)</span><br><span class="line">level_performance_mean = recent_df.groupby(&#x27;price_level&#x27;)[</span><br><span class="line">&#x27;price&#x27;,&#x27;sales&#x27;,&#x27;vote_count&#x27;,&#x27;amount&#x27;].mean().sort_values(by=&#x27;sales&#x27;,ascending=False)</span><br><span class="line">#绘制利润与评论数柱状图</span><br><span class="line">level_performance_sum.loc[:,[&#x27;sales&#x27;,&#x27;vote_count&#x27;]].plot.bar(figsize=(12,6))</span><br></pre></td></tr></table></figure>
+<h3 id="寻找竞争品牌"><a href="#寻找竞争品牌" class="headerlink" title="寻找竞争品牌"></a>寻找竞争品牌</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#想写个函数找出泸州老窖的上下各相邻两个的品牌，也就是它的竞争品牌</span><br><span class="line">def lookup_name(data):</span><br><span class="line">    for i in range(len(data)):</span><br><span class="line">        if data.loc[i,&#x27;brand&#x27;] ==&#x27;泸州老窖&#x27;:</span><br><span class="line">            return [data.loc[i-1,&#x27;brand&#x27;],data.loc[i-2,&#x27;brand&#x27;],data.loc[i+1,&#x27;brand&#x27;],data.loc[i+2,&#x27;brand&#x27;]]</span><br><span class="line">        else:</span><br><span class="line">            continue</span><br><span class="line">#按品牌分组求均值，再分别按价格、销量和金额排序，然后找出竞争品牌</span><br><span class="line">df_brand_price_mean = df.groupby(&#x27;brand&#x27;,as_index=False)[[</span><br><span class="line">    &#x27;price&#x27;,&#x27;sales&#x27;,&#x27;amount&#x27;]].mean().sort_values(by=&#x27;price&#x27;,ascending=True).reset_index(drop=True)</span><br><span class="line">lookup_name(df_brand_price_mean)#[&#x27;汾酒&#x27;, &#x27;珍酒&#x27;, &#x27;剑南春&#x27;, &#x27;白云边&#x27;]</span><br><span class="line">df_brand_sales_mean=df.groupby(&#x27;brand&#x27;,as_index=False)[[</span><br><span class="line">    &#x27;price&#x27;,&#x27;sales&#x27;,&#x27;amount&#x27;]].mean().sort_values(by=&#x27;sales&#x27;,ascending=True).reset_index(drop=True)</span><br><span class="line">df_brand_amount_mean= df.groupby(&#x27;brand&#x27;,as_index=False)[[</span><br><span class="line">    &#x27;price&#x27;,&#x27;sales&#x27;,&#x27;amount&#x27;]].mean().sort_values(by=&#x27;amount&#x27;,ascending=True).reset_index(drop=True)</span><br><span class="line">#按品牌分组求和，再分别按价格、销量和金额排序，然后找出竞争品牌</span><br><span class="line">df_brand_amount_sum=df.groupby(&#x27;brand&#x27;,as_index=False)[[</span><br><span class="line">    &#x27;sales&#x27;,&#x27;amount&#x27;]].sum().sort_values(by=&#x27;amount&#x27;,ascending = True).reset_index(drop=True)</span><br><span class="line">df_brand_sales_sum=df.groupby(&#x27;brand&#x27;,as_index=False)[[</span><br><span class="line">    &#x27;sales&#x27;,&#x27;amount&#x27;]].sum().sort_values(by=&#x27;sales&#x27;,ascending = True).reset_index(drop=True)</span><br><span class="line">a_sums = set(lookup_name(df_brand_amount_sum)+lookup_name(df_brand_sales_sum))</span><br><span class="line">a_means = set(lookup_name(df_brand_price_mean)+lookup_name(df_brand_sales_mean)+lookup_name(df_brand_amount_mean))</span><br><span class="line">s = set(list(a_means)+list(a_sums))</span><br><span class="line">#&#123;&#x27;习酒&#x27;,&#x27;五粮液&#x27;,&#x27;剑南春&#x27;,&#x27;劲酒&#x27;,&#x27;古井贡酒&#x27;, &#x27;水井坊&#x27;, &#x27;江小白&#x27;, &#x27;汾酒&#x27;, &#x27;洋河&#x27;, &#x27;牛栏山&#x27;,&#x27;珍酒&#x27;,</span><br><span class="line"># &#x27;白云边&#x27;,&#x27;红星&#x27;,&#x27;茅台&#x27;&#125; 选取剑南春 古井贡酒 牛栏山 五粮液作为泸州老窖的竞争对手</span><br></pre></td></tr></table></figure>
+<h3 id="生成词云图"><a href="#生成词云图" class="headerlink" title="生成词云图"></a>生成词云图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#提取广告词字符串</span><br><span class="line">def ad_words_str(data):</span><br><span class="line">    ad_words_list = []</span><br><span class="line">    for x in data.ad_word.dropna():</span><br><span class="line">        ad_words_list.append(x)</span><br><span class="line">    ad_words_list = &#x27;&#x27;.join(ad_words_list)</span><br><span class="line">    return ad_words_list</span><br><span class="line">#提取促销活动字符串</span><br><span class="line">def buy_act_str(data):</span><br><span class="line">    buy_act_list=[]</span><br><span class="line">    for x in data.buy_act.dropna():</span><br><span class="line">        buy_act_list.append(x)</span><br><span class="line">    buy_act_list = &#x27;&#x27;.join(buy_act_list)</span><br><span class="line">    return buy_act_list</span><br><span class="line">#生成词云</span><br><span class="line">def pic_words(keywords_list):</span><br><span class="line">    keywords_list.replace(&#x27;\s&#x27;,&#x27;&#x27;)#去除字符串中空字符串（\s用于匹配空白字符，可能是空格、制表符、其他空白））</span><br><span class="line">    font = &#x27;C:\Windows\Fonts\msyh.ttc&#x27;</span><br><span class="line">    wordcloud = WordCloud(background_color=&#x27;white&#x27;,max_words=3000,scale=1.5,font_path=font).generate(keywords_list)</span><br><span class="line">    plt.figure(figsize=(14,8))</span><br><span class="line">    plt.imshow(wordcloud)</span><br><span class="line">    plt.axis(&#x27;off&#x27;)</span><br><span class="line">    plt.show()</span><br><span class="line">listb = ad_words_str(lzlj_df)+buy_act_str(lzlj_df)</span><br><span class="line">#行业大盘最近一个周期的词云</span><br><span class="line">pic_words(ad_words_str(recent_df))</span><br><span class="line">pic_words(buy_act_str(recent_df))</span><br><span class="line">pic_words(ad_words_str(lzlj_df))</span><br><span class="line">pic_words(buy_act_str(lzlj_df))</span><br></pre></td></tr></table></figure>
+<h1 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df.plot.scatter(x=&#x27;price&#x27;,y=&#x27;sales&#x27;)</span><br><span class="line">plt.title(&#x27;销量与单价&#x27;)</span><br><span class="line">df.plot.scatter(x=&#x27;vote_count&#x27;,y=&#x27;sales&#x27;)</span><br><span class="line">plt.title(&#x27;销量与评论数&#x27;)</span><br><span class="line">#写个画图函数，它不香吗</span><br><span class="line">def pic_trend(data,val,agg,tit,ylab):</span><br><span class="line">    a_sum = data.pivot_table(</span><br><span class="line">        index=&#x27;price_level&#x27;,columns=&#x27;month&#x27;,values=val,aggfunc=agg).fillna(0).T</span><br><span class="line">    plt.figure(figsize=(12,6))</span><br><span class="line">    a_sum.plot()</span><br><span class="line">    plt.title(tit,fontsize=20)</span><br><span class="line">    plt.ylabel(ylab,fontsize=15)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_trend(lzlj_df,&#x27;sales&#x27;,&#x27;sum&#x27;,&#x27;泸州老窖各区间产品销量走势&#x27;,&#x27;sales&#x27;)</span><br><span class="line">pic_trend(lzlj_df,&#x27;amount&#x27;,&#x27;sum&#x27;,&#x27;泸州老窖销售额走势&#x27;,&#x27;amount&#x27;)</span><br><span class="line">pic_trend(lzlj_df,&#x27;price&#x27;,&#x27;mean&#x27;,&#x27;泸州老窖产品单价走势&#x27;,&#x27;price&#x27;)</span><br><span class="line">pic_trend(lzlj_df,&#x27;vote_count&#x27;,&#x27;sum&#x27;,&#x27;泸州老窖产品评论走势&#x27;,&#x27;vote_count&#x27;)</span><br><span class="line">pic_trend(df,&#x27;sales&#x27;,&#x27;sum&#x27;,&#x27;总体各区间产品销量走势&#x27;,&#x27;sales&#x27;)</span><br><span class="line">pic_trend(df,&#x27;amount&#x27;,&#x27;sum&#x27;,&#x27;总体产品销售额走势&#x27;,&#x27;amount&#x27;)</span><br><span class="line">pic_trend(df,&#x27;price&#x27;,&#x27;mean&#x27;,&#x27;总体产品单价走势&#x27;,&#x27;price&#x27;)</span><br><span class="line">pic_trend(df,&#x27;vote_count&#x27;,&#x27;sum&#x27;,&#x27;总体产品评论走势&#x27;,&#x27;vote_count&#x27;)</span><br></pre></td></tr></table></figure>
+<h1 id="得到各品牌数据"><a href="#得到各品牌数据" class="headerlink" title="得到各品牌数据"></a>得到各品牌数据</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#写个函数用来对各品牌数据拆分</span><br><span class="line">def df_brand(data,brand):</span><br><span class="line">    data = data[data.brand==brand].reset_index(drop=True)</span><br><span class="line">    data = price_level(data)</span><br><span class="line">    data[&#x27;amount&#x27;] = data[&#x27;sales&#x27;]*data[&#x27;price&#x27;]</span><br><span class="line">    return data</span><br><span class="line"># list_brand = [&#x27;剑南春&#x27;,&#x27;古井贡酒&#x27;,&#x27;牛栏山&#x27;,&#x27;五粮液&#x27;,&#x27;泸州老窖&#x27;]</span><br><span class="line"># for i in list_brand:</span><br><span class="line">#     df_brand(df,i)</span><br><span class="line">#对该品牌的各价位段进行分组求和</span><br><span class="line">def df_brand_groupby_sum(data):</span><br><span class="line">    data = data.groupby(&#x27;price_level&#x27;).sum().loc[:,[&#x27;sales&#x27;,&#x27;vote_count&#x27;,&#x27;amount&#x27;]]</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line"># 剑南春 古井贡酒 牛栏山 五粮液 #各个价格段的销量、评论量、销售额汇总</span><br><span class="line">lzlj_sum = df_brand_groupby_sum(df_brand(df,&#x27;泸州老窖&#x27;))</span><br><span class="line">jlc_sum = df_brand_groupby_sum(df_brand(df,&#x27;剑南春&#x27;))</span><br><span class="line">gjgj_sum = df_brand_groupby_sum(df_brand(df,&#x27;古井贡酒&#x27;))</span><br><span class="line">nls_sum = df_brand_groupby_sum(df_brand(df,&#x27;牛栏山&#x27;))</span><br><span class="line">wly_sum = df_brand_groupby_sum(df_brand(df,&#x27;五粮液&#x27;))</span><br></pre></td></tr></table></figure>
+<h3 id="画饼图"><a href="#画饼图" class="headerlink" title="画饼图"></a>画饼图</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def pic_pie(data,gby,tit):</span><br><span class="line">    price_count = data.groupby(gby).count().reset_index(drop=False)</span><br><span class="line">    fig = plt.figure(figsize=(16,8))</span><br><span class="line">    plt.pie(price_count.price,labels=price_count[gby],autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">    plt.title(tit,fontsize = 15)</span><br><span class="line">pic_pie(nls_df,&#x27;price_level&#x27;,&#x27;牛栏山产品价位规模&#x27;)</span><br><span class="line">pic_pie(nls_df,&#x27;month&#x27;,&#x27;牛栏山产品月份规模&#x27;)</span><br><span class="line">pic_pie(lzlj_df,&#x27;price_level&#x27;,&#x27;泸州老窖产品价位规模&#x27;)</span><br><span class="line">pic_pie(lzlj_df,&#x27;month&#x27;,&#x27;泸州老窖产品月份规模&#x27;)</span><br><span class="line"></span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">plt.pie(lzlj_sum.sales,labels=lzlj_sum.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;泸州老窖各价位销量图&#x27;,fontsize = 15)</span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">plt.pie(nls_sum.vote_count,labels=nls_sum.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;牛栏山各价位评论数图&#x27;,fontsize = 15)</span><br><span class="line"></span><br><span class="line">#按月份销量变化</span><br><span class="line">lzlj_df.groupby(&#x27;month&#x27;).sales.sum().plot()</span><br><span class="line">plt.title(&#x27;销量按月份变化&#x27;)</span><br><span class="line">#总销售额随时间变化</span><br><span class="line">lzlj_df.groupby(&#x27;month&#x27;).amount.sum().plot()</span><br><span class="line">plt.title(&#x27;总销售额随时间变化&#x27;)</span><br><span class="line"></span><br><span class="line">def pic_bar2(arg):</span><br><span class="line">    sales_dif = nls_sum.sales.reset_index().merge(lzlj_sum[arg].reset_index(),on=&#x27;price_level&#x27;,how=&#x27;outer&#x27;,suffixes=[&#x27;_nls&#x27;,&#x27;_lzlj&#x27;])</span><br><span class="line">    sales_dif = sales_dif.set_index(&#x27;price_level&#x27;)</span><br><span class="line">    plt.figure(figsize=(12,10))</span><br><span class="line">    sales_dif.plot.bar()</span><br><span class="line">    plt.title(&#x27;泸州老窖与牛栏山&#x27;+str(arg)+&#x27;对比&#x27;)</span><br><span class="line">pic_bar2(&#x27;sales&#x27;)</span><br><span class="line">pic_bar2(&#x27;amount&#x27;)</span><br><span class="line">pic_bar2(&#x27;vote_count&#x27;)</span><br><span class="line"></span><br><span class="line">pic_barh(df_brand_sum.sales,&#x27;各品牌销售总量对比&#x27;,&#x27;销量&#x27;,&#x27;品牌&#x27;)</span><br><span class="line">pic_barh(df_brand_sum.amount,&#x27;各品牌销售总金额对比&#x27;,&#x27;金额&#x27;,&#x27;品牌&#x27;)</span><br><span class="line">pic_barh(df_brand_sum.vote_count,&#x27;各品牌产品评论数对比&#x27;,&#x27;评论数&#x27;,&#x27;品牌&#x27;)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>python数据分析实战</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python面向对象习题</title>
-    <url>/2019/11/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/</url>
+    <url>/2020/01/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/</url>
     <content><![CDATA[<p>写完对对象这个东西了解很多了</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">一：定义一个学生类。有下面的类属性：</span><br><span class="line">1 姓名</span><br><span class="line">2 年龄</span><br><span class="line">3 成绩（语文，数学，英语)[每课成绩的类型为整数]</span><br><span class="line">类方法：</span><br><span class="line">1 获取学生的姓名：get_name() 返回类型:str</span><br><span class="line">2 获取学生的年龄：get_age() 返回类型:int</span><br><span class="line">3 返回3门科目中最高的分数。get_course() 返回类型:int</span><br><span class="line">写好类以后，可以定义2个同学测试下:</span><br><span class="line">zm = Student(&#x27;zhangming&#x27;,20,[69,88,100])</span><br><span class="line">返回结果：</span><br><span class="line">zhangming</span><br><span class="line">20</span><br><span class="line">100</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, age, scores):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.scores = scores</span><br><span class="line">    def get_name(self):</span><br><span class="line">        return self.name</span><br><span class="line">    def get_age(self):</span><br><span class="line">        return self.age</span><br><span class="line">    def get_course(self):</span><br><span class="line">        return max(self.scores)</span><br><span class="line">zm = Student(&#x27;zhangming&#x27;, 20, [69, 88, 100])</span><br><span class="line">print zm.get_name()</span><br><span class="line">print zm.get_age()</span><br><span class="line">print zm.get_course()</span><br></pre></td></tr></table></figure>
 
@@ -579,30 +918,281 @@
       </tags>
   </entry>
   <entry>
-    <title>python中requests使用中中文乱码的解决方案</title>
-    <url>/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<ul>
-<li> 中文乱码处理<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.baidu.com&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 自动选择合适的编码方式</span><br><span class="line">r.encoding = r.apparent_encoding</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
-中文乱码显示正常了！！</li>
-</ul>
-<p>有时候，我们还会遇到通过这个操作后无法解决的情况，比如新浪首页的表现：<br>出现这种情况，据说是使用gzip将网页压缩了，必须先对其解码，使用r.content会自动解码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.sina.com.cn/&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 指定编码解码方式</span><br><span class="line">html = r.content.decode(&#x27;UTF-8&#x27;)</span><br><span class="line"># r.encoding = &#x27;utf-8&#x27;</span><br></pre></td></tr></table></figure>
-<p>其实吧，处理的方式有很多，大家注意一点，那就是看请求的html数据中最前面对的charset设置的是啥！！</p>
-<ul>
-<li> html实体编码解析<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">In [1]: s = &#x27;目前玩的挺好的，就&amp;hellip;&amp;hellip;&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br><span class="line">#可以看到，有个&#x27;&amp;hellip;&#x27;，这玩意是html实体表示省略号&#x27;...&#x27;，因此需要进行处理！</span><br><span class="line">In [2]: import html</span><br><span class="line"></span><br><span class="line">In [3]: html.unescape(s)</span><br><span class="line">Out[3]: &#x27;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
+    <title>sql互联网游戏数据分析</title>
+    <url>/2020/04/20/sql%E4%BA%92%E8%81%94%E7%BD%91%E6%B8%B8%E6%88%8F%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="一、数据概览"><a href="#一、数据概览" class="headerlink" title="一、数据概览"></a>一、数据概览</h1><p>数据共有828934条，108列标签</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.14j5jvjer19c.png"
+                     
+                ></p>
+<p>本文主要对以下10个字段进行分析</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.15fg7qqjowkg.png"
+                     
+                ></p>
+<p>使用工具：Navicat Premium ，jupyter notebook<br>技能要求：SQL掌握到子查询，Python连接数据库（不连也可以）</p>
+<h1 id="二、提出问题："><a href="#二、提出问题：" class="headerlink" title="二、提出问题："></a>二、提出问题：</h1><p>1、新增玩家分析：从玩家数量、玩家占比、每日新增玩家数展开分析<br>2、玩家活跃度分析：从不同用户在线时长、分布特征展开分析<br>3、玩家付费情况分析：从PUR（付费比率）、ARPPU（活跃付费用户平均消费金额）等关键指标展开分析<br>4、玩家游戏习惯分析：从不同玩家类型、游戏模式（PVP与PVE）得出的情况来展开分析</p>
+<h1 id="三、新增玩家分析"><a href="#三、新增玩家分析" class="headerlink" title="三、新增玩家分析"></a>三、新增玩家分析</h1><p>新增玩家数量：828934人</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT count(DISTINCT user_id) 新增玩家数量 FROM `tap_fun_test`</span><br></pre></td></tr></table></figure>
+<p>新增付费玩家数量：19549</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select count(DISTINCT(user_id))  新增付费玩家数量 from tap_fun_test where pay_price &gt;0;</span><br></pre></td></tr></table></figure>
+<p>付费玩家占比:0.0236</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select 新增付费玩家/新增玩家数 as 付费玩家占比 from </span><br><span class="line">(SELECT count(distinct user_id) 新增玩家数 from tap_fun_test) as t1 ,</span><br><span class="line">(SELECT count(DISTINCT user_id)  新增付费玩家 from tap_fun_test where pay_price&gt;0) as t2 ;</span><br></pre></td></tr></table></figure>
+<p>每日新增用户数量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select date(register_time) 日期,count(DISTINCT(user_id)) from tap_fun_test GROUP BY 日期;</span><br></pre></td></tr></table></figure>
+
+<p>每日新增付费用户数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select date(register_time) 日期,count(DISTINCT(user_id)) from tap_fun_test where pay_price&gt;0 GROUP BY 日期;</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1w7wlbjdniow.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4v3ad1gpu2v4.png"
+                     
+                ></p>
+<p>每日新增玩家在3月10日有一次大高峰增长，可能举办活动，但活动一过后续新增玩家数并没有显著提升，可见活动没有游戏的人气带来实质性的帮助。<br>活动需要力度加强并保持一定时间维度，给玩家充分时间了解游戏，才能提高秀逸热度。</p>
+<p>全部玩家平均在线时长:11.741103057664969</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT avg(avg_online_minutes)  as 全部玩家平均在线时长 from tap_fun_test;</span><br></pre></td></tr></table></figure>
+<p>付费玩家平均在线时长:135.8732415946089</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select avg(avg_online_minutes) from tap_fun_test where pay_price&gt;0;</span><br></pre></td></tr></table></figure>
+<h1 id="四、玩家活跃度分析"><a href="#四、玩家活跃度分析" class="headerlink" title="四、玩家活跃度分析"></a>四、玩家活跃度分析</h1><p>平均在线时长的分布特点<br>###全部玩家人数的中位数、上下四分位数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select round(count(distinct user_id)/4) as 下四分位数,</span><br><span class="line">round(count(distinct user_id)/2) as 中位数,</span><br><span class="line">round(count(distinct user_id)/4*3) as 上四分位数</span><br><span class="line">from tap_fun_test;</span><br></pre></td></tr></table></figure>
+<h4 id="下四分位数：207234-中位数：414467-上四分位数：621701"><a href="#下四分位数：207234-中位数：414467-上四分位数：621701" class="headerlink" title="下四分位数：207234    中位数：414467    上四分位数：621701"></a>下四分位数：207234    中位数：414467    上四分位数：621701</h4><h3 id="全部玩家在线时长箱线图关键值"><a href="#全部玩家在线时长箱线图关键值" class="headerlink" title="全部玩家在线时长箱线图关键值"></a>全部玩家在线时长箱线图关键值</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT min(avg_online_minutes) 最小值,</span><br><span class="line">(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 207233,1) as 下四分位数,</span><br><span class="line">(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 414466,1) as 中位数,</span><br><span class="line">(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 621700,1) as 上四分位数,</span><br><span class="line">max( avg_online_minutes) 最大值</span><br><span class="line">FROM `tap_fun_test`	</span><br></pre></td></tr></table></figure>
+<h4 id="最小值0-0-下四分位数-0-5-中位数-1-666667，上四分位数：5，最大值：1605-833333"><a href="#最小值0-0-下四分位数-0-5-中位数-1-666667，上四分位数：5，最大值：1605-833333" class="headerlink" title="最小值0.0,下四分位数:0.5,中位数:1.666667，上四分位数：5，最大值：1605.833333"></a>最小值0.0,下四分位数:0.5,中位数:1.666667，上四分位数：5，最大值：1605.833333</h4><h3 id="付费玩家的人数最大值最小值、中位数、上下四分位数"><a href="#付费玩家的人数最大值最小值、中位数、上下四分位数" class="headerlink" title="付费玩家的人数最大值最小值、中位数、上下四分位数"></a>付费玩家的人数最大值最小值、中位数、上下四分位数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select round(count(distinct user_id)/4) as 下四分位数,</span><br><span class="line">round(count(distinct user_id)/2) as 中位数,</span><br><span class="line">round(count(distinct user_id)/4*3) as 上四分位数</span><br><span class="line">from tap_fun_test </span><br><span class="line">WHERE pay_price&gt;0;</span><br></pre></td></tr></table></figure>
+<h4 id="下四分位数：4887，-中位数：9775-上四分位数：14662"><a href="#下四分位数：4887，-中位数：9775-上四分位数：14662" class="headerlink" title="下四分位数：4887，    中位数：9775    上四分位数：14662"></a>下四分位数：4887，    中位数：9775    上四分位数：14662</h4><h1 id="付费玩家在线时长箱线图关键值"><a href="#付费玩家在线时长箱线图关键值" class="headerlink" title="付费玩家在线时长箱线图关键值"></a>付费玩家在线时长箱线图关键值</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT min(avg_online_minutes) 最小值,</span><br><span class="line">(select avg_online_minutes from tap_fun_test where pay_price&gt;0 ORDER BY avg_online_minutes LIMIT 4886,1) as 下四分位数,</span><br><span class="line">(select avg_online_minutes from tap_fun_test where pay_price&gt;0 ORDER BY avg_online_minutes LIMIT 9774,1) as 中位数,</span><br><span class="line">(select avg_online_minutes from tap_fun_test where pay_price&gt;0 ORDER BY avg_online_minutes LIMIT 14661,1) as 上四分位数,</span><br><span class="line">max( avg_online_minutes) 最大值</span><br><span class="line">FROM `tap_fun_test` </span><br><span class="line">where pay_price&gt;0;</span><br></pre></td></tr></table></figure>
+<h4 id="最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5"><a href="#最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5" class="headerlink" title="最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5"></a>最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.25066jtzv1vk.png"
+                     
+                ></p>
+<p>全部玩家的在线时长箱线图中向下压缩的很厉害，全部玩家上四分位数为5，说明75%的玩家平均在线只有大约5分钟，可能一局游戏都没有玩完，可见玩家流失情况比较严重。<br>付费用户的箱型图中下四分位数为30，中位数84，上四分位数为191，说明付费用户中75%以上的用户在线时长都超过了30分钟。</p>
+<h1 id="五、玩家付费情况分析"><a href="#五、玩家付费情况分析" class="headerlink" title="五、玩家付费情况分析"></a>五、玩家付费情况分析</h1><h3 id="关键指标"><a href="#关键指标" class="headerlink" title="关键指标"></a>关键指标</h3><p>AU（active users）活跃用户：游戏时长超过15分钟<br> PU（Paying users）付费用户<br>APA（Active Paying Account）:活跃付费用户数<br>ARPU：平均每个活跃用户的收入，总收入/AU<br> ARPPU：平均活跃付费用户收入,总收入/APU<br> PUR(付费比率)：APA/AU</p>
+<h2 id="每个活跃玩家的收入"><a href="#每个活跃玩家的收入" class="headerlink" title="每个活跃玩家的收入"></a>每个活跃玩家的收入</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select count(DISTINCT user_id) as AU,</span><br><span class="line">(select sum(pay_price) from tap_fun_test as 总收入),</span><br><span class="line">(select sum(pay_price) from tap_fun_test) /count(DISTINCT user_id) as 每个活跃玩家收入 </span><br><span class="line">from tap_fun_test </span><br><span class="line">where avg_online_minutes &gt; 15;</span><br><span class="line">#and pay_price&gt;0;每个活跃付费玩家的收入</span><br></pre></td></tr></table></figure>
+<h5 id="AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989"><a href="#AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989" class="headerlink" title="AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989"></a>AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989</h5><h2 id="每个活跃付费玩家的收入"><a href="#每个活跃付费玩家的收入" class="headerlink" title="每个活跃付费玩家的收入"></a>每个活跃付费玩家的收入</h2><h5 id="APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846"><a href="#APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846" class="headerlink" title="APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846"></a>APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.19kx2qgrrty8.png"
+                     
+                ></p>
+<h1 id="付费比率"><a href="#付费比率" class="headerlink" title="付费比率"></a>付费比率</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select count(DISTINCT user_id) as APA ,</span><br><span class="line">(SELECT count(DISTINCT user_id) from tap_fun_test WHERE avg_online_minutes&gt;=15) as AU ,</span><br><span class="line">count(DISTINCT user_id)/(select count(DISTINCT user_id) from tap_fun_test </span><br><span class="line">where avg_online_minutes&gt;=15) as PUR</span><br><span class="line">from tap_fun_test </span><br><span class="line">where avg_online_minutes&gt;=15 and pay_price &gt;0;</span><br></pre></td></tr></table></figure>
+<h5 id="APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021"><a href="#APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021" class="headerlink" title="APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021"></a>APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7esl7b48tf28.png"
+                     
+                ></p>
+<p>该游戏的PUR（人均付费率）为0.169较低，且ARPU（活跃玩家平均消费额）为5.58，说明收入表现差；相对于ARPPU，活跃付费用户消费很高，是ARPU的6倍左右，针对这点我们可以做首次消费门槛和专属大V玩家的福利与活动进行调整与优化。</p>
+<h1 id="六、玩家游戏习惯分析"><a href="#六、玩家游戏习惯分析" class="headerlink" title="六、玩家游戏习惯分析"></a>六、玩家游戏习惯分析</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select AVG(pvp_battle_count) as 平均PVP次数 ,</span><br><span class="line">sum(pvp_lanch_count)/sum(pvp_battle_count) as 主动发起PVP概率,</span><br><span class="line">sum(pvp_win_count)/sum(pvp_battle_count) as PVP获胜概率</span><br><span class="line">from tap_fun_test</span><br><span class="line">where avg_online_minutes&gt;=15;</span><br><span class="line">PVP活跃玩家</span><br><span class="line">平均PVP次数：15.164651412333953；主动发起PVP概率：0.5688357584679884；PVP获胜概率：0.532222547626395</span><br><span class="line">PVP活跃付费玩家(加一个pay_price&gt;0)</span><br><span class="line">平均PVP次数：27.301911202587473；主动发起PVP概率：0.6553937480210826；PVP获胜概率：0.6872459716242092</span><br></pre></td></tr></table></figure>
+
+<p>PVE活跃玩家<br>平均PVE次数：28；主动发起PVE概率：0.9967；PVE获胜概率：0.9041<br>PVE活跃付费玩家<br>平均PVE次数：52；主动发起PVE概率：0.9957；PVE获胜概率：0.9110</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.qcf66hymhfk.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5z2txq9ht3wg.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6ycbt2l7v340.png"
+                     
+                ></p>
+<p>APA（付费活跃用户）玩家的平均PVE和PVP次数都是AU（活跃）玩家次数的两倍左右，显然APA玩家是重要的发展对象。<br>PVP活动中，APA玩家主动发起和胜利的概率都明显高于AU玩家。<br>PVE活动中，APA玩家主动发起和胜利的概率与AU玩家都基本持平，其中主动发起PVE的概率非常高，且二者的PVE胜率高达90%，游戏体验较好。</p>
 ]]></content>
+      <tags>
+        <tag>数据分析实战</tag>
+      </tags>
   </entry>
   <entry>
-    <title>python数据采集：selenium爬虫、自动化</title>
-    <url>/2021/05/05/python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%EF%BC%9Aselenium%E7%88%AC%E8%99%AB%E3%80%81%E8%87%AA%E5%8A%A8%E5%8C%96/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">中文文档https://python-selenium-zh.readthedocs.io/zh_CN/latest/</span><br></pre></td></tr></table></figure>
-<p>装包：pip install selenium<br>下载chrome：<a class="link"   href="https://www.google.cn/chrome/" >https://www.google.cn/chrome/<i class="fas fa-external-link-alt"></i></a><br>下驱动：<a class="link"   href="https://chromedriver.storage.googleapis.com/index.html" >https://chromedriver.storage.googleapis.com/index.html<i class="fas fa-external-link-alt"></i></a>  注意浏览器驱动 必须要和浏览器版本匹配<br>这是个zip包，下载下来之后，解压里面的程序文件 chromedriver.exe 到scripts路径下<br>跑一下看看感觉来了没有</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from selenium import webdriver</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.common.keys import Keys</span><br><span class="line">from selenium.webdriver.support import expected_conditions as EC</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait</span><br><span class="line"></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line">try:</span><br><span class="line">    browser.get(&#x27;https://www.baidu.com&#x27;)</span><br><span class="line">    input = browser.find_element_by_id(&#x27;kw&#x27;)</span><br><span class="line">    input.send_keys(&#x27;Python&#x27;)</span><br><span class="line">    input.send_keys(Keys.ENTER)</span><br><span class="line">    wait = WebDriverWait(browser, 10)</span><br><span class="line">    wait.until(EC.presence_of_element_located((By.ID, &#x27;content_left&#x27;)))</span><br><span class="line">    print(browser.current_url)</span><br><span class="line">    print(browser.get_cookies())</span><br><span class="line">    print(browser.page_source)</span><br><span class="line">finally:hexo</span><br><span class="line">    browser.close()</span><br></pre></td></tr></table></figure>
-<p>不可能一下就会的，慢慢来</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/weixin_54733110/article/details/119027005  python万字博文教你玩嗨selenium库</span><br><span class="line">https://mp.weixin.qq.com/s?__biz=MzI0OTc0MzAwNA==&amp;mid=2247487680&amp;idx=1&amp;sn=e40947f382116ff59761f250ee45dce3  模拟登录淘宝</span><br><span class="line">https://www.pianshen.com/article/345981989/  判断元素16种方法expected_conditions</span><br><span class="line">https://github.com/Python3WebSpider/Python3WebSpider/blob/master/7.1-Selenium%E7%9A%84%E4%BD%BF%E7%94%A8.md</span><br><span class="line">http://www.byhy.net/tut/auto/selenium/01/这个作者写的很好</span><br><span class="line">https://www.bilibili.com/video/av64421994/?p=1简直是保姆级教学，</span><br><span class="line">希望你学会了不要乱搞</span><br></pre></td></tr></table></figure>]]></content>
+    <title>python电影数据分析</title>
+    <url>/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"
+                     
+                ></p>
+<h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>id：标识号<br>imdb_id：IMDB 标识号<br>popularity：在 Movie Database 上的相对页面查看次数<br>budget：预算（美元）<br>revenue：收入（美元）<br>original_title：电影名称<br>cast：演员列表，按 | 分隔，最多 5 名演员<br>homepage：电影首页的 URL<br>director：导演列表，按 | 分隔，最多 5 名导演<br>tagline：电影的标语<br>keywords：与电影相关的关键字，按 | 分隔，最多 5 个关键字<br>overview：剧情摘要<br>runtime：电影时长<br>genres：风格列表，按 | 分隔，最多 5 种风格<br>production_companies：制作公司列表，按 | 分隔，最多 5 家公司<br>release_date：首次上映日期<br>vote_count：评分次数<br>vote_average：平均评分<br>based on novel 是否由小说改编</p>
+<h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>每年上映电影数量、电影总票房表现？<br>电影票房与哪些因素最相关？<br>各类型电影表现？<br>各电影类型之间的关联性<br>原创电影与改编电影有何差异？<br>受众喜好与那些因素有关？电影时长为多少最合适？<br>Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</p>
+<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"
+                     
+                ></p>
+<p>电影工业在最近三十几年呈现稳步式增长，2014年数量最多。虽然电影数量最近二十年内有3次较大的波动，但电影总票房仍然保持在较高的水准，说明电影市场已经成熟，有固定的消费人群，可见投资电影仍然是很好的投资方式。</p>
+<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"
+                     
+                ></p>
+<p>由以上可知，电影票房与电影预算（0.73），受欢迎度（0.66），评价次数（0.78）存在强相关。 绘制电影票房与受欢迎度，评价次数，电影预算的相关性散点图及其线性回归线。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"
+                     
+                ></p>
+<p>如图，电影预算、评分基本与电影票房呈正线性相关的关系，这也符合正常经济规律。</p>
+<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"
+                     
+                ></p>
+<p>约从1992开始，电影市场开始爆发式增长，其中戏剧类（Drama）和喜剧类（Comedy）这两个类型是随时间增长幅度最大的，现在也比较热门。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"
+                     
+                ></p>
+<p>如上图，可见投资一部电影的话，上图中的类型是最好的选择，尤以comedy和drama最佳。那不同类型电影的盈利能力如何呢？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"
+                     
+                ></p>
+<p>电影关键词主要以based on novel（基于小说）、women（女性）、independent film（独立电影）、murder（谋杀）为主</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"
+                     
+                ></p>
+<p>由图可知，平均收益前3的电影类型为：冒险类（Adventure）、科幻类（Fantasy）、动画类（Animation），而外国电影类（Foreign）和电视电影类（TV Movie）有亏损的风险。</p>
+<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"
+                     
+                ></p>
+<p>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在支持度阈值2.5%，提升度为3 的情况下，表现出较强的关联性，也符合人们的生活常识</p>
+<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"
+                     
+                ></p>
+<p>可见，绝大部分电影还是原创为主。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"
+                     
+                ></p>
+<p>原创电影的利润与改编电影相差一倍多。</p>
+<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"
+                     
+                ></p>
+<p>受众欢迎度较高的电影类型为Adventure，Science Fiction ，Fantasy。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"
+                     
+                ></p>
+<p>受众欢迎度较高的电影的时长基本在90-200分钟之间。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"
+                     
+                ></p>
+<p>受欢迎度高的电影，评分肯定高。反之评分高的电影，受欢迎度可能低，这就是冷门好片的天地。</p>
+<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"
+                     
+                ></p>
+<p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
+<h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
+<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import seaborn as sns</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]#显示中文</span><br><span class="line">plt.style.use(&#x27;ggplot&#x27;)</span><br></pre></td></tr></table></figure>
+<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">path = &#x27;D:/python_data_file/based_on_novel.csv&#x27;</span><br><span class="line">data = pd.read_csv(path)</span><br><span class="line"></span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line"># print(movies_ohe.shape)#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line"></span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line"># len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line"># print(rules_movies)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;3)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
+<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xdata = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,</span><br><span class="line">              &#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;]]</span><br><span class="line">#要求制造商和电影类型不能为空</span><br><span class="line">clean_xdata = xdata[xdata.production_companies.notnull()&amp;xdata.genres.notnull()].reset_index(drop=True)</span><br><span class="line"># 每年总票房</span><br><span class="line">clean_xdata[&#x27;year&#x27;] = pd.to_datetime(clean_xdata.release_date,format=&#x27;%Y-%m-%d&#x27;).dt.year</span><br><span class="line">year_revenue = clean_xdata.groupby(&#x27;year&#x27;)[&#x27;revenue&#x27;].sum()</span><br><span class="line">def pic_trend(data,tit,xlab,ylab):</span><br><span class="line">    plt.figure(figsize=(12,6))</span><br><span class="line">    data.plot()</span><br><span class="line">    plt.title(tit,fontsize = 20)</span><br><span class="line">    plt.xlabel(xlab,fontsize=15)</span><br><span class="line">    plt.ylabel(ylab,fontsize=15)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_trend(year_revenue,&#x27;每年总票房统计&#x27;,&#x27;年份&#x27;,&#x27;总票房&#x27;)</span><br><span class="line">#每年上映电影数量统计</span><br><span class="line">year_count = clean_xdata.groupby(&#x27;year&#x27;).id.count()</span><br><span class="line">pic_trend(year_count,&#x27;每年上映电影数量统计&#x27;,&#x27;年份&#x27;,&#x27;上映电影数量&#x27;)</span><br><span class="line">#每年上映电影数量饼图</span><br><span class="line">def pic_pie(data,val,gby,tit):</span><br><span class="line">    data = data.reset_index(drop=False)</span><br><span class="line">    fig = plt.figure(figsize=(16,8))</span><br><span class="line">    plt.pie(data[val],labels=data[gby],autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">    plt.title(tit,fontsize = 15)</span><br><span class="line">pic_pie(year_count,&#x27;id&#x27;,&#x27;year&#x27;,&#x27;每年上映电影数量&#x27;)</span><br></pre></td></tr></table></figure>
+<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 随时间推移如何发生变化的</span><br><span class="line">genre_df = clean_xdata.genres.str.get_dummies()#构建虚拟变量，相当于把各电影类型作为列名展开为一个稀疏矩阵</span><br><span class="line">genre_df[&#x27;release_date&#x27;] = clean_xdata[&#x27;year&#x27;]</span><br><span class="line">genre_by_year = genre_df.groupby(&#x27;release_date&#x27;).sum()</span><br><span class="line">fig = plt.figure(figsize=(12,6))</span><br><span class="line">plt.plot(genre_by_year,label = genre_by_year.columns)</span><br><span class="line">plt.legend(genre_by_year)</span><br><span class="line">plt.xticks(range(1950,2020,10))</span><br><span class="line">plt.title(&#x27;电影类型随时间变动趋势图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;年份&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line"></span><br><span class="line"># ②电影类型数量分布</span><br><span class="line">genre_sum = genre_by_year.sum().sort_values(ascending = False)</span><br><span class="line">#这里的label参数加不加在图中没有任何变化</span><br><span class="line">genre_sum.plot.barh(label=&#x27;genre&#x27;,figsize = (12,6))</span><br><span class="line">plt.title(&#x27;电影类型数量分布图&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;数量&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># （二）不同类型电影的盈利能力如何？</span><br><span class="line"># 建立电影类型-利润数据框，计算各电影类型平均收益：</span><br><span class="line">a = clean_xdata.revenue - clean_xdata.budget</span><br><span class="line">profit_df = genre_df.join(pd.DataFrame(a,columns=[&#x27;profit&#x27;]))</span><br><span class="line"></span><br><span class="line">#计算个电影类型的利润平均值</span><br><span class="line">#传递as_index=False，把分组键的类型作为一列返回在DataFrame中，而不是默认True时作为Series的索引返回</span><br><span class="line">genre_set = clean_xdata[&#x27;genres&#x27;].str.get_dummies().columns.unique()</span><br><span class="line">profit_by_genre = pd.Series(index=genre_set)</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    profit_by_genre[genre] = profit_df.groupby(genre,as_index = False).profit.mean().loc[1,&#x27;profit&#x27;]</span><br><span class="line">#画出各电影类型平均收益分布图</span><br><span class="line">profit_by_genre.sort_values().plot.barh(label=&#x27;genre&#x27;,figsize=(12,6))</span><br><span class="line">plt.title(&#x27;各电影类型平均收益分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;利润&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">original_recompose = pd.DataFrame(clean_xdata[&#x27;budget&#x27;])</span><br><span class="line">original_recompose.loc[:,&#x27;profit&#x27;] = profit_df.profit</span><br><span class="line">original_recompose[&#x27;type&#x27;] = clean_xdata[&#x27;based on novel&#x27;].map(lambda x :1 if x==&#x27;based on novel&#x27; else 0)</span><br><span class="line">#原创或改编电影的预算与利润</span><br><span class="line">#这个地方重新定义新的DataFrame --original_recompose_groupby用来存储各个指标分组后的均值（原创与改编电影概要）</span><br><span class="line">original_recompose_groupby = original_recompose.groupby(&#x27;type&#x27;).mean()</span><br><span class="line">original_recompose_groupby[&#x27;count&#x27;] = original_recompose.groupby(&#x27;type&#x27;).type.count()</span><br><span class="line">original_recompose_groupby[&#x27;profit_rate&#x27;] = original_recompose_groupby.profit/original_recompose_groupby.budget#这里有细节,平均利润率</span><br><span class="line">original_recompose_groupby.rename(index = &#123;0:&#x27;original&#x27;,1:&#x27;recompose&#x27;&#125;,inplace = True)#传递inplace=True会删去原来的索引，否则会保留</span><br><span class="line">#是否原创电影数量对比图</span><br><span class="line">plt.figure(figsize =(12,6))</span><br><span class="line">original_recompose_groupby.loc[original_recompose_groupby.index,&#x27;count&#x27;].plot.bar()#传入loc【】里面的参数不能是；&#x27;type&#x27;,会报错</span><br><span class="line">plt.title(&#x27;原创改编电影数量对比&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;原创-改变&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">#绘制利润柱状图</span><br><span class="line">x= list(range(len(original_recompose_groupby.index)))#索引长度序列</span><br><span class="line">xl = original_recompose_groupby.index#xl为索引实际值</span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1=fig.add_subplot(111)</span><br><span class="line">plt.bar(x,original_recompose_groupby.profit)</span><br><span class="line">#接下来有疑问？</span><br><span class="line">plt.xticks(x,xl,rotation = 0,fontsize=12)</span><br><span class="line">plt.yticks(fontsize=15)</span><br><span class="line">ax1.set_title(&#x27;原创与改编电影平均利润对比&#x27;,fontsize = 20)</span><br><span class="line">ax1.set_xlabel(&#x27;原创-改变&#x27;,fontsize = 18)</span><br><span class="line">ax1.set_ylabel(&#x27;利润&#x27;,fontsize = 18)</span><br><span class="line">ax1.legend(loc=2,labels=&#x27;利润&#x27;)</span><br><span class="line"></span><br><span class="line">#绘制利润折线图</span><br><span class="line">import matplotlib.ticker as mtick</span><br><span class="line">ax2 = ax1.twinx()</span><br><span class="line">ax2.plot(x,original_recompose_groupby[&#x27;profit_rate&#x27;],&#x27;go-&#x27;,lw=2)</span><br><span class="line">fmt=&#x27;%.2f%%&#x27;</span><br><span class="line">yticks = mtick.FormatStrFormatter(fmt)</span><br><span class="line">ax2.yaxis.set_major_formatter(yticks)#次纵坐标标签设置为百分比显示</span><br><span class="line">plt.yticks(fontsize = 15)</span><br><span class="line">ax2.set_ylabel(&#x27;利润率&#x27;,fontsize = 18)</span><br><span class="line">ax2.legend(loc=4,labels = &#x27;profit_rate&#x27;)#传递labels参数避免警告</span><br></pre></td></tr></table></figure>
+<p>#####生成词云</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">keywords_data = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,&#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;,&#x27;keywords&#x27;]]</span><br><span class="line">keywords_data = data[data.production_companies.notnull()&amp;data.genres.notnull()].reset_index(drop=True)#得到 包含关键字keywords数据的列表</span><br><span class="line">keywords_list1 = []</span><br><span class="line">for x in keywords_data.keywords.dropna():</span><br><span class="line">    keywords_list1.append(x)</span><br><span class="line">keywords_list1 = &#x27;&#x27;.join(keywords_list1)</span><br><span class="line">keywords_list1 = keywords_list1.replace(&#x27;\s&#x27;,&#x27;&#x27;)#去除字符串中空字符串（\s用于匹配空白字符，可能是空格、制表符、其他空白））</span><br><span class="line"></span><br><span class="line">wordcloud = WordCloud(background_color=&#x27;black&#x27;,max_words=3000,scale=1.5).generate(keywords_list1)</span><br><span class="line">plt.figure(figsize=(14,8))</span><br><span class="line">plt.imshow(wordcloud)</span><br><span class="line">plt.axis(&#x27;off&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">popular_genre_df = pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis=1)</span><br><span class="line">#计算各类型电影受欢迎度均值</span><br><span class="line">list = []</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    list.append(popular_genre_df.groupby(genre,as_index = False).popularity.mean().loc[1,&#x27;popularity&#x27;])</span><br><span class="line">popular_by_genre= pd.DataFrame(index=genre_set)</span><br><span class="line">popular_by_genre[&#x27;popularity_mean&#x27;] = list</span><br><span class="line">#电影类型受欢迎度分布图</span><br><span class="line">popular_by_genre.sort_values(by=&#x27;popularity_mean&#x27;).plot.barh(figsize=(14,8))</span><br><span class="line">plt.title(&#x27;电影类型受欢迎度分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ②电影时长与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.runtime,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;时长与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影时长&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ③电影评分与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.vote_average,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;评分与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影评分&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">companies_list =[&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]</span><br><span class="line">companies_df = pd.DataFrame()</span><br><span class="line">for company in companies_list:#各电影的电影商是否包含两者中其中一个，是则返回1，否则返回0</span><br><span class="line">    companies_df[company] =clean_xdata.production_companies.str.contains(company).map(lambda x :1 if x else 0)</span><br><span class="line">companies_df = pd.concat([companies_df,genre_df.iloc[:,:-1],profit_df.profit],axis=1)</span><br><span class="line">list = []</span><br><span class="line">for company in companies_list:</span><br><span class="line">    list.append(companies_df.groupby(company,as_index=False).profit.sum().loc[1,&#x27;profit&#x27;])</span><br><span class="line">companies_profit= pd.DataFrame(list,index = companies_list,columns=[&#x27;profit_sum&#x27;])</span><br><span class="line">companies_profit.plot.bar(label = companies_profit.index,figsize=(8,6))</span><br><span class="line">plt.title(&#x27;两家公司利润对比&#x27;,fontsize=20)</span><br><span class="line">plt.xticks(rotation = 0)</span><br><span class="line">plt.ylabel(&#x27;利润&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">companies_df_1 = companies_df.groupby(&#x27;Universal Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">companies_df_2 = companies_df.groupby(&#x27;Paramount Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">company_genre_df = pd.DataFrame([companies_df_1,companies_df_2],index = [&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]).T</span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">ax1 = fig.add_subplot(121)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Universal Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Universal Pictures&#x27;,fontsize = 15)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(122)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Paramount Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Paramount Pictures&#x27;,fontsize=15)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 电影票房与哪些因素最相关？</span><br><span class="line">clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;release_date&#x27;,&#x27;runtime&#x27;,&#x27;vote_average&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]].corr()</span><br><span class="line">import seaborn as sns</span><br><span class="line">revenue_corr = clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]]</span><br><span class="line">fig = plt.figure(figsize=(18,6))</span><br><span class="line">#电影票票房与电影预算相关性散点图</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(1,3,1)</span><br><span class="line">ax1 = sns.regplot(x=&#x27;popularity&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1)</span><br><span class="line">ax1.text(400,2e9,&#x27;r=0.64&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by popularity&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;popularity&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax2 = plt.subplot(1,3,2)</span><br><span class="line">ax2 = sns.regplot(x=&#x27;vote_count&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;g&#x27;,marker=&#x27;+&#x27;)</span><br><span class="line">ax2.text(6800,1.1e9,&#x27;r=0.78&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by vote_count&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;vote_count&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax3 = plt.subplot(1,3,3)</span><br><span class="line">ax3 = sns.regplot(x=&#x27;budget&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;r&#x27;,marker=&#x27;^&#x27;)</span><br><span class="line">ax3.text(1.6e8,2.2e9,&#x27;r=0.73&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by budget&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;budget&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br></pre></td></tr></table></figure>
+<p>思路要明确，代码要简洁，以后尽量都写成函数。</p>
+]]></content>
       <tags>
-        <tag>python数据分析</tag>
+        <tag>python数据分析实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学里，最丧的时候</title>
+    <url>/2020/04/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/</url>
+    <content><![CDATA[<p>—1—</p>
+<p>看到香港大学孙教授的一段话：</p>
+<p>﻿﻿“大学，就应该是早起吃点早餐；跑跑步；专业课认真听；公共课看看自己喜欢的杂志；中午小睡一会儿；下午参加个社团活动或打打篮球；晚上陪着喜欢的人散散步；或去自习室安静地看看书……  社会不需要学霸，也不认什么学生会主席，更不希望看到学生放弃学业去创业。你只要能平稳完整地读完大学，寻找到自己所爱的人和兴趣，多去没有目的的看些能丰富自己思想的书，认识几个好的不成样子的朋友，锻炼或是塑造自己的身体，学精自己想要从事事业的专业知识…… 做到这些，平淡地度过大学这几年你就已经足够优秀了。 ”</p>
+<p>可为什么今年大三的我，感觉这辈子算是完了。</p>
+<p>—2—</p>
+<p>大学，是一段没有烟火气的生活，是一个比毕业后舒服的状态。</p>
+<p>调剂到一个一眼无缘的理科专业，而你做的最无力的抗拒，就是在课上看自己感兴趣的东西，在宿舍听歌，看电影，打游戏，一日三餐，南来北往。渐渐，这成了一个司空见惯的事情。失落的时候练下吉他，你也曾想活在音乐的小世界里无人问津…</p>
+<p>每天坚持吃早饭，天气暖和会去操场跑步，中午很难睡着，晚上精力旺盛到连开玩笑都尤其认真，每一次赶作业都是一场和时间赛跑的特殊行动，当然你还可以在期末的时候完成一些感觉惊天动地的事情﻿…</p>
+<p>你慢慢疏远书本理论里面的成就感，开始厌倦众口一词的最佳答案，逃避一次又一次选择中的唯唯诺诺，沉醉在自己对于儿时梦境的美好想往里…</p>
+<p>你不是学霸也没进学生会，你总是庆幸地以为低分通过就是比那个挂了科的室友强，你甚至想着在学校待上四年然后发财，慢慢地，你变得不愿意参加带着利益性质炫耀嘲讽的社团活动，没有能力去美化人家的游戏体验…</p>
+<p>这是一个记忆稍纵即逝的年纪，你读的那些感觉挺有意思的书，随着旋转的时间轴忘得所剩无几。你做了一些兼职，挣了一点小钱，在同学面前过得洋洋洒洒。你去过几个地方，认识了好少好少可以交心的人，每次吃饭想说心里话的时候，你总害怕别人抓住你的软肋而欲言又止。你还考了几个希望能给未来生活带来惊喜的证书……</p>
+<p>做到这些，平淡的度过大学，你也很害怕平凡的你一无所成。﻿﻿</p>
+<p>—3—</p>
+<p>这是一个花里胡哨的时代，你可能永远都不会知道，那个在朋友圈里高大上的陌生人，在真实里，究竟是怎样的际遇。﻿﻿</p>
+<p>你尽可能的在人前把自己装点得光鲜亮丽，绅士般的接受所有的缘行渐远。你变得害怕承诺，躲避爱情，却又不愿意享受孤独，独当一面…﻿﻿</p>
+<p>你见识到的世界的确比父辈要大，可是对自我的认知却很浅。</p>
+<p>你每天在爆炸的信息中学习各种道理，通过网络你知道了身边好多人赢，于是你变得更加不甘平凡，时而凝神聚气的笃定，时而云淡风轻的随意，在对比中渐渐迷失﻿…﻿﻿</p>
+<p>﻿你感觉自己变成了一台机器，可以不对生活付诸任何情感，他能一直工作，只是会越来越慢。﻿﻿</p>
+<p>如果现在有一个可以看到的决定，未来你会在世界的某一个角落，从事一份称心如意的职业，可能你就不会在错过一节专业课的时候坐立不安，更不会因为身边的人活的体面潇洒而心惊胆战了。﻿﻿</p>
+<p>也许正是因为这种人生的不确定性，才愈加增大了人们对未来五彩缤纷的构想吧。﻿﻿</p>
+<p>克莱顿在《你要如何衡量你的人生》中提到，人对自己一生的规划，无非是周密战略和意外机遇相结合的产物，关键是要走出去，并行动起来，直到你明白应该将自己的聪明才智，兴趣和重点放在哪里，再将应急战略转化为周密战略。</p>
+<p>我希望你，在试图跳出规则之前，能做出关于自己本心的选择，愿你强大到能冲破社会的桎梏，以自己愿意的姿态生活下去。﻿﻿﻿</p>
+]]></content>
+      <tags>
+        <tag>成长，旧时光</tag>
       </tags>
   </entry>
   <entry>
@@ -654,6 +1244,78 @@
 ]]></content>
       <tags>
         <tag>sql数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大学三年，写给那个迟到的人</title>
+    <url>/2020/02/19/%E5%A4%A7%E5%AD%A6%E4%B8%89%E5%B9%B4%EF%BC%8C%E5%86%99%E7%BB%99%E9%82%A3%E4%B8%AA%E8%BF%9F%E5%88%B0%E7%9A%84%E4%BA%BA/</url>
+    <content><![CDATA[<p>亲爱的X姑娘：</p>
+<p>你好！给你写这封信的时候，我正在学校的机电楼B301上第一节课。看了简书里好多给异性朋友写信的文章，我也心血来潮，忍不住想要和你说说话了。</p>
+<p>—1—</p>
+<p>早上醒的很早，在床上平躺到闹铃声响起，依旧照常的起床，洗漱，整理好出门。</p>
+<p>没有胃口，不太想吃饭。但想到将来要在你面前呈现一个健康阳光的自己，还是买了一份豆浆和两个早餐包。</p>
+<p>吃完走进教室，已经零零散散的坐满了一些人，我打开耳机里的纯音乐，想着舒缓下情绪，来迎接这节并不怎么让我心动的课程。</p>
+<p>邻桌有一对情侣坐得很近，我看着老师走进教室，紧接着用余光一瞥到他们有说有笑的样子，顿时心生怅惘。</p>
+<p>如果，我想说是如果，你在后面轻轻地拍一下我的肩膀，我回头看到一个嘴角微微上扬的弧度，那这节课我一定带着满满的能量。</p>
+<p>或者，你就只是静静地坐在我的前面，我看着你，心生欢喜，脸上也应该会不自觉的泛起笑容……</p>
+<p>有时候我会一个人坐在三个座位的中间，就好像潜意识里给你留了一个位置一样。</p>
+<p>其实，一个人，一个座位，一支沙沙作响的笔，一个低下视线的背影。总是会显得孤零零的，在周围整齐的人群背景下，不免会有些格格不入…</p>
+<p>—2—</p>
+<p>你知道吗，我已经习惯了一个人走在去图书馆的路上，我听着音乐，看着一路沿途的风景，为了包裹住心中的孤独，我昂首挺胸，略显悠闲、惬意的走着。</p>
+<p>但是，如果是你和我一起，我可能会满含笑意地和你谈天说地，像个孩子一样大大方方的走着…</p>
+<p>又或是，你挽着我的手，不需要讲太多话，一起慢悠悠的走在石头小路上。就像《成都》里描绘的意境那样：”你会挽着我的衣袖，我会把手揣进裤兜……”</p>
+<p>有一个秘密要告诉你，我会用吉他弹唱这首歌了，不知道在你面前的时候，我能不能饱含深情的唱出来带给你浪漫的感觉。</p>
+<p>从图书馆出来，我们一起去食堂买饭，我会想先去你喜欢的窗口排队，你是想拿着书包去寻找空着的座位，还是想和我走在一起呢…</p>
+<p>你知道吗，平时都是和舍友一起吃饭，聊的也都是各自的事情。但是如果是和你一起，我想不但胃口会大涨，我们还可以有更多的故事一起回忆…</p>
+<p>吃完饭，我们坐在图书馆旁林荫小道的长凳上，听微风拂过耳边的声音，看那阳光沐浴下的一片绿林。</p>
+<p>你慢慢地把头靠在我的臂弯，我低头捕捉你眸底似海一般的温柔…</p>
+<p>我会想调皮地刮你的鼻子，你会闭上眼睛满意地笑吗，还是轻轻的戳我一下。</p>
+<p>你知道吗，就这样一个简单的动作，也会让我的整个世界都开满了花。</p>
+<p>—3—</p>
+<p>﻿假期的时候你会去哪玩呢！是在宿舍刷刷剧，和朋友聊聊天，还是出去旅游，拍照，发朋友圈，或是和我一样会去商业街兼职呢！﻿</p>
+<p>﻿我也会想着挣钱去买自己喜欢的东西呀，或是旅游去一个心驰神往的地方呢，又或者是，和我爱的人一起去吃顿火锅怎么样！oh！ that’s a good idea!﻿</p>
+<p>﻿当然，有时候他也会把握不好分寸，甚至不愿意安排自己学习的时间，逃课去做一些他感兴趣的东西呢。﻿</p>
+<p>﻿他觉得，要是有个心思细腻的你在身边的话，他们一起，一定能过着更有节奏、充实的生活！﻿</p>
+<p>﻿节日的时候我们去看场电影吧！要是去的比较早，那就在休息区玩一个超级有趣的双人小游戏怎么样！你知道怎么玩吗，不会？那我教你好了…﻿</p>
+<p>﻿我会宠爱地喂你爆米花，你会不会依偎在我的肩膀呢！不然的话我可能会把送到你嘴边的零食马上缩回到我嘴边哦！啊！你别生气，还是给你吃好了…</p>
+<p>﻿你知道吗，从这个时候起，在他期待的未来里，全都将是你……</p>
+<p>—4—</p>
+<p>晚上你喜欢出去逛逛吗！下自习后我常常会去超市，即便只买那几样东西，我也会在里面多逛一小会儿，可能是因为那里有浓浓的生活气息吧。</p>
+<p>愿在将来的某一天，我推着购物车，你牵着我的手，走在喧闹的商场。我悄悄把你喜欢的零食放进车里，你认真地挑着我爱吃的水果，然后我们拎着这简单而平凡的幸福，满载而归。</p>
+<p>我还有个夜跑的小习惯，我也希望和你一起，趁着夜幕降临，去草坪上繁星点点的操场。戴上耳机，跟着音乐的节奏，在皎洁的月光下挥洒汗水。</p>
+<p>一圈一圈的轮回，甩掉心中所有的不愉快，接着再去澡堂，冲去一天中纷乱的小情绪…</p>
+<p>又或是，我带着吉他，你当我的专属观众，在柔软舒适的草坪席地而坐，弹唱那些为你学过的歌好不好呢！</p>
+<p>你和我一起唱怎么样，可不能放过你那被天使吻过的嗓子，还有我可能会跑调哦，你会笑吗，还是大声一点，带回我跑偏的部分呢…</p>
+<p>想到这个唯美的画面，也会让我感动的红了眼。</p>
+<p>忙着为下一段人生做准备，好久都不去KTV了，好像也没有那种想在人前表现的冲动了，只希望现在的拼搏能为余生发掘出与众不凡的核心竞争力。</p>
+<p>不知道你是不是也正处于人生的某一个风口浪尖呢，你是不是已经完成蜕变了呢，你憧憬的未来里有没有一个像我这样的人呢。</p>
+<p>我相信，你肯定正走在和我相遇的路上呢。而我，也正在寻找着那一份懂你的资格呀。</p>
+<p>﻿突然间，清晨的一缕阳光掠过窗帘的缝隙撞到我的手上，照在这些热烈而又抽象的文字上，我顿下笔来，多想能永远保存此刻心里正诞生的阵阵暖意…</p>
+<p>他多么希望可以有一个人陪他看陌生城市里的每一个落日，他们一起去听喜欢的课程。一起规划未来，一起带着足够的知识，去闯荡这色彩斑斓的平凡世界。</p>
+<p>——你东半球官方指定唯一的男朋友</p>
+]]></content>
+      <tags>
+        <tag>成长，旧时光</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>至少你，存在过我的记忆</title>
+    <url>/2020/03/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/</url>
+    <content><![CDATA[<p>人海中错过的那个人，至少，在我失眠梦呓间，脑海里还是会依稀浮现出你的容颜。</p>
+<p>贝蒂，我是里克。最近你的城市下雨了吗，我这里的温度有些难过，不知道你过得怎么样。</p>
+<p>济南的天照旧那样调皮，就像世界末日里的那句歌词，Why dose the sun go on shining一样，一次又一次地挑战着我出门的勇气，还好我坐的地方阳光有所收敛，不然我炽热的内心暴露在烈日下，真不知道会发生什么化学反应。</p>
+<p>家庭生活的原因，我很早就开始了一个人的生活，可能除了自己，没有谁能左右我的想法了。一个人无拘无束，一个人天马行空，一个人桀骜不驯，一个人胆怯如鼠。</p>
+<p>周国平说，在多数场合，我不是觉得对方乏味，就是害怕对方觉得我乏味，我既不愿意忍受对方的乏味，又不愿意费劲使自己有趣，所以我选择独处，那就自己承受自己的乏味，不累及他人。我大概就是这样一种人吧，得意的时候手舞足蹈，逢场作戏，可稍不如意就黯然失色，冷若冰霜，你说乏味不乏味。</p>
+<p>浮躁的生活中让人有太多无法控制的遐想，也许，我应该找到一个更好的娱乐方式，以至于不会在休息的时候，不由自主的沦陷。</p>
+<p>每次听到廖俊涛的那首《谁》，特别想拿起吉他练琴，弹着弹着，就忘记了后天还要考试的束缚感。有时候真希望时间定格在这一刻，不用去想其他任何事情。</p>
+<p>当然也好羡慕那些在架子鼓上不可一世的乐手们，想学习打鼓，一直追求这样的发泄方式，可是生活总归会有些小遗憾，习惯了时光静好，心情似乎一直都波澜不惊。</p>
+<p>最近经历了一连串的考核，带着满满的用心，和一丁点慌张，完成着之前感觉惊天动地的事情。</p>
+<p>前段时间帮驾校招生，拿到了辛苦换来的一点小回报。不过贝蒂，很多次的社会经验使我觉得，人们好像都不愿意看到别人变好的样子，他们尽可能与遭遇苦难的人找到共鸣，要么保持缄默，要么施以怜悯。当他们发现别人的好时，它们立刻感到毛骨悚然。</p>
+<p>贝蒂，你说像我这样的人，会活成自己想要成为的样子吗，我要学习的东西在需要通过考试拿到的学分面前，已经搁浅了一阵时间。我想，过完这一阵，我会继续坚持。因为，在这场游戏中，并没有什么其他的角色供我选择。</p>
+<p>当然我相信，这些很快就会过去的。时间总是这样无情地切割我们的生命，夜里想着心事，第二天的闹铃就响了；下几次雨，夏天也结束了；等反应过来的时候，那个穿着开裆裤在邻居家乱跑的小屁孩，都长这么大了。</p>
+]]></content>
+      <tags>
+        <tag>成长，旧时光</tag>
       </tags>
   </entry>
 </search>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="WenGe Zhang">
+    
+    <title>
+        
+            python电影数据分析 |
+        
+        弦好想断
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":"true# shadow effect when the mouse hover","scale":"true# scale effect when the mouse hover"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"她肯定像你一样，锋芒里露着柔情，身影中透着坚定。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                弦好想断
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">python电影数据分析</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">WenGe Zhang</span>
+                        
+                            <span class="author-label">干饭分析师</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-03-11 13:25:31
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/">python数据分析实战</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.4k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>15 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"
+                     
+                ></p>
+<h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>id：标识号<br>imdb_id：IMDB 标识号<br>popularity：在 Movie Database 上的相对页面查看次数<br>budget：预算（美元）<br>revenue：收入（美元）<br>original_title：电影名称<br>cast：演员列表，按 | 分隔，最多 5 名演员<br>homepage：电影首页的 URL<br>director：导演列表，按 | 分隔，最多 5 名导演<br>tagline：电影的标语<br>keywords：与电影相关的关键字，按 | 分隔，最多 5 个关键字<br>overview：剧情摘要<br>runtime：电影时长<br>genres：风格列表，按 | 分隔，最多 5 种风格<br>production_companies：制作公司列表，按 | 分隔，最多 5 家公司<br>release_date：首次上映日期<br>vote_count：评分次数<br>vote_average：平均评分<br>based on novel 是否由小说改编</p>
+<h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>每年上映电影数量、电影总票房表现？<br>电影票房与哪些因素最相关？<br>各类型电影表现？<br>各电影类型之间的关联性<br>原创电影与改编电影有何差异？<br>受众喜好与那些因素有关？电影时长为多少最合适？<br>Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</p>
+<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"
+                     
+                ></p>
+<p>电影工业在最近三十几年呈现稳步式增长，2014年数量最多。虽然电影数量最近二十年内有3次较大的波动，但电影总票房仍然保持在较高的水准，说明电影市场已经成熟，有固定的消费人群，可见投资电影仍然是很好的投资方式。</p>
+<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"
+                     
+                ></p>
+<p>由以上可知，电影票房与电影预算（0.73），受欢迎度（0.66），评价次数（0.78）存在强相关。 绘制电影票房与受欢迎度，评价次数，电影预算的相关性散点图及其线性回归线。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"
+                     
+                ></p>
+<p>如图，电影预算、评分基本与电影票房呈正线性相关的关系，这也符合正常经济规律。</p>
+<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"
+                     
+                ></p>
+<p>约从1992开始，电影市场开始爆发式增长，其中戏剧类（Drama）和喜剧类（Comedy）这两个类型是随时间增长幅度最大的，现在也比较热门。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"
+                     
+                ></p>
+<p>如上图，可见投资一部电影的话，上图中的类型是最好的选择，尤以comedy和drama最佳。那不同类型电影的盈利能力如何呢？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"
+                     
+                ></p>
+<p>电影关键词主要以based on novel（基于小说）、women（女性）、independent film（独立电影）、murder（谋杀）为主</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"
+                     
+                ></p>
+<p>由图可知，平均收益前3的电影类型为：冒险类（Adventure）、科幻类（Fantasy）、动画类（Animation），而外国电影类（Foreign）和电视电影类（TV Movie）有亏损的风险。</p>
+<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"
+                     
+                ></p>
+<p>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在支持度阈值2.5%，提升度为3 的情况下，表现出较强的关联性，也符合人们的生活常识</p>
+<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"
+                     
+                ></p>
+<p>可见，绝大部分电影还是原创为主。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"
+                     
+                ></p>
+<p>原创电影的利润与改编电影相差一倍多。</p>
+<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"
+                     
+                ></p>
+<p>受众欢迎度较高的电影类型为Adventure，Science Fiction ，Fantasy。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"
+                     
+                ></p>
+<p>受众欢迎度较高的电影的时长基本在90-200分钟之间。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"
+                     
+                ></p>
+<p>受欢迎度高的电影，评分肯定高。反之评分高的电影，受欢迎度可能低，这就是冷门好片的天地。</p>
+<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"
+                     
+                ></p>
+<p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
+<h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
+<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import seaborn as sns</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]#显示中文</span><br><span class="line">plt.style.use(&#x27;ggplot&#x27;)</span><br></pre></td></tr></table></figure>
+<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">path = &#x27;D:/python_data_file/based_on_novel.csv&#x27;</span><br><span class="line">data = pd.read_csv(path)</span><br><span class="line"></span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line"># print(movies_ohe.shape)#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line"></span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line"># len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line"># print(rules_movies)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;3)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
+<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">xdata = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,</span><br><span class="line">              &#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;]]</span><br><span class="line">#要求制造商和电影类型不能为空</span><br><span class="line">clean_xdata = xdata[xdata.production_companies.notnull()&amp;xdata.genres.notnull()].reset_index(drop=True)</span><br><span class="line"># 每年总票房</span><br><span class="line">clean_xdata[&#x27;year&#x27;] = pd.to_datetime(clean_xdata.release_date,format=&#x27;%Y-%m-%d&#x27;).dt.year</span><br><span class="line">year_revenue = clean_xdata.groupby(&#x27;year&#x27;)[&#x27;revenue&#x27;].sum()</span><br><span class="line">def pic_trend(data,tit,xlab,ylab):</span><br><span class="line">    plt.figure(figsize=(12,6))</span><br><span class="line">    data.plot()</span><br><span class="line">    plt.title(tit,fontsize = 20)</span><br><span class="line">    plt.xlabel(xlab,fontsize=15)</span><br><span class="line">    plt.ylabel(ylab,fontsize=15)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_trend(year_revenue,&#x27;每年总票房统计&#x27;,&#x27;年份&#x27;,&#x27;总票房&#x27;)</span><br><span class="line">#每年上映电影数量统计</span><br><span class="line">year_count = clean_xdata.groupby(&#x27;year&#x27;).id.count()</span><br><span class="line">pic_trend(year_count,&#x27;每年上映电影数量统计&#x27;,&#x27;年份&#x27;,&#x27;上映电影数量&#x27;)</span><br><span class="line">#每年上映电影数量饼图</span><br><span class="line">def pic_pie(data,val,gby,tit):</span><br><span class="line">    data = data.reset_index(drop=False)</span><br><span class="line">    fig = plt.figure(figsize=(16,8))</span><br><span class="line">    plt.pie(data[val],labels=data[gby],autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">    plt.title(tit,fontsize = 15)</span><br><span class="line">pic_pie(year_count,&#x27;id&#x27;,&#x27;year&#x27;,&#x27;每年上映电影数量&#x27;)</span><br></pre></td></tr></table></figure>
+<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 随时间推移如何发生变化的</span><br><span class="line">genre_df = clean_xdata.genres.str.get_dummies()#构建虚拟变量，相当于把各电影类型作为列名展开为一个稀疏矩阵</span><br><span class="line">genre_df[&#x27;release_date&#x27;] = clean_xdata[&#x27;year&#x27;]</span><br><span class="line">genre_by_year = genre_df.groupby(&#x27;release_date&#x27;).sum()</span><br><span class="line">fig = plt.figure(figsize=(12,6))</span><br><span class="line">plt.plot(genre_by_year,label = genre_by_year.columns)</span><br><span class="line">plt.legend(genre_by_year)</span><br><span class="line">plt.xticks(range(1950,2020,10))</span><br><span class="line">plt.title(&#x27;电影类型随时间变动趋势图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;年份&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line"></span><br><span class="line"># ②电影类型数量分布</span><br><span class="line">genre_sum = genre_by_year.sum().sort_values(ascending = False)</span><br><span class="line">#这里的label参数加不加在图中没有任何变化</span><br><span class="line">genre_sum.plot.barh(label=&#x27;genre&#x27;,figsize = (12,6))</span><br><span class="line">plt.title(&#x27;电影类型数量分布图&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;数量&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># （二）不同类型电影的盈利能力如何？</span><br><span class="line"># 建立电影类型-利润数据框，计算各电影类型平均收益：</span><br><span class="line">a = clean_xdata.revenue - clean_xdata.budget</span><br><span class="line">profit_df = genre_df.join(pd.DataFrame(a,columns=[&#x27;profit&#x27;]))</span><br><span class="line"></span><br><span class="line">#计算个电影类型的利润平均值</span><br><span class="line">#传递as_index=False，把分组键的类型作为一列返回在DataFrame中，而不是默认True时作为Series的索引返回</span><br><span class="line">genre_set = clean_xdata[&#x27;genres&#x27;].str.get_dummies().columns.unique()</span><br><span class="line">profit_by_genre = pd.Series(index=genre_set)</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    profit_by_genre[genre] = profit_df.groupby(genre,as_index = False).profit.mean().loc[1,&#x27;profit&#x27;]</span><br><span class="line">#画出各电影类型平均收益分布图</span><br><span class="line">profit_by_genre.sort_values().plot.barh(label=&#x27;genre&#x27;,figsize=(12,6))</span><br><span class="line">plt.title(&#x27;各电影类型平均收益分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;利润&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">original_recompose = pd.DataFrame(clean_xdata[&#x27;budget&#x27;])</span><br><span class="line">original_recompose.loc[:,&#x27;profit&#x27;] = profit_df.profit</span><br><span class="line">original_recompose[&#x27;type&#x27;] = clean_xdata[&#x27;based on novel&#x27;].map(lambda x :1 if x==&#x27;based on novel&#x27; else 0)</span><br><span class="line">#原创或改编电影的预算与利润</span><br><span class="line">#这个地方重新定义新的DataFrame --original_recompose_groupby用来存储各个指标分组后的均值（原创与改编电影概要）</span><br><span class="line">original_recompose_groupby = original_recompose.groupby(&#x27;type&#x27;).mean()</span><br><span class="line">original_recompose_groupby[&#x27;count&#x27;] = original_recompose.groupby(&#x27;type&#x27;).type.count()</span><br><span class="line">original_recompose_groupby[&#x27;profit_rate&#x27;] = original_recompose_groupby.profit/original_recompose_groupby.budget#这里有细节,平均利润率</span><br><span class="line">original_recompose_groupby.rename(index = &#123;0:&#x27;original&#x27;,1:&#x27;recompose&#x27;&#125;,inplace = True)#传递inplace=True会删去原来的索引，否则会保留</span><br><span class="line">#是否原创电影数量对比图</span><br><span class="line">plt.figure(figsize =(12,6))</span><br><span class="line">original_recompose_groupby.loc[original_recompose_groupby.index,&#x27;count&#x27;].plot.bar()#传入loc【】里面的参数不能是；&#x27;type&#x27;,会报错</span><br><span class="line">plt.title(&#x27;原创改编电影数量对比&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;原创-改变&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">#绘制利润柱状图</span><br><span class="line">x= list(range(len(original_recompose_groupby.index)))#索引长度序列</span><br><span class="line">xl = original_recompose_groupby.index#xl为索引实际值</span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1=fig.add_subplot(111)</span><br><span class="line">plt.bar(x,original_recompose_groupby.profit)</span><br><span class="line">#接下来有疑问？</span><br><span class="line">plt.xticks(x,xl,rotation = 0,fontsize=12)</span><br><span class="line">plt.yticks(fontsize=15)</span><br><span class="line">ax1.set_title(&#x27;原创与改编电影平均利润对比&#x27;,fontsize = 20)</span><br><span class="line">ax1.set_xlabel(&#x27;原创-改变&#x27;,fontsize = 18)</span><br><span class="line">ax1.set_ylabel(&#x27;利润&#x27;,fontsize = 18)</span><br><span class="line">ax1.legend(loc=2,labels=&#x27;利润&#x27;)</span><br><span class="line"></span><br><span class="line">#绘制利润折线图</span><br><span class="line">import matplotlib.ticker as mtick</span><br><span class="line">ax2 = ax1.twinx()</span><br><span class="line">ax2.plot(x,original_recompose_groupby[&#x27;profit_rate&#x27;],&#x27;go-&#x27;,lw=2)</span><br><span class="line">fmt=&#x27;%.2f%%&#x27;</span><br><span class="line">yticks = mtick.FormatStrFormatter(fmt)</span><br><span class="line">ax2.yaxis.set_major_formatter(yticks)#次纵坐标标签设置为百分比显示</span><br><span class="line">plt.yticks(fontsize = 15)</span><br><span class="line">ax2.set_ylabel(&#x27;利润率&#x27;,fontsize = 18)</span><br><span class="line">ax2.legend(loc=4,labels = &#x27;profit_rate&#x27;)#传递labels参数避免警告</span><br></pre></td></tr></table></figure>
+<p>#####生成词云</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">keywords_data = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,&#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;,&#x27;keywords&#x27;]]</span><br><span class="line">keywords_data = data[data.production_companies.notnull()&amp;data.genres.notnull()].reset_index(drop=True)#得到 包含关键字keywords数据的列表</span><br><span class="line">keywords_list1 = []</span><br><span class="line">for x in keywords_data.keywords.dropna():</span><br><span class="line">    keywords_list1.append(x)</span><br><span class="line">keywords_list1 = &#x27;&#x27;.join(keywords_list1)</span><br><span class="line">keywords_list1 = keywords_list1.replace(&#x27;\s&#x27;,&#x27;&#x27;)#去除字符串中空字符串（\s用于匹配空白字符，可能是空格、制表符、其他空白））</span><br><span class="line"></span><br><span class="line">wordcloud = WordCloud(background_color=&#x27;black&#x27;,max_words=3000,scale=1.5).generate(keywords_list1)</span><br><span class="line">plt.figure(figsize=(14,8))</span><br><span class="line">plt.imshow(wordcloud)</span><br><span class="line">plt.axis(&#x27;off&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">popular_genre_df = pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis=1)</span><br><span class="line">#计算各类型电影受欢迎度均值</span><br><span class="line">list = []</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    list.append(popular_genre_df.groupby(genre,as_index = False).popularity.mean().loc[1,&#x27;popularity&#x27;])</span><br><span class="line">popular_by_genre= pd.DataFrame(index=genre_set)</span><br><span class="line">popular_by_genre[&#x27;popularity_mean&#x27;] = list</span><br><span class="line">#电影类型受欢迎度分布图</span><br><span class="line">popular_by_genre.sort_values(by=&#x27;popularity_mean&#x27;).plot.barh(figsize=(14,8))</span><br><span class="line">plt.title(&#x27;电影类型受欢迎度分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ②电影时长与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.runtime,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;时长与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影时长&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ③电影评分与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.vote_average,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;评分与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影评分&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">companies_list =[&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]</span><br><span class="line">companies_df = pd.DataFrame()</span><br><span class="line">for company in companies_list:#各电影的电影商是否包含两者中其中一个，是则返回1，否则返回0</span><br><span class="line">    companies_df[company] =clean_xdata.production_companies.str.contains(company).map(lambda x :1 if x else 0)</span><br><span class="line">companies_df = pd.concat([companies_df,genre_df.iloc[:,:-1],profit_df.profit],axis=1)</span><br><span class="line">list = []</span><br><span class="line">for company in companies_list:</span><br><span class="line">    list.append(companies_df.groupby(company,as_index=False).profit.sum().loc[1,&#x27;profit&#x27;])</span><br><span class="line">companies_profit= pd.DataFrame(list,index = companies_list,columns=[&#x27;profit_sum&#x27;])</span><br><span class="line">companies_profit.plot.bar(label = companies_profit.index,figsize=(8,6))</span><br><span class="line">plt.title(&#x27;两家公司利润对比&#x27;,fontsize=20)</span><br><span class="line">plt.xticks(rotation = 0)</span><br><span class="line">plt.ylabel(&#x27;利润&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">companies_df_1 = companies_df.groupby(&#x27;Universal Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">companies_df_2 = companies_df.groupby(&#x27;Paramount Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">company_genre_df = pd.DataFrame([companies_df_1,companies_df_2],index = [&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]).T</span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">ax1 = fig.add_subplot(121)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Universal Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Universal Pictures&#x27;,fontsize = 15)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(122)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Paramount Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Paramount Pictures&#x27;,fontsize=15)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># 电影票房与哪些因素最相关？</span><br><span class="line">clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;release_date&#x27;,&#x27;runtime&#x27;,&#x27;vote_average&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]].corr()</span><br><span class="line">import seaborn as sns</span><br><span class="line">revenue_corr = clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]]</span><br><span class="line">fig = plt.figure(figsize=(18,6))</span><br><span class="line">#电影票票房与电影预算相关性散点图</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(1,3,1)</span><br><span class="line">ax1 = sns.regplot(x=&#x27;popularity&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1)</span><br><span class="line">ax1.text(400,2e9,&#x27;r=0.64&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by popularity&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;popularity&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax2 = plt.subplot(1,3,2)</span><br><span class="line">ax2 = sns.regplot(x=&#x27;vote_count&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;g&#x27;,marker=&#x27;+&#x27;)</span><br><span class="line">ax2.text(6800,1.1e9,&#x27;r=0.78&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by vote_count&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;vote_count&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax3 = plt.subplot(1,3,3)</span><br><span class="line">ax3 = sns.regplot(x=&#x27;budget&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;r&#x27;,marker=&#x27;^&#x27;)</span><br><span class="line">ax3.text(1.6e8,2.2e9,&#x27;r=0.73&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by budget&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;budget&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br></pre></td></tr></table></figure>
+<p>思路要明确，代码要简洁，以后尽量都写成函数。</p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/03/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">至少你，存在过我的记忆</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/02/19/%E5%A4%A7%E5%AD%A6%E4%B8%89%E5%B9%B4%EF%BC%8C%E5%86%99%E7%BB%99%E9%82%A3%E4%B8%AA%E8%BF%9F%E5%88%B0%E7%9A%84%E4%BA%BA/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">大学三年，写给那个迟到的人</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">WenGe Zhang</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">一、数据概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%8F%90%E5%87%BA%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">二、提出问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%AF%8F%E5%B9%B4%E4%B8%8A%E6%98%A0%E7%94%B5%E5%BD%B1%E6%95%B0%E9%87%8F%E3%80%81%E7%94%B5%E5%BD%B1%E6%80%BB%E7%A5%A8%E6%88%BF%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">三、每年上映电影数量、电影总票房是多少？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%94%B5%E5%BD%B1%E7%A5%A8%E6%88%BF%E4%B8%8E%E5%93%AA%E4%BA%9B%E5%9B%A0%E7%B4%A0%E6%9C%80%E7%9B%B8%E5%85%B3%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">四、电影票房与哪些因素最相关？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%90%84%E7%B1%BB%E5%9E%8B%E7%94%B5%E5%BD%B1%E8%A1%A8%E7%8E%B0%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">五、各类型电影表现？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%90%84%E7%94%B5%E5%BD%B1%E7%B1%BB%E5%9E%8B%E4%B9%8B%E9%97%B4%E5%85%B3%E8%81%94%E6%80%A7"><span class="nav-number">6.</span> <span class="nav-text">六、各电影类型之间关联性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%8E%9F%E5%88%9B%E7%94%B5%E5%BD%B1%E4%B8%8E%E6%94%B9%E7%BC%96%E7%94%B5%E5%BD%B1%E6%9C%89%E4%BD%95%E5%B7%AE%E5%BC%82%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">七、原创电影与改编电影有何差异？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E5%8F%97%E4%BC%97%E5%96%9C%E5%A5%BD%E4%B8%8E%E9%82%A3%E4%BA%9B%E5%9B%A0%E7%B4%A0%E6%9C%89%E5%85%B3%EF%BC%9F%E7%94%B5%E5%BD%B1%E6%97%B6%E9%95%BF%E4%B8%BA%E5%A4%9A%E5%B0%91%E6%9C%80%E5%90%88%E9%80%82%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">八、受众喜好与那些因素有关？电影时长为多少最合适？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%9D%E3%80%81Universal-Pictures%E4%B8%8EParamount-Pictures%E4%B8%A4%E5%AE%B6%E8%A1%8C%E4%B8%9A%E5%B7%A8%E5%A4%B4%E7%9A%84%E4%B8%9A%E7%BB%A9%E5%A6%82%E4%BD%95%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E7%BB%93%E8%AE%BA"><span class="nav-number">10.</span> <span class="nav-text">十、结论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81Python%E4%BB%A3%E7%A0%81"><span class="nav-number">11.</span> <span class="nav-text">十一、Python代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%8C%85"><span class="nav-number">11.0.0.1.</span> <span class="nav-text">导入包</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8apriori%E7%AE%97%E6%B3%95%E8%BF%9B%E8%A1%8C%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98"><span class="nav-number">11.0.0.1.1.</span> <span class="nav-text">使用apriori算法进行关联规则挖掘</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE"><span class="nav-number">11.0.0.1.2.</span> <span class="nav-text">处理数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%BB%E8%B5%B0%E5%8A%BF%E5%9B%BE"><span class="nav-number">11.0.0.2.</span> <span class="nav-text">画走势图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%8C%87%E6%A0%87"><span class="nav-number">11.0.0.3.</span> <span class="nav-text">计算指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Universal-Pictures%E4%B8%8EParamount-Pictures"><span class="nav-number">11.0.0.4.</span> <span class="nav-text">Universal Pictures与Paramount Pictures</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
