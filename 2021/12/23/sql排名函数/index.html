@@ -9,7 +9,7 @@
     
     <title>
         
-            sql查询连续签到天数 |
+            sql排名函数 |
         
         弦好想断
     </title>
@@ -142,7 +142,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">sql查询连续签到天数</span>
+            <span class="title-hover-animation">sql排名函数</span>
         </div>
 
         
@@ -160,7 +160,7 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-edit"></i>&nbsp;2021-12-20 16:23:46
+        <i class="fas fa-edit"></i>&nbsp;2021-12-23 11:14:23
     </span>
     
     
@@ -179,7 +179,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>396 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>196 字</span>
         </span>
     
     
@@ -200,15 +200,14 @@
         
 
         <div class="article-content markdown-body">
-            <p>先建表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table user_attendence(</span><br><span class="line">user_id bigint comment &#x27;用户名&#x27;, </span><br><span class="line">date TIMESTAMP comment &#x27;日期&#x27; ,</span><br><span class="line">is_sign bigint comment &#x27;是否登录，0为否，1为是&#x27;);</span><br><span class="line">-- delete from user_attendence;</span><br></pre></td></tr></table></figure>
-<p>接下来用python自己导入随机数据,500个用户、时间2021-1-1~2021-5-5。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import pymysql</span><br><span class="line">import pandas as pd</span><br><span class="line">from sqlalchemy import create_engine</span><br><span class="line">import numpy as np</span><br><span class="line">df = pd.DataFrame()</span><br><span class="line">date = pd.date_range(&#x27;2021-1-1&#x27;,&#x27;2021-5-5&#x27;).strftime(&#x27;%Y-%m-%d&#x27;)</span><br><span class="line">df[&quot;user_id&quot;]=[i for i in np.arange(1,500)]*len(date)</span><br><span class="line">df[&#x27;date&#x27;] = [i for i in date]*len(np.arange(1,500))</span><br><span class="line">df[&quot;is_sign&quot;] = [np.random.choice([0,1]) for i in range(len(df))]</span><br><span class="line">df = df.sort_values(by=[&#x27;user_id&#x27;,&#x27;date&#x27;],na_position=&#x27;first&#x27;)</span><br><span class="line">#写入数据库</span><br><span class="line">con = &#x27;mysql+pymysql://root:3333@localhost:3306/supermanzwg?charset=utf8&#x27;</span><br><span class="line">#如果出现字符串编码错误记得在Navicat运行alter table 表名 convert to character set utf8mb4;</span><br><span class="line">df.to_sql(name=&#x27;user_attendence&#x27;,con=con,if_exists=&#x27;append&#x27;,index = False)</span><br></pre></td></tr></table></figure>
-<p>#截至当前，每个用户已经连续签到的天数<br>查出最后一次不登录的日期，与当前日期进行比较，二者差值为几就是连续登录几天</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(date) from user_attendence;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">user_id ,</span><br><span class="line">max(date),</span><br><span class="line">DATEDIFF(&#x27;2021-02-19&#x27;,max(date)) as max_con_days</span><br><span class="line">from user_attendence </span><br><span class="line">where is_sign = 0 </span><br><span class="line">group by user_id;</span><br></pre></td></tr></table></figure>
-<p>#计算有史以来用户最大连续签到天数；<br>对用户分组，按日期进行排序，排序序号为rank;<br>如果日期与序号的差值为相等，按这个差值进行分组并计数，取最大值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">user_id</span><br><span class="line">,max(次数)from </span><br><span class="line">	(select user_id</span><br><span class="line">	,date,rn</span><br><span class="line">	,a.date-a.rn diff</span><br><span class="line">	,count(*) 次数</span><br><span class="line">	from </span><br><span class="line">		(select </span><br><span class="line">		user_id</span><br><span class="line">		,date,</span><br><span class="line">		row_number() over(partition by user_id order by date asc) rn</span><br><span class="line">		from user_attendence  </span><br><span class="line">		where is_sign = 1</span><br><span class="line">		) a </span><br><span class="line">	group by user_id,diff</span><br><span class="line">	) b </span><br><span class="line">group by user_id;</span><br></pre></td></tr></table></figure>
+            <p>– rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，且序号会断开</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id</span><br><span class="line">,last_name</span><br><span class="line">,department_id</span><br><span class="line">,salary</span><br><span class="line">,rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees</span><br></pre></td></tr></table></figure>
+<p>– row_number()排名是连续的,出现同名的序号仍然会连续(用来记录次数比较实用)，且不会跳跃</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,row_number() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
+<p>– dense_rank()排名是连续的，出现同名的序号会相同，且不会跳跃（用的比较少的，单纯需要排名且存在并列也不跳跃）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,dense_rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
+<p>– ntile()根据排序指定数量进行分区编号（分区编号排序）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,ntile(3) over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -216,29 +215,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                           rel="prev"
-                           href="/2021/12/23/sql%E6%8E%92%E5%90%8D%E5%87%BD%E6%95%B0/"
-                        >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">sql排名函数</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2021/12/13/mysql-tips/"
+                           href="/2021/12/20/sql%E6%9F%A5%E8%AF%A2%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0%E5%A4%A9%E6%95%B0/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">mysql_tips</span>
+                                <span class="post-nav-title-item">sql查询连续签到天数</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
