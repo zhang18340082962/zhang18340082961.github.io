@@ -203,8 +203,12 @@
 
                 <div class="home-article-content markdown-body">
                     
-                        – rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，且序号会断开
-1234567select employee_id,last_name,department_id,salary,rank() over(partition b...
+                        
+rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，存在并列，且序号会跳跃
+适合求第一名，名次这类
+
+
+1234567select employee_id,last_name,department_id,salary,rank(...
                     
                 </div>
 

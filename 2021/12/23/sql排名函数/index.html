@@ -179,7 +179,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>196 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>223 字</span>
         </span>
     
     
@@ -200,11 +200,23 @@
         
 
         <div class="article-content markdown-body">
-            <p>– rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，且序号会断开</p>
+            <ul>
+<li><p>rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，存在并列，且序号会跳跃</p>
+<p>适合求第一名，名次这类</p>
+</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id</span><br><span class="line">,last_name</span><br><span class="line">,department_id</span><br><span class="line">,salary</span><br><span class="line">,rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees</span><br></pre></td></tr></table></figure>
-<p>– row_number()排名是连续的,出现同名的序号仍然会连续(用来记录次数比较实用)，且不会跳跃</p>
+<ul>
+<li><p>row_number()排名是连续的,出现同名的序号仍然会连续，不存在并列和跳跃</p>
+<p>适合计算个数，位置，连续购买场景</p>
+</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,row_number() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
-<p>– dense_rank()排名是连续的，出现同名的序号会相同，且不会跳跃（用的比较少的，单纯需要排名且存在并列也不跳跃）</p>
+<ul>
+<li><p>dense_rank()排名是连续的，出现同名的序号会相同，存在并列，且序号不会跳跃</p>
+<p>（用的比较少的，单纯需要排名且存在并列也不跳跃）</p>
+</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,dense_rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
 <p>– ntile()根据排序指定数量进行分区编号（分区编号排序）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,ntile(3) over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
