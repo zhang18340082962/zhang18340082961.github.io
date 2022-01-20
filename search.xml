@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>mysql_tips</title>
+    <url>/2021/12/13/mysql-tips/</url>
+    <content><![CDATA[<ul>
+<li><p>mysql基础<br><a class="link"   href="https://blog.csdn.net/weixin_45108087/article/details/102766281" >https://blog.csdn.net/weixin_45108087/article/details/102766281<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MYSQL中的COLLATE是什么？<br><a class="link"   href="https://blog.csdn.net/weixin_34194317/article/details/92720517" >https://blog.csdn.net/weixin_34194317/article/details/92720517<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>mysql中key 、primary key 、unique key 与index区别<br><a class="link"   href="https://blog.csdn.net/nanaMasuda/article/details/52543177" >https://blog.csdn.net/nanaMasuda/article/details/52543177<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL中REGEXP正则表达式<br><a class="link"   href="https://blog.csdn.net/u011271894/article/details/79705869" >https://blog.csdn.net/u011271894/article/details/79705869<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>mysql中distinct后面两个字段:同时作用了两个字段，也就是必须得这两个字段都相同的才会被排除</p>
+</li>
+<li><p>MySql中把一个表的数据插入到另一个表中<br><a class="link"   href="https://www.cnblogs.com/jiangxiaobo/p/7722691.html" >https://www.cnblogs.com/jiangxiaobo/p/7722691.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>Mysql 根据一个表数据更新另外一个表<br><a class="link"   href="https://www.cnblogs.com/wu628/p/4948833.html" >https://www.cnblogs.com/wu628/p/4948833.html<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">insert into table_2 (promotion_price,promotion) SELECT 字段1，字段2，...  FROM table_1 where table_1.id is not in (</span><br><span class="line">select id from  table_2 );</span><br></pre></td></tr></table></figure></li>
+<li><p>concat以及group_concat的用法<br><a class="link"   href="https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc" >https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>字符串截取总结：left()、right()、substring()、substring_index()<br><a class="link"   href="https://blog.csdn.net/wolinxuebin/article/details/7845917" >https://blog.csdn.net/wolinxuebin/article/details/7845917<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>replace的用法<br><a class="link"   href="https://www.cnblogs.com/to-creat/p/6516375.html" >https://www.cnblogs.com/to-creat/p/6516375.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>mysql中join的用法<br><a class="link"   href="https://www.cnblogs.com/beili/p/9140019.html" >https://www.cnblogs.com/beili/p/9140019.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL计算日期的函数DATE_SUB(d,INTERVAL expr type)<br><a class="link"   href="https://blog.csdn.net/sinat_34979528/article/details/54571316" >https://blog.csdn.net/sinat_34979528/article/details/54571316<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL DATE_ADD() 函数<br><a class="link"   href="https://www.w3school.com.cn/sql/func_date_add.asp" >https://www.w3school.com.cn/sql/func_date_add.asp<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>sql中interval用法总结<br><a class="link"   href="https://blog.csdn.net/weixin_42586373/article/details/107467914" >https://blog.csdn.net/weixin_42586373/article/details/107467914<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>SQL中的cast()函数<br><a class="link"   href="https://www.jianshu.com/p/e8ed290426b6" >https://www.jianshu.com/p/e8ed290426b6<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>MySQL UNION 操作符<br><a class="link"   href="https://www.runoob.com/mysql/mysql-union-operation.html" >https://www.runoob.com/mysql/mysql-union-operation.html<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>ROW_NUMBER() OVER()函数用法详解 （分组排序 例子多）<br><a class="link"   href="https://blog.csdn.net/qq_25221835/article/details/82762416" >https://blog.csdn.net/qq_25221835/article/details/82762416<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+<li><p>hive中regexp_extract的用法总结<br><a class="link"   href="https://blog.csdn.net/jv_rookie/article/details/55211955" >https://blog.csdn.net/jv_rookie/article/details/55211955<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>sql数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python数据分析 :pandas数据读取、预处理、筛选、计算，时间序列、透视、拼接、导出</title>
     <url>/2021/10/04/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9Apandas%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96%E3%80%81%E9%A2%84%E5%A4%84%E7%90%86%E3%80%81%E7%AD%9B%E9%80%89%E3%80%81%E8%AE%A1%E7%AE%97%EF%BC%8C%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E3%80%81%E9%80%8F%E8%A7%86%E3%80%81%E6%8B%BC%E6%8E%A5%E3%80%81%E5%AF%BC%E5%87%BA/</url>
     <content><![CDATA[<h3 id="一、Pandas数据结构"><a href="#一、Pandas数据结构" class="headerlink" title="一、Pandas数据结构"></a>一、Pandas数据结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">S1=pd.Series([‘a’,’b’,’c’]) series是一组数据与一组索引（行索引）组成的数据结构</span><br><span class="line">S1=pd.Series([‘a’,’b’,’c’],index=(1,3,4)) 指定索引</span><br><span class="line">S1=pd.Series(&#123;1:‘a’,2:’b’,3:’c’&#125;) 用字典形式指定索引</span><br><span class="line">S1.index() 返回索引</span><br><span class="line">S1.values() 返回值</span><br><span class="line">Df=pd.DataFrame([‘a’,’b’,’c’]) dataframe是一组数据与两组索引（行列索引）组成的数据结构</span><br><span class="line">Df=pd.DataFrame([[a,A],[b,B],[c,C]],columns=[‘小写’,’大写’]，index=[‘一’,’二’,’三’])</span><br><span class="line">Columms 为列索引，index为行索引</span><br><span class="line">pip install -i [https://pypi.tuna.tsinghua.edu.cn/simple](https://link.zhihu.com/?target=https%3A//pypi.tuna.tsinghua.edu.cn/simple) pyspider 清华镜像</span><br></pre></td></tr></table></figure>
@@ -127,65 +173,43 @@
       </tags>
   </entry>
   <entry>
-    <title>python-flask疫情数据可视化</title>
-    <url>/2021/07/21/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
-    <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a class="link"   href="https://www.bilibili.com/video/BV177411j7qJ" >https://www.bilibili.com/video/BV177411j7qJ<i class="fas fa-external-link-alt"></i></a> 大佬的视频，做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。</p>
+    <title>python关联分析（apriori算法）</title>
+    <url>/2021/02/28/python%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90%EF%BC%88apriori%E7%AE%97%E6%B3%95%EF%BC%89/</url>
+    <content><![CDATA[<p>若两个或多个变量的取值之间存在某种规律性，就称为关联。关联规则是寻找在同一个事件中出现的不同项的相关性，比如在一次购买活动中所买不同商品的相关性。例如：“在购买计算机的顾客中，有30％的人也同时购买了打印机”。</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.60btv7guvhxc.png"
                      
                 ></p>
-<p>关于flask：<br><a class="link"   href="https://www.cnblogs.com/songboriceboy/category/1867414.html" >https://www.cnblogs.com/songboriceboy/category/1867414.html<i class="fas fa-external-link-alt"></i></a><br><a class="link"   href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482" >https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482<i class="fas fa-external-link-alt"></i></a></p>
+<p>一个样本称为一个“事务”<br>每个事务由多个属性来确定，这里的属性称为“项”<br>多个项组成的集合称为“项集”<br>####由k个项构成的集合<br>{牛奶}、{啤酒}都是1-项集；<br>{牛奶，果冻}是2-项集；<br>{啤酒，面包，牛奶}是3-项集<br>####X==&gt;Y含义：<br>X和Y是项集<br>X称为规则前项（antecedent）<br>Y称为规则后项（consequent）<br>####支持度（support）：一个项集或者规则在所有事务中出现的频率，σ(X):表示项集X的支持度计数<br>项集X的支持度：s(X)=σ(X)/N<br>规则X==&gt;Y表示物品集X对物品集Y的支持度，也就是物品集X和物品集Y同时出现的概率<br>某天共有100个顾客到商场购买物品，其中有30个顾客同时购买了啤酒和尿布，那么上述的关联规则的支持度就是30％<br>####置信度（confidence）：确定Y在包含X的事务中出现的频繁程度。c(X → Y) = σ(X∪Y)/σ(X)<br>p（Y│X）＝p（XY）/p(X)。<br>置信度反应了关联规则的可信度—购买了项目集X中的商品的顾客同时也购买了Y中商品的可能性有多大<br>购买薯片的顾客中有50％的人购买了可乐,则置信度为50％</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4qn34mu3vvr4.png"
+                     
+                ></p>
+<p>####(X , Y)==&gt;Z :<br>支持度:交易中包含{X 、 Y 、 Z}的可能性<br>置信度:包含{X 、 Y}的交易中也包含Z的条件概率<br>####设最小支持度为50%, 最小可信度为 50%, 则可得到 :<br>A==&gt;C (50%, 66.6%)<br>C==&gt;A (50%, 100%)</p>
+<p>若关联规则X-&gt;Y的支持度和置信度分别大于或等于用户指定的最小支持率minsupport和最小置信度minconfidence，则称关联规则X-&gt;Y为强关联规则，否则称关联规则X-&gt;Y为弱关联规则。</p>
+<p>####提升度（lift）：物品集A的出现对物品集B的出现概率发生了多大的变化<br>lift（A==&gt;B）=confidence（A==&gt;B）/support(B)=p(B|A)/p(B)<br>现在有** 1000 ** 个消费者，有** 500** 人购买了茶叶，其中有** 450人同时** 购买了咖啡，另** 50人** 没有。由于** confidence(茶叶=&gt;咖啡)=450/500=90%** ，由此可能会认为喜欢喝茶的人往往喜欢喝咖啡。但如果另外没有购买茶叶的** 500人** ，其中同样有** 450人** 购买了咖啡，同样是很高的** 置信度90%** ,由此，得到不爱喝茶的也爱喝咖啡。这样看来，其实是否购买咖啡，与有没有购买茶叶并没有关联，两者是相互独立的，其** 提升度90%/[(450+450)/1000]=1** 。<br>由此可见，lift正是弥补了confidence的这一缺陷，if lift=1,X与Y独立，X对Y出现的可能性没有提升作用，其值越大(lift&gt;1),则表明X对Y的提升程度越大，也表明关联性越强。<br>####Leverage 与 Conviction的作用和lift类似，都是值越大代表越关联<br>Leverage : P(A,B)-P(A)P(B)<br>Conviction:P(A)P(!B)/P(A,!B）<br>####所有指标的计算公式：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1iip63ea95vk.png"
+                     
+                ></p>
+<p>接下来获取电影数据集中个电影类型之间的关联关系：<br>anaconda安装mlxtend包</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install -c conda-forge mlxtend</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line">movies_ohe.shape#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line">len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;4)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.70uir8omojk0.png"
+                     
+                ></p>
+<p>也挺符合常理哈。</p>
 ]]></content>
       <tags>
         <tag>python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mysql_tips</title>
-    <url>/2021/12/13/mysql-tips/</url>
-    <content><![CDATA[<ul>
-<li><p>mysql基础<br><a class="link"   href="https://blog.csdn.net/weixin_45108087/article/details/102766281" >https://blog.csdn.net/weixin_45108087/article/details/102766281<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>MYSQL中的COLLATE是什么？<br><a class="link"   href="https://blog.csdn.net/weixin_34194317/article/details/92720517" >https://blog.csdn.net/weixin_34194317/article/details/92720517<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>mysql中key 、primary key 、unique key 与index区别<br><a class="link"   href="https://blog.csdn.net/nanaMasuda/article/details/52543177" >https://blog.csdn.net/nanaMasuda/article/details/52543177<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>MySQL中REGEXP正则表达式<br><a class="link"   href="https://blog.csdn.net/u011271894/article/details/79705869" >https://blog.csdn.net/u011271894/article/details/79705869<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>mysql中distinct后面两个字段:同时作用了两个字段，也就是必须得这两个字段都相同的才会被排除</p>
-</li>
-<li><p>MySql中把一个表的数据插入到另一个表中<br><a class="link"   href="https://www.cnblogs.com/jiangxiaobo/p/7722691.html" >https://www.cnblogs.com/jiangxiaobo/p/7722691.html<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>Mysql 根据一个表数据更新另外一个表<br><a class="link"   href="https://www.cnblogs.com/wu628/p/4948833.html" >https://www.cnblogs.com/wu628/p/4948833.html<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">insert into table_2 (promotion_price,promotion) SELECT 字段1，字段2，...  FROM table_1 where table_1.id is not in (</span><br><span class="line">select id from  table_2 );</span><br></pre></td></tr></table></figure></li>
-<li><p>concat以及group_concat的用法<br><a class="link"   href="https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc" >https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>字符串截取总结：left()、right()、substring()、substring_index()<br><a class="link"   href="https://blog.csdn.net/wolinxuebin/article/details/7845917" >https://blog.csdn.net/wolinxuebin/article/details/7845917<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>replace的用法<br><a class="link"   href="https://www.cnblogs.com/to-creat/p/6516375.html" >https://www.cnblogs.com/to-creat/p/6516375.html<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>mysql中join的用法<br><a class="link"   href="https://www.cnblogs.com/beili/p/9140019.html" >https://www.cnblogs.com/beili/p/9140019.html<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>MySQL计算日期的函数DATE_SUB(d,INTERVAL expr type)<br><a class="link"   href="https://blog.csdn.net/sinat_34979528/article/details/54571316" >https://blog.csdn.net/sinat_34979528/article/details/54571316<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>MySQL DATE_ADD() 函数<br><a class="link"   href="https://www.w3school.com.cn/sql/func_date_add.asp" >https://www.w3school.com.cn/sql/func_date_add.asp<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>sql中interval用法总结<br><a class="link"   href="https://blog.csdn.net/weixin_42586373/article/details/107467914" >https://blog.csdn.net/weixin_42586373/article/details/107467914<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>SQL中的cast()函数<br><a class="link"   href="https://www.jianshu.com/p/e8ed290426b6" >https://www.jianshu.com/p/e8ed290426b6<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>MySQL UNION 操作符<br><a class="link"   href="https://www.runoob.com/mysql/mysql-union-operation.html" >https://www.runoob.com/mysql/mysql-union-operation.html<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>ROW_NUMBER() OVER()函数用法详解 （分组排序 例子多）<br><a class="link"   href="https://blog.csdn.net/qq_25221835/article/details/82762416" >https://blog.csdn.net/qq_25221835/article/details/82762416<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-<li><p>hive中regexp_extract的用法总结<br><a class="link"   href="https://blog.csdn.net/jv_rookie/article/details/55211955" >https://blog.csdn.net/jv_rookie/article/details/55211955<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>sql数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -278,6 +302,22 @@
 ]]></content>
       <tags>
         <tag>python办公自动化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python-flask疫情数据可视化</title>
+    <url>/2021/07/21/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
+    <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a class="link"   href="https://www.bilibili.com/video/BV177411j7qJ" >https://www.bilibili.com/video/BV177411j7qJ<i class="fas fa-external-link-alt"></i></a> 大佬的视频，做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"
+                     
+                ></p>
+<p>关于flask：<br><a class="link"   href="https://www.cnblogs.com/songboriceboy/category/1867414.html" >https://www.cnblogs.com/songboriceboy/category/1867414.html<i class="fas fa-external-link-alt"></i></a><br><a class="link"   href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482" >https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482<i class="fas fa-external-link-alt"></i></a></p>
+]]></content>
+      <tags>
+        <tag>python数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -432,148 +472,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python办公自动化：邮件发送</title>
-    <url>/2021/04/05/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/</url>
-    <content><![CDATA[<ul>
-<li>邮件批量发送<br>调用smtp.exmail.qq.com批量自动发送邮件<br>注意文件路径，逗号分隔符，csv中不要有多余回车和空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import csv</span><br><span class="line">import smtplib</span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">from email.mime.base import MIMEBase</span><br><span class="line">from email.mime.image import MIMEImage</span><br><span class="line">from email.utils import formataddr</span><br><span class="line">from email import encoders</span><br><span class="line">import time,datetime</span><br><span class="line">import smtplib</span><br><span class="line">import email.mime.multipart</span><br><span class="line">import email.mime.text</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">from email.mime.application import MIMEApplication</span><br><span class="line">from email.header import Header</span><br><span class="line"></span><br><span class="line">def get_current_date():</span><br><span class="line">    &quot;&quot;&quot;获取当前时间&quot;&quot;&quot;</span><br><span class="line">    return str(time.strftime(&#x27;%Y%m%d&#x27;))</span><br><span class="line"></span><br><span class="line">def getAddrBook(addrBook):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">        @作用：根据输入的CSV文件，形成相应的通讯录字典</span><br><span class="line">        @返回：字典类型，name为人名，value为对应的邮件地址</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    with open(addrBook,&#x27;r&#x27;,encoding=&#x27;UTF-8&#x27;) as addrFile:</span><br><span class="line">        #将文件名和邮件接收人邮箱地址分行存放在csv文件中，用逗号分隔</span><br><span class="line">        reader = csv.reader(addrFile)</span><br><span class="line">        name = []</span><br><span class="line">        value = []</span><br><span class="line">        for row in reader:</span><br><span class="line">            name.append(row[0])</span><br><span class="line">            value.append(row[1])</span><br><span class="line">    addrs = dict(zip(name, value))</span><br><span class="line">    return addrs</span><br><span class="line"></span><br><span class="line">def send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs, subject, content,attachfilename):</span><br><span class="line">    &quot;&quot;&quot;定义并配置好发邮件的函数&quot;&quot;&quot;</span><br><span class="line">    msg = email.mime.multipart.MIMEMultipart()</span><br><span class="line">    msg[&#x27;from&#x27;] =sendAddr #发件人</span><br><span class="line">    msg[&#x27;to&#x27;] =recipientAddrs #接收人</span><br><span class="line">    # msg[&#x27;cc&#x27;] =cc_name #抄送人名称</span><br><span class="line">    msg[&#x27;subject&#x27;] =subject #主题</span><br><span class="line">    content=content</span><br><span class="line">    txt = email.mime.text.MIMEText(content, &#x27;plain&#x27;, &#x27;UTF-8&#x27;)</span><br><span class="line">    msg.attach(txt)</span><br><span class="line">    print(&quot;准备添加附件...&quot;)</span><br><span class="line">    inputfile=inputpath+attachfilename #文件路径</span><br><span class="line">    part = MIMEText(open(inputfile,&#x27;rb&#x27;).read(),&#x27;base64&#x27;, &#x27;utf-8&#x27;)</span><br><span class="line">    part[&quot;Content-Type&quot;] = &#x27;application/octet-stream&#x27;</span><br><span class="line">    part.add_header(&#x27;Content-Disposition&#x27;, &#x27;attachment&#x27;, filename=Header(attachfilename,&#x27;utf-8&#x27;).encode())</span><br><span class="line">    msg.attach(part)</span><br><span class="line">    smtp = smtplib.SMTP_SSL(smtpHost, port)</span><br><span class="line">    smtp.login(sendAddr, password)</span><br><span class="line">    smtp.sendmail(sendAddr, recipientAddrs.split(&#x27;,&#x27;), str(msg))   #+cc_name.split(&#x27;,&#x27;)</span><br><span class="line">    #print(&quot;发送成功！&quot;)</span><br><span class="line">    smtp.quit()</span><br><span class="line"></span><br><span class="line">if __name__==&#x27;__main__&#x27;:</span><br><span class="line">    #这里需要定义send_email函数中传入的所有变量</span><br><span class="line">    inputpath = &quot;r&#x27;D:/&quot; #数据存放的文件路径（这里是绝对路径）</span><br><span class="line">    smtpHost = &#x27;smtp.exmail.qq.com&#x27;  # 默认服务器地址及端口</span><br><span class="line">    port=465</span><br><span class="line">    sendAddr =&quot;&quot;    #自己也就是发件人的邮箱账号</span><br><span class="line">    password = &quot;&quot;   #自己的邮箱密码</span><br><span class="line">    subject=&quot; &quot;+current_date  #主题+当前日期</span><br><span class="line">    content=&#x27;&#x27;&#x27;附件为测试文件&#x27;&#x27;&#x27;+current_date# 正文内容+当前日期</span><br><span class="line"></span><br><span class="line">    addrBook=r&#x27;D:\邮箱联系人表单.csv&#x27;  #联系人表单文件路径</span><br><span class="line">    addrs=getAddrBook(addrBook)</span><br><span class="line">    for i in addrs:</span><br><span class="line">        attachfilename=i+&#x27;.xlsx&#x27; #将要发送的文件添加为附件</span><br><span class="line">        recipientAddrs=addrs[i] #接收人的邮箱地址</span><br><span class="line">        result = os.path.exists(inputpath+i+&#x27;.xlsx&#x27;) #判断当前目录是否存在该文件</span><br><span class="line">        if result:</span><br><span class="line">            #存在就执行邮件</span><br><span class="line">            send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs,</span><br><span class="line">            subject,content,attachfilename)</span><br><span class="line">            print ((&#x27;发给 %s 的邮件执行成功&#x27;) %(recipientAddrs))</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a class="link"   href="https://blog.csdn.net/weixin_42350212/article/details/118751583" >https://blog.csdn.net/weixin_42350212/article/details/118751583<i class="fas fa-external-link-alt"></i></a><br>Python smtp发送邮件怎么设置抄送人<br><a class="link"   href="https://www.cnblogs.com/shiyixirui/p/14692146.html" >https://www.cnblogs.com/shiyixirui/p/14692146.html<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <tags>
-        <tag>python办公自动化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python关联分析（apriori算法）</title>
-    <url>/2021/02/28/python%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90%EF%BC%88apriori%E7%AE%97%E6%B3%95%EF%BC%89/</url>
-    <content><![CDATA[<p>若两个或多个变量的取值之间存在某种规律性，就称为关联。关联规则是寻找在同一个事件中出现的不同项的相关性，比如在一次购买活动中所买不同商品的相关性。例如：“在购买计算机的顾客中，有30％的人也同时购买了打印机”。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.60btv7guvhxc.png"
-                     
-                ></p>
-<p>一个样本称为一个“事务”<br>每个事务由多个属性来确定，这里的属性称为“项”<br>多个项组成的集合称为“项集”<br>####由k个项构成的集合<br>{牛奶}、{啤酒}都是1-项集；<br>{牛奶，果冻}是2-项集；<br>{啤酒，面包，牛奶}是3-项集<br>####X==&gt;Y含义：<br>X和Y是项集<br>X称为规则前项（antecedent）<br>Y称为规则后项（consequent）<br>####支持度（support）：一个项集或者规则在所有事务中出现的频率，σ(X):表示项集X的支持度计数<br>项集X的支持度：s(X)=σ(X)/N<br>规则X==&gt;Y表示物品集X对物品集Y的支持度，也就是物品集X和物品集Y同时出现的概率<br>某天共有100个顾客到商场购买物品，其中有30个顾客同时购买了啤酒和尿布，那么上述的关联规则的支持度就是30％<br>####置信度（confidence）：确定Y在包含X的事务中出现的频繁程度。c(X → Y) = σ(X∪Y)/σ(X)<br>p（Y│X）＝p（XY）/p(X)。<br>置信度反应了关联规则的可信度—购买了项目集X中的商品的顾客同时也购买了Y中商品的可能性有多大<br>购买薯片的顾客中有50％的人购买了可乐,则置信度为50％</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4qn34mu3vvr4.png"
-                     
-                ></p>
-<p>####(X , Y)==&gt;Z :<br>支持度:交易中包含{X 、 Y 、 Z}的可能性<br>置信度:包含{X 、 Y}的交易中也包含Z的条件概率<br>####设最小支持度为50%, 最小可信度为 50%, 则可得到 :<br>A==&gt;C (50%, 66.6%)<br>C==&gt;A (50%, 100%)</p>
-<p>若关联规则X-&gt;Y的支持度和置信度分别大于或等于用户指定的最小支持率minsupport和最小置信度minconfidence，则称关联规则X-&gt;Y为强关联规则，否则称关联规则X-&gt;Y为弱关联规则。</p>
-<p>####提升度（lift）：物品集A的出现对物品集B的出现概率发生了多大的变化<br>lift（A==&gt;B）=confidence（A==&gt;B）/support(B)=p(B|A)/p(B)<br>现在有** 1000 ** 个消费者，有** 500** 人购买了茶叶，其中有** 450人同时** 购买了咖啡，另** 50人** 没有。由于** confidence(茶叶=&gt;咖啡)=450/500=90%** ，由此可能会认为喜欢喝茶的人往往喜欢喝咖啡。但如果另外没有购买茶叶的** 500人** ，其中同样有** 450人** 购买了咖啡，同样是很高的** 置信度90%** ,由此，得到不爱喝茶的也爱喝咖啡。这样看来，其实是否购买咖啡，与有没有购买茶叶并没有关联，两者是相互独立的，其** 提升度90%/[(450+450)/1000]=1** 。<br>由此可见，lift正是弥补了confidence的这一缺陷，if lift=1,X与Y独立，X对Y出现的可能性没有提升作用，其值越大(lift&gt;1),则表明X对Y的提升程度越大，也表明关联性越强。<br>####Leverage 与 Conviction的作用和lift类似，都是值越大代表越关联<br>Leverage : P(A,B)-P(A)P(B)<br>Conviction:P(A)P(!B)/P(A,!B）<br>####所有指标的计算公式：<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1iip63ea95vk.png"
-                     
-                ></p>
-<p>接下来获取电影数据集中个电影类型之间的关联关系：<br>anaconda安装mlxtend包</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda install -c conda-forge mlxtend</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line">movies_ohe.shape#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line">len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;4)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.70uir8omojk0.png"
-                     
-                ></p>
-<p>也挺符合常理哈。</p>
-]]></content>
-      <tags>
-        <tag>python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python数据可视化：pyecharts v1版本</title>
-    <url>/2021/06/05/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9Apyecharts-v1%E7%89%88%E6%9C%AC/</url>
-    <content><![CDATA[<p><a class="link"   href="https://github.com/ecomfe/echarts" >Echarts<i class="fas fa-external-link-alt"></i></a>是一个由百度开源的数据可视化，结合巧妙的交互性，精巧的图表设计；而 Python 是一门富有表达力的语言，很适合用于数据处理。分析遇上数据可视化时，<a class="link"   href="https://github.com/pyecharts/pyecharts" >pyecharts<i class="fas fa-external-link-alt"></i></a>诞生了。<br>个人觉得可视化最好用的，不接受反驳，毕竟用echarts的都那么多；<br><a class="link"   href="https://pyecharts.org/#/zh-cn/intro" >官方文档<i class="fas fa-external-link-alt"></i></a></p>
-<ul>
-<li>自己挑了一些碰到的坑记了一下，分享一些自己学习过程中发现的资源，其他看文档就够了</li>
-</ul>
-<h1 id="基础柱状图"><a href="#基础柱状图" class="headerlink" title="基础柱状图"></a>基础柱状图</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from pyecharts import options as opts</span><br><span class="line">from pyecharts.charts import Bar</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line">c = (</span><br><span class="line">    Bar()</span><br><span class="line">    .add_xaxis(Faker.choose())</span><br><span class="line">    .add_yaxis(&quot;商家A&quot;, Faker.values())#gap=&quot;0%&quot;；category_gap=&quot;80%&quot;；stack=&quot;stack1&quot;</span><br><span class="line">    .add_yaxis(&quot;商家B&quot;, Faker.values())#gap=&quot;0%&quot;；is_selected=False；stack=&quot;stack1&quot;；label_opts=opts.LabelOpts(is_show=False)</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Bar-基本示例&quot;, subtitle=&quot;我是副标题&quot;))</span><br><span class="line">                     # datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_=&quot;inside&quot;)],#时间轴显示并可同通过鼠标滑动</span><br><span class="line">    .set_series_opts(</span><br><span class="line">        label_opts=opts.LabelOpts(is_show=False),</span><br><span class="line">        markpoint_opts=opts.MarkPointOpts(</span><br><span class="line">            data=[</span><br><span class="line">                opts.MarkPointItem(type_=&quot;max&quot;, name=&quot;最大值&quot;),</span><br><span class="line">                opts.MarkPointItem(type_=&quot;min&quot;, name=&quot;最小值&quot;),</span><br><span class="line">#                 opts.MarkPointItem(type_=&quot;average&quot;, name=&quot;平均值&quot;),</span><br><span class="line">            ]</span><br><span class="line">        ),</span><br><span class="line">        markline_opts= opts.MarkLineOpts(data = [opts.MarkLineItem(type_ = &quot;average&quot;,name = &quot;平均值&quot;)])</span><br><span class="line">    )</span><br><span class="line">    .render_notebook()</span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-c318cf13b19d947a.1zz3gy9m634w.png"
-                     
-                ></p>
-<ul>
-<li><p>只能通过滑动水平轴缩放x轴：只传入datazoom_opts=[opts.DataZoomOpts()]；省略掉 opts.DataZoomOpts(), 删除水平轴，就只能通过鼠标拖动；</p>
-</li>
-<li><p>显示水平轴的比例（默认）：<br>opts.DataZoomOpts(range_start=20,range_end=80)</p>
-</li>
-<li><p>取消柱子上方数据显示：<br>label_opts=opts.LabelOpts(is_show=False)</p>
-</li>
-<li><p>添加y轴水平轴：<br>datazoom_opts=opts.DataZoomOpts(orient=”vertical”)，可缩放大小；</p>
-</li>
-<li><p>柱间距离：<br>加入参数gap=”0%”(两个add_yaxis里面都要传)；<br>加入参数category_gap=”80%”，表示单系柱间距离；</p>
-</li>
-<li><p>默认取消显示某 Series：<br>加入参数is_selected=False，默认取消显示某 Series</p>
-</li>
-<li><p>堆叠数据：传入stack=”stack1”，希望哪几个指标堆叠就传那几个add_yaxis中；</p>
-</li>
-<li><p>显示ToolBox：在set_global_opts()中传入        toolbox_opts=opts.ToolboxOpts(), brush_opts=opts.BrushOpts(),；</p>
-</li>
-<li><p>XY轴名称：在set_globel_opts()中加入 yaxis_opts=opts.AxisOpts(name=”我是 Y  轴”),xaxis_opts=opts.AxisOpts(name=”我是 X 轴”),  ；</p>
-</li>
-<li><p>Y轴数据单位：在set_globel_opts()中加入 yaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(formatter=”{value} /月”)),  ；</p>
-</li>
-<li><p>加入标记线</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    .set_global_opts()</span><br><span class="line">    .set_series_opts(</span><br><span class="line">        label_opts=opts.LabelOpts(is_show=False),</span><br><span class="line">        markline_opts=opts.MarkLineOpts(</span><br><span class="line">            data=[opts.MarkLineItem(y=50, name=&quot;yAxis=50&quot;)]</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">#set_global_opts()后加入set_series_opts，加入标记线，这里是y=50；</span><br></pre></td></tr></table></figure></li>
-<li><p>加入标记值</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#set_series_opts中加入，表示传入标记，最大、最小、平均值。</span><br><span class="line">        markpoint_opts=opts.MarkPointOpts(</span><br><span class="line">            data=[</span><br><span class="line">                opts.MarkPointItem(type_=&quot;max&quot;, name=&quot;最大值&quot;),</span><br><span class="line">                opts.MarkPointItem(type_=&quot;min&quot;, name=&quot;最小值&quot;),</span><br><span class="line">                opts.MarkPointItem(type_=&quot;average&quot;, name=&quot;平均值&quot;),</span><br><span class="line">            ]</span><br></pre></td></tr></table></figure></li>
-<li><p>xy轴互换</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#设置完add_yaxis后接着</span><br><span class="line">    .reversal_axis()#xy轴互换</span><br><span class="line">    .set_series_opts(label_opts=opts.LabelOpts(position=&quot;right&quot;))#显示数据在柱子右边</span><br></pre></td></tr></table></figure></li>
-<li><p>x轴名字标签过长，旋转角度</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在set_global_opts（）中传入</span><br><span class="line">xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),</span><br></pre></td></tr></table></figure></li>
-<li><p>连接空数据 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pyecharts.options as opts</span><br><span class="line">from pyecharts.charts import Line</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line"></span><br><span class="line">y = Faker.values()</span><br><span class="line">y[3], y[5] = None, None</span><br><span class="line">c = (</span><br><span class="line">    Line()</span><br><span class="line">    .add_xaxis(Faker.choose())</span><br><span class="line">    .add_yaxis(&quot;商家A&quot;, y, is_connect_nones=True)</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Line-连接空数据&quot;))</span><br><span class="line">    .render(&quot;line_connect_null.html&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
-<li><p>自定义标记点</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pyecharts.options as opts</span><br><span class="line">from pyecharts.charts import Line</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line"></span><br><span class="line">x, y = Faker.choose(), Faker.values()</span><br><span class="line">c = (</span><br><span class="line">    Line()</span><br><span class="line">    .add_xaxis(x)</span><br><span class="line">    .add_yaxis(</span><br><span class="line">        &quot;商家A&quot;,</span><br><span class="line">        y,</span><br><span class="line">        markpoint_opts=opts.MarkPointOpts(</span><br><span class="line">            data=[opts.MarkPointItem(name=&quot;自定义标记点&quot;, coord=[x[2], y[2]], value=y[2])]</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Line-MarkPoint（自定义）&quot;))</span><br><span class="line">    .render(&quot;line_markpoint_custom.html&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
-<li><p>作条形图时由于有时候座标轴文字过长，缩放后导致无法完全显示，此时则需要调整座标轴与图像的边距。调整边距是采用grid（）方法。在图形设置完成后，使用grid设置座标轴与图像边界的距离。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">report_day_line = Grid()</span><br><span class="line">report_day_line.add(report_day_line1,opts.GridOpts(pos_left=&quot;10%&quot;,pos_top =&quot;10%&quot;), is_control_axis_index=True)</span><br><span class="line">report_day_line.render_notebook()</span><br></pre></td></tr></table></figure></li>
-<li><p>指定chart_id时要将写好的图形定义成函数，这样子可以复用后面的page中图片位置，方便更改</p>
-<h1 id="pyecharts画地理图-geo-map"><a href="#pyecharts画地理图-geo-map" class="headerlink" title="pyecharts画地理图-geo,map"></a>pyecharts画地理图-geo,map</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def my_geo(city, city_value):</span><br><span class="line">    c = (</span><br><span class="line">        Geo(init_opts=opts.InitOpts(theme=ThemeType.DARK,chart_id=1))</span><br><span class="line">            .add_schema(maptype=&quot;china&quot;)</span><br><span class="line">            .add(&quot;geo&quot;, [list(z) for z in zip(city, city_value)])</span><br><span class="line">            .set_series_opts(label_opts=opts.LabelOpts(is_show=False))</span><br><span class="line">            .set_global_opts(</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(), title_opts=opts.TitleOpts(title=&quot;用户城市分布&quot;)</span><br><span class="line">        )  # .render(&quot;geo_base.html&quot;)</span><br><span class="line">    )</span><br><span class="line">    return c</span><br></pre></td></tr></table></figure>
-<p>is_piecewise参数：在 set_global_opts()中的visualmap_opts=opts.VisualMapOpts(is_piecewise=True),表示分段显示；</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def my_map(province, num):</span><br><span class="line">    c = (</span><br><span class="line">        Map(init_opts=opts.InitOpts(theme=ThemeType.DARK,chart_id=2))</span><br><span class="line">            .add(&quot;map&quot;, [list(z) for z in zip(province, num)], &quot;china&quot;)</span><br><span class="line">            .set_series_opts(label_opts=opts.LabelOpts(is_show=False))</span><br><span class="line">            .set_global_opts(visualmap_opts=opts.VisualMapOpts(), title_opts=opts.TitleOpts(title=&quot;用户省份分布&quot;))</span><br><span class="line">    )  # .render(&quot;map_base.html&quot;)</span><br><span class="line">    return c</span><br></pre></td></tr></table></figure>
-<h1 id="pyecharts画内层嵌套饼图"><a href="#pyecharts画内层嵌套饼图" class="headerlink" title="pyecharts画内层嵌套饼图"></a>pyecharts画内层嵌套饼图</h1></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">c = (</span><br><span class="line">    Pie()</span><br><span class="line">    .add(&quot;&quot;, [list(z) for z in zip(Faker.choose(), Faker.values())])#center=[&quot;35%&quot;, &quot;50%&quot;],</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Pie-基本示例&quot;))#legend_opts=opts.LegendOpts(pos_left=&quot;15%&quot;),</span><br><span class="line">    .set_series_opts(label_opts=opts.LabelOpts(formatter=&quot;&#123;b&#125;: &#123;c&#125;&quot;))</span><br><span class="line">#     .render(&quot;pie_base.html&quot;)</span><br><span class="line">)</span><br><span class="line">c.render_notebook()</span><br></pre></td></tr></table></figure>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-109a65be286830ab.wpn8qntfni8.png"
-                     
-                ></p>
-<h1 id="nested-pies"><a href="#nested-pies" class="headerlink" title="nested_pies"></a>nested_pies</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">inner_x_data = [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;]</span><br><span class="line">inner_y_data = [335, 679, 1548]</span><br><span class="line">inner_data_pair = [list(z) for z in zip(inner_x_data, inner_y_data)]</span><br><span class="line"></span><br><span class="line">outer_x_data = [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;百度&quot;, &quot;谷歌&quot;]</span><br><span class="line">outer_y_data = [335, 310, 234, 135, 1048, 251, 147, 102]</span><br><span class="line">outer_data_pair = [list(z) for z in zip(outer_x_data, outer_y_data)]</span><br><span class="line">(</span><br><span class="line">    Pie(init_opts=opts.InitOpts())#theme=ThemeType.DARK 指定主题为黑色</span><br><span class="line">    .add(</span><br><span class="line">        series_name=&quot;访问来源&quot;,</span><br><span class="line">        data_pair=inner_data_pair,#指定数据源</span><br><span class="line">        radius=[0, &quot;30%&quot;],#半径 </span><br><span class="line">        label_opts=opts.LabelOpts(position=&quot;inner&quot;),#图形位置</span><br><span class="line">    )</span><br><span class="line">    .add(</span><br><span class="line">        series_name=&quot;访问来源&quot;,</span><br><span class="line">        radius=[&quot;40%&quot;, &quot;55%&quot;],</span><br><span class="line">        data_pair=outer_data_pair,</span><br><span class="line">        label_opts=opts.LabelOpts(</span><br><span class="line">            position=&quot;outside&quot;,</span><br><span class="line">            formatter=&quot;&#123;a|&#123;a&#125;&#125;&#123;abg|&#125;\n&#123;hr|&#125;\n &#123;b|&#123;b&#125;: &#125;&#123;c&#125; &#123;per|&#123;d&#125;%&#125;  &quot;,#&quot;&#123;a&#125; &lt;br/&gt;&#123;b&#125;: &#123;c&#125; (&#123;d&#125;%)&quot; 文本样式</span><br><span class="line">            background_color=&quot;#eee&quot;,  #背景颜色</span><br><span class="line">            border_color=&quot;#aaa&quot;,  #边框颜色</span><br><span class="line">            border_width=1,   #边框宽度</span><br><span class="line">            border_radius=4,  #边界半径</span><br><span class="line">            rich=&#123;</span><br><span class="line">                &quot;a&quot;: &#123;&quot;color&quot;: &quot;#999&quot;, &quot;lineHeight&quot;: 22, &quot;align&quot;: &quot;center&quot;&#125;,</span><br><span class="line">                &quot;abg&quot;: &#123;</span><br><span class="line">                    &quot;backgroundColor&quot;: &quot;#e3e3e3&quot;,</span><br><span class="line">                    &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                    &quot;align&quot;: &quot;right&quot;,</span><br><span class="line">                    &quot;height&quot;: 22,</span><br><span class="line">                    &quot;borderRadius&quot;: [4, 4, 0, 0],</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;hr&quot;: &#123;</span><br><span class="line">                    &quot;borderColor&quot;: &quot;#aaa&quot;,</span><br><span class="line">                    &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                    &quot;borderWidth&quot;: 0.5,</span><br><span class="line">                    &quot;height&quot;: 0,</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;b&quot;: &#123;&quot;fontSize&quot;: 16, &quot;lineHeight&quot;: 33&#125;,#,&quot;color&quot;:&quot;#999&quot;</span><br><span class="line">#                 &quot;c&quot;:&#123;&quot;color&quot;:&quot;#999&quot;&#125;,</span><br><span class="line">                &quot;per&quot;: &#123;</span><br><span class="line">                    &quot;color&quot;: &quot;#eee&quot;,</span><br><span class="line">                    &quot;backgroundColor&quot;: &quot;#334455&quot;,</span><br><span class="line">                    &quot;padding&quot;: [2, 4],</span><br><span class="line">                    &quot;borderRadius&quot;: 2,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    .set_global_opts(legend_opts=opts.LegendOpts(pos_left=&quot;left&quot;, orient=&quot;vertical&quot;,textstyle_opts=&#123;&quot;color&quot;:&quot;#999&quot;&#125;))#设置图例字体为白色</span><br><span class="line">    .set_series_opts(</span><br><span class="line">        tooltip_opts=opts.TooltipOpts(</span><br><span class="line">            trigger=&quot;item&quot;, formatter=&quot;&#123;a&#125; &lt;br/&gt;&#123;b&#125;: &#123;c&#125; (&#123;d&#125;%)&quot;    # &#x27;item&#x27;: 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">#     .render(&quot;nested_pies.html&quot;)</span><br><span class="line">).render_notebook()</span><br></pre></td></tr></table></figure>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-85a5b5d8ee7790a8.5qowy1o8a20.png"
-                     
-                ></p>
-<p>那个formatter配置项可以在这里了解：<br>{a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）<br><a class="link"   href="https://echarts.apache.org/zh/option.html#grid.tooltip.formatter" >https://echarts.apache.org/zh/option.html#grid.tooltip.formatter<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="pyecharts中page的使用类似BI大屏展示"><a href="#pyecharts中page的使用类似BI大屏展示" class="headerlink" title="pyecharts中page的使用类似BI大屏展示"></a>pyecharts中page的使用类似BI大屏展示</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">page = Page(layout= Page.DraggablePageLayout, page_title= &quot;大屏展示&quot;)</span><br><span class="line"># page = Page()</span><br><span class="line">page.add(</span><br><span class="line">    bar_datazoom_slider(),</span><br><span class="line">    line_markpoint(),</span><br><span class="line">    pie_rosetype(),</span><br><span class="line">    grid_mutil_yaxis(),</span><br><span class="line">    liquid_data_precision(),</span><br><span class="line">    table_base(),</span><br><span class="line">)</span><br><span class="line">page.render(&quot;temp.html&quot;)</span><br></pre></td></tr></table></figure>
-<p>然后自己点那开个temp.html文件进行拖拽，缩放，布局称自己想要的样子，最后点击save_config按钮，下载那个chart_config.json文件。</p>
-<ul>
-<li><p>修改json配置文件，改成百分比主要是为了页面自适应屏幕大小。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df = pd.read_json(&quot;chart_config.json&quot;)</span><br><span class="line">df[&quot;width&quot;] = df.width.apply(lambda x: x[:-2])</span><br><span class="line">df[&quot;height&quot;] = df.height.apply(lambda x: x[:-2])</span><br><span class="line">df[&quot;top&quot;] = df.top.apply(lambda x: x[:-2])</span><br><span class="line">df[&quot;left&quot;] = df.left.apply(lambda x: x[:-2])</span><br><span class="line"># df.astype(&#123;&#x27;width&#x27;:&#x27;float&#x27;,&#x27;height&#x27;:&#x27;float&#x27;,&#x27;top&#x27;:&#x27;float&#x27;,&#x27;height&#x27;:&#x27;float&#x27;&#125;).dtypes</span><br><span class="line">df[&quot;width&quot;]= df.width.apply(lambda x: str(round(float(x)/1256*100,4))+&quot;%&quot;)#这里1256、640是你自己电脑屏幕的px值</span><br><span class="line">df[&quot;height&quot;] = df.height.apply(lambda x: str(round(float(x)/640*100*11/12,4))+&quot;%&quot;)#如果出现右侧滑块，可适当进行缩放，这里按11/12的比例缩放</span><br><span class="line">df[&quot;top&quot;] = df.top.apply(lambda x: str(round(float(x)/640*100*11/12,4))+&quot;%&quot;)</span><br><span class="line">df[&quot;left&quot;] = df.left.apply(lambda x: str(round(float(x)/1256*100,4))+&quot;%&quot;)</span><br><span class="line">df.to_json(&quot;chart_config2.json&quot;,orient = &quot;records&quot;)</span><br></pre></td></tr></table></figure></li>
-<li><p>修改好json数据之后，再运行这行代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#第一个字段是前面拖拽的html文件名，cfg_file就是你刚save的json文件名，dest是你要生成的文件名</span><br><span class="line">page.save_resize_html( &#x27;temp.html&#x27;, cfg_file= &#x27;chart_config2.json&#x27;,dest= &#x27;设置好位置后的BI看板.html&#x27;)</span><br></pre></td></tr></table></figure>
-<p>这样弄完有点问题就是背景页面可能和图片背景有违和感，你可以使用BeautifulSoup再修改下页面背景颜色啥的,相关网课链接<a class="link"   href="https://www.bilibili.com/video/BV1KT4y1c7pb?p=22" >https://www.bilibili.com/video/BV1KT4y1c7pb?p=22<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import os</span><br><span class="line">with open(os.path.join(os.path.abspath(&quot;.&quot;), &quot;设置好位置后的BI看板.html&quot;), &#x27;r+&#x27;, encoding=&quot;utf8&quot;) as html:</span><br><span class="line">    html_bf = BeautifulSoup(html, &quot;lxml&quot;)</span><br><span class="line">    divs = html_bf.find_all(&quot;div&quot;)</span><br><span class="line">    </span><br><span class="line">    body = html_bf.find(&quot;body&quot;)</span><br><span class="line">    body[&quot;style&quot;]=&quot;background-color:#333333;&quot;</span><br><span class="line">#     div_title = &quot;&lt;div align=\&quot;center\&quot; style=\&quot;width:1900px;\&quot;&gt;\n&lt;span style=\&quot;font-size:30px;font face=\&#x27;黑体\&#x27;;color :#FFFFFF\&quot;&gt;&lt;b&gt;CD_NOW数据看板&lt;/b&gt;&lt;/div&gt;&quot;  # 修改页面背景色、追加标题</span><br><span class="line">#     body.insert(0, BeautifulSoup(div_title, &quot;lxml&quot;).div)</span><br><span class="line">    html_new = str(html_bf)</span><br><span class="line">    html.seek(0, 0)</span><br><span class="line">    html.truncate()</span><br><span class="line">    html.write(html_new)</span><br><span class="line">    html.close()</span><br></pre></td></tr></table></figure>
-<p>当然也可以把那个json文件里面的值传到对应的样式代码中在HTML页面中进行布局，需要注意的是画图时指定好每个图表的chart_id,便于通过字符串格式进行指定对应图表位置。</p>
-</li>
-</ul>
-<p>注意点：（来自<a class="link"   href="https://www.jianshu.com/p/47e8f056e5cf%EF%BC%89" >https://www.jianshu.com/p/47e8f056e5cf）<i class="fas fa-external-link-alt"></i></a><br>1.由于图片的布局是根据chart_config.json中图片id的对应关系进行布局，因此每张图片均需要指定其id；<br>如：<br>Bar(init_opts=opts.InitOpts(chart_id=1))<br>2.在本次操作工程中，发现Table类中不包含init_opts参数，可以通过修改源码，在D:\Anaconda3\Lib\site-packages\pyecharts\component\table指定char_id,具体修改的代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Table(ChartMixin):</span><br><span class="line">    def __init__(self, page_title: str = CurrentConfig.PAGE_TITLE, js_host: str = &quot;&quot;,chart_id=None):</span><br><span class="line">        self.page_title = page_title</span><br><span class="line">        self.js_host = js_host or CurrentConfig.ONLINE_HOST</span><br><span class="line">        self.js_dependencies: OrderedSet = OrderedSet()</span><br><span class="line">        self.js_functions: OrderedSet = OrderedSet()</span><br><span class="line">        self.title_opts: ComponentTitleOpts = ComponentTitleOpts()</span><br><span class="line">        self.html_content: str = &quot;&quot;</span><br><span class="line">        self._component_type: str = &quot;table&quot;</span><br><span class="line">        if chart_id:</span><br><span class="line">            self.chart_id: str = chart_id</span><br><span class="line">        else:</span><br><span class="line">            self.chart_id: str = uuid.uuid4().hex</span><br></pre></td></tr></table></figure>
-<p><a class="link"   href="https://www.bilibili.com/video/BV1KT4y1c7pb" >https://www.bilibili.com/video/BV1KT4y1c7pb<i class="fas fa-external-link-alt"></i></a> 网课里有资源自己去取</p>
-]]></content>
-      <tags>
-        <tag>python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python连接mysql:读取、写入、更新、删除</title>
     <url>/2021/07/04/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9A%E8%BF%9E%E6%8E%A5mysql%EF%BC%8C%E8%AF%BB%E5%8F%96%E3%80%81%E5%86%99%E5%85%A5%E3%80%81%E6%9B%B4%E6%96%B0%E3%80%81%E5%88%A0%E9%99%A4/</url>
     <content><![CDATA[<h2 id="1、连接读取数据"><a href="#1、连接读取数据" class="headerlink" title="1、连接读取数据"></a>1、连接读取数据</h2><h3 id="第一种：用pymysql连接"><a href="#第一种：用pymysql连接" class="headerlink" title="第一种：用pymysql连接"></a>第一种：用pymysql连接</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#安装pymysql</span><br><span class="line">conda install pymysql</span><br><span class="line">#或者</span><br><span class="line">pip install pymysql</span><br></pre></td></tr></table></figure>
@@ -626,6 +524,18 @@
 <h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#删除数据</span><br><span class="line">sql = &quot;delete from stuinfo where id &gt;=10&quot;</span><br><span class="line">cursor.execute(sql)</span><br><span class="line">connect.commit()</span><br><span class="line">cursor.execute(&quot;select * from stuinfo&quot;)</span><br><span class="line">print(cursor.fetchall())</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>python数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python办公自动化：邮件发送</title>
+    <url>/2021/04/05/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E9%82%AE%E4%BB%B6%E5%8F%91%E9%80%81/</url>
+    <content><![CDATA[<ul>
+<li>邮件批量发送<br>调用smtp.exmail.qq.com批量自动发送邮件<br>注意文件路径，逗号分隔符，csv中不要有多余回车和空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import csv</span><br><span class="line">import smtplib</span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">from email.mime.base import MIMEBase</span><br><span class="line">from email.mime.image import MIMEImage</span><br><span class="line">from email.utils import formataddr</span><br><span class="line">from email import encoders</span><br><span class="line">import time,datetime</span><br><span class="line">import smtplib</span><br><span class="line">import email.mime.multipart</span><br><span class="line">import email.mime.text</span><br><span class="line">from email.mime.text import MIMEText</span><br><span class="line">from email.mime.multipart import MIMEMultipart</span><br><span class="line">from email.mime.application import MIMEApplication</span><br><span class="line">from email.header import Header</span><br><span class="line"></span><br><span class="line">def get_current_date():</span><br><span class="line">    &quot;&quot;&quot;获取当前时间&quot;&quot;&quot;</span><br><span class="line">    return str(time.strftime(&#x27;%Y%m%d&#x27;))</span><br><span class="line"></span><br><span class="line">def getAddrBook(addrBook):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">        @作用：根据输入的CSV文件，形成相应的通讯录字典</span><br><span class="line">        @返回：字典类型，name为人名，value为对应的邮件地址</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    with open(addrBook,&#x27;r&#x27;,encoding=&#x27;UTF-8&#x27;) as addrFile:</span><br><span class="line">        #将文件名和邮件接收人邮箱地址分行存放在csv文件中，用逗号分隔</span><br><span class="line">        reader = csv.reader(addrFile)</span><br><span class="line">        name = []</span><br><span class="line">        value = []</span><br><span class="line">        for row in reader:</span><br><span class="line">            name.append(row[0])</span><br><span class="line">            value.append(row[1])</span><br><span class="line">    addrs = dict(zip(name, value))</span><br><span class="line">    return addrs</span><br><span class="line"></span><br><span class="line">def send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs, subject, content,attachfilename):</span><br><span class="line">    &quot;&quot;&quot;定义并配置好发邮件的函数&quot;&quot;&quot;</span><br><span class="line">    msg = email.mime.multipart.MIMEMultipart()</span><br><span class="line">    msg[&#x27;from&#x27;] =sendAddr #发件人</span><br><span class="line">    msg[&#x27;to&#x27;] =recipientAddrs #接收人</span><br><span class="line">    # msg[&#x27;cc&#x27;] =cc_name #抄送人名称</span><br><span class="line">    msg[&#x27;subject&#x27;] =subject #主题</span><br><span class="line">    content=content</span><br><span class="line">    txt = email.mime.text.MIMEText(content, &#x27;plain&#x27;, &#x27;UTF-8&#x27;)</span><br><span class="line">    msg.attach(txt)</span><br><span class="line">    print(&quot;准备添加附件...&quot;)</span><br><span class="line">    inputfile=inputpath+attachfilename #文件路径</span><br><span class="line">    part = MIMEText(open(inputfile,&#x27;rb&#x27;).read(),&#x27;base64&#x27;, &#x27;utf-8&#x27;)</span><br><span class="line">    part[&quot;Content-Type&quot;] = &#x27;application/octet-stream&#x27;</span><br><span class="line">    part.add_header(&#x27;Content-Disposition&#x27;, &#x27;attachment&#x27;, filename=Header(attachfilename,&#x27;utf-8&#x27;).encode())</span><br><span class="line">    msg.attach(part)</span><br><span class="line">    smtp = smtplib.SMTP_SSL(smtpHost, port)</span><br><span class="line">    smtp.login(sendAddr, password)</span><br><span class="line">    smtp.sendmail(sendAddr, recipientAddrs.split(&#x27;,&#x27;), str(msg))   #+cc_name.split(&#x27;,&#x27;)</span><br><span class="line">    #print(&quot;发送成功！&quot;)</span><br><span class="line">    smtp.quit()</span><br><span class="line"></span><br><span class="line">if __name__==&#x27;__main__&#x27;:</span><br><span class="line">    #这里需要定义send_email函数中传入的所有变量</span><br><span class="line">    inputpath = &quot;r&#x27;D:/&quot; #数据存放的文件路径（这里是绝对路径）</span><br><span class="line">    smtpHost = &#x27;smtp.exmail.qq.com&#x27;  # 默认服务器地址及端口</span><br><span class="line">    port=465</span><br><span class="line">    sendAddr =&quot;&quot;    #自己也就是发件人的邮箱账号</span><br><span class="line">    password = &quot;&quot;   #自己的邮箱密码</span><br><span class="line">    subject=&quot; &quot;+current_date  #主题+当前日期</span><br><span class="line">    content=&#x27;&#x27;&#x27;附件为测试文件&#x27;&#x27;&#x27;+current_date# 正文内容+当前日期</span><br><span class="line"></span><br><span class="line">    addrBook=r&#x27;D:\邮箱联系人表单.csv&#x27;  #联系人表单文件路径</span><br><span class="line">    addrs=getAddrBook(addrBook)</span><br><span class="line">    for i in addrs:</span><br><span class="line">        attachfilename=i+&#x27;.xlsx&#x27; #将要发送的文件添加为附件</span><br><span class="line">        recipientAddrs=addrs[i] #接收人的邮箱地址</span><br><span class="line">        result = os.path.exists(inputpath+i+&#x27;.xlsx&#x27;) #判断当前目录是否存在该文件</span><br><span class="line">        if result:</span><br><span class="line">            #存在就执行邮件</span><br><span class="line">            send_email(inputpath,smtpHost,port,sendAddr,password,recipientAddrs,</span><br><span class="line">            subject,content,attachfilename)</span><br><span class="line">            print ((&#x27;发给 %s 的邮件执行成功&#x27;) %(recipientAddrs))</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a class="link"   href="https://blog.csdn.net/weixin_42350212/article/details/118751583" >https://blog.csdn.net/weixin_42350212/article/details/118751583<i class="fas fa-external-link-alt"></i></a><br>Python smtp发送邮件怎么设置抄送人<br><a class="link"   href="https://www.cnblogs.com/shiyixirui/p/14692146.html" >https://www.cnblogs.com/shiyixirui/p/14692146.html<i class="fas fa-external-link-alt"></i></a></p>
+]]></content>
+      <tags>
+        <tag>python办公自动化</tag>
       </tags>
   </entry>
   <entry>
@@ -746,6 +656,249 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
 ]]></content>
       <tags>
         <tag>python数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python数据可视化：pyecharts v1版本</title>
+    <url>/2021/06/05/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9Apyecharts-v1%E7%89%88%E6%9C%AC/</url>
+    <content><![CDATA[<p><a class="link"   href="https://github.com/ecomfe/echarts" >Echarts<i class="fas fa-external-link-alt"></i></a>是一个由百度开源的数据可视化，结合巧妙的交互性，精巧的图表设计；而 Python 是一门富有表达力的语言，很适合用于数据处理。分析遇上数据可视化时，<a class="link"   href="https://github.com/pyecharts/pyecharts" >pyecharts<i class="fas fa-external-link-alt"></i></a>诞生了。<br>个人觉得可视化最好用的，不接受反驳，毕竟用echarts的都那么多；<br><a class="link"   href="https://pyecharts.org/#/zh-cn/intro" >官方文档<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li>自己挑了一些碰到的坑记了一下，分享一些自己学习过程中发现的资源，其他看文档就够了</li>
+</ul>
+<h1 id="基础柱状图"><a href="#基础柱状图" class="headerlink" title="基础柱状图"></a>基础柱状图</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from pyecharts import options as opts</span><br><span class="line">from pyecharts.charts import Bar</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line">c = (</span><br><span class="line">    Bar()</span><br><span class="line">    .add_xaxis(Faker.choose())</span><br><span class="line">    .add_yaxis(&quot;商家A&quot;, Faker.values())#gap=&quot;0%&quot;；category_gap=&quot;80%&quot;；stack=&quot;stack1&quot;</span><br><span class="line">    .add_yaxis(&quot;商家B&quot;, Faker.values())#gap=&quot;0%&quot;；is_selected=False；stack=&quot;stack1&quot;；label_opts=opts.LabelOpts(is_show=False)</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Bar-基本示例&quot;, subtitle=&quot;我是副标题&quot;))</span><br><span class="line">                     # datazoom_opts=[opts.DataZoomOpts(), opts.DataZoomOpts(type_=&quot;inside&quot;)],#时间轴显示并可同通过鼠标滑动</span><br><span class="line">    .set_series_opts(</span><br><span class="line">        label_opts=opts.LabelOpts(is_show=False),</span><br><span class="line">        markpoint_opts=opts.MarkPointOpts(</span><br><span class="line">            data=[</span><br><span class="line">                opts.MarkPointItem(type_=&quot;max&quot;, name=&quot;最大值&quot;),</span><br><span class="line">                opts.MarkPointItem(type_=&quot;min&quot;, name=&quot;最小值&quot;),</span><br><span class="line">#                 opts.MarkPointItem(type_=&quot;average&quot;, name=&quot;平均值&quot;),</span><br><span class="line">            ]</span><br><span class="line">        ),</span><br><span class="line">        markline_opts= opts.MarkLineOpts(data = [opts.MarkLineItem(type_ = &quot;average&quot;,name = &quot;平均值&quot;)])</span><br><span class="line">    )</span><br><span class="line">    .render_notebook()</span><br><span class="line">)</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-c318cf13b19d947a.1zz3gy9m634w.png"
+                     
+                ></p>
+<ul>
+<li><p>只能通过滑动水平轴缩放x轴：只传入datazoom_opts=[opts.DataZoomOpts()]；省略掉 opts.DataZoomOpts(), 删除水平轴，就只能通过鼠标拖动；</p>
+</li>
+<li><p>显示水平轴的比例（默认）：<br>opts.DataZoomOpts(range_start=20,range_end=80)</p>
+</li>
+<li><p>取消柱子上方数据显示：<br>label_opts=opts.LabelOpts(is_show=False)</p>
+</li>
+<li><p>添加y轴水平轴：<br>datazoom_opts=opts.DataZoomOpts(orient=”vertical”)，可缩放大小；</p>
+</li>
+<li><p>柱间距离：<br>加入参数gap=”0%”(两个add_yaxis里面都要传)；<br>加入参数category_gap=”80%”，表示单系柱间距离；</p>
+</li>
+<li><p>默认取消显示某 Series：<br>加入参数is_selected=False，默认取消显示某 Series</p>
+</li>
+<li><p>堆叠数据：传入stack=”stack1”，希望哪几个指标堆叠就传那几个add_yaxis中；</p>
+</li>
+<li><p>显示ToolBox：在set_global_opts()中传入        toolbox_opts=opts.ToolboxOpts(), brush_opts=opts.BrushOpts(),；</p>
+</li>
+<li><p>XY轴名称：在set_globel_opts()中加入 yaxis_opts=opts.AxisOpts(name=”我是 Y  轴”),xaxis_opts=opts.AxisOpts(name=”我是 X 轴”),  ；</p>
+</li>
+<li><p>Y轴数据单位：在set_globel_opts()中加入 yaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(formatter=”{value} /月”)),  ；</p>
+</li>
+<li><p>加入标记线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    .set_series_opts(</span><br><span class="line">        label_opts=opts.LabelOpts(is_show=False),</span><br><span class="line">        markline_opts=opts.MarkLineOpts(</span><br><span class="line">            data=[opts.MarkLineItem(y=50, name=&quot;yAxis=50&quot;)]</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">#set_global_opts()后加入set_series_opts，加入标记线，这里是y=50；</span><br></pre></td></tr></table></figure></li>
+<li><p>标记线的维度（当然可以是横轴）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.set_series_opts(</span><br><span class="line">	markline_opts=opts.MarkLineOpts(</span><br><span class="line">                data=[opts.MarkLineItem(type_=&quot;average&quot;,value_dim=&quot;x&quot;, 								name=&quot;xAxis&quot;),</span><br><span class="line">                     opts.MarkLineItem(type_=&quot;average&quot;,value_dim=&quot;y&quot;, 								name=&quot;xAxis&quot;)</span><br><span class="line">                     ]</span><br></pre></td></tr></table></figure></li>
+<li><p>加入标记值</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#set_series_opts中加入，表示传入标记，最大、最小、平均值。</span><br><span class="line">        markpoint_opts=opts.MarkPointOpts(</span><br><span class="line">            data=[</span><br><span class="line">                opts.MarkPointItem(type_=&quot;max&quot;, name=&quot;最大值&quot;),</span><br><span class="line">                opts.MarkPointItem(type_=&quot;min&quot;, name=&quot;最小值&quot;),</span><br><span class="line">                opts.MarkPointItem(type_=&quot;average&quot;, name=&quot;平均值&quot;),</span><br><span class="line">            ]</span><br></pre></td></tr></table></figure></li>
+<li><p>xy轴互换</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#设置完add_yaxis后接着</span><br><span class="line">    .reversal_axis()#xy轴互换</span><br><span class="line">    .set_series_opts(label_opts=opts.LabelOpts(position=&quot;right&quot;))#显示数据在柱子右边</span><br></pre></td></tr></table></figure></li>
+<li><p>x轴名字标签过长，旋转角度</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">在set_global_opts（）中传入</span><br><span class="line">xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-15)),</span><br></pre></td></tr></table></figure></li>
+<li><p>连接空数据 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pyecharts.options as opts</span><br><span class="line">from pyecharts.charts import Line</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line"></span><br><span class="line">y = Faker.values()</span><br><span class="line">y[3], y[5] = None, None</span><br><span class="line">c = (</span><br><span class="line">    Line()</span><br><span class="line">    .add_xaxis(Faker.choose())</span><br><span class="line">    .add_yaxis(&quot;商家A&quot;, y, is_connect_nones=True)</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Line-连接空数据&quot;))</span><br><span class="line">    .render(&quot;line_connect_null.html&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li><p>自定义标记点</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pyecharts.options as opts</span><br><span class="line">from pyecharts.charts import Line</span><br><span class="line">from pyecharts.faker import Faker</span><br><span class="line"></span><br><span class="line">x, y = Faker.choose(), Faker.values()</span><br><span class="line">c = (</span><br><span class="line">    Line()</span><br><span class="line">    .add_xaxis(x)</span><br><span class="line">    .add_yaxis(</span><br><span class="line">        &quot;商家A&quot;,</span><br><span class="line">        y,</span><br><span class="line">        markpoint_opts=opts.MarkPointOpts(</span><br><span class="line">            data=[opts.MarkPointItem(name=&quot;自定义标记点&quot;, coord=[x[2], y[2]], value=y[2])]</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Line-MarkPoint（自定义）&quot;))</span><br><span class="line">    .render(&quot;line_markpoint_custom.html&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li><p>作条形图时由于有时候座标轴文字过长，缩放后导致无法完全显示，此时则需要调整座标轴与图像的边距。调整边距是采用grid（）方法。在图形设置完成后，使用grid设置座标轴与图像边界的距离。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">report_day_line = Grid()</span><br><span class="line">report_day_line.add(report_day_line1,opts.GridOpts(pos_left=&quot;10%&quot;,pos_top =&quot;10%&quot;), is_control_axis_index=True)</span><br><span class="line">report_day_line.render_notebook()</span><br></pre></td></tr></table></figure></li>
+<li><p>指定chart_id时要将写好的图形定义成函数，这样子可以复用后面的page中图片位置，方便更改</p>
+</li>
+<li><p>jscode的妙用</p>
+</li>
+<li><p><a class="link"   href="https://zhuanlan.zhihu.com/p/133533187" >https://zhuanlan.zhihu.com/p/133533187<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tooltip_opts=opts.TooltipOpts(</span><br><span class="line">                formatter=JsCode(</span><br><span class="line">                &quot;function (params) &#123;return params.value[2] + &#x27; ：复购率：&#x27; +(Number(params.value[0])* 100).toFixed(2) + &#x27;%&#x27;+&#x27;，销售额：&#x27;+ params.value[1];&#125;&quot;</span><br><span class="line">                )</span><br><span class="line">#                 trigger=&quot;axis&quot;, axis_pointer_type=&quot;cross&quot;</span><br><span class="line">            ),</span><br></pre></td></tr></table></figure>
+<h1 id="pyecharts画地理图-geo-map"><a href="#pyecharts画地理图-geo-map" class="headerlink" title="pyecharts画地理图-geo,map"></a>pyecharts画地理图-geo,map</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def my_geo(city, city_value):</span><br><span class="line">    c = (</span><br><span class="line">        Geo(init_opts=opts.InitOpts(theme=ThemeType.DARK,chart_id=1))</span><br><span class="line">            .add_schema(maptype=&quot;china&quot;)</span><br><span class="line">            .add(&quot;geo&quot;, [list(z) for z in zip(city, city_value)])</span><br><span class="line">            .set_series_opts(label_opts=opts.LabelOpts(is_show=False))</span><br><span class="line">            .set_global_opts(</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(), title_opts=opts.TitleOpts(title=&quot;用户城市分布&quot;)</span><br><span class="line">        )  # .render(&quot;geo_base.html&quot;)</span><br><span class="line">    )</span><br><span class="line">    return c</span><br></pre></td></tr></table></figure>
+<p>is_piecewise参数：在 set_global_opts()中的visualmap_opts=opts.VisualMapOpts(is_piecewise=True),表示分段显示；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def my_map(province, num):</span><br><span class="line">    c = (</span><br><span class="line">        Map(init_opts=opts.InitOpts(theme=ThemeType.DARK,chart_id=2))</span><br><span class="line">            .add(&quot;map&quot;, [list(z) for z in zip(province, num)], &quot;china&quot;)</span><br><span class="line">            .set_series_opts(label_opts=opts.LabelOpts(is_show=False))</span><br><span class="line">            .set_global_opts(visualmap_opts=opts.VisualMapOpts(), title_opts=opts.TitleOpts(title=&quot;用户省份分布&quot;))</span><br><span class="line">    )  # .render(&quot;map_base.html&quot;)</span><br><span class="line">    return c</span><br></pre></td></tr></table></figure>
+<h1 id="pyecharts画内层嵌套饼图"><a href="#pyecharts画内层嵌套饼图" class="headerlink" title="pyecharts画内层嵌套饼图"></a>pyecharts画内层嵌套饼图</h1></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">c = (</span><br><span class="line">    Pie()</span><br><span class="line">    .add(&quot;&quot;, [list(z) for z in zip(Faker.choose(), Faker.values())])#center=[&quot;35%&quot;, &quot;50%&quot;],</span><br><span class="line">    .set_global_opts(title_opts=opts.TitleOpts(title=&quot;Pie-基本示例&quot;))#legend_opts=opts.LegendOpts(pos_left=&quot;15%&quot;),</span><br><span class="line">    .set_series_opts(label_opts=opts.LabelOpts(formatter=&quot;&#123;b&#125;: &#123;c&#125;&quot;))</span><br><span class="line">#     .render(&quot;pie_base.html&quot;)</span><br><span class="line">)</span><br><span class="line">c.render_notebook()</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-109a65be286830ab.wpn8qntfni8.png"
+                     
+                ></p>
+<h1 id="nested-pies"><a href="#nested-pies" class="headerlink" title="nested_pies"></a>nested_pies</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">inner_x_data = [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;]</span><br><span class="line">inner_y_data = [335, 679, 1548]</span><br><span class="line">inner_data_pair = [list(z) for z in zip(inner_x_data, inner_y_data)]</span><br><span class="line"></span><br><span class="line">outer_x_data = [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;, &quot;邮件营销&quot;, &quot;联盟广告&quot;, &quot;视频广告&quot;, &quot;百度&quot;, &quot;谷歌&quot;]</span><br><span class="line">outer_y_data = [335, 310, 234, 135, 1048, 251, 147, 102]</span><br><span class="line">outer_data_pair = [list(z) for z in zip(outer_x_data, outer_y_data)]</span><br><span class="line">(</span><br><span class="line">    Pie(init_opts=opts.InitOpts())#theme=ThemeType.DARK 指定主题为黑色</span><br><span class="line">    .add(</span><br><span class="line">        series_name=&quot;访问来源&quot;,</span><br><span class="line">        data_pair=inner_data_pair,#指定数据源</span><br><span class="line">        radius=[0, &quot;30%&quot;],#半径 </span><br><span class="line">        label_opts=opts.LabelOpts(position=&quot;inner&quot;),#图形位置</span><br><span class="line">    )</span><br><span class="line">    .add(</span><br><span class="line">        series_name=&quot;访问来源&quot;,</span><br><span class="line">        radius=[&quot;40%&quot;, &quot;55%&quot;],</span><br><span class="line">        data_pair=outer_data_pair,</span><br><span class="line">        label_opts=opts.LabelOpts(</span><br><span class="line">            position=&quot;outside&quot;,</span><br><span class="line">            formatter=&quot;&#123;a|&#123;a&#125;&#125;&#123;abg|&#125;\n&#123;hr|&#125;\n &#123;b|&#123;b&#125;: &#125;&#123;c&#125; &#123;per|&#123;d&#125;%&#125;  &quot;,#&quot;&#123;a&#125; &lt;br/&gt;&#123;b&#125;: &#123;c&#125; (&#123;d&#125;%)&quot; 文本样式</span><br><span class="line">            background_color=&quot;#eee&quot;,  #背景颜色</span><br><span class="line">            border_color=&quot;#aaa&quot;,  #边框颜色</span><br><span class="line">            border_width=1,   #边框宽度</span><br><span class="line">            border_radius=4,  #边界半径</span><br><span class="line">            rich=&#123;</span><br><span class="line">                &quot;a&quot;: &#123;&quot;color&quot;: &quot;#999&quot;, &quot;lineHeight&quot;: 22, &quot;align&quot;: &quot;center&quot;&#125;,</span><br><span class="line">                &quot;abg&quot;: &#123;</span><br><span class="line">                    &quot;backgroundColor&quot;: &quot;#e3e3e3&quot;,</span><br><span class="line">                    &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                    &quot;align&quot;: &quot;right&quot;,</span><br><span class="line">                    &quot;height&quot;: 22,</span><br><span class="line">                    &quot;borderRadius&quot;: [4, 4, 0, 0],</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;hr&quot;: &#123;</span><br><span class="line">                    &quot;borderColor&quot;: &quot;#aaa&quot;,</span><br><span class="line">                    &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                    &quot;borderWidth&quot;: 0.5,</span><br><span class="line">                    &quot;height&quot;: 0,</span><br><span class="line">                &#125;,</span><br><span class="line">                &quot;b&quot;: &#123;&quot;fontSize&quot;: 16, &quot;lineHeight&quot;: 33&#125;,#,&quot;color&quot;:&quot;#999&quot;</span><br><span class="line">#                 &quot;c&quot;:&#123;&quot;color&quot;:&quot;#999&quot;&#125;,</span><br><span class="line">                &quot;per&quot;: &#123;</span><br><span class="line">                    &quot;color&quot;: &quot;#eee&quot;,</span><br><span class="line">                    &quot;backgroundColor&quot;: &quot;#334455&quot;,</span><br><span class="line">                    &quot;padding&quot;: [2, 4],</span><br><span class="line">                    &quot;borderRadius&quot;: 2,</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    .set_global_opts(legend_opts=opts.LegendOpts(pos_left=&quot;left&quot;, orient=&quot;vertical&quot;,textstyle_opts=&#123;&quot;color&quot;:&quot;#999&quot;&#125;))#设置图例字体为白色</span><br><span class="line">    .set_series_opts(</span><br><span class="line">        tooltip_opts=opts.TooltipOpts(</span><br><span class="line">            trigger=&quot;item&quot;, formatter=&quot;&#123;a&#125; &lt;br/&gt;&#123;b&#125;: &#123;c&#125; (&#123;d&#125;%)&quot;    # &#x27;item&#x27;: 数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">#     .render(&quot;nested_pies.html&quot;)</span><br><span class="line">).render_notebook()</span><br></pre></td></tr></table></figure>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-85a5b5d8ee7790a8.5qowy1o8a20.png"
+                     
+                ></p>
+<p>那个formatter配置项可以在这里了解：<br>{a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）<br><a class="link"   href="https://echarts.apache.org/zh/option.html#grid.tooltip.formatter" >https://echarts.apache.org/zh/option.html#grid.tooltip.formatter<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="pyecharts中page的使用类似BI大屏展示"><a href="#pyecharts中page的使用类似BI大屏展示" class="headerlink" title="pyecharts中page的使用类似BI大屏展示"></a>pyecharts中page的使用类似BI大屏展示</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">page = Page(layout= Page.DraggablePageLayout, page_title= &quot;大屏展示&quot;)</span><br><span class="line"># page = Page()</span><br><span class="line">page.add(</span><br><span class="line">    bar_datazoom_slider(),</span><br><span class="line">    line_markpoint(),</span><br><span class="line">    pie_rosetype(),</span><br><span class="line">    grid_mutil_yaxis(),</span><br><span class="line">    liquid_data_precision(),</span><br><span class="line">    table_base(),</span><br><span class="line">)</span><br><span class="line">page.render(&quot;temp.html&quot;)</span><br></pre></td></tr></table></figure>
+<p>然后自己点那开个temp.html文件进行拖拽，缩放，布局称自己想要的样子，最后点击save_config按钮，下载那个chart_config.json文件。</p>
+<ul>
+<li><p>修改json配置文件，改成百分比主要是为了页面自适应屏幕大小。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df = pd.read_json(&quot;chart_config.json&quot;)</span><br><span class="line">df[&quot;width&quot;] = df.width.apply(lambda x: x[:-2])</span><br><span class="line">df[&quot;height&quot;] = df.height.apply(lambda x: x[:-2])</span><br><span class="line">df[&quot;top&quot;] = df.top.apply(lambda x: x[:-2])</span><br><span class="line">df[&quot;left&quot;] = df.left.apply(lambda x: x[:-2])</span><br><span class="line"># df.astype(&#123;&#x27;width&#x27;:&#x27;float&#x27;,&#x27;height&#x27;:&#x27;float&#x27;,&#x27;top&#x27;:&#x27;float&#x27;,&#x27;height&#x27;:&#x27;float&#x27;&#125;).dtypes</span><br><span class="line">df[&quot;width&quot;]= df.width.apply(lambda x: str(round(float(x)/1256*100,4))+&quot;%&quot;)#这里1256、640是你自己电脑屏幕的px值</span><br><span class="line">df[&quot;height&quot;] = df.height.apply(lambda x: str(round(float(x)/640*100*11/12,4))+&quot;%&quot;)#如果出现右侧滑块，可适当进行缩放，这里按11/12的比例缩放</span><br><span class="line">df[&quot;top&quot;] = df.top.apply(lambda x: str(round(float(x)/640*100*11/12,4))+&quot;%&quot;)</span><br><span class="line">df[&quot;left&quot;] = df.left.apply(lambda x: str(round(float(x)/1256*100,4))+&quot;%&quot;)</span><br><span class="line">df.to_json(&quot;chart_config2.json&quot;,orient = &quot;records&quot;)</span><br></pre></td></tr></table></figure></li>
+<li><p>修改好json数据之后，再运行这行代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#第一个字段是前面拖拽的html文件名，cfg_file就是你刚save的json文件名，dest是你要生成的文件名</span><br><span class="line">page.save_resize_html( &#x27;temp.html&#x27;, cfg_file= &#x27;chart_config2.json&#x27;,dest= &#x27;设置好位置后的BI看板.html&#x27;)</span><br></pre></td></tr></table></figure>
+<p>这样弄完有点问题就是背景页面可能和图片背景有违和感，你可以使用BeautifulSoup再修改下页面背景颜色啥的,相关网课链接<a class="link"   href="https://www.bilibili.com/video/BV1KT4y1c7pb?p=22" >https://www.bilibili.com/video/BV1KT4y1c7pb?p=22<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import os</span><br><span class="line">with open(os.path.join(os.path.abspath(&quot;.&quot;), &quot;设置好位置后的BI看板.html&quot;), &#x27;r+&#x27;, encoding=&quot;utf8&quot;) as html:</span><br><span class="line">    html_bf = BeautifulSoup(html, &quot;lxml&quot;)</span><br><span class="line">    divs = html_bf.find_all(&quot;div&quot;)</span><br><span class="line">    </span><br><span class="line">    body = html_bf.find(&quot;body&quot;)</span><br><span class="line">    body[&quot;style&quot;]=&quot;background-color:#333333;&quot;</span><br><span class="line">#     div_title = &quot;&lt;div align=\&quot;center\&quot; style=\&quot;width:1900px;\&quot;&gt;\n&lt;span style=\&quot;font-size:30px;font face=\&#x27;黑体\&#x27;;color :#FFFFFF\&quot;&gt;&lt;b&gt;CD_NOW数据看板&lt;/b&gt;&lt;/div&gt;&quot;  # 修改页面背景色、追加标题</span><br><span class="line">#     body.insert(0, BeautifulSoup(div_title, &quot;lxml&quot;).div)</span><br><span class="line">    html_new = str(html_bf)</span><br><span class="line">    html.seek(0, 0)</span><br><span class="line">    html.truncate()</span><br><span class="line">    html.write(html_new)</span><br><span class="line">    html.close()</span><br></pre></td></tr></table></figure>
+<p>当然也可以把那个json文件里面的值传到对应的样式代码中在HTML页面中进行布局，需要注意的是画图时指定好每个图表的chart_id,便于通过字符串格式进行指定对应图表位置。</p>
+</li>
+</ul>
+<p>注意点：（来自<a class="link"   href="https://www.jianshu.com/p/47e8f056e5cf%EF%BC%89" >https://www.jianshu.com/p/47e8f056e5cf）<i class="fas fa-external-link-alt"></i></a><br>1.由于图片的布局是根据chart_config.json中图片id的对应关系进行布局，因此每张图片均需要指定其id；<br>如：<br>Bar(init_opts=opts.InitOpts(chart_id=1))<br>2.在本次操作工程中，发现Table类中不包含init_opts参数，可以通过修改源码，在D:\Anaconda3\Lib\site-packages\pyecharts\component\table指定char_id,具体修改的代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Table(ChartMixin):</span><br><span class="line">    def __init__(self, page_title: str = CurrentConfig.PAGE_TITLE, js_host: str = &quot;&quot;,chart_id=None):</span><br><span class="line">        self.page_title = page_title</span><br><span class="line">        self.js_host = js_host or CurrentConfig.ONLINE_HOST</span><br><span class="line">        self.js_dependencies: OrderedSet = OrderedSet()</span><br><span class="line">        self.js_functions: OrderedSet = OrderedSet()</span><br><span class="line">        self.title_opts: ComponentTitleOpts = ComponentTitleOpts()</span><br><span class="line">        self.html_content: str = &quot;&quot;</span><br><span class="line">        self._component_type: str = &quot;table&quot;</span><br><span class="line">        if chart_id:</span><br><span class="line">            self.chart_id: str = chart_id</span><br><span class="line">        else:</span><br><span class="line">            self.chart_id: str = uuid.uuid4().hex</span><br></pre></td></tr></table></figure>
+<p><a class="link"   href="https://www.bilibili.com/video/BV1KT4y1c7pb" >https://www.bilibili.com/video/BV1KT4y1c7pb<i class="fas fa-external-link-alt"></i></a> 网课里有资源自己去取</p>
+]]></content>
+      <tags>
+        <tag>python数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python电影数据分析</title>
+    <url>/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"
+                     
+                ></p>
+<h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>id：标识号<br>imdb_id：IMDB 标识号<br>popularity：在 Movie Database 上的相对页面查看次数<br>budget：预算（美元）<br>revenue：收入（美元）<br>original_title：电影名称<br>cast：演员列表，按 | 分隔，最多 5 名演员<br>homepage：电影首页的 URL<br>director：导演列表，按 | 分隔，最多 5 名导演<br>tagline：电影的标语<br>keywords：与电影相关的关键字，按 | 分隔，最多 5 个关键字<br>overview：剧情摘要<br>runtime：电影时长<br>genres：风格列表，按 | 分隔，最多 5 种风格<br>production_companies：制作公司列表，按 | 分隔，最多 5 家公司<br>release_date：首次上映日期<br>vote_count：评分次数<br>vote_average：平均评分<br>based on novel 是否由小说改编</p>
+<h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>每年上映电影数量、电影总票房表现？<br>电影票房与哪些因素最相关？<br>各类型电影表现？<br>各电影类型之间的关联性<br>原创电影与改编电影有何差异？<br>受众喜好与那些因素有关？电影时长为多少最合适？<br>Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</p>
+<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"
+                     
+                ></p>
+<p>电影工业在最近三十几年呈现稳步式增长，2014年数量最多。虽然电影数量最近二十年内有3次较大的波动，但电影总票房仍然保持在较高的水准，说明电影市场已经成熟，有固定的消费人群，可见投资电影仍然是很好的投资方式。</p>
+<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"
+                     
+                ></p>
+<p>由以上可知，电影票房与电影预算（0.73），受欢迎度（0.66），评价次数（0.78）存在强相关。 绘制电影票房与受欢迎度，评价次数，电影预算的相关性散点图及其线性回归线。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"
+                     
+                ></p>
+<p>如图，电影预算、评分基本与电影票房呈正线性相关的关系，这也符合正常经济规律。</p>
+<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"
+                     
+                ></p>
+<p>约从1992开始，电影市场开始爆发式增长，其中戏剧类（Drama）和喜剧类（Comedy）这两个类型是随时间增长幅度最大的，现在也比较热门。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"
+                     
+                ></p>
+<p>如上图，可见投资一部电影的话，上图中的类型是最好的选择，尤以comedy和drama最佳。那不同类型电影的盈利能力如何呢？</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"
+                     
+                ></p>
+<p>电影关键词主要以based on novel（基于小说）、women（女性）、independent film（独立电影）、murder（谋杀）为主</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"
+                     
+                ></p>
+<p>由图可知，平均收益前3的电影类型为：冒险类（Adventure）、科幻类（Fantasy）、动画类（Animation），而外国电影类（Foreign）和电视电影类（TV Movie）有亏损的风险。</p>
+<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"
+                     
+                ></p>
+<p>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在支持度阈值2.5%，提升度为3 的情况下，表现出较强的关联性，也符合人们的生活常识</p>
+<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"
+                     
+                ></p>
+<p>可见，绝大部分电影还是原创为主。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"
+                     
+                ></p>
+<p>原创电影的利润与改编电影相差一倍多。</p>
+<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"
+                     
+                ></p>
+<p>受众欢迎度较高的电影类型为Adventure，Science Fiction ，Fantasy。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"
+                     
+                ></p>
+<p>受众欢迎度较高的电影的时长基本在90-200分钟之间。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"
+                     
+                ></p>
+<p>受欢迎度高的电影，评分肯定高。反之评分高的电影，受欢迎度可能低，这就是冷门好片的天地。</p>
+<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"
+                     
+                ></p>
+<p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
+<h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
+<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import seaborn as sns</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]#显示中文</span><br><span class="line">plt.style.use(&#x27;ggplot&#x27;)</span><br></pre></td></tr></table></figure>
+<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">path = &#x27;D:/python_data_file/based_on_novel.csv&#x27;</span><br><span class="line">data = pd.read_csv(path)</span><br><span class="line"></span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line"># print(movies_ohe.shape)#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line"></span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line"># len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line"># print(rules_movies)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;3)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
+<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xdata = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,</span><br><span class="line">              &#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;]]</span><br><span class="line">#要求制造商和电影类型不能为空</span><br><span class="line">clean_xdata = xdata[xdata.production_companies.notnull()&amp;xdata.genres.notnull()].reset_index(drop=True)</span><br><span class="line"># 每年总票房</span><br><span class="line">clean_xdata[&#x27;year&#x27;] = pd.to_datetime(clean_xdata.release_date,format=&#x27;%Y-%m-%d&#x27;).dt.year</span><br><span class="line">year_revenue = clean_xdata.groupby(&#x27;year&#x27;)[&#x27;revenue&#x27;].sum()</span><br><span class="line">def pic_trend(data,tit,xlab,ylab):</span><br><span class="line">    plt.figure(figsize=(12,6))</span><br><span class="line">    data.plot()</span><br><span class="line">    plt.title(tit,fontsize = 20)</span><br><span class="line">    plt.xlabel(xlab,fontsize=15)</span><br><span class="line">    plt.ylabel(ylab,fontsize=15)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_trend(year_revenue,&#x27;每年总票房统计&#x27;,&#x27;年份&#x27;,&#x27;总票房&#x27;)</span><br><span class="line">#每年上映电影数量统计</span><br><span class="line">year_count = clean_xdata.groupby(&#x27;year&#x27;).id.count()</span><br><span class="line">pic_trend(year_count,&#x27;每年上映电影数量统计&#x27;,&#x27;年份&#x27;,&#x27;上映电影数量&#x27;)</span><br><span class="line">#每年上映电影数量饼图</span><br><span class="line">def pic_pie(data,val,gby,tit):</span><br><span class="line">    data = data.reset_index(drop=False)</span><br><span class="line">    fig = plt.figure(figsize=(16,8))</span><br><span class="line">    plt.pie(data[val],labels=data[gby],autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">    plt.title(tit,fontsize = 15)</span><br><span class="line">pic_pie(year_count,&#x27;id&#x27;,&#x27;year&#x27;,&#x27;每年上映电影数量&#x27;)</span><br></pre></td></tr></table></figure>
+<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 随时间推移如何发生变化的</span><br><span class="line">genre_df = clean_xdata.genres.str.get_dummies()#构建虚拟变量，相当于把各电影类型作为列名展开为一个稀疏矩阵</span><br><span class="line">genre_df[&#x27;release_date&#x27;] = clean_xdata[&#x27;year&#x27;]</span><br><span class="line">genre_by_year = genre_df.groupby(&#x27;release_date&#x27;).sum()</span><br><span class="line">fig = plt.figure(figsize=(12,6))</span><br><span class="line">plt.plot(genre_by_year,label = genre_by_year.columns)</span><br><span class="line">plt.legend(genre_by_year)</span><br><span class="line">plt.xticks(range(1950,2020,10))</span><br><span class="line">plt.title(&#x27;电影类型随时间变动趋势图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;年份&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line"></span><br><span class="line"># ②电影类型数量分布</span><br><span class="line">genre_sum = genre_by_year.sum().sort_values(ascending = False)</span><br><span class="line">#这里的label参数加不加在图中没有任何变化</span><br><span class="line">genre_sum.plot.barh(label=&#x27;genre&#x27;,figsize = (12,6))</span><br><span class="line">plt.title(&#x27;电影类型数量分布图&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;数量&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># （二）不同类型电影的盈利能力如何？</span><br><span class="line"># 建立电影类型-利润数据框，计算各电影类型平均收益：</span><br><span class="line">a = clean_xdata.revenue - clean_xdata.budget</span><br><span class="line">profit_df = genre_df.join(pd.DataFrame(a,columns=[&#x27;profit&#x27;]))</span><br><span class="line"></span><br><span class="line">#计算个电影类型的利润平均值</span><br><span class="line">#传递as_index=False，把分组键的类型作为一列返回在DataFrame中，而不是默认True时作为Series的索引返回</span><br><span class="line">genre_set = clean_xdata[&#x27;genres&#x27;].str.get_dummies().columns.unique()</span><br><span class="line">profit_by_genre = pd.Series(index=genre_set)</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    profit_by_genre[genre] = profit_df.groupby(genre,as_index = False).profit.mean().loc[1,&#x27;profit&#x27;]</span><br><span class="line">#画出各电影类型平均收益分布图</span><br><span class="line">profit_by_genre.sort_values().plot.barh(label=&#x27;genre&#x27;,figsize=(12,6))</span><br><span class="line">plt.title(&#x27;各电影类型平均收益分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;利润&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">original_recompose = pd.DataFrame(clean_xdata[&#x27;budget&#x27;])</span><br><span class="line">original_recompose.loc[:,&#x27;profit&#x27;] = profit_df.profit</span><br><span class="line">original_recompose[&#x27;type&#x27;] = clean_xdata[&#x27;based on novel&#x27;].map(lambda x :1 if x==&#x27;based on novel&#x27; else 0)</span><br><span class="line">#原创或改编电影的预算与利润</span><br><span class="line">#这个地方重新定义新的DataFrame --original_recompose_groupby用来存储各个指标分组后的均值（原创与改编电影概要）</span><br><span class="line">original_recompose_groupby = original_recompose.groupby(&#x27;type&#x27;).mean()</span><br><span class="line">original_recompose_groupby[&#x27;count&#x27;] = original_recompose.groupby(&#x27;type&#x27;).type.count()</span><br><span class="line">original_recompose_groupby[&#x27;profit_rate&#x27;] = original_recompose_groupby.profit/original_recompose_groupby.budget#这里有细节,平均利润率</span><br><span class="line">original_recompose_groupby.rename(index = &#123;0:&#x27;original&#x27;,1:&#x27;recompose&#x27;&#125;,inplace = True)#传递inplace=True会删去原来的索引，否则会保留</span><br><span class="line">#是否原创电影数量对比图</span><br><span class="line">plt.figure(figsize =(12,6))</span><br><span class="line">original_recompose_groupby.loc[original_recompose_groupby.index,&#x27;count&#x27;].plot.bar()#传入loc【】里面的参数不能是；&#x27;type&#x27;,会报错</span><br><span class="line">plt.title(&#x27;原创改编电影数量对比&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;原创-改变&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">#绘制利润柱状图</span><br><span class="line">x= list(range(len(original_recompose_groupby.index)))#索引长度序列</span><br><span class="line">xl = original_recompose_groupby.index#xl为索引实际值</span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1=fig.add_subplot(111)</span><br><span class="line">plt.bar(x,original_recompose_groupby.profit)</span><br><span class="line">#接下来有疑问？</span><br><span class="line">plt.xticks(x,xl,rotation = 0,fontsize=12)</span><br><span class="line">plt.yticks(fontsize=15)</span><br><span class="line">ax1.set_title(&#x27;原创与改编电影平均利润对比&#x27;,fontsize = 20)</span><br><span class="line">ax1.set_xlabel(&#x27;原创-改变&#x27;,fontsize = 18)</span><br><span class="line">ax1.set_ylabel(&#x27;利润&#x27;,fontsize = 18)</span><br><span class="line">ax1.legend(loc=2,labels=&#x27;利润&#x27;)</span><br><span class="line"></span><br><span class="line">#绘制利润折线图</span><br><span class="line">import matplotlib.ticker as mtick</span><br><span class="line">ax2 = ax1.twinx()</span><br><span class="line">ax2.plot(x,original_recompose_groupby[&#x27;profit_rate&#x27;],&#x27;go-&#x27;,lw=2)</span><br><span class="line">fmt=&#x27;%.2f%%&#x27;</span><br><span class="line">yticks = mtick.FormatStrFormatter(fmt)</span><br><span class="line">ax2.yaxis.set_major_formatter(yticks)#次纵坐标标签设置为百分比显示</span><br><span class="line">plt.yticks(fontsize = 15)</span><br><span class="line">ax2.set_ylabel(&#x27;利润率&#x27;,fontsize = 18)</span><br><span class="line">ax2.legend(loc=4,labels = &#x27;profit_rate&#x27;)#传递labels参数避免警告</span><br></pre></td></tr></table></figure>
+<p>#####生成词云</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">keywords_data = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,&#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;,&#x27;keywords&#x27;]]</span><br><span class="line">keywords_data = data[data.production_companies.notnull()&amp;data.genres.notnull()].reset_index(drop=True)#得到 包含关键字keywords数据的列表</span><br><span class="line">keywords_list1 = []</span><br><span class="line">for x in keywords_data.keywords.dropna():</span><br><span class="line">    keywords_list1.append(x)</span><br><span class="line">keywords_list1 = &#x27;&#x27;.join(keywords_list1)</span><br><span class="line">keywords_list1 = keywords_list1.replace(&#x27;\s&#x27;,&#x27;&#x27;)#去除字符串中空字符串（\s用于匹配空白字符，可能是空格、制表符、其他空白））</span><br><span class="line"></span><br><span class="line">wordcloud = WordCloud(background_color=&#x27;black&#x27;,max_words=3000,scale=1.5).generate(keywords_list1)</span><br><span class="line">plt.figure(figsize=(14,8))</span><br><span class="line">plt.imshow(wordcloud)</span><br><span class="line">plt.axis(&#x27;off&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">popular_genre_df = pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis=1)</span><br><span class="line">#计算各类型电影受欢迎度均值</span><br><span class="line">list = []</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    list.append(popular_genre_df.groupby(genre,as_index = False).popularity.mean().loc[1,&#x27;popularity&#x27;])</span><br><span class="line">popular_by_genre= pd.DataFrame(index=genre_set)</span><br><span class="line">popular_by_genre[&#x27;popularity_mean&#x27;] = list</span><br><span class="line">#电影类型受欢迎度分布图</span><br><span class="line">popular_by_genre.sort_values(by=&#x27;popularity_mean&#x27;).plot.barh(figsize=(14,8))</span><br><span class="line">plt.title(&#x27;电影类型受欢迎度分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ②电影时长与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.runtime,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;时长与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影时长&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ③电影评分与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.vote_average,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;评分与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影评分&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">companies_list =[&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]</span><br><span class="line">companies_df = pd.DataFrame()</span><br><span class="line">for company in companies_list:#各电影的电影商是否包含两者中其中一个，是则返回1，否则返回0</span><br><span class="line">    companies_df[company] =clean_xdata.production_companies.str.contains(company).map(lambda x :1 if x else 0)</span><br><span class="line">companies_df = pd.concat([companies_df,genre_df.iloc[:,:-1],profit_df.profit],axis=1)</span><br><span class="line">list = []</span><br><span class="line">for company in companies_list:</span><br><span class="line">    list.append(companies_df.groupby(company,as_index=False).profit.sum().loc[1,&#x27;profit&#x27;])</span><br><span class="line">companies_profit= pd.DataFrame(list,index = companies_list,columns=[&#x27;profit_sum&#x27;])</span><br><span class="line">companies_profit.plot.bar(label = companies_profit.index,figsize=(8,6))</span><br><span class="line">plt.title(&#x27;两家公司利润对比&#x27;,fontsize=20)</span><br><span class="line">plt.xticks(rotation = 0)</span><br><span class="line">plt.ylabel(&#x27;利润&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">companies_df_1 = companies_df.groupby(&#x27;Universal Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">companies_df_2 = companies_df.groupby(&#x27;Paramount Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">company_genre_df = pd.DataFrame([companies_df_1,companies_df_2],index = [&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]).T</span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">ax1 = fig.add_subplot(121)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Universal Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Universal Pictures&#x27;,fontsize = 15)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(122)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Paramount Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Paramount Pictures&#x27;,fontsize=15)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 电影票房与哪些因素最相关？</span><br><span class="line">clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;release_date&#x27;,&#x27;runtime&#x27;,&#x27;vote_average&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]].corr()</span><br><span class="line">import seaborn as sns</span><br><span class="line">revenue_corr = clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]]</span><br><span class="line">fig = plt.figure(figsize=(18,6))</span><br><span class="line">#电影票票房与电影预算相关性散点图</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(1,3,1)</span><br><span class="line">ax1 = sns.regplot(x=&#x27;popularity&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1)</span><br><span class="line">ax1.text(400,2e9,&#x27;r=0.64&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by popularity&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;popularity&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax2 = plt.subplot(1,3,2)</span><br><span class="line">ax2 = sns.regplot(x=&#x27;vote_count&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;g&#x27;,marker=&#x27;+&#x27;)</span><br><span class="line">ax2.text(6800,1.1e9,&#x27;r=0.78&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by vote_count&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;vote_count&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax3 = plt.subplot(1,3,3)</span><br><span class="line">ax3 = sns.regplot(x=&#x27;budget&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;r&#x27;,marker=&#x27;^&#x27;)</span><br><span class="line">ax3.text(1.6e8,2.2e9,&#x27;r=0.73&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by budget&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;budget&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br></pre></td></tr></table></figure>
+<p>思路要明确，代码要简洁，以后尽量都写成函数。</p>
+]]></content>
+      <tags>
+        <tag>数据分析实战</tag>
       </tags>
   </entry>
   <entry>
@@ -1045,152 +1198,6 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
       </tags>
   </entry>
   <entry>
-    <title>python电影数据分析</title>
-    <url>/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"
-                     
-                ></p>
-<h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>id：标识号<br>imdb_id：IMDB 标识号<br>popularity：在 Movie Database 上的相对页面查看次数<br>budget：预算（美元）<br>revenue：收入（美元）<br>original_title：电影名称<br>cast：演员列表，按 | 分隔，最多 5 名演员<br>homepage：电影首页的 URL<br>director：导演列表，按 | 分隔，最多 5 名导演<br>tagline：电影的标语<br>keywords：与电影相关的关键字，按 | 分隔，最多 5 个关键字<br>overview：剧情摘要<br>runtime：电影时长<br>genres：风格列表，按 | 分隔，最多 5 种风格<br>production_companies：制作公司列表，按 | 分隔，最多 5 家公司<br>release_date：首次上映日期<br>vote_count：评分次数<br>vote_average：平均评分<br>based on novel 是否由小说改编</p>
-<h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>每年上映电影数量、电影总票房表现？<br>电影票房与哪些因素最相关？<br>各类型电影表现？<br>各电影类型之间的关联性<br>原创电影与改编电影有何差异？<br>受众喜好与那些因素有关？电影时长为多少最合适？<br>Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</p>
-<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"
-                     
-                ></p>
-<p>电影工业在最近三十几年呈现稳步式增长，2014年数量最多。虽然电影数量最近二十年内有3次较大的波动，但电影总票房仍然保持在较高的水准，说明电影市场已经成熟，有固定的消费人群，可见投资电影仍然是很好的投资方式。</p>
-<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"
-                     
-                ></p>
-<p>由以上可知，电影票房与电影预算（0.73），受欢迎度（0.66），评价次数（0.78）存在强相关。 绘制电影票房与受欢迎度，评价次数，电影预算的相关性散点图及其线性回归线。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"
-                     
-                ></p>
-<p>如图，电影预算、评分基本与电影票房呈正线性相关的关系，这也符合正常经济规律。</p>
-<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"
-                     
-                ></p>
-<p>约从1992开始，电影市场开始爆发式增长，其中戏剧类（Drama）和喜剧类（Comedy）这两个类型是随时间增长幅度最大的，现在也比较热门。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"
-                     
-                ></p>
-<p>如上图，可见投资一部电影的话，上图中的类型是最好的选择，尤以comedy和drama最佳。那不同类型电影的盈利能力如何呢？</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"
-                     
-                ></p>
-<p>电影关键词主要以based on novel（基于小说）、women（女性）、independent film（独立电影）、murder（谋杀）为主</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"
-                     
-                ></p>
-<p>由图可知，平均收益前3的电影类型为：冒险类（Adventure）、科幻类（Fantasy）、动画类（Animation），而外国电影类（Foreign）和电视电影类（TV Movie）有亏损的风险。</p>
-<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"
-                     
-                ></p>
-<p>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在支持度阈值2.5%，提升度为3 的情况下，表现出较强的关联性，也符合人们的生活常识</p>
-<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"
-                     
-                ></p>
-<p>可见，绝大部分电影还是原创为主。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"
-                     
-                ></p>
-<p>原创电影的利润与改编电影相差一倍多。</p>
-<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"
-                     
-                ></p>
-<p>受众欢迎度较高的电影类型为Adventure，Science Fiction ，Fantasy。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"
-                     
-                ></p>
-<p>受众欢迎度较高的电影的时长基本在90-200分钟之间。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"
-                     
-                ></p>
-<p>受欢迎度高的电影，评分肯定高。反之评分高的电影，受欢迎度可能低，这就是冷门好片的天地。</p>
-<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"
-                     
-                ></p>
-<p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
-<h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
-<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import seaborn as sns</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]#显示中文</span><br><span class="line">plt.style.use(&#x27;ggplot&#x27;)</span><br></pre></td></tr></table></figure>
-<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">path = &#x27;D:/python_data_file/based_on_novel.csv&#x27;</span><br><span class="line">data = pd.read_csv(path)</span><br><span class="line"></span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line"># print(movies_ohe.shape)#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line"></span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line"># len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line"># print(rules_movies)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;3)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
-<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xdata = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,</span><br><span class="line">              &#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;]]</span><br><span class="line">#要求制造商和电影类型不能为空</span><br><span class="line">clean_xdata = xdata[xdata.production_companies.notnull()&amp;xdata.genres.notnull()].reset_index(drop=True)</span><br><span class="line"># 每年总票房</span><br><span class="line">clean_xdata[&#x27;year&#x27;] = pd.to_datetime(clean_xdata.release_date,format=&#x27;%Y-%m-%d&#x27;).dt.year</span><br><span class="line">year_revenue = clean_xdata.groupby(&#x27;year&#x27;)[&#x27;revenue&#x27;].sum()</span><br><span class="line">def pic_trend(data,tit,xlab,ylab):</span><br><span class="line">    plt.figure(figsize=(12,6))</span><br><span class="line">    data.plot()</span><br><span class="line">    plt.title(tit,fontsize = 20)</span><br><span class="line">    plt.xlabel(xlab,fontsize=15)</span><br><span class="line">    plt.ylabel(ylab,fontsize=15)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_trend(year_revenue,&#x27;每年总票房统计&#x27;,&#x27;年份&#x27;,&#x27;总票房&#x27;)</span><br><span class="line">#每年上映电影数量统计</span><br><span class="line">year_count = clean_xdata.groupby(&#x27;year&#x27;).id.count()</span><br><span class="line">pic_trend(year_count,&#x27;每年上映电影数量统计&#x27;,&#x27;年份&#x27;,&#x27;上映电影数量&#x27;)</span><br><span class="line">#每年上映电影数量饼图</span><br><span class="line">def pic_pie(data,val,gby,tit):</span><br><span class="line">    data = data.reset_index(drop=False)</span><br><span class="line">    fig = plt.figure(figsize=(16,8))</span><br><span class="line">    plt.pie(data[val],labels=data[gby],autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">    plt.title(tit,fontsize = 15)</span><br><span class="line">pic_pie(year_count,&#x27;id&#x27;,&#x27;year&#x27;,&#x27;每年上映电影数量&#x27;)</span><br></pre></td></tr></table></figure>
-<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 随时间推移如何发生变化的</span><br><span class="line">genre_df = clean_xdata.genres.str.get_dummies()#构建虚拟变量，相当于把各电影类型作为列名展开为一个稀疏矩阵</span><br><span class="line">genre_df[&#x27;release_date&#x27;] = clean_xdata[&#x27;year&#x27;]</span><br><span class="line">genre_by_year = genre_df.groupby(&#x27;release_date&#x27;).sum()</span><br><span class="line">fig = plt.figure(figsize=(12,6))</span><br><span class="line">plt.plot(genre_by_year,label = genre_by_year.columns)</span><br><span class="line">plt.legend(genre_by_year)</span><br><span class="line">plt.xticks(range(1950,2020,10))</span><br><span class="line">plt.title(&#x27;电影类型随时间变动趋势图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;年份&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line"></span><br><span class="line"># ②电影类型数量分布</span><br><span class="line">genre_sum = genre_by_year.sum().sort_values(ascending = False)</span><br><span class="line">#这里的label参数加不加在图中没有任何变化</span><br><span class="line">genre_sum.plot.barh(label=&#x27;genre&#x27;,figsize = (12,6))</span><br><span class="line">plt.title(&#x27;电影类型数量分布图&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;数量&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># （二）不同类型电影的盈利能力如何？</span><br><span class="line"># 建立电影类型-利润数据框，计算各电影类型平均收益：</span><br><span class="line">a = clean_xdata.revenue - clean_xdata.budget</span><br><span class="line">profit_df = genre_df.join(pd.DataFrame(a,columns=[&#x27;profit&#x27;]))</span><br><span class="line"></span><br><span class="line">#计算个电影类型的利润平均值</span><br><span class="line">#传递as_index=False，把分组键的类型作为一列返回在DataFrame中，而不是默认True时作为Series的索引返回</span><br><span class="line">genre_set = clean_xdata[&#x27;genres&#x27;].str.get_dummies().columns.unique()</span><br><span class="line">profit_by_genre = pd.Series(index=genre_set)</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    profit_by_genre[genre] = profit_df.groupby(genre,as_index = False).profit.mean().loc[1,&#x27;profit&#x27;]</span><br><span class="line">#画出各电影类型平均收益分布图</span><br><span class="line">profit_by_genre.sort_values().plot.barh(label=&#x27;genre&#x27;,figsize=(12,6))</span><br><span class="line">plt.title(&#x27;各电影类型平均收益分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;利润&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">original_recompose = pd.DataFrame(clean_xdata[&#x27;budget&#x27;])</span><br><span class="line">original_recompose.loc[:,&#x27;profit&#x27;] = profit_df.profit</span><br><span class="line">original_recompose[&#x27;type&#x27;] = clean_xdata[&#x27;based on novel&#x27;].map(lambda x :1 if x==&#x27;based on novel&#x27; else 0)</span><br><span class="line">#原创或改编电影的预算与利润</span><br><span class="line">#这个地方重新定义新的DataFrame --original_recompose_groupby用来存储各个指标分组后的均值（原创与改编电影概要）</span><br><span class="line">original_recompose_groupby = original_recompose.groupby(&#x27;type&#x27;).mean()</span><br><span class="line">original_recompose_groupby[&#x27;count&#x27;] = original_recompose.groupby(&#x27;type&#x27;).type.count()</span><br><span class="line">original_recompose_groupby[&#x27;profit_rate&#x27;] = original_recompose_groupby.profit/original_recompose_groupby.budget#这里有细节,平均利润率</span><br><span class="line">original_recompose_groupby.rename(index = &#123;0:&#x27;original&#x27;,1:&#x27;recompose&#x27;&#125;,inplace = True)#传递inplace=True会删去原来的索引，否则会保留</span><br><span class="line">#是否原创电影数量对比图</span><br><span class="line">plt.figure(figsize =(12,6))</span><br><span class="line">original_recompose_groupby.loc[original_recompose_groupby.index,&#x27;count&#x27;].plot.bar()#传入loc【】里面的参数不能是；&#x27;type&#x27;,会报错</span><br><span class="line">plt.title(&#x27;原创改编电影数量对比&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;原创-改变&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">#绘制利润柱状图</span><br><span class="line">x= list(range(len(original_recompose_groupby.index)))#索引长度序列</span><br><span class="line">xl = original_recompose_groupby.index#xl为索引实际值</span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1=fig.add_subplot(111)</span><br><span class="line">plt.bar(x,original_recompose_groupby.profit)</span><br><span class="line">#接下来有疑问？</span><br><span class="line">plt.xticks(x,xl,rotation = 0,fontsize=12)</span><br><span class="line">plt.yticks(fontsize=15)</span><br><span class="line">ax1.set_title(&#x27;原创与改编电影平均利润对比&#x27;,fontsize = 20)</span><br><span class="line">ax1.set_xlabel(&#x27;原创-改变&#x27;,fontsize = 18)</span><br><span class="line">ax1.set_ylabel(&#x27;利润&#x27;,fontsize = 18)</span><br><span class="line">ax1.legend(loc=2,labels=&#x27;利润&#x27;)</span><br><span class="line"></span><br><span class="line">#绘制利润折线图</span><br><span class="line">import matplotlib.ticker as mtick</span><br><span class="line">ax2 = ax1.twinx()</span><br><span class="line">ax2.plot(x,original_recompose_groupby[&#x27;profit_rate&#x27;],&#x27;go-&#x27;,lw=2)</span><br><span class="line">fmt=&#x27;%.2f%%&#x27;</span><br><span class="line">yticks = mtick.FormatStrFormatter(fmt)</span><br><span class="line">ax2.yaxis.set_major_formatter(yticks)#次纵坐标标签设置为百分比显示</span><br><span class="line">plt.yticks(fontsize = 15)</span><br><span class="line">ax2.set_ylabel(&#x27;利润率&#x27;,fontsize = 18)</span><br><span class="line">ax2.legend(loc=4,labels = &#x27;profit_rate&#x27;)#传递labels参数避免警告</span><br></pre></td></tr></table></figure>
-<p>#####生成词云</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">keywords_data = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,&#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;,&#x27;keywords&#x27;]]</span><br><span class="line">keywords_data = data[data.production_companies.notnull()&amp;data.genres.notnull()].reset_index(drop=True)#得到 包含关键字keywords数据的列表</span><br><span class="line">keywords_list1 = []</span><br><span class="line">for x in keywords_data.keywords.dropna():</span><br><span class="line">    keywords_list1.append(x)</span><br><span class="line">keywords_list1 = &#x27;&#x27;.join(keywords_list1)</span><br><span class="line">keywords_list1 = keywords_list1.replace(&#x27;\s&#x27;,&#x27;&#x27;)#去除字符串中空字符串（\s用于匹配空白字符，可能是空格、制表符、其他空白））</span><br><span class="line"></span><br><span class="line">wordcloud = WordCloud(background_color=&#x27;black&#x27;,max_words=3000,scale=1.5).generate(keywords_list1)</span><br><span class="line">plt.figure(figsize=(14,8))</span><br><span class="line">plt.imshow(wordcloud)</span><br><span class="line">plt.axis(&#x27;off&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">popular_genre_df = pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis=1)</span><br><span class="line">#计算各类型电影受欢迎度均值</span><br><span class="line">list = []</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    list.append(popular_genre_df.groupby(genre,as_index = False).popularity.mean().loc[1,&#x27;popularity&#x27;])</span><br><span class="line">popular_by_genre= pd.DataFrame(index=genre_set)</span><br><span class="line">popular_by_genre[&#x27;popularity_mean&#x27;] = list</span><br><span class="line">#电影类型受欢迎度分布图</span><br><span class="line">popular_by_genre.sort_values(by=&#x27;popularity_mean&#x27;).plot.barh(figsize=(14,8))</span><br><span class="line">plt.title(&#x27;电影类型受欢迎度分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ②电影时长与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.runtime,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;时长与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影时长&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ③电影评分与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.vote_average,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;评分与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影评分&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">companies_list =[&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]</span><br><span class="line">companies_df = pd.DataFrame()</span><br><span class="line">for company in companies_list:#各电影的电影商是否包含两者中其中一个，是则返回1，否则返回0</span><br><span class="line">    companies_df[company] =clean_xdata.production_companies.str.contains(company).map(lambda x :1 if x else 0)</span><br><span class="line">companies_df = pd.concat([companies_df,genre_df.iloc[:,:-1],profit_df.profit],axis=1)</span><br><span class="line">list = []</span><br><span class="line">for company in companies_list:</span><br><span class="line">    list.append(companies_df.groupby(company,as_index=False).profit.sum().loc[1,&#x27;profit&#x27;])</span><br><span class="line">companies_profit= pd.DataFrame(list,index = companies_list,columns=[&#x27;profit_sum&#x27;])</span><br><span class="line">companies_profit.plot.bar(label = companies_profit.index,figsize=(8,6))</span><br><span class="line">plt.title(&#x27;两家公司利润对比&#x27;,fontsize=20)</span><br><span class="line">plt.xticks(rotation = 0)</span><br><span class="line">plt.ylabel(&#x27;利润&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">companies_df_1 = companies_df.groupby(&#x27;Universal Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">companies_df_2 = companies_df.groupby(&#x27;Paramount Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">company_genre_df = pd.DataFrame([companies_df_1,companies_df_2],index = [&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]).T</span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">ax1 = fig.add_subplot(121)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Universal Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Universal Pictures&#x27;,fontsize = 15)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(122)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Paramount Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Paramount Pictures&#x27;,fontsize=15)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 电影票房与哪些因素最相关？</span><br><span class="line">clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;release_date&#x27;,&#x27;runtime&#x27;,&#x27;vote_average&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]].corr()</span><br><span class="line">import seaborn as sns</span><br><span class="line">revenue_corr = clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]]</span><br><span class="line">fig = plt.figure(figsize=(18,6))</span><br><span class="line">#电影票票房与电影预算相关性散点图</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(1,3,1)</span><br><span class="line">ax1 = sns.regplot(x=&#x27;popularity&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1)</span><br><span class="line">ax1.text(400,2e9,&#x27;r=0.64&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by popularity&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;popularity&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax2 = plt.subplot(1,3,2)</span><br><span class="line">ax2 = sns.regplot(x=&#x27;vote_count&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;g&#x27;,marker=&#x27;+&#x27;)</span><br><span class="line">ax2.text(6800,1.1e9,&#x27;r=0.78&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by vote_count&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;vote_count&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax3 = plt.subplot(1,3,3)</span><br><span class="line">ax3 = sns.regplot(x=&#x27;budget&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;r&#x27;,marker=&#x27;^&#x27;)</span><br><span class="line">ax3.text(1.6e8,2.2e9,&#x27;r=0.73&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by budget&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;budget&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br></pre></td></tr></table></figure>
-<p>思路要明确，代码要简洁，以后尽量都写成函数。</p>
-]]></content>
-      <tags>
-        <tag>数据分析实战</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python面向对象习题</title>
     <url>/2019/07/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/</url>
     <content><![CDATA[<p>写完对对象这个东西了解很多了</p>
@@ -1207,33 +1214,6 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
 ]]></content>
       <tags>
         <tag>python数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>sql排名函数</title>
-    <url>/2021/12/23/sql%E6%8E%92%E5%90%8D%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<ul>
-<li><p>rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，存在并列，且序号会跳跃</p>
-<p>适合求第一名，名次这类</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id</span><br><span class="line">,last_name</span><br><span class="line">,department_id</span><br><span class="line">,salary</span><br><span class="line">,rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>row_number()排名是连续的,出现同名的序号仍然会连续，不存在并列和跳跃</p>
-<p>适合计算个数，位置，连续购买场景</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,row_number() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>dense_rank()排名是连续的，出现同名的序号会相同，存在并列，且序号不会跳跃</p>
-<p>（用的比较少的，单纯需要排名且存在并列也不跳跃）</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,dense_rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
-<p>– ntile()根据排序指定数量进行分区编号（分区编号排序）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,ntile(3) over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>sql数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -1355,6 +1335,33 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
       </tags>
   </entry>
   <entry>
+    <title>sql排名函数</title>
+    <url>/2021/12/23/sql%E6%8E%92%E5%90%8D%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<ul>
+<li><p>rank()排名是不连续的，出现同名的排序序号会相同(比较常规的排序)，存在并列，且序号会跳跃</p>
+<p>适合求第一名，名次这类</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id</span><br><span class="line">,last_name</span><br><span class="line">,department_id</span><br><span class="line">,salary</span><br><span class="line">,rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>row_number()排名是连续的,出现同名的序号仍然会连续，不存在并列和跳跃</p>
+<p>适合计算个数，位置，连续购买场景</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,row_number() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>dense_rank()排名是连续的，出现同名的序号会相同，存在并列，且序号不会跳跃</p>
+<p>（用的比较少的，单纯需要排名且存在并列也不跳跃）</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,dense_rank() over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>
+<p>– ntile()根据排序指定数量进行分区编号（分区编号排序）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">select </span><br><span class="line">employee_id </span><br><span class="line">,last_name </span><br><span class="line">,department_id </span><br><span class="line">,salary </span><br><span class="line">,ntile(3) over(partition by department_id order by salary desc) </span><br><span class="line">from employees </span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>sql数据分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我们这样的人，谈爱都太奢侈</title>
     <url>/2020/09/24/%E6%88%91%E4%BB%AC%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%BA%EF%BC%8C%E8%B0%88%E7%88%B1%E9%83%BD%E5%A4%AA%E5%A5%A2%E4%BE%88/</url>
     <content><![CDATA[<p>爱是人类的本能，可是成年人的世界里，所谓的真心，更多的换来的却是失落与沮丧，渐渐的他们学会了伪装与克制，变得沉默且凉薄。前几天和朋友闲聊，突然听到现如今找女朋友就像找大熊猫一样，哈哈哈，还是大学的时候投资好啊，现在估计早都不担心了。</p>
@@ -1368,20 +1375,30 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
       </tags>
   </entry>
   <entry>
-    <title>至少你，存在过我的记忆</title>
-    <url>/2018/10/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/</url>
-    <content><![CDATA[<p>人海中错过的那个人，至少，在我失眠梦呓间，脑海里还是会依稀浮现出你的容颜。</p>
-<p>贝蒂，我是里克。最近你的城市下雨了吗，我这里的温度有些难过，不知道你过得怎么样。</p>
-<p>济南的天照旧那样调皮，就像世界末日里的那句歌词，Why dose the sun go on shining一样，一次又一次地挑战着我出门的勇气，还好我坐的地方阳光有所收敛，不然我炽热的内心暴露在烈日下，真不知道会发生什么化学反应。</p>
-<p>家庭生活的原因，我很早就开始了一个人的生活，可能除了自己，没有谁能左右我的想法了。一个人无拘无束，一个人天马行空，一个人桀骜不驯，一个人胆怯如鼠。</p>
-<p>周国平说，在多数场合，我不是觉得对方乏味，就是害怕对方觉得我乏味，我既不愿意忍受对方的乏味，又不愿意费劲使自己有趣，所以我选择独处，那就自己承受自己的乏味，不累及他人。我大概就是这样一种人吧，得意的时候手舞足蹈，逢场作戏，可稍不如意就黯然失色，冷若冰霜，你说乏味不乏味。</p>
-<p>浮躁的生活中让人有太多无法控制的遐想，也许，我应该找到一个更好的娱乐方式，以至于不会在休息的时候，不由自主的沦陷。</p>
-<p>每次听到廖俊涛的那首《谁》，特别想拿起吉他练琴，弹着弹着，就忘记了后天还要考试的束缚感。有时候真希望时间定格在这一刻，不用去想其他任何事情。</p>
-<p>当然也好羡慕那些在架子鼓上不可一世的乐手们，想学习打鼓，一直追求这样的发泄方式，可是生活总归会有些小遗憾，习惯了时光静好，心情似乎一直都波澜不惊。</p>
-<p>最近经历了一连串的考核，带着满满的用心，和一丁点慌张，完成着之前感觉惊天动地的事情。</p>
-<p>前段时间帮驾校招生，拿到了辛苦换来的一点小回报。不过贝蒂，很多次的社会经验使我觉得，人们好像都不愿意看到别人变好的样子，他们尽可能与遭遇苦难的人找到共鸣，要么保持缄默，要么施以怜悯。当他们发现别人的好时，它们立刻感到毛骨悚然。</p>
-<p>贝蒂，你说像我这样的人，会活成自己想要成为的样子吗，我要学习的东西在需要通过考试拿到的学分面前，已经搁浅了一阵时间。我想，过完这一阵，我会继续坚持。因为，在这场游戏中，并没有什么其他的角色供我选择。</p>
-<p>当然我相信，这些很快就会过去的。时间总是这样无情地切割我们的生命，夜里想着心事，第二天的闹铃就响了；下几次雨，夏天也结束了；等反应过来的时候，那个穿着开裆裤在邻居家乱跑的小屁孩，都长这么大了。</p>
+    <title>大学里，最丧的时候</title>
+    <url>/2018/10/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/</url>
+    <content><![CDATA[<p>—1—</p>
+<p>看到香港大学孙教授的一段话：</p>
+<p>﻿﻿“大学，就应该是早起吃点早餐；跑跑步；专业课认真听；公共课看看自己喜欢的杂志；中午小睡一会儿；下午参加个社团活动或打打篮球；晚上陪着喜欢的人散散步；或去自习室安静地看看书……  社会不需要学霸，也不认什么学生会主席，更不希望看到学生放弃学业去创业。你只要能平稳完整地读完大学，寻找到自己所爱的人和兴趣，多去没有目的的看些能丰富自己思想的书，认识几个好的不成样子的朋友，锻炼或是塑造自己的身体，学精自己想要从事事业的专业知识…… 做到这些，平淡地度过大学这几年你就已经足够优秀了。 ”</p>
+<p>可为什么今年大三的我，感觉这辈子算是完了。</p>
+<p>—2—</p>
+<p>大学，是一段没有烟火气的生活，是一个比毕业后舒服的状态。</p>
+<p>调剂到一个一眼无缘的理科专业，而你做的最无力的抗拒，就是在课上看自己感兴趣的东西，在宿舍听歌，看电影，打游戏，一日三餐，南来北往。渐渐，这成了一个司空见惯的事情。失落的时候练下吉他，你也曾想活在音乐的小世界里无人问津…</p>
+<p>每天坚持吃早饭，天气暖和会去操场跑步，中午很难睡着，晚上精力旺盛到连开玩笑都尤其认真，每一次赶作业都是一场和时间赛跑的特殊行动，当然你还可以在期末的时候完成一些感觉惊天动地的事情﻿…</p>
+<p>你慢慢疏远书本理论里面的成就感，开始厌倦众口一词的最佳答案，逃避一次又一次选择中的唯唯诺诺，沉醉在自己对于儿时梦境的美好想往里…</p>
+<p>你不是学霸也没进学生会，你总是庆幸地以为低分通过就是比那个挂了科的室友强，你甚至想着在学校待上四年然后发财，慢慢地，你变得不愿意参加带着利益性质炫耀嘲讽的社团活动，没有能力去美化人家的游戏体验…</p>
+<p>这是一个记忆稍纵即逝的年纪，你读的那些感觉挺有意思的书，随着旋转的时间轴忘得所剩无几。你做了一些兼职，挣了一点小钱，在同学面前过得洋洋洒洒。你去过几个地方，认识了好少好少可以交心的人，每次吃饭想说心里话的时候，你总害怕别人抓住你的软肋而欲言又止。你还考了几个希望能给未来生活带来惊喜的证书……</p>
+<p>做到这些，平淡的度过大学，你也很害怕平凡的你一无所成。﻿﻿</p>
+<p>—3—</p>
+<p>这是一个花里胡哨的时代，你可能永远都不会知道，那个在朋友圈里高大上的陌生人，在真实里，究竟是怎样的际遇。﻿﻿</p>
+<p>你尽可能的在人前把自己装点得光鲜亮丽，绅士般的接受所有的缘行渐远。你变得害怕承诺，躲避爱情，却又不愿意享受孤独，独当一面…﻿﻿</p>
+<p>你见识到的世界的确比父辈要大，可是对自我的认知却很浅。</p>
+<p>你每天在爆炸的信息中学习各种道理，通过网络你知道了身边好多人赢，于是你变得更加不甘平凡，时而凝神聚气的笃定，时而云淡风轻的随意，在对比中渐渐迷失﻿…﻿﻿</p>
+<p>﻿你感觉自己变成了一台机器，可以不对生活付诸任何情感，他能一直工作，只是会越来越慢。﻿﻿</p>
+<p>如果现在有一个可以看到的决定，未来你会在世界的某一个角落，从事一份称心如意的职业，可能你就不会在错过一节专业课的时候坐立不安，更不会因为身边的人活的体面潇洒而心惊胆战了。﻿﻿</p>
+<p>也许正是因为这种人生的不确定性，才愈加增大了人们对未来五彩缤纷的构想吧。﻿﻿</p>
+<p>克莱顿在《你要如何衡量你的人生》中提到，人对自己一生的规划，无非是周密战略和意外机遇相结合的产物，关键是要走出去，并行动起来，直到你明白应该将自己的聪明才智，兴趣和重点放在哪里，再将应急战略转化为周密战略。</p>
+<p>我希望你，在试图跳出规则之前，能做出关于自己本心的选择，愿你强大到能冲破社会的桎梏，以自己愿意的姿态生活下去。﻿﻿﻿</p>
 ]]></content>
       <tags>
         <tag>成长，旧时光</tag>
@@ -1437,6 +1454,73 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
 ]]></content>
       <tags>
         <tag>成长，旧时光</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>至少你，存在过我的记忆</title>
+    <url>/2018/10/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/</url>
+    <content><![CDATA[<p>人海中错过的那个人，至少，在我失眠梦呓间，脑海里还是会依稀浮现出你的容颜。</p>
+<p>贝蒂，我是里克。最近你的城市下雨了吗，我这里的温度有些难过，不知道你过得怎么样。</p>
+<p>济南的天照旧那样调皮，就像世界末日里的那句歌词，Why dose the sun go on shining一样，一次又一次地挑战着我出门的勇气，还好我坐的地方阳光有所收敛，不然我炽热的内心暴露在烈日下，真不知道会发生什么化学反应。</p>
+<p>家庭生活的原因，我很早就开始了一个人的生活，可能除了自己，没有谁能左右我的想法了。一个人无拘无束，一个人天马行空，一个人桀骜不驯，一个人胆怯如鼠。</p>
+<p>周国平说，在多数场合，我不是觉得对方乏味，就是害怕对方觉得我乏味，我既不愿意忍受对方的乏味，又不愿意费劲使自己有趣，所以我选择独处，那就自己承受自己的乏味，不累及他人。我大概就是这样一种人吧，得意的时候手舞足蹈，逢场作戏，可稍不如意就黯然失色，冷若冰霜，你说乏味不乏味。</p>
+<p>浮躁的生活中让人有太多无法控制的遐想，也许，我应该找到一个更好的娱乐方式，以至于不会在休息的时候，不由自主的沦陷。</p>
+<p>每次听到廖俊涛的那首《谁》，特别想拿起吉他练琴，弹着弹着，就忘记了后天还要考试的束缚感。有时候真希望时间定格在这一刻，不用去想其他任何事情。</p>
+<p>当然也好羡慕那些在架子鼓上不可一世的乐手们，想学习打鼓，一直追求这样的发泄方式，可是生活总归会有些小遗憾，习惯了时光静好，心情似乎一直都波澜不惊。</p>
+<p>最近经历了一连串的考核，带着满满的用心，和一丁点慌张，完成着之前感觉惊天动地的事情。</p>
+<p>前段时间帮驾校招生，拿到了辛苦换来的一点小回报。不过贝蒂，很多次的社会经验使我觉得，人们好像都不愿意看到别人变好的样子，他们尽可能与遭遇苦难的人找到共鸣，要么保持缄默，要么施以怜悯。当他们发现别人的好时，它们立刻感到毛骨悚然。</p>
+<p>贝蒂，你说像我这样的人，会活成自己想要成为的样子吗，我要学习的东西在需要通过考试拿到的学分面前，已经搁浅了一阵时间。我想，过完这一阵，我会继续坚持。因为，在这场游戏中，并没有什么其他的角色供我选择。</p>
+<p>当然我相信，这些很快就会过去的。时间总是这样无情地切割我们的生命，夜里想着心事，第二天的闹铃就响了；下几次雨，夏天也结束了；等反应过来的时候，那个穿着开裆裤在邻居家乱跑的小屁孩，都长这么大了。</p>
+]]></content>
+      <tags>
+        <tag>成长，旧时光</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次面试题：excel数据处理</title>
+    <url>/2019/03/19/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<p>Sales表：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.42u5kgldrn0g.png"
+                     
+                ></p>
+<p>Institution表：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hsivqtazg0o.png"
+                     
+                ></p>
+<p>Product表：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.57axgsalziio.png"
+                     
+                ></p>
+<p>Price表：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3hfa2v3xoukg.png"
+                     
+                ></p>
+<p>Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import openpyxl </span><br><span class="line">path = r&#x27;C:\Users\supermanzwg\Desktop\Excel能力测试解答.xlsx&#x27;</span><br><span class="line">df = pd.read_excel(path,sheet_name= &#x27;Sales&#x27;)</span><br><span class="line">df = df[pd.to_datetime(df.SalesDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df2 = pd.read_excel(path,sheet_name= &#x27;Institution&#x27;)</span><br><span class="line"># print(df2.info())</span><br><span class="line">#检查并发现两表之间连接键出现不一致</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    if df.loc[i,&#x27;InstitutionCode&#x27;]== &#x27;F6302 &#x27;:</span><br><span class="line">        df.loc[i,&#x27;InstitutionCode&#x27;] = &#x27;F6302&#x27;</span><br><span class="line">    else:</span><br><span class="line">        pass</span><br><span class="line">df_12 = pd.merge(df,df2,on=&#x27;InstitutionCode&#x27;,how=&#x27;left&#x27;)</span><br><span class="line"># print(df_12.info())</span><br><span class="line"># a = df_12[df_12.Province.isnull()] 检查是否还存在缺失值</span><br><span class="line"># a.InstitutionCode.unique()</span><br><span class="line">df4 = pd.read_excel(path,sheet_name= &#x27;Price&#x27;)</span><br><span class="line">df4 = df4[pd.to_datetime(df4.EffectiveDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df4 = df4.drop_duplicates([&#x27;SKU&#x27;])#删去重复SKU值</span><br><span class="line">ddff = pd.merge(df_12,df4,on=&#x27;SKU&#x27;)</span><br><span class="line">ddff[&#x27;money&#x27;] = ddff[&#x27;Quantity&#x27;]*ddff[&#x27;Price&#x27;]</span><br><span class="line"># print(ddff.money.sum())#销售额总和</span><br><span class="line">groupby_ddff = ddff.groupby([&#x27;Province&#x27;,&#x27;InstitutionName&#x27;])[&#x27;money&#x27;].sum().reset_index()</span><br><span class="line">groupby_ddff[&#x27;group_sort&#x27;]=groupby_ddff[&#x27;money&#x27;].groupby(groupby_ddff[&#x27;Province&#x27;]).rank(ascending=False,method=&#x27;first&#x27;)</span><br><span class="line">groupby_ddff_top1 = groupby_ddff[groupby_ddff[&#x27;group_sort&#x27;]==1]</span><br><span class="line">groupby_ddff_top1</span><br></pre></td></tr></table></figure>
+<p>写入到原excel</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># import xlwings as xw</span><br><span class="line">book = openpyxl.load_workbook(path)   #读取你要写入的workbook</span><br><span class="line">#和pd.read_excel() 用于将Dataframe写入excel。xls用xlwt。xlsx用openpyxl</span><br><span class="line">writer = pd.ExcelWriter(path, engine=&#x27;openpyxl&#x27;)   </span><br><span class="line">##此时的writer里还只是读写器. 然后将上面读取的book复制给writer  </span><br><span class="line">writer.book = book</span><br><span class="line">#转化为字典的形式</span><br><span class="line">writer.sheets = dict((ws.title, ws) for ws in book.worksheets)</span><br><span class="line">#将data写入writer</span><br><span class="line">groupby_ddff_top1.to_excel(writer,sheet_name=&quot;Answer_Python&quot;,index=False)</span><br><span class="line">writer.save()</span><br></pre></td></tr></table></figure>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6qq9z1446rs.png"
+                     
+                ></p>
+]]></content>
+      <tags>
+        <tag>python数据分析</tag>
       </tags>
   </entry>
   <entry>
@@ -1527,83 +1611,6 @@ AttributeError: module &#39;xlwings&#39; has no attribute &#39;range&#39;
 ]]></content>
       <tags>
         <tag>sql数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学里，最丧的时候</title>
-    <url>/2018/10/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/</url>
-    <content><![CDATA[<p>—1—</p>
-<p>看到香港大学孙教授的一段话：</p>
-<p>﻿﻿“大学，就应该是早起吃点早餐；跑跑步；专业课认真听；公共课看看自己喜欢的杂志；中午小睡一会儿；下午参加个社团活动或打打篮球；晚上陪着喜欢的人散散步；或去自习室安静地看看书……  社会不需要学霸，也不认什么学生会主席，更不希望看到学生放弃学业去创业。你只要能平稳完整地读完大学，寻找到自己所爱的人和兴趣，多去没有目的的看些能丰富自己思想的书，认识几个好的不成样子的朋友，锻炼或是塑造自己的身体，学精自己想要从事事业的专业知识…… 做到这些，平淡地度过大学这几年你就已经足够优秀了。 ”</p>
-<p>可为什么今年大三的我，感觉这辈子算是完了。</p>
-<p>—2—</p>
-<p>大学，是一段没有烟火气的生活，是一个比毕业后舒服的状态。</p>
-<p>调剂到一个一眼无缘的理科专业，而你做的最无力的抗拒，就是在课上看自己感兴趣的东西，在宿舍听歌，看电影，打游戏，一日三餐，南来北往。渐渐，这成了一个司空见惯的事情。失落的时候练下吉他，你也曾想活在音乐的小世界里无人问津…</p>
-<p>每天坚持吃早饭，天气暖和会去操场跑步，中午很难睡着，晚上精力旺盛到连开玩笑都尤其认真，每一次赶作业都是一场和时间赛跑的特殊行动，当然你还可以在期末的时候完成一些感觉惊天动地的事情﻿…</p>
-<p>你慢慢疏远书本理论里面的成就感，开始厌倦众口一词的最佳答案，逃避一次又一次选择中的唯唯诺诺，沉醉在自己对于儿时梦境的美好想往里…</p>
-<p>你不是学霸也没进学生会，你总是庆幸地以为低分通过就是比那个挂了科的室友强，你甚至想着在学校待上四年然后发财，慢慢地，你变得不愿意参加带着利益性质炫耀嘲讽的社团活动，没有能力去美化人家的游戏体验…</p>
-<p>这是一个记忆稍纵即逝的年纪，你读的那些感觉挺有意思的书，随着旋转的时间轴忘得所剩无几。你做了一些兼职，挣了一点小钱，在同学面前过得洋洋洒洒。你去过几个地方，认识了好少好少可以交心的人，每次吃饭想说心里话的时候，你总害怕别人抓住你的软肋而欲言又止。你还考了几个希望能给未来生活带来惊喜的证书……</p>
-<p>做到这些，平淡的度过大学，你也很害怕平凡的你一无所成。﻿﻿</p>
-<p>—3—</p>
-<p>这是一个花里胡哨的时代，你可能永远都不会知道，那个在朋友圈里高大上的陌生人，在真实里，究竟是怎样的际遇。﻿﻿</p>
-<p>你尽可能的在人前把自己装点得光鲜亮丽，绅士般的接受所有的缘行渐远。你变得害怕承诺，躲避爱情，却又不愿意享受孤独，独当一面…﻿﻿</p>
-<p>你见识到的世界的确比父辈要大，可是对自我的认知却很浅。</p>
-<p>你每天在爆炸的信息中学习各种道理，通过网络你知道了身边好多人赢，于是你变得更加不甘平凡，时而凝神聚气的笃定，时而云淡风轻的随意，在对比中渐渐迷失﻿…﻿﻿</p>
-<p>﻿你感觉自己变成了一台机器，可以不对生活付诸任何情感，他能一直工作，只是会越来越慢。﻿﻿</p>
-<p>如果现在有一个可以看到的决定，未来你会在世界的某一个角落，从事一份称心如意的职业，可能你就不会在错过一节专业课的时候坐立不安，更不会因为身边的人活的体面潇洒而心惊胆战了。﻿﻿</p>
-<p>也许正是因为这种人生的不确定性，才愈加增大了人们对未来五彩缤纷的构想吧。﻿﻿</p>
-<p>克莱顿在《你要如何衡量你的人生》中提到，人对自己一生的规划，无非是周密战略和意外机遇相结合的产物，关键是要走出去，并行动起来，直到你明白应该将自己的聪明才智，兴趣和重点放在哪里，再将应急战略转化为周密战略。</p>
-<p>我希望你，在试图跳出规则之前，能做出关于自己本心的选择，愿你强大到能冲破社会的桎梏，以自己愿意的姿态生活下去。﻿﻿﻿</p>
-]]></content>
-      <tags>
-        <tag>成长，旧时光</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次面试题：excel数据处理</title>
-    <url>/2019/03/19/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<p>Sales表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.42u5kgldrn0g.png"
-                     
-                ></p>
-<p>Institution表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hsivqtazg0o.png"
-                     
-                ></p>
-<p>Product表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.57axgsalziio.png"
-                     
-                ></p>
-<p>Price表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3hfa2v3xoukg.png"
-                     
-                ></p>
-<p>Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import openpyxl </span><br><span class="line">path = r&#x27;C:\Users\supermanzwg\Desktop\Excel能力测试解答.xlsx&#x27;</span><br><span class="line">df = pd.read_excel(path,sheet_name= &#x27;Sales&#x27;)</span><br><span class="line">df = df[pd.to_datetime(df.SalesDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df2 = pd.read_excel(path,sheet_name= &#x27;Institution&#x27;)</span><br><span class="line"># print(df2.info())</span><br><span class="line">#检查并发现两表之间连接键出现不一致</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    if df.loc[i,&#x27;InstitutionCode&#x27;]== &#x27;F6302 &#x27;:</span><br><span class="line">        df.loc[i,&#x27;InstitutionCode&#x27;] = &#x27;F6302&#x27;</span><br><span class="line">    else:</span><br><span class="line">        pass</span><br><span class="line">df_12 = pd.merge(df,df2,on=&#x27;InstitutionCode&#x27;,how=&#x27;left&#x27;)</span><br><span class="line"># print(df_12.info())</span><br><span class="line"># a = df_12[df_12.Province.isnull()] 检查是否还存在缺失值</span><br><span class="line"># a.InstitutionCode.unique()</span><br><span class="line">df4 = pd.read_excel(path,sheet_name= &#x27;Price&#x27;)</span><br><span class="line">df4 = df4[pd.to_datetime(df4.EffectiveDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df4 = df4.drop_duplicates([&#x27;SKU&#x27;])#删去重复SKU值</span><br><span class="line">ddff = pd.merge(df_12,df4,on=&#x27;SKU&#x27;)</span><br><span class="line">ddff[&#x27;money&#x27;] = ddff[&#x27;Quantity&#x27;]*ddff[&#x27;Price&#x27;]</span><br><span class="line"># print(ddff.money.sum())#销售额总和</span><br><span class="line">groupby_ddff = ddff.groupby([&#x27;Province&#x27;,&#x27;InstitutionName&#x27;])[&#x27;money&#x27;].sum().reset_index()</span><br><span class="line">groupby_ddff[&#x27;group_sort&#x27;]=groupby_ddff[&#x27;money&#x27;].groupby(groupby_ddff[&#x27;Province&#x27;]).rank(ascending=False,method=&#x27;first&#x27;)</span><br><span class="line">groupby_ddff_top1 = groupby_ddff[groupby_ddff[&#x27;group_sort&#x27;]==1]</span><br><span class="line">groupby_ddff_top1</span><br></pre></td></tr></table></figure>
-<p>写入到原excel</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># import xlwings as xw</span><br><span class="line">book = openpyxl.load_workbook(path)   #读取你要写入的workbook</span><br><span class="line">#和pd.read_excel() 用于将Dataframe写入excel。xls用xlwt。xlsx用openpyxl</span><br><span class="line">writer = pd.ExcelWriter(path, engine=&#x27;openpyxl&#x27;)   </span><br><span class="line">##此时的writer里还只是读写器. 然后将上面读取的book复制给writer  </span><br><span class="line">writer.book = book</span><br><span class="line">#转化为字典的形式</span><br><span class="line">writer.sheets = dict((ws.title, ws) for ws in book.worksheets)</span><br><span class="line">#将data写入writer</span><br><span class="line">groupby_ddff_top1.to_excel(writer,sheet_name=&quot;Answer_Python&quot;,index=False)</span><br><span class="line">writer.save()</span><br></pre></td></tr></table></figure>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6qq9z1446rs.png"
-                     
-                ></p>
-]]></content>
-      <tags>
-        <tag>python数据分析</tag>
       </tags>
   </entry>
 </search>
