@@ -179,12 +179,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>396 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>409 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -208,7 +208,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(date) from user_attendence;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">user_id ,</span><br><span class="line">max(date),</span><br><span class="line">DATEDIFF(&#x27;2021-02-19&#x27;,max(date)) as max_con_days</span><br><span class="line">from user_attendence </span><br><span class="line">where is_sign = 0 </span><br><span class="line">group by user_id;</span><br></pre></td></tr></table></figure>
 <p>#计算有史以来用户最大连续签到天数；<br>对用户分组，按日期进行排序，排序序号为rank;<br>如果日期与序号的差值为相等，按这个差值进行分组并计数，取最大值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">user_id</span><br><span class="line">,max(次数)from </span><br><span class="line">	(select user_id</span><br><span class="line">	,date,rn</span><br><span class="line">	,a.date-a.rn diff</span><br><span class="line">	,count(*) 次数</span><br><span class="line">	from </span><br><span class="line">		(select </span><br><span class="line">		user_id</span><br><span class="line">		,date,</span><br><span class="line">		row_number() over(partition by user_id order by date asc) rn</span><br><span class="line">		from user_attendence  </span><br><span class="line">		where is_sign = 1</span><br><span class="line">		) a </span><br><span class="line">	group by user_id,diff</span><br><span class="line">	) b </span><br><span class="line">group by user_id;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">user_id</span><br><span class="line">,max(`次数`)  `最大连续登陆天数`</span><br><span class="line">from </span><br><span class="line">    (select user_id</span><br><span class="line">    ,date</span><br><span class="line">    ,a.date-a.rn diff</span><br><span class="line">    ,count(*) `次数`</span><br><span class="line">    from </span><br><span class="line">        (select </span><br><span class="line">        user_id</span><br><span class="line">        ,date,</span><br><span class="line">        row_number() over(partition by user_id order by date asc) rn</span><br><span class="line">        from user_attendence  </span><br><span class="line">        where is_sign = 1</span><br><span class="line">        ) a </span><br><span class="line">    group by user_id,diff</span><br><span class="line">    ) b </span><br><span class="line">group by user_id order by max(`次数`) desc;</span><br></pre></td></tr></table></figure>
         </div>
 
         
