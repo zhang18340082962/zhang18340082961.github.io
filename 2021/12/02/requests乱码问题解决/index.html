@@ -179,12 +179,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>308 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>544 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>2 分钟</span>
         </span>
     
     
@@ -208,9 +208,15 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = &quot;http://www.sina.com.cn/&quot;</span><br><span class="line">r = requests.get(url)</span><br><span class="line"># 指定编码解码方式</span><br><span class="line">html = r.content.decode(&#x27;UTF-8&#x27;)</span><br><span class="line"># r.encoding = &#x27;utf-8&#x27;</span><br></pre></td></tr></table></figure>
 <p>其实吧，处理的方式有很多，大家注意一点，那就是看请求的html数据中最前面对的charset设置的是啥！！</p>
 <ul>
-<li> html实体编码解析<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">In [1]: s = &#x27;目前玩的挺好的，就&amp;hellip;&amp;hellip;&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br><span class="line">#可以看到，有个&#x27;&amp;hellip;&#x27;，这玩意是html实体表示省略号&#x27;...&#x27;，因此需要进行处理！</span><br><span class="line">In [2]: import html</span><br><span class="line"></span><br><span class="line">In [3]: html.unescape(s)</span><br><span class="line">Out[3]: &#x27;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br></pre></td></tr></table></figure></li>
+<li><p> html实体编码解析</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">In [1]: s = &#x27;目前玩的挺好的，就&amp;hellip;&amp;hellip;&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br><span class="line">#可以看到，有个&#x27;&amp;hellip;&#x27;，这玩意是html实体表示省略号&#x27;...&#x27;，因此需要进行处理！</span><br><span class="line">In [2]: import html</span><br><span class="line"></span><br><span class="line">In [3]: html.unescape(s)</span><br><span class="line">Out[3]: &#x27;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什么不是同一个服的就不能进社团😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬😬&#x27;</span><br></pre></td></tr></table></figure></li>
+<li><p>也是一种情况吧~</p>
+</li>
 </ul>
+<p><a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/xieqiankun/p/lxmlencoding.html" >https://www.cnblogs.com/xieqiankun/p/lxmlencoding.html<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">显然这应该是编码的问题，在使用:</span><br><span class="line">etree.HTML(r)</span><br><span class="line">处理源文件的时候，由于没有指定编码，所以它使用了一个默认编码，从而导致和UTF-8冲突，产生乱码。</span><br><span class="line"></span><br><span class="line">经过查阅lxml.etree.HTML的文档，我发现etree.HTML有一个参数是parser,这个参数不是必须的，因此省略以后它就会自动使用一个默认的parser。既然如此，那我手动指定一个：</span><br><span class="line">contentTree = etree.HTML(r, parser=etree.HTMLParser(encoding=&#x27;utf-8&#x27;))</span><br><span class="line">这里我指定了etree.HTMLParser来作为一个parser,同时，etree.HTMLParser可以接受编码作为参数。于是我指定为UTF-8。</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">from lxml import etree</span><br><span class="line">import sys</span><br><span class="line">reload(sys)</span><br><span class="line">sys.setdefaultencoding(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">r</span> = requests.get(url=<span class="string">&#x27;http://sports.sina.cn/nba/rockets/2015-10-07/detail-ifximrxn8235561.d.html?vt=4&amp;pos=10&#x27;</span>)<span class="comment"># 最基本的GET请求</span></span><br><span class="line">r.encoding = <span class="string">&#x27;utf-8&#x27;</span></span><br><span class="line"><span class="built_in">r</span> = r.content</span><br><span class="line">print <span class="built_in">r</span></span><br></pre></td></tr></table></figure>
         </div>
 
         

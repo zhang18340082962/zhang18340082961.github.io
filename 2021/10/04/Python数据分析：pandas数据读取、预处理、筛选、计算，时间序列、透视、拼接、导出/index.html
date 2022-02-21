@@ -179,12 +179,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>6.4k 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>6.5k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>28 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>29 分钟</span>
         </span>
     
     
@@ -240,6 +240,8 @@
 </li>
 <li><p>Insert用于在DataFrame的指定位置中插入新的数据列。默认情况下新列是添加到末尾的，但可以更改位置参数，将新列添加到任何位置。<br>Dataframe.insert(loc, column, value, allow_duplicates=False)<br>loc: int型，表示插入位置在第几列；若在第一列插入数据，则 loc=0<br>column: 给插入的列取名，如 column=’新的一列’<br>value：新列的值，数字、array、series等都可以<br>allow_duplicates: 是否允许列名重复，选择Ture表示允许新的列名与已存在的列名重复<br>在第三列的位置插入新列：df.insert(2, ‘new_col’, new_col)</p>
 </li>
+<li><p>DataFrame首行插入行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df.loc[-1] = [10, 20, 30]  # 增加一行</span><br><span class="line">df.index = df.index + 1  # 把index的每一项增加1</span><br><span class="line">df = df.sort_index()  #重新排序一下</span><br></pre></td></tr></table></figure></li>
 <li><p>Cumsum是pandas的累加函数，用来求列的累加值。 用法：<br>DataFrame.cumsum(axis=None, skipna=True, args, kwargs)<br>axis：index或者轴的名字<br>skipna：排除NA/null值<br>df中的group列有A、B、C三组，year列有多个年份。我们只知道当年度的值value_1、value_2，现在求group分组下的累计值，比如A、2014之前的累计值，可以用cumsum函数来实现。<br>当然仅用cumsum函数没办法对groups (A, B, C)进行区分，所以需要结合分组函数groupby分别对(A, B, C)进行值的累加。<br>df[‘cumsum_2’] = df[[‘value_2’,’group’]].groupby(‘group’).cumsum()</p>
 </li>
 <li><p>Sample用于从DataFrame中随机选取若干个行或列。 用法：<br>DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None)<br>n：要抽取的行数<br>frac：抽取行的比例 例如frac=0.8，就是抽取其中80%<br>replace：是否为有放回抽样， True:有放回抽样 False:未放回抽样<br>weights：字符索引或概率数组<br>random_state ：随机数发生器种子<br>axis：选择抽取数据的行还是列 axis=0:抽取行 axis=1:抽取列<br>从df中随机抽取5行：df.sample(n=5)<br>从df随机抽取60%的行，并且设置随机数种子，每次能抽取到一样的样本：df.sample(frac=0.6,random_state=2)</p>
