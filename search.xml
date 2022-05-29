@@ -5,47 +5,50 @@
     <url>//post/mysql-tips.html</url>
     <content><![CDATA[<ul>
 <li><p>四个在工作后才知道的SQL密技</p>
-<p><a class="link"   href="https://zhuanlan.zhihu.com/p/412878736" >https://zhuanlan.zhihu.com/p/412878736<i class="fas fa-external-link-alt"></i></a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/412878736">https://zhuanlan.zhihu.com/p/412878736</a></p>
 </li>
-<li><p>mysql基础<br><a class="link"   href="https://blog.csdn.net/weixin_45108087/article/details/102766281" >https://blog.csdn.net/weixin_45108087/article/details/102766281<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>mysql基础<br><a href="https://blog.csdn.net/weixin_45108087/article/details/102766281">https://blog.csdn.net/weixin_45108087/article/details/102766281</a></p>
 </li>
-<li><p>MYSQL中的COLLATE是什么？<br><a class="link"   href="https://blog.csdn.net/weixin_34194317/article/details/92720517" >https://blog.csdn.net/weixin_34194317/article/details/92720517<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>MYSQL中的COLLATE是什么？<br><a href="https://blog.csdn.net/weixin_34194317/article/details/92720517">https://blog.csdn.net/weixin_34194317/article/details/92720517</a></p>
 </li>
-<li><p>mysql中key 、primary key 、unique key 与index区别<br><a class="link"   href="https://blog.csdn.net/nanaMasuda/article/details/52543177" >https://blog.csdn.net/nanaMasuda/article/details/52543177<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>mysql中key 、primary key 、unique key 与index区别<br><a href="https://blog.csdn.net/nanaMasuda/article/details/52543177">https://blog.csdn.net/nanaMasuda/article/details/52543177</a></p>
 </li>
-<li><p>MySQL中REGEXP正则表达式<br><a class="link"   href="https://blog.csdn.net/u011271894/article/details/79705869" >https://blog.csdn.net/u011271894/article/details/79705869<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>MySQL中REGEXP正则表达式<br><a href="https://blog.csdn.net/u011271894/article/details/79705869">https://blog.csdn.net/u011271894/article/details/79705869</a></p>
 </li>
 <li><p>mysql中distinct后面两个字段: 同时作用了两个字段，也就是必须得这两个字段都相同的才会被排除</p>
 </li>
-<li><p>MySql中把一个表的数据插入到另一个表中<br><a class="link"   href="https://www.cnblogs.com/jiangxiaobo/p/7722691.html" >https://www.cnblogs.com/jiangxiaobo/p/7722691.html<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>MySql中把一个表的数据插入到另一个表中<br><a href="https://www.cnblogs.com/jiangxiaobo/p/7722691.html">https://www.cnblogs.com/jiangxiaobo/p/7722691.html</a></p>
 </li>
-<li><p>Mysql 根据一个表数据更新另外一个表<br><a class="link"   href="https://www.cnblogs.com/wu628/p/4948833.html" >https://www.cnblogs.com/wu628/p/4948833.html<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>Mysql 根据一个表数据更新另外一个表<br><a href="https://www.cnblogs.com/wu628/p/4948833.html">https://www.cnblogs.com/wu628/p/4948833.html</a></p>
 <pre class="line-numbers language-none"><code class="language-none">insert into table_2 (promotion_price,promotion) SELECT 字段1，字段2，...  FROM table_1 where table_1.id is not in (
 select id from  table_2 );</code></pre></li>
-<li><p>concat以及group_concat的用法<br><a class="link"   href="https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc" >https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>concat以及group_concat的用法<br><a href="https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1595349117525189591&amp;wfr=spider&amp;for=pc</a></p>
 </li>
-<li><p>字符串截取总结：left()、right()、substring()、substring_index()<br><a class="link"   href="https://blog.csdn.net/wolinxuebin/article/details/7845917" >https://blog.csdn.net/wolinxuebin/article/details/7845917<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>字符串截取总结：left()、right()、substring()、substring_index()<br><a href="https://blog.csdn.net/wolinxuebin/article/details/7845917">https://blog.csdn.net/wolinxuebin/article/details/7845917</a></p>
 </li>
-<li><p>replace的用法<br><a class="link"   href="https://www.cnblogs.com/to-creat/p/6516375.html" >https://www.cnblogs.com/to-creat/p/6516375.html<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>replace的用法<br><a href="https://www.cnblogs.com/to-creat/p/6516375.html">https://www.cnblogs.com/to-creat/p/6516375.html</a></p>
 </li>
-<li><p>mysql中join的用法<br><a class="link"   href="https://www.cnblogs.com/beili/p/9140019.html" >https://www.cnblogs.com/beili/p/9140019.html<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>mysql中join的用法<br><a href="https://www.cnblogs.com/beili/p/9140019.html">https://www.cnblogs.com/beili/p/9140019.html</a></p>
 </li>
-<li><p>MySQL计算日期的函数DATE_SUB(d,INTERVAL expr type)<br><a class="link"   href="https://blog.csdn.net/sinat_34979528/article/details/54571316" >https://blog.csdn.net/sinat_34979528/article/details/54571316<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>MySQL计算日期的函数DATE_SUB(d,INTERVAL expr type)<br><a href="https://blog.csdn.net/sinat_34979528/article/details/54571316">https://blog.csdn.net/sinat_34979528/article/details/54571316</a></p>
 </li>
-<li><p>MySQL DATE_ADD() 函数<br><a class="link"   href="https://www.w3school.com.cn/sql/func_date_add.asp" >https://www.w3school.com.cn/sql/func_date_add.asp<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>MySQL DATE_ADD() 函数<br><a href="https://www.w3school.com.cn/sql/func_date_add.asp">https://www.w3school.com.cn/sql/func_date_add.asp</a></p>
 </li>
-<li><p>sql中interval用法总结<br><a class="link"   href="https://blog.csdn.net/weixin_42586373/article/details/107467914" >https://blog.csdn.net/weixin_42586373/article/details/107467914<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>sql中interval用法总结<br><a href="https://blog.csdn.net/weixin_42586373/article/details/107467914">https://blog.csdn.net/weixin_42586373/article/details/107467914</a></p>
 </li>
-<li><p>SQL中的cast()函数<br><a class="link"   href="https://www.jianshu.com/p/e8ed290426b6" >https://www.jianshu.com/p/e8ed290426b6<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>SQL中的cast()函数<br><a href="https://www.jianshu.com/p/e8ed290426b6">https://www.jianshu.com/p/e8ed290426b6</a></p>
 </li>
-<li><p>MySQL UNION 操作符<br><a class="link"   href="https://www.runoob.com/mysql/mysql-union-operation.html" >https://www.runoob.com/mysql/mysql-union-operation.html<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>MySQL UNION 操作符<br><a href="https://www.runoob.com/mysql/mysql-union-operation.html">https://www.runoob.com/mysql/mysql-union-operation.html</a></p>
 </li>
-<li><p>ROW_NUMBER() OVER()函数用法详解 （分组排序 例子多）<br><a class="link"   href="https://blog.csdn.net/qq_25221835/article/details/82762416" >https://blog.csdn.net/qq_25221835/article/details/82762416<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>ROW_NUMBER() OVER()函数用法详解 （分组排序 例子多）<br><a href="https://blog.csdn.net/qq_25221835/article/details/82762416">https://blog.csdn.net/qq_25221835/article/details/82762416</a></p>
 </li>
-<li><p>hive中regexp_extract的用法总结<br><a class="link"   href="https://blog.csdn.net/jv_rookie/article/details/55211955" >https://blog.csdn.net/jv_rookie/article/details/55211955<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>hive中regexp_extract的用法总结<br><a href="https://blog.csdn.net/jv_rookie/article/details/55211955">https://blog.csdn.net/jv_rookie/article/details/55211955</a></p>
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>sql</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -408,6 +411,9 @@ json_values &#x3D; data.to_json(orient &#x3D; &quot;values&quot;)  # 返回结�
 • format()函数，与lambda函数配合，可以设置：四舍五入保留小数位、转化为百分数、添加千位分隔符等<br>保留1位小数：df[“A”].map(lambda x: format(x, ‘.1f’))<br>设置百分数，并保留2位小数：df[“A”].map(lambda x: format(x, ‘.2%’))<br>设置千位分隔，并保留3位小数：df[“A”].map(lambda x: format(x, ‘,.3f’))</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -423,12 +429,7 @@ json_values &#x3D; data.to_json(orient &#x3D; &quot;values&quot;)  # 返回结�
 <li>根据学生成绩进行排序</li>
 <li>统计学生的总分</li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/image-20211219123240293.1zbrdjhj57ts.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/image-20211219123240293.1zbrdjhj57ts.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">import os
 filename &#x3D; &#39;student.txt&#39;
 def main():
@@ -690,8 +691,11 @@ if __name__ &#x3D;&#x3D;&#39;__main__&#39;:
 <ul>
 <li>打包成exe需要在终端激活环境后运行 pip install PyIntaller<br>下载好之后再执行 pyinstaller -F D:\Studentsys\stusystem.py  </li>
 </ul>
-<p>-F后面是完整路径以及文件名<br><a class="link"   href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver" >https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver<i class="fas fa-external-link-alt"></i></a><br>娟姐yyds! </p>
+<p>-F后面是完整路径以及文件名<br><a href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver</a><br>娟姐yyds! </p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -700,27 +704,12 @@ if __name__ &#x3D;&#x3D;&#39;__main__&#39;:
     <title>python关联分析（apriori算法）</title>
     <url>//post/python%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90%EF%BC%88apriori%E7%AE%97%E6%B3%95%EF%BC%89.html</url>
     <content><![CDATA[<p>若两个或多个变量的取值之间存在某种规律性，就称为关联。关联规则是寻找在同一个事件中出现的不同项的相关性，比如在一次购买活动中所买不同商品的相关性。例如：“在购买计算机的顾客中，有30％的人也同时购买了打印机”。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.60btv7guvhxc.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.60btv7guvhxc.png"></p>
 <p>一个样本称为一个“事务”<br>每个事务由多个属性来确定，这里的属性称为“项”<br>多个项组成的集合称为“项集”<br>####由k个项构成的集合<br>{牛奶}、{啤酒}都是1-项集；<br>{牛奶，果冻}是2-项集；<br>{啤酒，面包，牛奶}是3-项集<br>####X==&gt;Y含义：<br>X和Y是项集<br>X称为规则前项（antecedent）<br>Y称为规则后项（consequent）<br>####支持度（support）：一个项集或者规则在所有事务中出现的频率，σ(X):表示项集X的支持度计数<br>项集X的支持度：s(X)=σ(X)/N<br>规则X==&gt;Y表示物品集X对物品集Y的支持度，也就是物品集X和物品集Y同时出现的概率<br>某天共有100个顾客到商场购买物品，其中有30个顾客同时购买了啤酒和尿布，那么上述的关联规则的支持度就是30％<br>####置信度（confidence）：确定Y在包含X的事务中出现的频繁程度。c(X → Y) = σ(X∪Y)/σ(X)<br>p（Y│X）＝p（XY）/p(X)。<br>置信度反应了关联规则的可信度—购买了项目集X中的商品的顾客同时也购买了Y中商品的可能性有多大<br>购买薯片的顾客中有50％的人购买了可乐,则置信度为50％</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4qn34mu3vvr4.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4qn34mu3vvr4.png"></p>
 <p>####(X , Y)==&gt;Z :<br>支持度:交易中包含{X 、 Y 、 Z}的可能性<br>置信度:包含{X 、 Y}的交易中也包含Z的条件概率<br>####设最小支持度为50%, 最小可信度为 50%, 则可得到 :<br>A==&gt;C (50%, 66.6%)<br>C==&gt;A (50%, 100%)</p>
 <p>若关联规则X-&gt;Y的支持度和置信度分别大于或等于用户指定的最小支持率minsupport和最小置信度minconfidence，则称关联规则X-&gt;Y为强关联规则，否则称关联规则X-&gt;Y为弱关联规则。</p>
-<p>####提升度（lift）：物品集A的出现对物品集B的出现概率发生了多大的变化<br>lift（A==&gt;B）=confidence（A==&gt;B）/support(B)=p(B|A)/p(B)<br>现在有** 1000 ** 个消费者，有** 500** 人购买了茶叶，其中有** 450人同时** 购买了咖啡，另** 50人** 没有。由于** confidence(茶叶=&gt;咖啡)=450/500=90%** ，由此可能会认为喜欢喝茶的人往往喜欢喝咖啡。但如果另外没有购买茶叶的** 500人** ，其中同样有** 450人** 购买了咖啡，同样是很高的** 置信度90%** ,由此，得到不爱喝茶的也爱喝咖啡。这样看来，其实是否购买咖啡，与有没有购买茶叶并没有关联，两者是相互独立的，其** 提升度90%/[(450+450)/1000]=1** 。<br>由此可见，lift正是弥补了confidence的这一缺陷，if lift=1,X与Y独立，X对Y出现的可能性没有提升作用，其值越大(lift&gt;1),则表明X对Y的提升程度越大，也表明关联性越强。<br>####Leverage 与 Conviction的作用和lift类似，都是值越大代表越关联<br>Leverage : P(A,B)-P(A)P(B)<br>Conviction:P(A)P(!B)/P(A,!B）<br>####所有指标的计算公式：<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1iip63ea95vk.png"
-                     
-                ></p>
+<p>####提升度（lift）：物品集A的出现对物品集B的出现概率发生了多大的变化<br>lift（A==&gt;B）=confidence（A==&gt;B）/support(B)=p(B|A)/p(B)<br>现在有** 1000 ** 个消费者，有** 500** 人购买了茶叶，其中有** 450人同时** 购买了咖啡，另** 50人** 没有。由于** confidence(茶叶=&gt;咖啡)=450/500=90%** ，由此可能会认为喜欢喝茶的人往往喜欢喝咖啡。但如果另外没有购买茶叶的** 500人** ，其中同样有** 450人** 购买了咖啡，同样是很高的** 置信度90%** ,由此，得到不爱喝茶的也爱喝咖啡。这样看来，其实是否购买咖啡，与有没有购买茶叶并没有关联，两者是相互独立的，其** 提升度90%/[(450+450)/1000]=1** 。<br>由此可见，lift正是弥补了confidence的这一缺陷，if lift=1,X与Y独立，X对Y出现的可能性没有提升作用，其值越大(lift&gt;1),则表明X对Y的提升程度越大，也表明关联性越强。<br>####Leverage 与 Conviction的作用和lift类似，都是值越大代表越关联<br>Leverage : P(A,B)-P(A)P(B)<br>Conviction:P(A)P(!B)/P(A,!B）<br>####所有指标的计算公式：<br><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1iip63ea95vk.png"></p>
 <p>接下来获取电影数据集中个电影类型之间的关联关系：<br>anaconda安装mlxtend包</p>
 <pre class="line-numbers language-none"><code class="language-none">conda install -c conda-forge mlxtend</code></pre>
 <pre class="line-numbers language-none"><code class="language-none">import pandas as pd
@@ -735,14 +724,12 @@ result &#x3D; [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]
 len(result)#37
 rules_movies &#x3D;  association_rules(frequent_itemsets_movies, metric&#x3D;&#39;lift&#39;, min_threshold&#x3D;1.25)
 rules_movies[(rules_movies.lift&gt;4)].sort_values(by&#x3D;[&#39;lift&#39;], ascending&#x3D;False)</code></pre>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.70uir8omojk0.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.70uir8omojk0.png"></p>
 <p>也挺符合常理哈。</p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -750,15 +737,13 @@ rules_movies[(rules_movies.lift&gt;4)].sort_values(by&#x3D;[&#39;lift&#39;], asc
   <entry>
     <title>python-flask疫情数据可视化</title>
     <url>//post/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html</url>
-    <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a class="link"   href="https://www.bilibili.com/video/BV177411j7qJ" >https://www.bilibili.com/video/BV177411j7qJ<i class="fas fa-external-link-alt"></i></a> 大佬的视频，做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"
-                     
-                ></p>
-<p>关于flask：<br><a class="link"   href="https://www.cnblogs.com/songboriceboy/category/1867414.html" >https://www.cnblogs.com/songboriceboy/category/1867414.html<i class="fas fa-external-link-alt"></i></a><br><a class="link"   href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482" >https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482<i class="fas fa-external-link-alt"></i></a></p>
+    <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a href="https://www.bilibili.com/video/BV177411j7qJ">https://www.bilibili.com/video/BV177411j7qJ</a> 大佬的视频，做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"></p>
+<p>关于flask：<br><a href="https://www.cnblogs.com/songboriceboy/category/1867414.html">https://www.cnblogs.com/songboriceboy/category/1867414.html</a><br><a href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482">https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482</a></p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -767,9 +752,9 @@ rules_movies[(rules_movies.lift&gt;4)].sort_values(by&#x3D;[&#39;lift&#39;], asc
     <title>python办公自动化：pdf和word</title>
     <url>//post/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9Apdf%E5%92%8Cword.html</url>
     <content><![CDATA[<h2 id="python-使用-PyPDF2-和-pdfplumber-操作pdf"><a href="#python-使用-PyPDF2-和-pdfplumber-操作pdf" class="headerlink" title="python 使用 PyPDF2 和 pdfplumber 操作pdf"></a>python 使用 PyPDF2 和 pdfplumber 操作pdf</h2><ul>
-<li>PyPDF2 官网：<a class="link"   href="https://pythonhosted.org/PyPDF2/" >https://pythonhosted.org/PyPDF2/<i class="fas fa-external-link-alt"></i></a></li>
+<li>PyPDF2 官网：<a href="https://pythonhosted.org/PyPDF2/">https://pythonhosted.org/PyPDF2/</a></li>
 <li>PyPDF2 可以更好的读取、写入、分割、合并 PDF 文件；</li>
-<li>pdfplumber 官网：<a class="link"   href="https://github.com/jsvine/pdfplumber" >https://github.com/jsvine/pdfplumber<i class="fas fa-external-link-alt"></i></a></li>
+<li>pdfplumber 官网：<a href="https://github.com/jsvine/pdfplumber">https://github.com/jsvine/pdfplumber</a></li>
 <li>pdfplumber 可以更好地读取 PDF 文件内容和提取 PDF 中的表格；</li>
 <li>查找某个包 anaconda search -t conda pdfplumber<br>下载某个包 anaconda show package</li>
 </ul>
@@ -795,7 +780,7 @@ for row in table:
     sheet.append(row)
   #sheet.append(row) #直接append这里提取出来的表格有很多空行
 workbook.save(filename &#x3D; &quot;新pdf.xlsx&quot;)</code></pre>
-提取表格这也是一种方式：<a class="link"   href="https://github.com/camelot-dev/camelot" >https://github.com/camelot-dev/camelot<i class="fas fa-external-link-alt"></i></a></li>
+提取表格这也是一种方式：<a href="https://github.com/camelot-dev/camelot">https://github.com/camelot-dev/camelot</a></li>
 </ul>
 <h3 id="3、PDF-合并及页面的排序和旋转"><a href="#3、PDF-合并及页面的排序和旋转" class="headerlink" title="3、PDF 合并及页面的排序和旋转"></a>3、PDF 合并及页面的排序和旋转</h3><h4 id="1）分割及合并-pdf"><a href="#1）分割及合并-pdf" class="headerlink" title="1）分割及合并 pdf"></a>1）分割及合并 pdf</h4><p>① 合并 pdf<br>首先，我们有如下几个文件，可以发现这里共有三个 PDF 文件需要我们合并。同时可以发现他们的文件名都是有规律的(如果文件名，没有先后顺序，我们合并起来就没有意义了。)</p>
 <pre class="line-numbers language-none"><code class="language-none">from PyPDF2 import PdfFileReader, PdfFileWriter 
@@ -887,19 +872,14 @@ for page in range(pdf_reader.getNumPages()):
 </li>
 <li><p>此模块儿不属于 python 标准库，需要单独安装；</p>
 </li>
-<li><p>python-docx 使用官网： <a class="link"   href="https://python-docx.readthedocs.io/en/latest/%EF%BC%9B" >https://python-docx.readthedocs.io/en/latest/；<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>python-docx 使用官网： <a href="https://python-docx.readthedocs.io/en/latest/%EF%BC%9B">https://python-docx.readthedocs.io/en/latest/；</a></p>
 </li>
 <li><p>我们在安装此模块儿使用的是 pip install python-docx，但是在导入的时候是 import<br>docx； </p>
 <h3 id="2、Python-读取-Word-文档内容"><a href="#2、Python-读取-Word-文档内容" class="headerlink" title="2、Python 读取 Word 文档内容"></a>2、Python 读取 Word 文档内容</h3></li>
 <li><p>注意：每进行一个操作，必须保存一下，否则等于白做；<br>1）word 文档结构介绍</p>
 </li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5t8bcxum41a8.png"
-                     
-                ><br>2）python-docx 提取文字和文字块儿<br>① python-docx 提取文字<br>有一个这样的 docx 文件，提取其中的文字</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5t8bcxum41a8.png"><br>2）python-docx 提取文字和文字块儿<br>① python-docx 提取文字<br>有一个这样的 docx 文件，提取其中的文字</p>
 <pre class="line-numbers language-none"><code class="language-none">from docx import Document 
 doc &#x3D; Document(r&quot;G:\concat_word\test1.docx&quot;) 
 print(doc.paragraphs) 
@@ -979,9 +959,12 @@ for table in tables:
     print(values)
     print(columns)
     print(pd.DataFrame(data &#x3D; values,columns&#x3D;columns))</code></pre>
-在操作word这块感觉并不怎么实用，等遇到问题了再加，也可以参考<br><a class="link"   href="https://juejin.cn/post/6868073137263607821" >https://juejin.cn/post/6868073137263607821<i class="fas fa-external-link-alt"></i></a></li>
+在操作word这块感觉并不怎么实用，等遇到问题了再加，也可以参考<br><a href="https://juejin.cn/post/6868073137263607821">https://juejin.cn/post/6868073137263607821</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>自动化</tag>
       </tags>
@@ -993,9 +976,9 @@ for table in tables:
 <ul>
 <li><p>openpyxl 最好用的 python 操作 excel 表格库，不接受反驳（想反驳自己去学其他的） </p>
 </li>
-<li><p>openpyxl 官网链接：<a class="link"   href="https://openpyxl.readthedocs.io/en/stable/" >https://openpyxl.readthedocs.io/en/stable/<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>openpyxl 官网链接：<a href="https://openpyxl.readthedocs.io/en/stable/">https://openpyxl.readthedocs.io/en/stable/</a></p>
 </li>
-<li><p><a class="link"   href="https://www.zhihu.com/column/c_1261255815367487488" >https://www.zhihu.com/column/c_1261255815367487488<i class="fas fa-external-link-alt"></i></a></p>
+<li><p><a href="https://www.zhihu.com/column/c_1261255815367487488">https://www.zhihu.com/column/c_1261255815367487488</a></p>
 </li>
 <li><p>openpyxl 只支持【.xlsx / .xlsm / .xltx / .xltm】格式的文件</p>
 </li>
@@ -1244,6 +1227,9 @@ workbook.save(filename &#x3D; &quot;花园.xlsx&quot;)</code></pre>
 <li>.unmerge_cells(start_row=起始行号，start_column=起始列号，end_row=结束行号，<br>end_column=结束列号)</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>自动化</tag>
       </tags>
@@ -1333,9 +1319,12 @@ print([f for f in os.listdir(targetDir) if isdir(join(targetDir, f))])</code></p
 ###得到目录中指定扩展名的文件和子目录<br>可以使用glob库<pre class="line-numbers language-none"><code class="language-none">import glob
 exes &#x3D; glob.glob(r&#39;d:\tmp\*.txt&#39;)
 print(exes)</code></pre>
-<a class="link"   href="http://www.byhy.net/tut/py/extra/file_dir" >http://www.byhy.net/tut/py/extra/file_dir<i class="fas fa-external-link-alt"></i></a></li>
+<a href="http://www.byhy.net/tut/py/extra/file_dir">http://www.byhy.net/tut/py/extra/file_dir</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>自动化</tag>
       </tags>
@@ -1428,8 +1417,11 @@ if __name__&#x3D;&#x3D;&#39;__main__&#39;:
             print ((&#39;发给 %s 的邮件执行成功&#39;) %(recipientAddrs))
 </code></pre></li>
 </ul>
-<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a class="link"   href="https://blog.csdn.net/weixin_42350212/article/details/118751583" >https://blog.csdn.net/weixin_42350212/article/details/118751583<i class="fas fa-external-link-alt"></i></a><br>Python smtp发送邮件怎么设置抄送人<br><a class="link"   href="https://www.cnblogs.com/shiyixirui/p/14692146.html" >https://www.cnblogs.com/shiyixirui/p/14692146.html<i class="fas fa-external-link-alt"></i></a></p>
+<p>这里也看到有使用126邮箱的smtp服务器：’smtp.126.com’<br><a href="https://blog.csdn.net/weixin_42350212/article/details/118751583">https://blog.csdn.net/weixin_42350212/article/details/118751583</a><br>Python smtp发送邮件怎么设置抄送人<br><a href="https://www.cnblogs.com/shiyixirui/p/14692146.html">https://www.cnblogs.com/shiyixirui/p/14692146.html</a></p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>自动化</tag>
       </tags>
@@ -1441,7 +1433,7 @@ if __name__&#x3D;&#x3D;&#39;__main__&#39;:
 <p>用pip install pywin32装完之后错误就来了</p>
 <p>DLL load failed while importing win32api: 找不到指定的程序。<br>md搞死我了</p>
 <p>查不到，再查，再查，再查。。。</p>
-<p>解决方法：<a class="link"   href="https://links.jianshu.com/go?to=https://www.cnblogs.com/Swalllow/p/11711750.html" >https://www.cnblogs.com/Swalllow/p/11711750.html<i class="fas fa-external-link-alt"></i></a><br>找到文件pywin32_postinstall.py的路径，</p>
+<p>解决方法：<a href="https://links.jianshu.com/go?to=https://www.cnblogs.com/Swalllow/p/11711750.html">https://www.cnblogs.com/Swalllow/p/11711750.html</a><br>找到文件pywin32_postinstall.py的路径，</p>
 <p>由于安装路径不同，可能位置不一样，可以在你安装python的文件夹搜索这个文件，</p>
 <p>一般在安装文件下的Scripts文件里，用cmd进入这个Scripts文件夹</p>
 <p>如cd/d D:\install\python3.8\Scripts</p>
@@ -1449,7 +1441,7 @@ if __name__&#x3D;&#x3D;&#39;__main__&#39;:
 <p>再检查一次是否成功</p>
 <p>芜湖~，居然好了</p>
 <p>学习xlwings看这里：</p>
-<p><a class="link"   href="https://www.kancloud.cn/gnefnuy/xlwings-docs/1127455" >https://www.kancloud.cn/gnefnuy/xlwings-docs/1127455<i class="fas fa-external-link-alt"></i></a><br><a class="link"   href="https://www.cnblogs.com/Renyi-Fan/p/13244027.html" >https://www.cnblogs.com/Renyi-Fan/p/13244027.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><a href="https://www.kancloud.cn/gnefnuy/xlwings-docs/1127455">https://www.kancloud.cn/gnefnuy/xlwings-docs/1127455</a><br><a href="https://www.cnblogs.com/Renyi-Fan/p/13244027.html">https://www.cnblogs.com/Renyi-Fan/p/13244027.html</a></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">import pandas as pd
 import xlwings as xw</code></pre>
 
@@ -1599,6 +1591,9 @@ sht.pictures.add(fig, name&#x3D;&#39;MyPlot&#39;, update&#x3D;True)
 <pre><code>&lt;Picture &#39;MyPlot&#39; in &lt;Sheet [out.xlsx]源数据&gt;&gt;
 </code></pre>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -1722,7 +1717,7 @@ chunksize：如果提供了一个整数值，那么就会返回一个generator�
 <p>Read SQL database table into a DataFrame.</p>
 <p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_sql_query.html#pandas.read_sql_query"><code>read_sql_query</code></a></p>
 <p>Read SQL query into a DataFrame.</p>
-<p><a class="link"   href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_sql.html" >to_sql<i class="fas fa-external-link-alt"></i></a><br>主要有以下几个参数：</p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_sql.html">to_sql</a><br>主要有以下几个参数：</p>
 <ul>
 <li>  name: 输出的表名</li>
 <li>  con: 与read_sql中相同</li>
@@ -1730,7 +1725,7 @@ chunksize：如果提供了一个整数值，那么就会返回一个generator�
 <li>  index：是否将df的index单独写到一列中</li>
 <li>  index_label:指定列作为df的index输出，此时index为True</li>
 <li>  chunksize： 同read_sql</li>
-<li>dtype: 指定列的输出到数据库中的数据类型。字典形式储存：{column_name: sql_dtype}。常见的数据类型有sqlalchemy.types.INTEGER(), sqlalchemy.types.NVARCHAR(),sqlalchemy.Datetime()等，具体数据类型可以参考<a class="link"   href="http://docs.sqlalchemy.org/en/latest/core/type_basics.html#sql-standard-and-multiple-vendor-types" >这里<i class="fas fa-external-link-alt"></i></a><br>  还是以写到mysql数据库为例：<pre class="line-numbers language-none"><code class="language-none">df.to_sql(name&#x3D;&#39;table&#39;, 
+<li>dtype: 指定列的输出到数据库中的数据类型。字典形式储存：{column_name: sql_dtype}。常见的数据类型有sqlalchemy.types.INTEGER(), sqlalchemy.types.NVARCHAR(),sqlalchemy.Datetime()等，具体数据类型可以参考<a href="http://docs.sqlalchemy.org/en/latest/core/type_basics.html#sql-standard-and-multiple-vendor-types">这里</a><br>  还是以写到mysql数据库为例：<pre class="line-numbers language-none"><code class="language-none">df.to_sql(name&#x3D;&#39;table&#39;, 
           con&#x3D;con, 
           if_exists&#x3D;&#39;append&#39;, 
           index&#x3D;False,
@@ -1739,7 +1734,7 @@ chunksize：如果提供了一个整数值，那么就会返回一个generator�
                  &#39;col_time&#39;:sqlalchemy.DateTime(),
                  &#39;col_bool&#39;:sqlalchemy.types.Boolean
           &#125;)</code></pre></li>
-<li>*注：**如果不提供dtype,to_sql会自动根据df列的dtype选择默认的数据类型输出，比如字符型会以sqlalchemy.types.TEXT类型输出，相比NVARCHAR，TEXT类型的数据所占的空间更大，所以一般会指定输出为NVARCHAR；而如果df的列的类型为np.int64时，将会导致无法识别并转换成INTEGER型，需要事先转换成int类型（用map，apply函数可以方便的转换）。<br><a class="link"   href="https://www.cnblogs.com/arkenstone/p/6271923.html" >https://www.cnblogs.com/arkenstone/p/6271923.html<i class="fas fa-external-link-alt"></i></a></li>
+<li>*注：**如果不提供dtype,to_sql会自动根据df列的dtype选择默认的数据类型输出，比如字符型会以sqlalchemy.types.TEXT类型输出，相比NVARCHAR，TEXT类型的数据所占的空间更大，所以一般会指定输出为NVARCHAR；而如果df的列的类型为np.int64时，将会导致无法识别并转换成INTEGER型，需要事先转换成int类型（用map，apply函数可以方便的转换）。<br><a href="https://www.cnblogs.com/arkenstone/p/6271923.html">https://www.cnblogs.com/arkenstone/p/6271923.html</a></li>
 </ul>
 <h3 id="第二种：cursor-execute-直接写入"><a href="#第二种：cursor-execute-直接写入" class="headerlink" title="第二种：cursor.execute()直接写入"></a>第二种：cursor.execute()直接写入</h3><pre class="line-numbers language-none"><code class="language-none">#插入方法无需改动，传入一个动态变化的字典
 connect &#x3D; pymysql.connect(host&#x3D;&#39;&#39;,user&#x3D;&#39;&#39;,db &#x3D; &#39;&#39;,password&#x3D;&#39;&#39;,port&#x3D;3306,charset&#x3D;&#39;utf8&#39;)
@@ -1769,6 +1764,9 @@ cursor.execute(sql)
 connect.commit()
 cursor.execute(&quot;select * from stuinfo&quot;)
 print(cursor.fetchall())</code></pre>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -1777,7 +1775,7 @@ print(cursor.fetchall())</code></pre>]]></content>
     <title>python数据采集：selenium爬虫、自动化</title>
     <url>//post/python%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%EF%BC%9Aselenium%E7%88%AC%E8%99%AB%E3%80%81%E8%87%AA%E5%8A%A8%E5%8C%96.html</url>
     <content><![CDATA[<pre class="line-numbers language-none"><code class="language-none">中文文档https:&#x2F;&#x2F;python-selenium-zh.readthedocs.io&#x2F;zh_CN&#x2F;latest&#x2F;</code></pre>
-<p>装包：pip install selenium<br>下载chrome：<a class="link"   href="https://www.google.cn/chrome/" >https://www.google.cn/chrome/<i class="fas fa-external-link-alt"></i></a><br>下驱动：<a class="link"   href="https://chromedriver.storage.googleapis.com/index.html" >https://chromedriver.storage.googleapis.com/index.html<i class="fas fa-external-link-alt"></i></a>  注意浏览器驱动 必须要和浏览器版本匹配<br>这是个zip包，下载下来之后，解压里面的程序文件 chromedriver.exe 到scripts路径下<br>跑一下看看感觉来了没有</p>
+<p>装包：pip install selenium<br>下载chrome：<a href="https://www.google.cn/chrome/">https://www.google.cn/chrome/</a><br>下驱动：<a href="https://chromedriver.storage.googleapis.com/index.html">https://chromedriver.storage.googleapis.com/index.html</a>  注意浏览器驱动 必须要和浏览器版本匹配<br>这是个zip包，下载下来之后，解压里面的程序文件 chromedriver.exe 到scripts路径下<br>跑一下看看感觉来了没有</p>
 <pre class="line-numbers language-none"><code class="language-none">from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -1807,6 +1805,9 @@ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av64421994&#x2F;?p&#x3D;1简�
 希望你学会了不要乱搞</code></pre>
 
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -1814,129 +1815,39 @@ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av64421994&#x2F;?p&#x3D;1简�
   <entry>
     <title>python电影数据分析</title>
     <url>//post/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html</url>
-    <content><![CDATA[<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"
-                     
-                ></p>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"></p>
 <h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>id：标识号<br>imdb_id：IMDB 标识号<br>popularity：在 Movie Database 上的相对页面查看次数<br>budget：预算（美元）<br>revenue：收入（美元）<br>original_title：电影名称<br>cast：演员列表，按 | 分隔，最多 5 名演员<br>homepage：电影首页的 URL<br>director：导演列表，按 | 分隔，最多 5 名导演<br>tagline：电影的标语<br>keywords：与电影相关的关键字，按 | 分隔，最多 5 个关键字<br>overview：剧情摘要<br>runtime：电影时长<br>genres：风格列表，按 | 分隔，最多 5 种风格<br>production_companies：制作公司列表，按 | 分隔，最多 5 家公司<br>release_date：首次上映日期<br>vote_count：评分次数<br>vote_average：平均评分<br>based on novel 是否由小说改编</p>
 <h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>每年上映电影数量、电影总票房表现？<br>电影票房与哪些因素最相关？<br>各类型电影表现？<br>各电影类型之间的关联性<br>原创电影与改编电影有何差异？<br>受众喜好与那些因素有关？电影时长为多少最合适？<br>Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</p>
-<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"
-                     
-                ></p>
+<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"></p>
 <p>电影工业在最近三十几年呈现稳步式增长，2014年数量最多。虽然电影数量最近二十年内有3次较大的波动，但电影总票房仍然保持在较高的水准，说明电影市场已经成熟，有固定的消费人群，可见投资电影仍然是很好的投资方式。</p>
-<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"
-                     
-                ></p>
+<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"></p>
 <p>由以上可知，电影票房与电影预算（0.73），受欢迎度（0.66），评价次数（0.78）存在强相关。 绘制电影票房与受欢迎度，评价次数，电影预算的相关性散点图及其线性回归线。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"></p>
 <p>如图，电影预算、评分基本与电影票房呈正线性相关的关系，这也符合正常经济规律。</p>
-<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"
-                     
-                ></p>
+<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"></p>
 <p>约从1992开始，电影市场开始爆发式增长，其中戏剧类（Drama）和喜剧类（Comedy）这两个类型是随时间增长幅度最大的，现在也比较热门。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"></p>
 <p>如上图，可见投资一部电影的话，上图中的类型是最好的选择，尤以comedy和drama最佳。那不同类型电影的盈利能力如何呢？</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"></p>
 <p>电影关键词主要以based on novel（基于小说）、women（女性）、independent film（独立电影）、murder（谋杀）为主</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"></p>
 <p>由图可知，平均收益前3的电影类型为：冒险类（Adventure）、科幻类（Fantasy）、动画类（Animation），而外国电影类（Foreign）和电视电影类（TV Movie）有亏损的风险。</p>
-<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"
-                     
-                ></p>
+<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"></p>
 <p>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在支持度阈值2.5%，提升度为3 的情况下，表现出较强的关联性，也符合人们的生活常识</p>
-<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"
-                     
-                ></p>
+<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"></p>
 <p>可见，绝大部分电影还是原创为主。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"></p>
 <p>原创电影的利润与改编电影相差一倍多。</p>
-<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"
-                     
-                ></p>
+<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"></p>
 <p>受众欢迎度较高的电影类型为Adventure，Science Fiction ，Fantasy。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"></p>
 <p>受众欢迎度较高的电影的时长基本在90-200分钟之间。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"></p>
 <p>受欢迎度高的电影，评分肯定高。反之评分高的电影，受欢迎度可能低，这就是冷门好片的天地。</p>
-<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"
-                     
-                ></p>
+<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"></p>
 <p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
 <h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
 <h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
@@ -2167,9 +2078,9 @@ plt.xlabel(&#39;budget&#39;,fontsize&#x3D;13)
 plt.ylabel(&#39;revenue&#39;,fontsize&#x3D;13)</code></pre>
 <p>思路要明确，代码要简洁，以后尽量都写成函数。</p>
 ]]></content>
-      <tags>
-        <tag>数据分析</tag>
-      </tags>
+      <categories>
+        <category>python</category>
+      </categories>
   </entry>
   <entry>
     <title>python面向对象习题</title>
@@ -2416,8 +2327,11 @@ t.tell()
 s.tell()
 c.tell()</code></pre>
 
-<p><a class="link"   href="https://blog.csdn.net/bullpride/article/details/52022701" >https://blog.csdn.net/bullpride/article/details/52022701<i class="fas fa-external-link-alt"></i></a></p>
+<p><a href="https://blog.csdn.net/bullpride/article/details/52022701">https://blog.csdn.net/bullpride/article/details/52022701</a></p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -2425,7 +2339,7 @@ c.tell()</code></pre>
   <entry>
     <title>python数据可视化：pyecharts v1版本</title>
     <url>//post/python%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%9Apyecharts-v1%E7%89%88%E6%9C%AC.html</url>
-    <content><![CDATA[<p><a class="link"   href="https://github.com/ecomfe/echarts" >Echarts<i class="fas fa-external-link-alt"></i></a>是一个由百度开源的数据可视化，结合巧妙的交互性，精巧的图表设计；而 Python 是一门富有表达力的语言，很适合用于数据处理。分析遇上数据可视化时，<a class="link"   href="https://github.com/pyecharts/pyecharts" >pyecharts<i class="fas fa-external-link-alt"></i></a>诞生了。<br>个人觉得可视化最好用的，不接受反驳，毕竟用echarts的都那么多；<br><a class="link"   href="https://pyecharts.org/#/zh-cn/intro" >官方文档<i class="fas fa-external-link-alt"></i></a></p>
+    <content><![CDATA[<p><a href="https://github.com/ecomfe/echarts">Echarts</a>是一个由百度开源的数据可视化，结合巧妙的交互性，精巧的图表设计；而 Python 是一门富有表达力的语言，很适合用于数据处理。分析遇上数据可视化时，<a href="https://github.com/pyecharts/pyecharts">pyecharts</a>诞生了。<br>个人觉得可视化最好用的，不接受反驳，毕竟用echarts的都那么多；<br><a href="https://pyecharts.org/#/zh-cn/intro">官方文档</a></p>
 <ul>
 <li>自己挑了一些碰到的坑记了一下，分享一些自己学习过程中发现的资源，其他看文档就够了</li>
 </ul>
@@ -2453,12 +2367,7 @@ c &#x3D; (
     .render_notebook()
 )
 c</code></pre>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-c318cf13b19d947a.1zz3gy9m634w.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-c318cf13b19d947a.1zz3gy9m634w.png"></p>
 <ul>
 <li><p>只能通过滑动水平轴缩放x轴：只传入datazoom_opts=[opts.DataZoomOpts()]；省略掉 opts.DataZoomOpts(), 删除水平轴，就只能通过鼠标拖动；</p>
 </li>
@@ -2548,7 +2457,7 @@ report_day_line.add(report_day_line1,opts.GridOpts(pos_left&#x3D;&quot;10%&quot;
 report_day_line.render_notebook()</code></pre></li>
 <li><p>指定chart_id时要将写好的图形定义成函数，这样子可以复用后面的page中图片位置，方便更改</p>
 </li>
-<li><p>jscode的妙用 <a class="link"   href="https://zhuanlan.zhihu.com/p/133533187" >https://zhuanlan.zhihu.com/p/133533187<i class="fas fa-external-link-alt"></i></a></p>
+<li><p>jscode的妙用 <a href="https://zhuanlan.zhihu.com/p/133533187">https://zhuanlan.zhihu.com/p/133533187</a></p>
 <pre class="line-numbers language-none"><code class="language-none">tooltip_opts&#x3D;opts.TooltipOpts(
                 formatter&#x3D;JsCode(
                 &quot;function (params) &#123;return params.value[2] + &#39; ：复购率：&#39; +(Number(params.value[0])* 100).toFixed(2) + &#39;%&#39;+&#39;，销售额：&#39;+ params.value[1];&#125;&quot;
@@ -2641,12 +2550,7 @@ t1.render_notebook()</code></pre>
 #     .render(&quot;pie_base.html&quot;)
 )
 c.render_notebook()</code></pre>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-109a65be286830ab.wpn8qntfni8.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-109a65be286830ab.wpn8qntfni8.png"></p>
 <h1 id="内嵌饼图nested-pies"><a href="#内嵌饼图nested-pies" class="headerlink" title="内嵌饼图nested_pies"></a>内嵌饼图nested_pies</h1><pre class="line-numbers language-none"><code class="language-none">inner_x_data &#x3D; [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;]
 inner_y_data &#x3D; [335, 679, 1548]
 inner_data_pair &#x3D; [list(z) for z in zip(inner_x_data, inner_y_data)]
@@ -2707,13 +2611,8 @@ outer_data_pair &#x3D; [list(z) for z in zip(outer_x_data, outer_y_data)]
     )
 #     .render(&quot;nested_pies.html&quot;)
 ).render_notebook()</code></pre>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-85a5b5d8ee7790a8.5qowy1o8a20.png"
-                     
-                ></p>
-<p>那个formatter配置项可以在这里了解：<br>{a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）<br><a class="link"   href="https://echarts.apache.org/zh/option.html#grid.tooltip.formatter" >https://echarts.apache.org/zh/option.html#grid.tooltip.formatter<i class="fas fa-external-link-alt"></i></a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-85a5b5d8ee7790a8.5qowy1o8a20.png"></p>
+<p>那个formatter配置项可以在这里了解：<br>{a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）<br><a href="https://echarts.apache.org/zh/option.html#grid.tooltip.formatter">https://echarts.apache.org/zh/option.html#grid.tooltip.formatter</a></p>
 <h1 id="pyecharts中page的使用类似BI大屏展示"><a href="#pyecharts中page的使用类似BI大屏展示" class="headerlink" title="pyecharts中page的使用类似BI大屏展示"></a>pyecharts中page的使用类似BI大屏展示</h1><pre class="line-numbers language-none"><code class="language-none">page &#x3D; Page(layout&#x3D; Page.DraggablePageLayout, page_title&#x3D; &quot;大屏展示&quot;)
 # page &#x3D; Page()
 page.add(
@@ -2744,7 +2643,7 @@ df.to_json(&quot;chart_config2.json&quot;,orient &#x3D; &quot;records&quot;)</co
 page.save_resize_html( &#39;temp.html&#39;, cfg_file&#x3D; &#39;chart_config2.json&#39;,dest&#x3D; &#39;设置好位置后的BI看板.html&#39;)</code></pre>
 <h3 id="加上标题，可自定义html"><a href="#加上标题，可自定义html" class="headerlink" title="加上标题，可自定义html"></a>加上标题，可自定义html</h3></li>
 </ul>
-<p>这样弄完有点问题就是背景页面可能和图片背景有违和感，你可以使用BeautifulSoup再修改下页面背景颜色啥的,相关网课链接<a class="link"   href="https://www.bilibili.com/video/BV1KT4y1c7pb?p=22" >https://www.bilibili.com/video/BV1KT4y1c7pb?p=22<i class="fas fa-external-link-alt"></i></a></p>
+<p>这样弄完有点问题就是背景页面可能和图片背景有违和感，你可以使用BeautifulSoup再修改下页面背景颜色啥的,相关网课链接<a href="https://www.bilibili.com/video/BV1KT4y1c7pb?p=22">https://www.bilibili.com/video/BV1KT4y1c7pb?p=22</a></p>
 <pre class="line-numbers language-none"><code class="language-none">from bs4 import BeautifulSoup
 import os
 
@@ -2771,7 +2670,7 @@ with open(os.path.join(os.path.abspath(&quot;.&quot;), &quot;设置好位置后�
     html.write(html_new)
     html.close()</code></pre>
 <p>当然也可以把那个json文件里面的值传到对应的样式代码中在HTML页面中进行布局，需要注意的是画图时指定好每个图表的chart_id,便于通过字符串格式进行指定对应图表位置。</p>
-<p>注意点：（来自<a class="link"   href="https://www.jianshu.com/p/47e8f056e5cf%EF%BC%89" >https://www.jianshu.com/p/47e8f056e5cf）<i class="fas fa-external-link-alt"></i></a><br>1.由于图片的布局是根据chart_config.json中图片id的对应关系进行布局，因此每张图片均需要指定其id；<br>如：<br>Bar(init_opts=opts.InitOpts(chart_id=1))<br>2.在本次操作工程中，发现Table类中不包含init_opts参数，可以通过修改源码，在D:\Anaconda3\Lib\site-packages\pyecharts\component\table指定char_id,具体修改的代码如下：</p>
+<p>注意点：（来自<a href="https://www.jianshu.com/p/47e8f056e5cf%EF%BC%89">https://www.jianshu.com/p/47e8f056e5cf）</a><br>1.由于图片的布局是根据chart_config.json中图片id的对应关系进行布局，因此每张图片均需要指定其id；<br>如：<br>Bar(init_opts=opts.InitOpts(chart_id=1))<br>2.在本次操作工程中，发现Table类中不包含init_opts参数，可以通过修改源码，在D:\Anaconda3\Lib\site-packages\pyecharts\component\table指定char_id,具体修改的代码如下：</p>
 <pre class="line-numbers language-none"><code class="language-none">class Table(ChartMixin):
     def __init__(self, page_title: str &#x3D; CurrentConfig.PAGE_TITLE, js_host: str &#x3D; &quot;&quot;,chart_id&#x3D;None):
         self.page_title &#x3D; page_title
@@ -2785,8 +2684,11 @@ with open(os.path.join(os.path.abspath(&quot;.&quot;), &quot;设置好位置后�
             self.chart_id: str &#x3D; chart_id
         else:
             self.chart_id: str &#x3D; uuid.uuid4().hex</code></pre>
-<p><a class="link"   href="https://www.bilibili.com/video/BV1KT4y1c7pb" >https://www.bilibili.com/video/BV1KT4y1c7pb<i class="fas fa-external-link-alt"></i></a> 网课里有资源自己去取</p>
+<p><a href="https://www.bilibili.com/video/BV1KT4y1c7pb">https://www.bilibili.com/video/BV1KT4y1c7pb</a> 网课里有资源自己去取</p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -2824,7 +2726,7 @@ Out[3]: &#39;目前玩的挺好的，就……&lt;br&gt;给四星是因为为什
 <li><p>也是一种情况吧~</p>
 </li>
 </ul>
-<p><a class="link"   href="https://www.cnblogs.com/xieqiankun/p/lxmlencoding.html" >https://www.cnblogs.com/xieqiankun/p/lxmlencoding.html<i class="fas fa-external-link-alt"></i></a></p>
+<p><a href="https://www.cnblogs.com/xieqiankun/p/lxmlencoding.html">https://www.cnblogs.com/xieqiankun/p/lxmlencoding.html</a></p>
 <pre class="line-numbers language-none"><code class="language-none">显然这应该是编码的问题，在使用:
 etree.HTML(r)
 处理源文件的时候，由于没有指定编码，所以它使用了一个默认编码，从而导致和UTF-8冲突，产生乱码。
@@ -2843,6 +2745,9 @@ r &#x3D; requests.get(url&#x3D;&#39;http:&#x2F;&#x2F;sports.sina.cn&#x2F;nba&#x2
 r.encoding &#x3D; &#39;utf-8&#39;
 r &#x3D; r.content
 print r</code></pre>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -2851,19 +2756,9 @@ print r</code></pre>]]></content>
     <title>sql互联网游戏数据分析</title>
     <url>//post/sql%E4%BA%92%E8%81%94%E7%BD%91%E6%B8%B8%E6%88%8F%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html</url>
     <content><![CDATA[<h1 id="一、数据概览"><a href="#一、数据概览" class="headerlink" title="一、数据概览"></a>一、数据概览</h1><p>数据共有828934条，108列标签</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.14j5jvjer19c.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.14j5jvjer19c.png"></p>
 <p>本文主要对以下10个字段进行分析</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.15fg7qqjowkg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.15fg7qqjowkg.png"></p>
 <p>使用工具：Navicat Premium ，jupyter notebook<br>技能要求：SQL掌握到子查询，Python连接数据库（不连也可以）</p>
 <h1 id="二、提出问题："><a href="#二、提出问题：" class="headerlink" title="二、提出问题："></a>二、提出问题：</h1><p>1、新增玩家分析：从玩家数量、玩家占比、每日新增玩家数展开分析<br>2、玩家活跃度分析：从不同用户在线时长、分布特征展开分析<br>3、玩家付费情况分析：从PUR（付费比率）、ARPPU（活跃付费用户平均消费金额）等关键指标展开分析<br>4、玩家游戏习惯分析：从不同玩家类型、游戏模式（PVP与PVE）得出的情况来展开分析</p>
 <h1 id="三、新增玩家分析"><a href="#三、新增玩家分析" class="headerlink" title="三、新增玩家分析"></a>三、新增玩家分析</h1><p>新增玩家数量：828934人</p>
@@ -2879,18 +2774,8 @@ print r</code></pre>]]></content>
 
 <p>每日新增付费用户数</p>
 <pre class="line-numbers language-none"><code class="language-none">select date(register_time) 日期,count(DISTINCT(user_id)) from tap_fun_test where pay_price&gt;0 GROUP BY 日期;</code></pre>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1w7wlbjdniow.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4v3ad1gpu2v4.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1w7wlbjdniow.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4v3ad1gpu2v4.png"></p>
 <p>每日新增玩家在3月10日有一次大高峰增长，可能举办活动，但活动一过后续新增玩家数并没有显著提升，可见活动没有游戏的人气带来实质性的帮助。<br>活动需要力度加强并保持一定时间维度，给玩家充分时间了解游戏，才能提高秀逸热度。</p>
 <p>全部玩家平均在线时长:11.741103057664969</p>
 <pre class="line-numbers language-none"><code class="language-none">SELECT avg(avg_online_minutes)  as 全部玩家平均在线时长 from tap_fun_test;</code></pre>
@@ -2919,12 +2804,7 @@ WHERE pay_price&gt;0;</code></pre>
 max( avg_online_minutes) 最大值
 FROM &#96;tap_fun_test&#96; 
 where pay_price&gt;0;</code></pre>
-<h4 id="最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5"><a href="#最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5" class="headerlink" title="最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5"></a>最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5</h4><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.25066jtzv1vk.png"
-                     
-                ></p>
+<h4 id="最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5"><a href="#最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5" class="headerlink" title="最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5"></a>最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5</h4><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.25066jtzv1vk.png"></p>
 <p>全部玩家的在线时长箱线图中向下压缩的很厉害，全部玩家上四分位数为5，说明75%的玩家平均在线只有大约5分钟，可能一局游戏都没有玩完，可见玩家流失情况比较严重。<br>付费用户的箱型图中下四分位数为30，中位数84，上四分位数为191，说明付费用户中75%以上的用户在线时长都超过了30分钟。</p>
 <h1 id="五、玩家付费情况分析"><a href="#五、玩家付费情况分析" class="headerlink" title="五、玩家付费情况分析"></a>五、玩家付费情况分析</h1><h3 id="关键指标"><a href="#关键指标" class="headerlink" title="关键指标"></a>关键指标</h3><p>AU（active users）活跃用户：游戏时长超过15分钟<br> PU（Paying users）付费用户<br>APA（Active Paying Account）:活跃付费用户数<br>ARPU：平均每个活跃用户的收入，总收入/AU<br> ARPPU：平均活跃付费用户收入,总收入/APU<br> PUR(付费比率)：APA/AU</p>
 <h2 id="每个活跃玩家的收入"><a href="#每个活跃玩家的收入" class="headerlink" title="每个活跃玩家的收入"></a>每个活跃玩家的收入</h2><pre class="line-numbers language-none"><code class="language-none">select count(DISTINCT user_id) as AU,
@@ -2933,24 +2813,14 @@ where pay_price&gt;0;</code></pre>
 from tap_fun_test 
 where avg_online_minutes &gt; 15;
 #and pay_price&gt;0;每个活跃付费玩家的收入</code></pre>
-<h5 id="AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989"><a href="#AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989" class="headerlink" title="AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989"></a>AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989</h5><h2 id="每个活跃付费玩家的收入"><a href="#每个活跃付费玩家的收入" class="headerlink" title="每个活跃付费玩家的收入"></a>每个活跃付费玩家的收入</h2><h5 id="APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846"><a href="#APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846" class="headerlink" title="APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846"></a>APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846</h5><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.19kx2qgrrty8.png"
-                     
-                ></p>
+<h5 id="AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989"><a href="#AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989" class="headerlink" title="AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989"></a>AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989</h5><h2 id="每个活跃付费玩家的收入"><a href="#每个活跃付费玩家的收入" class="headerlink" title="每个活跃付费玩家的收入"></a>每个活跃付费玩家的收入</h2><h5 id="APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846"><a href="#APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846" class="headerlink" title="APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846"></a>APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846</h5><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.19kx2qgrrty8.png"></p>
 <h1 id="付费比率"><a href="#付费比率" class="headerlink" title="付费比率"></a>付费比率</h1><pre class="line-numbers language-none"><code class="language-none">select count(DISTINCT user_id) as APA ,
 (SELECT count(DISTINCT user_id) from tap_fun_test WHERE avg_online_minutes&gt;&#x3D;15) as AU ,
 count(DISTINCT user_id)&#x2F;(select count(DISTINCT user_id) from tap_fun_test 
 where avg_online_minutes&gt;&#x3D;15) as PUR
 from tap_fun_test 
 where avg_online_minutes&gt;&#x3D;15 and pay_price &gt;0;</code></pre>
-<h5 id="APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021"><a href="#APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021" class="headerlink" title="APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021"></a>APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021</h5><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7esl7b48tf28.png"
-                     
-                ></p>
+<h5 id="APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021"><a href="#APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021" class="headerlink" title="APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021"></a>APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021</h5><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7esl7b48tf28.png"></p>
 <p>该游戏的PUR（人均付费率）为0.169较低，且ARPU（活跃玩家平均消费额）为5.58，说明收入表现差；相对于ARPPU，活跃付费用户消费很高，是ARPU的6倍左右，针对这点我们可以做首次消费门槛和专属大V玩家的福利与活动进行调整与优化。</p>
 <h1 id="六、玩家游戏习惯分析"><a href="#六、玩家游戏习惯分析" class="headerlink" title="六、玩家游戏习惯分析"></a>六、玩家游戏习惯分析</h1><pre class="line-numbers language-none"><code class="language-none">select AVG(pvp_battle_count) as 平均PVP次数 ,
 sum(pvp_lanch_count)&#x2F;sum(pvp_battle_count) as 主动发起PVP概率,
@@ -2963,26 +2833,14 @@ PVP活跃付费玩家(加一个pay_price&gt;0)
 平均PVP次数：27.301911202587473；主动发起PVP概率：0.6553937480210826；PVP获胜概率：0.6872459716242092</code></pre>
 
 <p>PVE活跃玩家<br>平均PVE次数：28；主动发起PVE概率：0.9967；PVE获胜概率：0.9041<br>PVE活跃付费玩家<br>平均PVE次数：52；主动发起PVE概率：0.9957；PVE获胜概率：0.9110</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.qcf66hymhfk.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5z2txq9ht3wg.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6ycbt2l7v340.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.qcf66hymhfk.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5z2txq9ht3wg.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6ycbt2l7v340.png"></p>
 <p>APA（付费活跃用户）玩家的平均PVE和PVP次数都是AU（活跃）玩家次数的两倍左右，显然APA玩家是重要的发展对象。<br>PVP活动中，APA玩家主动发起和胜利的概率都明显高于AU玩家。<br>PVE活动中，APA玩家主动发起和胜利的概率与AU玩家都基本持平，其中主动发起PVE的概率非常高，且二者的PVE胜率高达90%，游戏体验较好。</p>
 ]]></content>
+      <categories>
+        <category>sql</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -3034,6 +2892,9 @@ employee_id
 ,salary 
 ,ntile(3) over(partition by department_id order by salary desc) 
 from employees </code></pre>]]></content>
+      <categories>
+        <category>sql</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -3041,253 +2902,73 @@ from employees </code></pre>]]></content>
   <entry>
     <title>python酒类数据分析</title>
     <url>//post/python%E9%85%92%E7%B1%BB%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html</url>
-    <content><![CDATA[<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.kf1spxcftw0.png"
-                     
-                ></p>
+    <content><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.kf1spxcftw0.png"></p>
 <h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>‘id’,’name’,’price’,’sales’,’ad_word’,’buy_act’,’vote_count’,’url’,’date’,’brand’分别为销售数据的商品ID，商品名称，单价，销量，广告词，促销活动，链接，日期，品牌。<br>以及自构属性‘amount’：销售额，‘month’：月份，‘price_level’：价格区间。</p>
 <h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>1、行业大盘近期（2018/2/27）表现？各价位段表现？<br>总体表现，各价位表现，哪个价位的产品最火，各厂家表现？<br>近期各行业的广告词、促销活动怎么样<br>2、行业大盘总体态势怎样？<br>销量与评论数、单价的关系？<br>时间序列下的行业产品走势？<br>3、如何评价泸州老窖品牌？(可从多角度，规模增长趋势、产品结构等)<br>产品规模、增长趋势、友商竞争、行业水平？</p>
-<h1 id="三、行业大盘近周期（2018-2-27）表现？各价位段表现？"><a href="#三、行业大盘近周期（2018-2-27）表现？各价位段表现？" class="headerlink" title="三、行业大盘近周期（2018/2/27）表现？各价位段表现？"></a>三、行业大盘近周期（2018/2/27）表现？各价位段表现？</h1><h3 id="行业大盘2018-2-27总体表现"><a href="#行业大盘2018-2-27总体表现" class="headerlink" title="行业大盘2018/2/27总体表现"></a>行业大盘2018/2/27总体表现</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4jvl2phdo45c.png"
-                     
-                ></p>
-<h6 id="2018-2-27行业的总销售量为5-663030e-05，总评价数为1-255655e-06，总销售额达1-842307e-08。"><a href="#2018-2-27行业的总销售量为5-663030e-05，总评价数为1-255655e-06，总销售额达1-842307e-08。" class="headerlink" title="2018/2/27行业的总销售量为5.663030e+05，总评价数为1.255655e+06，总销售额达1.842307e+08。"></a>2018/2/27行业的总销售量为5.663030e+05，总评价数为1.255655e+06，总销售额达1.842307e+08。</h6><h6 id="平均单价价格为417元，平均销售642份，平均销售额达209115-4元"><a href="#平均单价价格为417元，平均销售642份，平均销售额达209115-4元" class="headerlink" title="平均单价价格为417元，平均销售642份，平均销售额达209115.4元"></a>平均单价价格为417元，平均销售642份，平均销售额达209115.4元</h6><h6 id="单价中位数199，说明少数高价位的酒提高了总体均值"><a href="#单价中位数199，说明少数高价位的酒提高了总体均值" class="headerlink" title="单价中位数199，说明少数高价位的酒提高了总体均值"></a>单价中位数199，说明少数高价位的酒提高了总体均值</h6><h6 id="销量中位数为148，说明少数及销量高的天数提升了平均交易量"><a href="#销量中位数为148，说明少数及销量高的天数提升了平均交易量" class="headerlink" title="销量中位数为148，说明少数及销量高的天数提升了平均交易量"></a>销量中位数为148，说明少数及销量高的天数提升了平均交易量</h6><h6 id="销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。"><a href="#销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。" class="headerlink" title="销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。"></a>销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。</h6><h6 id="一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。"><a href="#一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。" class="headerlink" title="一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。"></a>一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。</h6><h3 id="各价位表现"><a href="#各价位表现" class="headerlink" title="各价位表现"></a>各价位表现</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6dcpqx9r3pts.png"
-                     
-                ></p>
+<h1 id="三、行业大盘近周期（2018-2-27）表现？各价位段表现？"><a href="#三、行业大盘近周期（2018-2-27）表现？各价位段表现？" class="headerlink" title="三、行业大盘近周期（2018/2/27）表现？各价位段表现？"></a>三、行业大盘近周期（2018/2/27）表现？各价位段表现？</h1><h3 id="行业大盘2018-2-27总体表现"><a href="#行业大盘2018-2-27总体表现" class="headerlink" title="行业大盘2018/2/27总体表现"></a>行业大盘2018/2/27总体表现</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4jvl2phdo45c.png"></p>
+<h6 id="2018-2-27行业的总销售量为5-663030e-05，总评价数为1-255655e-06，总销售额达1-842307e-08。"><a href="#2018-2-27行业的总销售量为5-663030e-05，总评价数为1-255655e-06，总销售额达1-842307e-08。" class="headerlink" title="2018/2/27行业的总销售量为5.663030e+05，总评价数为1.255655e+06，总销售额达1.842307e+08。"></a>2018/2/27行业的总销售量为5.663030e+05，总评价数为1.255655e+06，总销售额达1.842307e+08。</h6><h6 id="平均单价价格为417元，平均销售642份，平均销售额达209115-4元"><a href="#平均单价价格为417元，平均销售642份，平均销售额达209115-4元" class="headerlink" title="平均单价价格为417元，平均销售642份，平均销售额达209115.4元"></a>平均单价价格为417元，平均销售642份，平均销售额达209115.4元</h6><h6 id="单价中位数199，说明少数高价位的酒提高了总体均值"><a href="#单价中位数199，说明少数高价位的酒提高了总体均值" class="headerlink" title="单价中位数199，说明少数高价位的酒提高了总体均值"></a>单价中位数199，说明少数高价位的酒提高了总体均值</h6><h6 id="销量中位数为148，说明少数及销量高的天数提升了平均交易量"><a href="#销量中位数为148，说明少数及销量高的天数提升了平均交易量" class="headerlink" title="销量中位数为148，说明少数及销量高的天数提升了平均交易量"></a>销量中位数为148，说明少数及销量高的天数提升了平均交易量</h6><h6 id="销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。"><a href="#销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。" class="headerlink" title="销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。"></a>销售额中位数低于总体均值相差巨大，可能存在爆发交易的情况。</h6><h6 id="一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。"><a href="#一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。" class="headerlink" title="一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。"></a>一天中出现的最高交易量是21685份订单，最高交易额是65011630元，最高单价的白酒为6588元，最高评论数为67514条，最低为0条。</h6><h3 id="各价位表现"><a href="#各价位表现" class="headerlink" title="各价位表现"></a>各价位表现</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6dcpqx9r3pts.png"></p>
 <p>在行业大盘最近一个周期内，可以看到销量最好和评论数最高的均是是100-200价位的白酒。<br>在价位50以下白酒销量和评论数出现大反差，在销量差距悬殊的情况下，该类白酒的评论数超过200-500价位白酒的评论数，但是销量偏低说明该类白酒在市场中有较高流行度的同时可能也存在较多的槽点。<br>中等价位（100-500）是市场的主要潮流所在，由中价位向低价位过度的产品（50-100）同样能稳住市场，获得较高的销量与人气。<br>3000以上的销量与评论数极低，符合当今社会人们财富资源分配或生活消费水平的差距，高消费人群只占极少数。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3ltt1wzyecxs.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3ltt1wzyecxs.png"></p>
 <p>1000-3000价位席卷市场，高单价情况下即时在低销量时也能远超越其他价位销售额。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2gkvdbfp9w3k.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2gkvdbfp9w3k.png"></p>
 <p>基本呈现单价越高，评论数越少。人们总是低价商品的要求过于执着？</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.52y9ub6wn7gg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.52y9ub6wn7gg.png"></p>
 <p>由于其1000-3000单价基数大，导致金额最大</p>
-<h3 id="各厂家表现"><a href="#各厂家表现" class="headerlink" title="各厂家表现"></a>各厂家表现</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4sep09ocakcg.png"
-                     
-                ></p>
+<h3 id="各厂家表现"><a href="#各厂家表现" class="headerlink" title="各厂家表现"></a>各厂家表现</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4sep09ocakcg.png"></p>
 <p>最近一周期五粮液销量最高达到10万瓶以上，远领先于其他厂家。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3nszvh59q70g.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3nszvh59q70g.png"></p>
 <p>五粮液产品市场评论数最高，应该是广告宣传或者产品质量做得好。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3ar839q1g2io.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3ar839q1g2io.png"></p>
 <p>茅台近期销售总额位于行业最高水平，销售额近7500万。五粮液可能由于产品单价偏低，销售总额位居第三，接近2000万。</p>
-<h3 id="最近一个周期广告、促销活动怎么做的？"><a href="#最近一个周期广告、促销活动怎么做的？" class="headerlink" title="最近一个周期广告、促销活动怎么做的？"></a>最近一个周期广告、促销活动怎么做的？</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6gq0tn4yo9og.png"
-                     
-                ></p>
+<h3 id="最近一个周期广告、促销活动怎么做的？"><a href="#最近一个周期广告、促销活动怎么做的？" class="headerlink" title="最近一个周期广告、促销活动怎么做的？"></a>最近一个周期广告、促销活动怎么做的？</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6gq0tn4yo9og.png"></p>
 <p>广告词一以‘天猫配送’，‘正品保证’等为主要标语，‘东方习酒’，‘猫超自营’，‘地道北京味’也是主要宣传方向。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5ancn0q8cccg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5ancn0q8cccg.png"></p>
 <p>促销活动主要以‘满一1或2送任意一件赠品，赠完为止’作为主要促销活动。</p>
-<h1 id="四、行业大盘总体态势怎样？"><a href="#四、行业大盘总体态势怎样？" class="headerlink" title="四、行业大盘总体态势怎样？"></a>四、行业大盘总体态势怎样？</h1><h3 id="销量与单价、评论数的关系"><a href="#销量与单价、评论数的关系" class="headerlink" title="销量与单价、评论数的关系"></a>销量与单价、评论数的关系</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3mw3xybva7nk.png"
-                     
-                ></p>
+<h1 id="四、行业大盘总体态势怎样？"><a href="#四、行业大盘总体态势怎样？" class="headerlink" title="四、行业大盘总体态势怎样？"></a>四、行业大盘总体态势怎样？</h1><h3 id="销量与单价、评论数的关系"><a href="#销量与单价、评论数的关系" class="headerlink" title="销量与单价、评论数的关系"></a>销量与单价、评论数的关系</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3mw3xybva7nk.png"></p>
 <p>评论数量变化与销量基本呈线性变化。评论数代表市场反应，市场热度越高，销量越高。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4o6xp1btc9g.png"
-                     
-                ></p>
-<p>单价与销量基本成反比例变化。单价越高，销量越低，单价越低，销量越高。<br>###时间序列下的行业产品走势<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3dp2nbjq0t34.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4o6xp1btc9g.png"></p>
+<p>单价与销量基本成反比例变化。单价越高，销量越低，单价越低，销量越高。<br>###时间序列下的行业产品走势<br><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3dp2nbjq0t34.png"></p>
 <p>200-500价位段的商品销量呈上升趋势，0-50和50-100的商品在2017年11月上升后出现持续下降，100-200的商品在上升后保持平稳，基本站稳市场。500-3000区间内商品在同年12月后出现小范围增长，因其单价基数较大，可能引起销售额大幅增长。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5ucvrzq2vfcw.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5ucvrzq2vfcw.png"></p>
 <p>除0-50和3000以上产品外，其他商品都在2017年11月后出现销售额显著增长，推测可能是双十一以及其他促销活动，但是对0-50和3000以上的商品销售状态基本无影响。1000-3000区间商品在2017年12月过后出现直线式增长，100-500区间产品作为市场主力也出现增长趋势。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4ucsu4issccg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4ucsu4issccg.png"></p>
 <p>3000月以上的酒类在11月出现价格大额下跌，其他区间商品单价均走势平稳。</p>
-<h1 id="五、泸州老窖自身增长的趋势，产品结构，行业水平"><a href="#五、泸州老窖自身增长的趋势，产品结构，行业水平" class="headerlink" title="五、泸州老窖自身增长的趋势，产品结构，行业水平"></a>五、泸州老窖自身增长的趋势，产品结构，行业水平</h1><h3 id="泸州老窖产品规模"><a href="#泸州老窖产品规模" class="headerlink" title="泸州老窖产品规模"></a>泸州老窖产品规模</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.t3dlkrd7ojk.png"
-                     
-                ></p>
+<h1 id="五、泸州老窖自身增长的趋势，产品结构，行业水平"><a href="#五、泸州老窖自身增长的趋势，产品结构，行业水平" class="headerlink" title="五、泸州老窖自身增长的趋势，产品结构，行业水平"></a>五、泸州老窖自身增长的趋势，产品结构，行业水平</h1><h3 id="泸州老窖产品规模"><a href="#泸州老窖产品规模" class="headerlink" title="泸州老窖产品规模"></a>泸州老窖产品规模</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.t3dlkrd7ojk.png"></p>
 <p>泸州老窖品牌主打50-500价位产品覆盖市场，其中3000+超高价酒类占比与0-50低价品类占比最低，均低于500-3000档位，说明泸州老窖在市场的品牌形象与战略目标是做好中高端酒类产品。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2jviql0m0lc0.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2jviql0m0lc0.png"></p>
 <p>在2017年12月产品规模突然增大，应该是与行业竞争或市场需求相关。 </p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkodwqpgads.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkodwqpgads.png"></p>
 <p>销量在十一月份出现大幅增长，持续到次年一月份出现显著下降。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hxptteb9rh.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hxptteb9rh.png"></p>
 <p>总销售额与销量表现相似，也是在十一月份出现大幅增长，持续到次年一月份出现显著下降。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5cjonwptotq8.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5cjonwptotq8.png"></p>
 <p>0-50区间产品在十一月后大幅增长，后持续衰弱。50-500区间商品同期均出现显著增长，后缓慢下降趋于稳定。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2n30ocmjuzr4.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2n30ocmjuzr4.png"></p>
 <p>200-500与1000-3000区间商品由于其单价基数较大，在同年十一月销量保证的前提下，出现大幅增长。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4843aw978akg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4843aw978akg.png"></p>
 <p>3000+产品在2017年7月-9月出现波动后趋于平稳。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3g6dp00zw7cw.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3g6dp00zw7cw.png"></p>
 <p>17年9月可能出现了一些问题，除500-1000区间外，都出现了先增后降的趋势。</p>
-<h3 id="那种广告词、促销标语出现的最多"><a href="#那种广告词、促销标语出现的最多" class="headerlink" title="那种广告词、促销标语出现的最多"></a>那种广告词、促销标语出现的最多</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.79nh5qchwhds.png"
-                     
-                ></p>
+<h3 id="那种广告词、促销标语出现的最多"><a href="#那种广告词、促销标语出现的最多" class="headerlink" title="那种广告词、促销标语出现的最多"></a>那种广告词、促销标语出现的最多</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.79nh5qchwhds.png"></p>
 <p>该品牌主打广告关键词： ‘’限时直降‘’，‘甄选好货’，‘厂家直供’。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6vpepnq4p2m8.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6vpepnq4p2m8.png"></p>
 <p>主打的促销标语为 ‘’送任意一件赠品，赠完即止‘’。</p>
-<h3 id="选择牛栏山作为泸州老窖竞争对手"><a href="#选择牛栏山作为泸州老窖竞争对手" class="headerlink" title="选择牛栏山作为泸州老窖竞争对手"></a>选择牛栏山作为泸州老窖竞争对手</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7k75jdss8f0g.png"
-                     
-                ></p>
+<h3 id="选择牛栏山作为泸州老窖竞争对手"><a href="#选择牛栏山作为泸州老窖竞争对手" class="headerlink" title="选择牛栏山作为泸州老窖竞争对手"></a>选择牛栏山作为泸州老窖竞争对手</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7k75jdss8f0g.png"></p>
 <p>牛栏山品牌在产品布局上和泸州老窖都是主打50-500价位段商品布局，但是牛栏山在0-50上的产品数多于500-1000价位的产品数量。且没有3000元以上产品上市，可见牛栏山品牌试图留住中端价位产品客户，拉拢低价位产品客户的战略方针。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.585gbomsxjsw.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.585gbomsxjsw.png"></p>
 <p>与泸州老窖相似均在十二月出现了较大幅度的增长。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5tcjs54m9rwg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5tcjs54m9rwg.png"></p>
 <p>泸州老窖只在200-300和超1000元以上的产品销量小范围领先友商，但由于单价基数较大，可能会有意想不到的效果哦</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.696y93qi0eps.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.696y93qi0eps.png"></p>
 <p>泸州老窖销售额仅在200-500和1000元以上三个价位段领先友商，在50-200价位，销售额较大程度低于友商。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.65kolxn2i16o.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.65kolxn2i16o.png"></p>
 <p>除了200-500和1000以上价位的产品，泸州老窖品牌产品收到的市场评论与反馈均低于友商，可见友商的宣传力度或产品口碑在市场中占有较高热度 。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1ebr4yfjo2n4.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6uo6tbp5jfk0.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1ebr4yfjo2n4.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6uo6tbp5jfk0.png"></p>
 <p>可以看到两个品牌的销售额主要来源产品类别有明显差异。</p>
-<h3 id="泸州老窖在行业的水平如何"><a href="#泸州老窖在行业的水平如何" class="headerlink" title="泸州老窖在行业的水平如何"></a>泸州老窖在行业的水平如何</h3><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.23phzpw6q96o.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.535us8b7xog0.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6n2czq2ijcow.png"
-                     
-                ><br>泸州老窖位于行业的上游水平，产品规模完善，各价位商品数量布局体现了明确的行业目标：要做中高端酒类产品的佼佼者。且不放弃低价位的0-50系列产品，全面覆盖市场，在给定的时间数据中，各区间段产品除0-50与3000+以外，其他商品的销量与销售额均呈持续缓慢上升趋势。可以看到该企业处于一个蓬勃向上，逐步冲向高端的行业发展状态。</p>
+<h3 id="泸州老窖在行业的水平如何"><a href="#泸州老窖在行业的水平如何" class="headerlink" title="泸州老窖在行业的水平如何"></a>泸州老窖在行业的水平如何</h3><p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.23phzpw6q96o.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.535us8b7xog0.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6n2czq2ijcow.png"><br>泸州老窖位于行业的上游水平，产品规模完善，各价位商品数量布局体现了明确的行业目标：要做中高端酒类产品的佼佼者。且不放弃低价位的0-50系列产品，全面覆盖市场，在给定的时间数据中，各区间段产品除0-50与3000+以外，其他商品的销量与销售额均呈持续缓慢上升趋势。可以看到该企业处于一个蓬勃向上，逐步冲向高端的行业发展状态。</p>
 <h1 id="六、分析结论"><a href="#六、分析结论" class="headerlink" title="六、分析结论"></a>六、分析结论</h1><p>1、近期行业呈现蓬勃向上的发展状态，0-50价位产品的销量与评论数出现较大市场反差，100-200价位段的商品销量最火，位于市场销量及销售额榜首的是茅台品牌，五粮液以市场获评数最高位居榜首。行业广告词以‘天猫配送’，‘正品保证’等作为主要标语，以‘满1或2件送任意一件赠品，赠完为止’作为主要促销活动。<br>2、行业总体发展十分成熟，各品牌产品竞争力都十分明显，销量与评论基本呈正相关线性关系，与单价成反比例关系，100-500区间产品销量作为市场主流，1000元以上产品可能在销售额上反超其他高销量产品，双十一对市场的刺激反响极为强烈。<br>3、泸州老窖主打中高端酒类产品，全价位品类布局全面，综合实力处于全行业上游水平。销量受双十一影响显著，导致200-500与1000-3000区间商品销售额大幅增长。该品牌主打广告关键词： ‘’限时直降‘’，‘甄选好货’，‘厂家直供’。主要促销活动为 ‘’送任意一件赠品，赠完即止‘’。其总体销售额主要来源于100-3000价位产品，相比牛栏山不相上下，在中高价位品类优势明显，0-100价位段还有较大进步空间。</p>
 <h1 id="七、python代码"><a href="#七、python代码" class="headerlink" title="七、python代码"></a>七、python代码</h1><h3 id="导入包，设定字体和画图风格"><a href="#导入包，设定字体和画图风格" class="headerlink" title="导入包，设定字体和画图风格"></a>导入包，设定字体和画图风格</h3><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
 import numpy as np
@@ -3495,6 +3176,9 @@ pic_barh(df_brand_sum.sales,&#39;各品牌销售总量对比&#39;,&#39;销量&#3
 pic_barh(df_brand_sum.amount,&#39;各品牌销售总金额对比&#39;,&#39;金额&#39;,&#39;品牌&#39;)
 pic_barh(df_brand_sum.vote_count,&#39;各品牌产品评论数对比&#39;,&#39;评论数&#39;,&#39;品牌&#39;)</code></pre>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -3552,6 +3236,9 @@ from
     group by user_id,diff
     ) b 
 group by user_id order by max(&#96;次数&#96;) desc;</code></pre>]]></content>
+      <categories>
+        <category>sql</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -3604,6 +3291,9 @@ group by user_id order by max(&#96;次数&#96;) desc;</code></pre>]]></content>
 <p>他多么希望可以有一个人陪他看陌生城市里的每一个落日，他们一起去听喜欢的课程。一起规划未来，一起带着足够的知识，去闯荡这色彩斑斓的平凡世界。</p>
 <p>——你东半球官方指定唯一的男朋友</p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
         <tag>成长，旧时光</tag>
       </tags>
@@ -3634,6 +3324,9 @@ group by user_id order by max(&#96;次数&#96;) desc;</code></pre>]]></content>
 <p>克莱顿在《你要如何衡量你的人生》中提到，人对自己一生的规划，无非是周密战略和意外机遇相结合的产物，关键是要走出去，并行动起来，直到你明白应该将自己的聪明才智，兴趣和重点放在哪里，再将应急战略转化为周密战略。</p>
 <p>我希望你，在试图跳出规则之前，能做出关于自己本心的选择，愿你强大到能冲破社会的桎梏，以自己愿意的姿态生活下去。﻿﻿﻿</p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
         <tag>成长，旧时光</tag>
       </tags>
@@ -4194,6 +3887,9 @@ from
 order by id;</code></pre>
 
 ]]></content>
+      <categories>
+        <category>sql</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -4207,6 +3903,9 @@ order by id;</code></pre>
 <p>有时候会有一种奇怪的感受，如果说读书时代遇到问题所面对的失落，是为了锻炼克服困难的能力，从而学习到更好的思维方式；参加高考上大学遭遇就业压力所承受的焦虑，是要鞭策自己为了过上更好的生活实现所谓的个人理想而努力。但当你真正走上社会的那一霎那，发现一切都不像你想象得那么有条有理，你可能还是会需要蛰伏很长一段时间。你拼尽全力的想要去缩短需要奋斗的距离，却还是会难以扛住资本家构造蓝图时行业给出的亲民价。我们这样的人，谈爱都太奢侈。</p>
 <p>就写到这吧，闲来几笔，一个人还是要心无所恃，随遇而安。</p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
         <tag>成长，旧时光</tag>
       </tags>
@@ -4227,6 +3926,9 @@ order by id;</code></pre>
 <p>贝蒂，你说像我这样的人，会活成自己想要成为的样子吗，我要学习的东西在需要通过考试拿到的学分面前，已经搁浅了一阵时间。我想，过完这一阵，我会继续坚持。因为，在这场游戏中，并没有什么其他的角色供我选择。</p>
 <p>当然我相信，这些很快就会过去的。时间总是这样无情地切割我们的生命，夜里想着心事，第二天的闹铃就响了；下几次雨，夏天也结束了；等反应过来的时候，那个穿着开裆裤在邻居家乱跑的小屁孩，都长这么大了。</p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
         <tag>成长，旧时光</tag>
       </tags>
@@ -4235,33 +3937,13 @@ order by id;</code></pre>
     <title>记一次面试题：excel数据处理</title>
     <url>//post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.html</url>
     <content><![CDATA[<p>Sales表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.42u5kgldrn0g.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.42u5kgldrn0g.png"></p>
 <p>Institution表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hsivqtazg0o.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hsivqtazg0o.png"></p>
 <p>Product表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.57axgsalziio.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.57axgsalziio.png"></p>
 <p>Price表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3hfa2v3xoukg.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3hfa2v3xoukg.png"></p>
 <p>Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)</p>
 <pre class="line-numbers language-none"><code class="language-none">import pandas as pd
 import openpyxl 
@@ -4303,13 +3985,11 @@ writer.sheets &#x3D; dict((ws.title, ws) for ws in book.worksheets)
 groupby_ddff_top1.to_excel(writer,sheet_name&#x3D;&quot;Answer_Python&quot;,index&#x3D;False)
 writer.save()</code></pre>
 
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6qq9z1446rs.png"
-                     
-                ></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6qq9z1446rs.png"></p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>数据分析</tag>
       </tags>
@@ -4317,7 +3997,8 @@ writer.save()</code></pre>
   <entry>
     <title>python实现鼠标键盘自动化——pyautogui、opencv</title>
     <url>//post/python%E5%AE%9E%E7%8E%B0%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%87%AA%E5%8A%A8%E5%8C%96.html</url>
-    <content><![CDATA[<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
+    <content><![CDATA[<p>总的来说这是一个通过个人自定义流程（cmd表格文件中一个sheet为一套流程），在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</p>
+<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> xlrd 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyautogui==0.9.50 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> opencv-python 回车</p>
@@ -4830,6 +4511,9 @@ while True:
 <p>参考B站大佬（不高兴就喝水）的源码</p>
 <p><a href="https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0</a></p>
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>自动化</tag>
       </tags>
