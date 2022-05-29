@@ -1,201 +1,206 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="WenGe Zhang">
+    
+    <title>
+        
+            python办公自动化：操作excel |
+        
+        弦好想断
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":"true# shadow effect when the mouse hover","scale":"true# scale effect when the mouse hover"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"毋庸置疑，好的事情总会到来，而当它来晚的时候，也不失为一种惊喜。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
-
-  <meta name="description" content="#python 使用 openpyxl 操作 excel  openpyxl 最好用的 python 操作 excel 表格库，不接受反驳（想反驳自己去学其他的）   openpyxl 官网链接：https:&#x2F;&#x2F;openpyxl.readthedocs.io&#x2F;en&#x2F;stable&#x2F;  https:&#x2F;&#x2F;www.zhihu.com&#x2F;column&#x2F;c_1261255815367487488  openpy">
-<meta property="og:type" content="article">
-<meta property="og:title" content="python办公自动化：操作excel">
-<meta property="og:url" content="http://example.com/2021/12/08/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E6%93%8D%E4%BD%9Cexcel/index.html">
-<meta property="og:site_name" content="弦好想断">
-<meta property="og:description" content="#python 使用 openpyxl 操作 excel  openpyxl 最好用的 python 操作 excel 表格库，不接受反驳（想反驳自己去学其他的）   openpyxl 官网链接：https:&#x2F;&#x2F;openpyxl.readthedocs.io&#x2F;en&#x2F;stable&#x2F;  https:&#x2F;&#x2F;www.zhihu.com&#x2F;column&#x2F;c_1261255815367487488  openpy">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-12-08T14:28:43.000Z">
-<meta property="article:modified_time" content="2022-04-03T06:09:41.283Z">
-<meta property="article:author" content="WenGe Zhang">
-<meta property="article:tag" content="自动化">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/2021/12/08/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E6%93%8D%E4%BD%9Cexcel/">
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>python办公自动化：操作excel | 弦好想断</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">弦好想断</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+<main class="page-container">
 
-          <div class="content post posts-expand">
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
             
+            <a class="logo-title" href="/">
+                弦好想断
+            </a>
+        </div>
 
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/08/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9A%E6%93%8D%E4%BD%9Cexcel/">
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          python办公自动化：操作excel
-        </h1>
+    <div class="window-mask"></div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+</header>
 
-              <time title="创建时间：2021-12-08 22:28:43" itemprop="dateCreated datePublished" datetime="2021-12-08T22:28:43+08:00">2021-12-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-03 14:09:41" itemprop="dateModified" datetime="2022-04-03T14:09:41+08:00">2022-04-03</time>
-              </span>
-
-          
 
         </div>
-      </header>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">python办公自动化：操作excel</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">WenGe Zhang</span>
+                        
+                            <span class="author-label">干饭分析师</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-12-08 22:28:43
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.2k 字</span>
+        </span>
     
-    <div class="post-body" itemprop="articleBody">
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>10 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
 
-      
-        <p>#python 使用 openpyxl 操作 excel</p>
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>#python 使用 openpyxl 操作 excel</p>
 <ul>
 <li><p>openpyxl 最好用的 python 操作 excel 表格库，不接受反驳（想反驳自己去学其他的） </p>
 </li>
@@ -287,193 +292,260 @@
 <li>.unmerge_cells(start_row=起始行号，start_column=起始列号，end_row=结束行号，<br>end_column=结束列号)</li>
 </ul>
 
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag"># 自动化</a>
-          </div>
+        </div>
 
         
 
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/12/13/mysql-tips/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">mysql_tips</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python中requests使用中文乱码的解决方案</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/12/02/requests%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" rel="prev" title="python中requests使用中文乱码的解决方案">
-      <i class="fa fa-chevron-left"></i> python中requests使用中文乱码的解决方案
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/12/13/mysql-tips/" rel="next" title="mysql_tips">
-      mysql_tips <i class="fa fa-chevron-right"></i>
-    </a></div>
     </div>
-      </footer>
-    
-  </article>
-  
-  
-  
+</div>
 
 
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
+                
+            </div>
 
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80-Excel-%E8%A1%A8%E6%A0%BC%E5%B9%B6%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC%E5%90%8D%E7%A7%B0%EF%BC%9B%E9%80%9A%E8%BF%87-sheet-%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.</span> <span class="nav-text">打开 Excel 表格并获取表格名称；通过 sheet 名称获取表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC%E5%86%85%E6%9F%90%E4%B8%AA%E6%A0%BC%E5%AD%90%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">2.</span> <span class="nav-text">获取表格内某个格子的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9-%E5%90%91%E6%9F%90%E4%B8%AA%E6%A0%BC%E5%AD%90%E4%B8%AD%E5%86%99%E5%85%A5%E5%86%85%E5%AE%B9%E5%B9%B6%E4%BF%9D%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">修改表格中的内容: 向某个格子中写入内容并保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-excel-%E5%87%BD%E6%95%B0%E5%85%AC%E5%BC%8F-%E5%BE%88%E6%9C%89%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">使用 excel 函数公式(很有用)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-cols-%E5%92%8C-insert-rows-%EF%BC%9A%E6%8F%92%E5%85%A5%E7%A9%BA%E8%A1%8C%E5%92%8C%E7%A9%BA%E5%88%97"><span class="nav-number">5.</span> <span class="nav-text">.insert_cols()和.insert_rows()：插入空行和空列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete-rows-%E5%92%8C-delete-cols-%EF%BC%9A%E5%88%A0%E9%99%A4%E8%A1%8C%E5%92%8C%E5%88%97"><span class="nav-number">6.</span> <span class="nav-text">.delete_rows()和.delete_cols()：删除行和列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#move-range-%EF%BC%9A%E7%A7%BB%E5%8A%A8%E6%A0%BC%E5%AD%90"><span class="nav-number">7.</span> <span class="nav-text">.move_range()：移动格子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create-sheet-%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84-sheet-%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.</span> <span class="nav-text">.create_sheet()：创建新的 sheet 表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-%EF%BC%9A%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA-sheet-%E8%A1%A8"><span class="nav-number">9.</span> <span class="nav-text">.remove()：删除某个 sheet 表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#copy-worksheet-%EF%BC%9A%E5%A4%8D%E5%88%B6%E4%B8%80%E4%B8%AA-sheet-%E8%A1%A8%E5%88%B0%E5%8F%A6%E5%A4%96%E4%B8%80%E5%BC%A0-excel-%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text">.copy_worksheet()：复制一个 sheet 表到另外一张 excel 表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sheet-title%EF%BC%9A%E4%BF%AE%E6%94%B9-sheet-%E8%A1%A8%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="nav-number">11.</span> <span class="nav-text">sheet.title：修改 sheet 表的名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84-excel-%E8%A1%A8%E6%A0%BC%E6%96%87%E4%BB%B6"><span class="nav-number">12.</span> <span class="nav-text">创建新的 excel 表格文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sheet-freeze-panes%EF%BC%9A%E5%86%BB%E7%BB%93%E7%AA%97%E5%8F%A3"><span class="nav-number">13.</span> <span class="nav-text">sheet.freeze_panes：冻结窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sheet-auto-filter-ref%EF%BC%9A%E7%BB%99%E8%A1%A8%E6%A0%BC%E6%B7%BB%E5%8A%A0%E2%80%9C%E7%AD%9B%E9%80%89%E5%99%A8%E2%80%9D"><span class="nav-number">14.</span> <span class="nav-text">sheet.auto_filter.ref：给表格添加“筛选器”</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E8%B0%83%E6%95%B4%E5%AD%97%E4%BD%93%E5%92%8C%E6%A0%B7%E5%BC%8F"><span class="nav-number"></span> <span class="nav-text">批量调整字体和样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1、修改字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC%E4%B8%AD%E6%A0%BC%E5%AD%90%E7%9A%84%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">2、获取表格中格子的字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E5%AF%B9%E9%BD%90%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">3、设置对齐样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E8%AE%BE%E7%BD%AE%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">4、设置边框样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E8%AE%BE%E7%BD%AE%E5%A1%AB%E5%85%85%E6%A0%B7%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">5、设置填充样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%AE%BE%E7%BD%AE%E8%A1%8C%E9%AB%98%E5%92%8C%E5%88%97%E5%AE%BD"><span class="nav-number">6.</span> <span class="nav-text">6、设置行高和列宽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC"><span class="nav-number">7.</span> <span class="nav-text">7、合并单元格</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">WenGe Zhang</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">WenGe Zhang</a>
+        </div>
         
-          <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
 </div>
 
+        </div>
+    
 
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
 
-      </div>
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">WenGe Zhang</span>
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80-Excel-%E8%A1%A8%E6%A0%BC%E5%B9%B6%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC%E5%90%8D%E7%A7%B0%EF%BC%9B%E9%80%9A%E8%BF%87-sheet-%E5%90%8D%E7%A7%B0%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.</span> <span class="nav-text">打开 Excel 表格并获取表格名称；通过 sheet 名称获取表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC%E5%86%85%E6%9F%90%E4%B8%AA%E6%A0%BC%E5%AD%90%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="nav-number">2.</span> <span class="nav-text">获取表格内某个格子的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9-%E5%90%91%E6%9F%90%E4%B8%AA%E6%A0%BC%E5%AD%90%E4%B8%AD%E5%86%99%E5%85%A5%E5%86%85%E5%AE%B9%E5%B9%B6%E4%BF%9D%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">修改表格中的内容: 向某个格子中写入内容并保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-excel-%E5%87%BD%E6%95%B0%E5%85%AC%E5%BC%8F-%E5%BE%88%E6%9C%89%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">使用 excel 函数公式(很有用)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insert-cols-%E5%92%8C-insert-rows-%EF%BC%9A%E6%8F%92%E5%85%A5%E7%A9%BA%E8%A1%8C%E5%92%8C%E7%A9%BA%E5%88%97"><span class="nav-number">5.</span> <span class="nav-text">.insert_cols()和.insert_rows()：插入空行和空列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delete-rows-%E5%92%8C-delete-cols-%EF%BC%9A%E5%88%A0%E9%99%A4%E8%A1%8C%E5%92%8C%E5%88%97"><span class="nav-number">6.</span> <span class="nav-text">.delete_rows()和.delete_cols()：删除行和列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#move-range-%EF%BC%9A%E7%A7%BB%E5%8A%A8%E6%A0%BC%E5%AD%90"><span class="nav-number">7.</span> <span class="nav-text">.move_range()：移动格子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#create-sheet-%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84-sheet-%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.</span> <span class="nav-text">.create_sheet()：创建新的 sheet 表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-%EF%BC%9A%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA-sheet-%E8%A1%A8"><span class="nav-number">9.</span> <span class="nav-text">.remove()：删除某个 sheet 表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#copy-worksheet-%EF%BC%9A%E5%A4%8D%E5%88%B6%E4%B8%80%E4%B8%AA-sheet-%E8%A1%A8%E5%88%B0%E5%8F%A6%E5%A4%96%E4%B8%80%E5%BC%A0-excel-%E8%A1%A8"><span class="nav-number">10.</span> <span class="nav-text">.copy_worksheet()：复制一个 sheet 表到另外一张 excel 表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sheet-title%EF%BC%9A%E4%BF%AE%E6%94%B9-sheet-%E8%A1%A8%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="nav-number">11.</span> <span class="nav-text">sheet.title：修改 sheet 表的名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84-excel-%E8%A1%A8%E6%A0%BC%E6%96%87%E4%BB%B6"><span class="nav-number">12.</span> <span class="nav-text">创建新的 excel 表格文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sheet-freeze-panes%EF%BC%9A%E5%86%BB%E7%BB%93%E7%AA%97%E5%8F%A3"><span class="nav-number">13.</span> <span class="nav-text">sheet.freeze_panes：冻结窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sheet-auto-filter-ref%EF%BC%9A%E7%BB%99%E8%A1%A8%E6%A0%BC%E6%B7%BB%E5%8A%A0%E2%80%9C%E7%AD%9B%E9%80%89%E5%99%A8%E2%80%9D"><span class="nav-number">14.</span> <span class="nav-text">sheet.auto_filter.ref：给表格添加“筛选器”</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E8%B0%83%E6%95%B4%E5%AD%97%E4%BD%93%E5%92%8C%E6%A0%B7%E5%BC%8F"><span class="nav-number"></span> <span class="nav-text">批量调整字体和样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1、修改字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%8E%B7%E5%8F%96%E8%A1%A8%E6%A0%BC%E4%B8%AD%E6%A0%BC%E5%AD%90%E7%9A%84%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">2、获取表格中格子的字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E5%AF%B9%E9%BD%90%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">3、设置对齐样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E8%AE%BE%E7%BD%AE%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">4、设置边框样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E8%AE%BE%E7%BD%AE%E5%A1%AB%E5%85%85%E6%A0%B7%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">5、设置填充样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%AE%BE%E7%BD%AE%E8%A1%8C%E9%AB%98%E5%92%8C%E5%88%97%E5%AE%BD"><span class="nav-number">6.</span> <span class="nav-text">6、设置行高和列宽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC"><span class="nav-number">7.</span> <span class="nav-text">7、合并单元格</span></a></li></ol>
+    </div>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
+        </aside>
+    
 
-        
-
-
-
-
+    <div class="image-viewer-container">
+    <img src="">
+</div>
 
 
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
+    
 
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
+</main>
 
 
 
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
 
 
 
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
 
 
-  
 
-  
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
 
 </body>
 </html>

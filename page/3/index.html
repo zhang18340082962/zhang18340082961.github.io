@@ -1,956 +1,602 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="WenGe Zhang">
+    
+    <title>
+        
+        弦好想断
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":"true# shadow effect when the mouse hover","scale":"true# scale effect when the mouse hover"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"毋庸置疑，好的事情总会到来，而当它来晚的时候，也不失为一种惊喜。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="弦好想断">
-<meta property="og:url" content="http://example.com/page/3/index.html">
-<meta property="og:site_name" content="弦好想断">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="WenGe Zhang">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/page/3/">
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>弦好想断</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">弦好想断</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+<main class="page-container">
 
-          <div class="content index posts-expand">
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+            <a class="logo-title" href="/">
+                弦好想断
+            </a>
+        </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">python电影数据分析</a>
-        </h2>
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+    <div class="window-mask"></div>
 
-              <time title="创建时间：2020-03-11 13:25:31" itemprop="dateCreated datePublished" datetime="2020-03-11T13:25:31+08:00">2020-03-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-03 14:02:27" itemprop="dateModified" datetime="2022-04-03T14:02:27+08:00">2022-04-03</time>
-              </span>
+</header>
 
-          
 
         </div>
-      </header>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        python电影数据分析
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+一、数据概述id：标识号imdb_id：IMDB 标识号popularity：在 Movie Database 上的相对页面查看次数budget：预算（美元）revenue：收入（美元）original_title：电影名称cast：演员列表，按 ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Mar 11 2020 13:25:31 GMT+0800">2020-03-11</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2020/03/11/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2019/07/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/">
+                        python面向对象习题
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        写完对对象这个东西了解很多了
+1234567891011121314151617181920212223242526272829303132# coding=utf-8&quot;&quot;&quot;一：定义一个学生类。有下面的类属性：1 姓名2...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Jul 19 2019 12:59:17 GMT+0800">2019-07-19</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2019/07/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2019/03/19/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+                        记一次面试题：excel数据处理
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        Sales表：
+
+Institution表：
+
+Product表：
+
+Price表：
+
+Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)
+1234567891011121314151617181920212...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Mar 19 2019 16:43:39 GMT+0800">2019-03-19</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2019/03/19/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2018/11/19/%E5%A4%A7%E5%AD%A6%E4%B8%89%E5%B9%B4%EF%BC%8C%E5%86%99%E7%BB%99%E9%82%A3%E4%B8%AA%E8%BF%9F%E5%88%B0%E7%9A%84%E4%BA%BA/">
+                        大学三年，写给那个迟到的人
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        亲爱的X姑娘：
+你好！给你写这封信的时候，我正在学校的机电楼B301上第一节课。看了简书里好多给异性朋友写信的文章，我也心血来潮，忍不住想要和你说说话了。
+—1—
+早上醒的很早，在床上平躺到闹铃声响起，依旧照常的起床，洗漱，整理好出门。
+没有胃口，不...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Nov 19 2018 16:28:23 GMT+0800">2018-11-19</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%88%90%E9%95%BF%EF%BC%8C%E6%97%A7%E6%97%B6%E5%85%89/">成长，旧时光</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2018/11/19/%E5%A4%A7%E5%AD%A6%E4%B8%89%E5%B9%B4%EF%BC%8C%E5%86%99%E7%BB%99%E9%82%A3%E4%B8%AA%E8%BF%9F%E5%88%B0%E7%9A%84%E4%BA%BA/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2018/10/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/">
+                        至少你，存在过我的记忆
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        人海中错过的那个人，至少，在我失眠梦呓间，脑海里还是会依稀浮现出你的容颜。
+贝蒂，我是里克。最近你的城市下雨了吗，我这里的温度有些难过，不知道你过得怎么样。
+济南的天照旧那样调皮，就像世界末日里的那句歌词，Why dose the sun go on...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Oct 19 2018 16:31:17 GMT+0800">2018-10-19</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%88%90%E9%95%BF%EF%BC%8C%E6%97%A7%E6%97%B6%E5%85%89/">成长，旧时光</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2018/10/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2018/10/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/">
+                        大学里，最丧的时候
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        —1—
+看到香港大学孙教授的一段话：
+﻿﻿“大学，就应该是早起吃点早餐；跑跑步；专业课认真听；公共课看看自己喜欢的杂志；中午小睡一会儿；下午参加个社团活动或打打篮球；晚上陪着喜欢的人散散步；或去自习室安静地看看书……  社会不需要学霸，也不认什么学生...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Oct 18 2018 11:12:12 GMT+0800">2018-10-18</span></span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%88%90%E9%95%BF%EF%BC%8C%E6%97%A7%E6%97%B6%E5%85%89/">成长，旧时光</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2018/10/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/2/"
+        >上一页</a>
+    
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</div>
 
-      
-          <p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3pbn6ny481hc.png"
-                     
-                ></p>
-<h1 id="一、数据概述"><a href="#一、数据概述" class="headerlink" title="一、数据概述"></a>一、数据概述</h1><p>id：标识号<br>imdb_id：IMDB 标识号<br>popularity：在 Movie Database 上的相对页面查看次数<br>budget：预算（美元）<br>revenue：收入（美元）<br>original_title：电影名称<br>cast：演员列表，按 | 分隔，最多 5 名演员<br>homepage：电影首页的 URL<br>director：导演列表，按 | 分隔，最多 5 名导演<br>tagline：电影的标语<br>keywords：与电影相关的关键字，按 | 分隔，最多 5 个关键字<br>overview：剧情摘要<br>runtime：电影时长<br>genres：风格列表，按 | 分隔，最多 5 种风格<br>production_companies：制作公司列表，按 | 分隔，最多 5 家公司<br>release_date：首次上映日期<br>vote_count：评分次数<br>vote_average：平均评分<br>based on novel 是否由小说改编</p>
-<h1 id="二、提出问题"><a href="#二、提出问题" class="headerlink" title="二、提出问题"></a>二、提出问题</h1><p>每年上映电影数量、电影总票房表现？<br>电影票房与哪些因素最相关？<br>各类型电影表现？<br>各电影类型之间的关联性<br>原创电影与改编电影有何差异？<br>受众喜好与那些因素有关？电影时长为多少最合适？<br>Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</p>
-<h1 id="三、每年上映电影数量、电影总票房是多少？"><a href="#三、每年上映电影数量、电影总票房是多少？" class="headerlink" title="三、每年上映电影数量、电影总票房是多少？"></a>三、每年上映电影数量、电影总票房是多少？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6b4rg4rm8f0g.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2zjbppvcxm2o.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.nkkuasvv4ww.png"
-                     
-                ></p>
-<p>电影工业在最近三十几年呈现稳步式增长，2014年数量最多。虽然电影数量最近二十年内有3次较大的波动，但电影总票房仍然保持在较高的水准，说明电影市场已经成熟，有固定的消费人群，可见投资电影仍然是很好的投资方式。</p>
-<h1 id="四、电影票房与哪些因素最相关？"><a href="#四、电影票房与哪些因素最相关？" class="headerlink" title="四、电影票房与哪些因素最相关？"></a>四、电影票房与哪些因素最相关？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.n21iikmlnb.png"
-                     
-                ></p>
-<p>由以上可知，电影票房与电影预算（0.73），受欢迎度（0.66），评价次数（0.78）存在强相关。 绘制电影票房与受欢迎度，评价次数，电影预算的相关性散点图及其线性回归线。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.402wi8il56kg.png"
-                     
-                ></p>
-<p>如图，电影预算、评分基本与电影票房呈正线性相关的关系，这也符合正常经济规律。</p>
-<h1 id="五、各类型电影表现？"><a href="#五、各类型电影表现？" class="headerlink" title="五、各类型电影表现？"></a>五、各类型电影表现？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4yo6dofyk6bk.png"
-                     
-                ></p>
-<p>约从1992开始，电影市场开始爆发式增长，其中戏剧类（Drama）和喜剧类（Comedy）这两个类型是随时间增长幅度最大的，现在也比较热门。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6w6fy2r0f75s.png"
-                     
-                ></p>
-<p>如上图，可见投资一部电影的话，上图中的类型是最好的选择，尤以comedy和drama最佳。那不同类型电影的盈利能力如何呢？</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1jep74ld6qgw.png"
-                     
-                ></p>
-<p>电影关键词主要以based on novel（基于小说）、women（女性）、independent film（独立电影）、murder（谋杀）为主</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.64w9itd55j40.png"
-                     
-                ></p>
-<p>由图可知，平均收益前3的电影类型为：冒险类（Adventure）、科幻类（Fantasy）、动画类（Animation），而外国电影类（Foreign）和电视电影类（TV Movie）有亏损的风险。</p>
-<h1 id="六、各电影类型之间关联性"><a href="#六、各电影类型之间关联性" class="headerlink" title="六、各电影类型之间关联性"></a>六、各电影类型之间关联性</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2uu5wutrq6m8.png"
-                     
-                ></p>
-<p>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在支持度阈值2.5%，提升度为3 的情况下，表现出较强的关联性，也符合人们的生活常识</p>
-<h1 id="七、原创电影与改编电影有何差异？"><a href="#七、原创电影与改编电影有何差异？" class="headerlink" title="七、原创电影与改编电影有何差异？"></a>七、原创电影与改编电影有何差异？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4oeqnee8dpj4.png"
-                     
-                ></p>
-<p>可见，绝大部分电影还是原创为主。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3o19mntggc5c.png"
-                     
-                ></p>
-<p>原创电影的利润与改编电影相差一倍多。</p>
-<h1 id="八、受众喜好与那些因素有关？电影时长为多少最合适？"><a href="#八、受众喜好与那些因素有关？电影时长为多少最合适？" class="headerlink" title="八、受众喜好与那些因素有关？电影时长为多少最合适？"></a>八、受众喜好与那些因素有关？电影时长为多少最合适？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1cg3xbzwubz4.png"
-                     
-                ></p>
-<p>受众欢迎度较高的电影类型为Adventure，Science Fiction ，Fantasy。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.777udesc9r7k.png"
-                     
-                ></p>
-<p>受众欢迎度较高的电影的时长基本在90-200分钟之间。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.33vaixewp474.png"
-                     
-                ></p>
-<p>受欢迎度高的电影，评分肯定高。反之评分高的电影，受欢迎度可能低，这就是冷门好片的天地。</p>
-<h1 id="九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？"><a href="#九、Universal-Pictures与Paramount-Pictures两家行业巨头的业绩如何？" class="headerlink" title="九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？"></a>九、Universal Pictures与Paramount Pictures两家行业巨头的业绩如何？</h1><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.2h5jra486agw.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"
-                     
-                ></p>
-<p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
-<h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
-<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import seaborn as sns</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">from mlxtend.frequent_patterns import apriori</span><br><span class="line">from mlxtend.frequent_patterns import association_rules</span><br><span class="line">plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]#显示中文</span><br><span class="line">plt.style.use(&#x27;ggplot&#x27;)</span><br></pre></td></tr></table></figure>
-<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">path = &#x27;D:/python_data_file/based_on_novel.csv&#x27;</span><br><span class="line">data = pd.read_csv(path)</span><br><span class="line"></span><br><span class="line">movie_genres = pd.DataFrame(data,columns=[&#x27;original_title&#x27;,&#x27;genres&#x27;])</span><br><span class="line">movies_ohe = movie_genres.drop(&#x27;genres&#x27;,1).join(movie_genres.genres.str.get_dummies())</span><br><span class="line"># print(movies_ohe.shape)#(10866, 21)</span><br><span class="line">movies_ohe.set_index([&#x27;original_title&#x27;],inplace=True)</span><br><span class="line"></span><br><span class="line">frequent_itemsets_movies = apriori(movies_ohe,use_colnames=True, min_support=0.025)</span><br><span class="line">result = [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]</span><br><span class="line"># len(result)#37</span><br><span class="line">rules_movies =  association_rules(frequent_itemsets_movies, metric=&#x27;lift&#x27;, min_threshold=1.25)</span><br><span class="line"># print(rules_movies)</span><br><span class="line">rules_movies[(rules_movies.lift&gt;3)].sort_values(by=[&#x27;lift&#x27;], ascending=False)</span><br></pre></td></tr></table></figure>
-<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">xdata = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,</span><br><span class="line">              &#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;]]</span><br><span class="line">#要求制造商和电影类型不能为空</span><br><span class="line">clean_xdata = xdata[xdata.production_companies.notnull()&amp;xdata.genres.notnull()].reset_index(drop=True)</span><br><span class="line"># 每年总票房</span><br><span class="line">clean_xdata[&#x27;year&#x27;] = pd.to_datetime(clean_xdata.release_date,format=&#x27;%Y-%m-%d&#x27;).dt.year</span><br><span class="line">year_revenue = clean_xdata.groupby(&#x27;year&#x27;)[&#x27;revenue&#x27;].sum()</span><br><span class="line">def pic_trend(data,tit,xlab,ylab):</span><br><span class="line">    plt.figure(figsize=(12,6))</span><br><span class="line">    data.plot()</span><br><span class="line">    plt.title(tit,fontsize = 20)</span><br><span class="line">    plt.xlabel(xlab,fontsize=15)</span><br><span class="line">    plt.ylabel(ylab,fontsize=15)</span><br><span class="line">    plt.show()</span><br><span class="line">pic_trend(year_revenue,&#x27;每年总票房统计&#x27;,&#x27;年份&#x27;,&#x27;总票房&#x27;)</span><br><span class="line">#每年上映电影数量统计</span><br><span class="line">year_count = clean_xdata.groupby(&#x27;year&#x27;).id.count()</span><br><span class="line">pic_trend(year_count,&#x27;每年上映电影数量统计&#x27;,&#x27;年份&#x27;,&#x27;上映电影数量&#x27;)</span><br><span class="line">#每年上映电影数量饼图</span><br><span class="line">def pic_pie(data,val,gby,tit):</span><br><span class="line">    data = data.reset_index(drop=False)</span><br><span class="line">    fig = plt.figure(figsize=(16,8))</span><br><span class="line">    plt.pie(data[val],labels=data[gby],autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">    plt.title(tit,fontsize = 15)</span><br><span class="line">pic_pie(year_count,&#x27;id&#x27;,&#x27;year&#x27;,&#x27;每年上映电影数量&#x27;)</span><br></pre></td></tr></table></figure>
-<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># 随时间推移如何发生变化的</span><br><span class="line">genre_df = clean_xdata.genres.str.get_dummies()#构建虚拟变量，相当于把各电影类型作为列名展开为一个稀疏矩阵</span><br><span class="line">genre_df[&#x27;release_date&#x27;] = clean_xdata[&#x27;year&#x27;]</span><br><span class="line">genre_by_year = genre_df.groupby(&#x27;release_date&#x27;).sum()</span><br><span class="line">fig = plt.figure(figsize=(12,6))</span><br><span class="line">plt.plot(genre_by_year,label = genre_by_year.columns)</span><br><span class="line">plt.legend(genre_by_year)</span><br><span class="line">plt.xticks(range(1950,2020,10))</span><br><span class="line">plt.title(&#x27;电影类型随时间变动趋势图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;年份&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line"></span><br><span class="line"># ②电影类型数量分布</span><br><span class="line">genre_sum = genre_by_year.sum().sort_values(ascending = False)</span><br><span class="line">#这里的label参数加不加在图中没有任何变化</span><br><span class="line">genre_sum.plot.barh(label=&#x27;genre&#x27;,figsize = (12,6))</span><br><span class="line">plt.title(&#x27;电影类型数量分布图&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;数量&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># （二）不同类型电影的盈利能力如何？</span><br><span class="line"># 建立电影类型-利润数据框，计算各电影类型平均收益：</span><br><span class="line">a = clean_xdata.revenue - clean_xdata.budget</span><br><span class="line">profit_df = genre_df.join(pd.DataFrame(a,columns=[&#x27;profit&#x27;]))</span><br><span class="line"></span><br><span class="line">#计算个电影类型的利润平均值</span><br><span class="line">#传递as_index=False，把分组键的类型作为一列返回在DataFrame中，而不是默认True时作为Series的索引返回</span><br><span class="line">genre_set = clean_xdata[&#x27;genres&#x27;].str.get_dummies().columns.unique()</span><br><span class="line">profit_by_genre = pd.Series(index=genre_set)</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    profit_by_genre[genre] = profit_df.groupby(genre,as_index = False).profit.mean().loc[1,&#x27;profit&#x27;]</span><br><span class="line">#画出各电影类型平均收益分布图</span><br><span class="line">profit_by_genre.sort_values().plot.barh(label=&#x27;genre&#x27;,figsize=(12,6))</span><br><span class="line">plt.title(&#x27;各电影类型平均收益分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;利润&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+    </div>
+</div>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">original_recompose = pd.DataFrame(clean_xdata[&#x27;budget&#x27;])</span><br><span class="line">original_recompose.loc[:,&#x27;profit&#x27;] = profit_df.profit</span><br><span class="line">original_recompose[&#x27;type&#x27;] = clean_xdata[&#x27;based on novel&#x27;].map(lambda x :1 if x==&#x27;based on novel&#x27; else 0)</span><br><span class="line">#原创或改编电影的预算与利润</span><br><span class="line">#这个地方重新定义新的DataFrame --original_recompose_groupby用来存储各个指标分组后的均值（原创与改编电影概要）</span><br><span class="line">original_recompose_groupby = original_recompose.groupby(&#x27;type&#x27;).mean()</span><br><span class="line">original_recompose_groupby[&#x27;count&#x27;] = original_recompose.groupby(&#x27;type&#x27;).type.count()</span><br><span class="line">original_recompose_groupby[&#x27;profit_rate&#x27;] = original_recompose_groupby.profit/original_recompose_groupby.budget#这里有细节,平均利润率</span><br><span class="line">original_recompose_groupby.rename(index = &#123;0:&#x27;original&#x27;,1:&#x27;recompose&#x27;&#125;,inplace = True)#传递inplace=True会删去原来的索引，否则会保留</span><br><span class="line">#是否原创电影数量对比图</span><br><span class="line">plt.figure(figsize =(12,6))</span><br><span class="line">original_recompose_groupby.loc[original_recompose_groupby.index,&#x27;count&#x27;].plot.bar()#传入loc【】里面的参数不能是；&#x27;type&#x27;,会报错</span><br><span class="line">plt.title(&#x27;原创改编电影数量对比&#x27;,fontsize = 20)</span><br><span class="line">plt.xlabel(&#x27;原创-改变&#x27;,fontsize = 20)</span><br><span class="line">plt.ylabel(&#x27;数量&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">#绘制利润柱状图</span><br><span class="line">x= list(range(len(original_recompose_groupby.index)))#索引长度序列</span><br><span class="line">xl = original_recompose_groupby.index#xl为索引实际值</span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1=fig.add_subplot(111)</span><br><span class="line">plt.bar(x,original_recompose_groupby.profit)</span><br><span class="line">#接下来有疑问？</span><br><span class="line">plt.xticks(x,xl,rotation = 0,fontsize=12)</span><br><span class="line">plt.yticks(fontsize=15)</span><br><span class="line">ax1.set_title(&#x27;原创与改编电影平均利润对比&#x27;,fontsize = 20)</span><br><span class="line">ax1.set_xlabel(&#x27;原创-改变&#x27;,fontsize = 18)</span><br><span class="line">ax1.set_ylabel(&#x27;利润&#x27;,fontsize = 18)</span><br><span class="line">ax1.legend(loc=2,labels=&#x27;利润&#x27;)</span><br><span class="line"></span><br><span class="line">#绘制利润折线图</span><br><span class="line">import matplotlib.ticker as mtick</span><br><span class="line">ax2 = ax1.twinx()</span><br><span class="line">ax2.plot(x,original_recompose_groupby[&#x27;profit_rate&#x27;],&#x27;go-&#x27;,lw=2)</span><br><span class="line">fmt=&#x27;%.2f%%&#x27;</span><br><span class="line">yticks = mtick.FormatStrFormatter(fmt)</span><br><span class="line">ax2.yaxis.set_major_formatter(yticks)#次纵坐标标签设置为百分比显示</span><br><span class="line">plt.yticks(fontsize = 15)</span><br><span class="line">ax2.set_ylabel(&#x27;利润率&#x27;,fontsize = 18)</span><br><span class="line">ax2.legend(loc=4,labels = &#x27;profit_rate&#x27;)#传递labels参数避免警告</span><br></pre></td></tr></table></figure>
-<p>#####生成词云</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">keywords_data = data[[&#x27;id&#x27;,&#x27;popularity&#x27;,&#x27;production_companies&#x27;,&#x27;budget&#x27;,&#x27;revenue&#x27;,&#x27;original_title&#x27;,&#x27;runtime&#x27;,&#x27;release_date&#x27;,&#x27;genres&#x27;,&#x27;vote_count&#x27;,&#x27;vote_average&#x27;,&#x27;based on novel&#x27;,&#x27;keywords&#x27;]]</span><br><span class="line">keywords_data = data[data.production_companies.notnull()&amp;data.genres.notnull()].reset_index(drop=True)#得到 包含关键字keywords数据的列表</span><br><span class="line">keywords_list1 = []</span><br><span class="line">for x in keywords_data.keywords.dropna():</span><br><span class="line">    keywords_list1.append(x)</span><br><span class="line">keywords_list1 = &#x27;&#x27;.join(keywords_list1)</span><br><span class="line">keywords_list1 = keywords_list1.replace(&#x27;\s&#x27;,&#x27;&#x27;)#去除字符串中空字符串（\s用于匹配空白字符，可能是空格、制表符、其他空白））</span><br><span class="line"></span><br><span class="line">wordcloud = WordCloud(background_color=&#x27;black&#x27;,max_words=3000,scale=1.5).generate(keywords_list1)</span><br><span class="line">plt.figure(figsize=(14,8))</span><br><span class="line">plt.imshow(wordcloud)</span><br><span class="line">plt.axis(&#x27;off&#x27;)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">popular_genre_df = pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis=1)</span><br><span class="line">#计算各类型电影受欢迎度均值</span><br><span class="line">list = []</span><br><span class="line">for genre in genre_set:</span><br><span class="line">    list.append(popular_genre_df.groupby(genre,as_index = False).popularity.mean().loc[1,&#x27;popularity&#x27;])</span><br><span class="line">popular_by_genre= pd.DataFrame(index=genre_set)</span><br><span class="line">popular_by_genre[&#x27;popularity_mean&#x27;] = list</span><br><span class="line">#电影类型受欢迎度分布图</span><br><span class="line">popular_by_genre.sort_values(by=&#x27;popularity_mean&#x27;).plot.barh(figsize=(14,8))</span><br><span class="line">plt.title(&#x27;电影类型受欢迎度分布图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;电影类型&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ②电影时长与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.runtime,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;时长与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影时长&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br><span class="line"># ③电影评分与受众欢迎度</span><br><span class="line">plt.scatter(clean_xdata.vote_average,clean_xdata.popularity)</span><br><span class="line">plt.title(&#x27;评分与欢迎度散点图&#x27;,fontsize=20)</span><br><span class="line">plt.xlabel(&#x27;电影评分&#x27;,fontsize=20)</span><br><span class="line">plt.ylabel(&#x27;受欢迎度&#x27;,fontsize=20)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">companies_list =[&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]</span><br><span class="line">companies_df = pd.DataFrame()</span><br><span class="line">for company in companies_list:#各电影的电影商是否包含两者中其中一个，是则返回1，否则返回0</span><br><span class="line">    companies_df[company] =clean_xdata.production_companies.str.contains(company).map(lambda x :1 if x else 0)</span><br><span class="line">companies_df = pd.concat([companies_df,genre_df.iloc[:,:-1],profit_df.profit],axis=1)</span><br><span class="line">list = []</span><br><span class="line">for company in companies_list:</span><br><span class="line">    list.append(companies_df.groupby(company,as_index=False).profit.sum().loc[1,&#x27;profit&#x27;])</span><br><span class="line">companies_profit= pd.DataFrame(list,index = companies_list,columns=[&#x27;profit_sum&#x27;])</span><br><span class="line">companies_profit.plot.bar(label = companies_profit.index,figsize=(8,6))</span><br><span class="line">plt.title(&#x27;两家公司利润对比&#x27;,fontsize=20)</span><br><span class="line">plt.xticks(rotation = 0)</span><br><span class="line">plt.ylabel(&#x27;利润&#x27;,fontsize = 20)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">companies_df_1 = companies_df.groupby(&#x27;Universal Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">companies_df_2 = companies_df.groupby(&#x27;Paramount Pictures&#x27;)[[&#x27;Action&#x27;, &#x27;Adventure&#x27;, &#x27;Animation&#x27;, &#x27;Comedy&#x27;, &#x27;Crime&#x27;, &#x27;Documentary&#x27;,</span><br><span class="line">       &#x27;Drama&#x27;, &#x27;Family&#x27;, &#x27;Fantasy&#x27;, &#x27;Foreign&#x27;, &#x27;History&#x27;, &#x27;Horror&#x27;, &#x27;Music&#x27;,</span><br><span class="line">       &#x27;Mystery&#x27;, &#x27;Romance&#x27;, &#x27;Science Fiction&#x27;, &#x27;TV Movie&#x27;, &#x27;Thriller&#x27;, &#x27;War&#x27;,</span><br><span class="line">       &#x27;Western&#x27;]].sum().loc[1,:]</span><br><span class="line">company_genre_df = pd.DataFrame([companies_df_1,companies_df_2],index = [&#x27;Universal Pictures&#x27;,&#x27;Paramount Pictures&#x27;]).T</span><br><span class="line">fig = plt.figure(figsize=(16,8))</span><br><span class="line">ax1 = fig.add_subplot(121)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Universal Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Universal Pictures&#x27;,fontsize = 15)</span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(122)</span><br><span class="line">plt.pie(company_genre_df[&#x27;Paramount Pictures&#x27;],labels=company_genre_df.index,autopct=&#x27;%.1f%%&#x27;)</span><br><span class="line">plt.title(&#x27;Paramount Pictures&#x27;,fontsize=15)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># 电影票房与哪些因素最相关？</span><br><span class="line">clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;release_date&#x27;,&#x27;runtime&#x27;,&#x27;vote_average&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]].corr()</span><br><span class="line">import seaborn as sns</span><br><span class="line">revenue_corr = clean_xdata[[&#x27;budget&#x27;,&#x27;popularity&#x27;,&#x27;vote_count&#x27;,&#x27;revenue&#x27;]]</span><br><span class="line">fig = plt.figure(figsize=(18,6))</span><br><span class="line">#电影票票房与电影预算相关性散点图</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(1,3,1)</span><br><span class="line">ax1 = sns.regplot(x=&#x27;popularity&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1)</span><br><span class="line">ax1.text(400,2e9,&#x27;r=0.64&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by popularity&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;popularity&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax2 = plt.subplot(1,3,2)</span><br><span class="line">ax2 = sns.regplot(x=&#x27;vote_count&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;g&#x27;,marker=&#x27;+&#x27;)</span><br><span class="line">ax2.text(6800,1.1e9,&#x27;r=0.78&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by vote_count&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;vote_count&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br><span class="line"> </span><br><span class="line">ax3 = plt.subplot(1,3,3)</span><br><span class="line">ax3 = sns.regplot(x=&#x27;budget&#x27;, y=&#x27;revenue&#x27;, data=revenue_corr, x_jitter=.1,color=&#x27;r&#x27;,marker=&#x27;^&#x27;)</span><br><span class="line">ax3.text(1.6e8,2.2e9,&#x27;r=0.73&#x27;,fontsize=15)</span><br><span class="line">plt.title(&#x27;revenue by budget&#x27;,fontsize=15)</span><br><span class="line">plt.xlabel(&#x27;budget&#x27;,fontsize=13)</span><br><span class="line">plt.ylabel(&#x27;revenue&#x27;,fontsize=13)</span><br></pre></td></tr></table></figure>
-<p>思路要明确，代码要简洁，以后尽量都写成函数。</p>
 
-      
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">WenGe Zhang</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
     </div>
 
     
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2019/07/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/">
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/19/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B9%A0%E9%A2%98/" class="post-title-link" itemprop="url">python面向对象习题</a>
-        </h2>
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
 
-              <time title="创建时间：2019-07-19 12:59:17" itemprop="dateCreated datePublished" datetime="2019-07-19T12:59:17+08:00">2019-07-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-03 14:08:04" itemprop="dateModified" datetime="2022-04-03T14:08:04+08:00">2022-04-03</time>
-              </span>
+        <!-- rss -->
+        
 
-          
+        
 
-        </div>
-      </header>
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
 
-      
-          <p>写完对对象这个东西了解很多了</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">一：定义一个学生类。有下面的类属性：</span><br><span class="line">1 姓名</span><br><span class="line">2 年龄</span><br><span class="line">3 成绩（语文，数学，英语)[每课成绩的类型为整数]</span><br><span class="line">类方法：</span><br><span class="line">1 获取学生的姓名：get_name() 返回类型:str</span><br><span class="line">2 获取学生的年龄：get_age() 返回类型:int</span><br><span class="line">3 返回3门科目中最高的分数。get_course() 返回类型:int</span><br><span class="line">写好类以后，可以定义2个同学测试下:</span><br><span class="line">zm = Student(&#x27;zhangming&#x27;,20,[69,88,100])</span><br><span class="line">返回结果：</span><br><span class="line">zhangming</span><br><span class="line">20</span><br><span class="line">100</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, age, scores):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.scores = scores</span><br><span class="line">    def get_name(self):</span><br><span class="line">        return self.name</span><br><span class="line">    def get_age(self):</span><br><span class="line">        return self.age</span><br><span class="line">    def get_course(self):</span><br><span class="line">        return max(self.scores)</span><br><span class="line">zm = Student(&#x27;zhangming&#x27;, 20, [69, 88, 100])</span><br><span class="line">print zm.get_name()</span><br><span class="line">print zm.get_age()</span><br><span class="line">print zm.get_course()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">二：定义一个字典类：dictclass。完成下面的功能：</span><br><span class="line">dict = dictclass(&#123;你需要操作的字典对象&#125;)</span><br><span class="line">1 删除某个key</span><br><span class="line">del_dict(key)</span><br><span class="line">2 判断某个键是否在字典里，如果在返回键对应的值，不存在则返回&quot;not found&quot;</span><br><span class="line">get_dict(key)</span><br><span class="line">3 返回键组成的列表：返回类型;(list)</span><br><span class="line">get_key()</span><br><span class="line">4 合并字典，并且返回合并后字典的values组成的列表。返回类型:(list)</span><br><span class="line">update_dict(&#123;要合并的字典&#125;)</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class dictclass(object):</span><br><span class="line">    def __init__(self, dict):</span><br><span class="line">        self.dict = dict</span><br><span class="line">    def get_dict(self, key):</span><br><span class="line">        if self.dict. has_key(key):</span><br><span class="line">            return self.dict[key]</span><br><span class="line">        return &#x27;not found&#x27;</span><br><span class="line">    def del_dict(self, key):</span><br><span class="line">        if self.dict.has_key(key):</span><br><span class="line">            self.dict.pop(key)</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;no that key&#x27;</span><br><span class="line">    def get_key(self):</span><br><span class="line">        return self.dict.keys()</span><br><span class="line">    def updata_dict(self, dict2):</span><br><span class="line">        self.dict = dict(self.dict, **dict2)</span><br><span class="line">        return self.dict.values()</span><br><span class="line"> </span><br><span class="line">A = dictclass(&#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;)</span><br><span class="line">print A.get_dict(&#x27;c&#x27;)</span><br><span class="line">print A.del_dict(&#x27;c&#x27;)</span><br><span class="line">print A.get_key()</span><br><span class="line">print A.updata_dict(&#123;&#x27;c&#x27;: 3, &#x27;d&#x27;: 4&#125;)</span><br><span class="line"> </span><br><span class="line"># 关于删除字典中的元素</span><br><span class="line"># pop 删除并返回对应的value值</span><br><span class="line">B = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;</span><br><span class="line">print B.pop(&#x27;b&#x27;)</span><br><span class="line">print B</span><br><span class="line"># del void不返回值</span><br><span class="line">C = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;</span><br><span class="line">del C[&#x27;a&#x27;]</span><br><span class="line">print C</span><br><span class="line"># del dict 删除字典，不存在这个字典</span><br><span class="line"># dict.clear()删除字典内所有元素但字典还是存在只是没有元素</span><br><span class="line">D = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3&#125;</span><br><span class="line">D.clear()</span><br><span class="line"># 关于合并字典</span><br><span class="line">A = &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3&#125;</span><br><span class="line">B = &#123;&#x27;d&#x27;: 4, &#x27;e&#x27;: 5, &#x27;f&#x27;: 6&#125;</span><br><span class="line">C = dict(A.items() + B.items())</span><br><span class="line">D = dict(A, **B)  # 这种合并方法会比上一种快很多对于重复的key，B会覆盖A</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">定义一个列表的操作类：Listinfo</span><br><span class="line">包括的方法:</span><br><span class="line">1 列表元素添加: add_key(keyname)  [keyname:字符串或者整数类型]</span><br><span class="line">2 列表元素取值：get_key(num) [num:整数类型]</span><br><span class="line">3 列表合并：update_list(list)	  [list:列表类型]</span><br><span class="line">4 删除并且返回最后一个元素：del_key()</span><br><span class="line">list_info = Listinfo([44,222,111,333,454,&#x27;sss&#x27;,&#x27;333&#x27;])</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Listinfo(object):</span><br><span class="line">    def __init__(self, list_val):</span><br><span class="line">        self.varlist = list_val</span><br><span class="line"> </span><br><span class="line">    def add_key(self, key_name):</span><br><span class="line">        if isinstance(key_name, (str, int)):</span><br><span class="line">            self.varlist.append(key_name)</span><br><span class="line">            return self.varlist</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def get_key(self, num):</span><br><span class="line">        if num &gt;= 0 and num &lt; len(self.varlist):</span><br><span class="line">            return self.varlist[num]</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def update_list(self, List_et):</span><br><span class="line">        self.varlist.extend(List_et)</span><br><span class="line">        return self.varlist</span><br><span class="line"> </span><br><span class="line">    def del_key(self):</span><br><span class="line">        if len(self.varlist) &gt;= 0:</span><br><span class="line">            return self.varlist.pop(-1)</span><br><span class="line">        else:</span><br><span class="line">            return &#x27;error&#x27;</span><br><span class="line">list_info = Listinfo([44, 222, 111, 333, 454, &#x27;sss&#x27;, &#x27;333&#x27;])</span><br><span class="line">print list_info.add_key(&#x27;1111&#x27;)</span><br><span class="line">print list_info.get_key(4)</span><br><span class="line">print list_info.update_list([&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;])</span><br><span class="line">print list_info.del_key()</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">定义一个集合的操作类：Setinfo</span><br><span class="line">包括的方法:</span><br><span class="line">1 集合元素添加: add_setinfo(keyname)  [keyname:字符串或者整数类型]</span><br><span class="line">2 集合的交集：get_intersection(unioninfo) [unioninfo :集合类型]</span><br><span class="line">3 集合的并集： get_union(unioninfo)[unioninfo :集合类型]</span><br><span class="line">4 集合的差集：del_difference(unioninfo) [unioninfo :集合类型]</span><br><span class="line">set_info =  Setinfo(你要操作的集合)</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">class Setinfo(object):</span><br><span class="line">    def __init__(self, my_Set):</span><br><span class="line">        self.Sett = my_Set</span><br><span class="line"> </span><br><span class="line">    def add_setinfo(self, keyname):</span><br><span class="line">        if isinstance(keyname, (int, str)):</span><br><span class="line">            self.Sett.add(keyname)</span><br><span class="line">            return self.Sett</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def get_intersection(self, unioninfo):</span><br><span class="line">        if isinstance(unioninfo, set):</span><br><span class="line">            return self.Sett &amp; unioninfo</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def get_union(self, unioninfo):</span><br><span class="line">        if isinstance(unioninfo, set):</span><br><span class="line">            return self.Sett | unioninfo</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">    def del_difference(self, unioninfo):</span><br><span class="line">        if isinstance(unioninfo, set):</span><br><span class="line">            return self.Sett - unioninfo</span><br><span class="line">        return &#x27;error&#x27;</span><br><span class="line"> </span><br><span class="line">A = set([1, 2, 3, 4, 5, 2])</span><br><span class="line">B = set([5, 6, 3])</span><br><span class="line">set_info = Setinfo(A)</span><br><span class="line">print set_info.add_setinfo(&#x27;f&#x27;)</span><br><span class="line">print set_info.get_intersection(B)</span><br><span class="line">print set_info.get_union(B)</span><br><span class="line">print set_info.del_difference(B)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">题目一： 写一个网页数据操作类。完成下面的功能：</span><br><span class="line">提示：需要用到urllib模块</span><br><span class="line">get_httpcode()获取网页的状态码，返回结果例如：200,301,404等 类型为int</span><br><span class="line">get_htmlcontent() 获取网页的内容。返回类型:str</span><br><span class="line">get_linknum()计算网页的链接数目。</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import urllib</span><br><span class="line">import urllib2</span><br><span class="line">class page_data(object):</span><br><span class="line">    def __init__(self, url_add):</span><br><span class="line">        self.url = url_add</span><br><span class="line"> </span><br><span class="line">    def get_httpcode(self):</span><br><span class="line">        status = urllib.urlopen(self.url).code</span><br><span class="line">        return status</span><br><span class="line"> </span><br><span class="line">    def get_htmlcontent(self):</span><br><span class="line">        contentstr = urllib2.urlopen(self.url).read()</span><br><span class="line">        return contentstr</span><br><span class="line"> </span><br><span class="line">    def get_linknum(self):</span><br><span class="line">        content = urllib2.urlopen(self.url).read()</span><br><span class="line">        return len(content.split(&#x27;&lt;a href=&#x27;)) - 1</span><br><span class="line"> </span><br><span class="line">A = page_data(&quot;http://www.baidu.com&quot;)</span><br><span class="line">print A.get_httpcode()</span><br><span class="line">print A.get_htmlcontent()</span><br><span class="line">print A.get_linknum()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># coding=utf-8</span><br><span class="line">class SchoolMember:</span><br><span class="line">    # Represents any school member.</span><br><span class="line">    def __init__(self, name, age):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        print &#x27;(Initialized SchoolMember: %s)&#x27; % self.name</span><br><span class="line"> </span><br><span class="line">    def tell(self):</span><br><span class="line">        # Tell my details.</span><br><span class="line">        print &#x27;Name:&quot;%s&quot; Age:&quot;%s&quot;&#x27; % (self.name, self.age),</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class Teacher(SchoolMember):</span><br><span class="line">    # Represents a teacher.</span><br><span class="line">    def __init__(self, name, age, salary):</span><br><span class="line">        SchoolMember.__init__(self, name, age)</span><br><span class="line">        self.salary = salary</span><br><span class="line">        print &#x27;(Initialized Teacher: %s)&#x27; % self.name</span><br><span class="line"> </span><br><span class="line">    def tell(self):</span><br><span class="line">        SchoolMember.tell(self)</span><br><span class="line">        print &#x27;Salary: &quot;%d&quot;&#x27; % self.salary</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class Student(SchoolMember):</span><br><span class="line">    # Represents a student.</span><br><span class="line">    def __init__(self, name, age, marks):</span><br><span class="line">        SchoolMember.__init__(self, name, age)</span><br><span class="line">        self.marks = marks</span><br><span class="line">        print &#x27;(Initialized Student: %s)&#x27; % self.name</span><br><span class="line"> </span><br><span class="line">    def tell(self):</span><br><span class="line">        SchoolMember.tell(self)</span><br><span class="line">        print &#x27;Marks: &quot;%d&quot;&#x27; % self.marks</span><br><span class="line"> </span><br><span class="line">t = Teacher(&#x27;Mrs. Shrividya&#x27;, 40, 30000)</span><br><span class="line">s = Student(&#x27;Swaroop&#x27;, 22, 75)</span><br><span class="line">c = SchoolMember(&#x27;Swar&#x27;, 22)</span><br><span class="line">t.tell()</span><br><span class="line">s.tell()</span><br><span class="line">c.tell()</span><br></pre></td></tr></table></figure>
-
-<p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/bullpride/article/details/52022701" >https://blog.csdn.net/bullpride/article/details/52022701<i class="fas fa-external-link-alt"></i></a></p>
-
-      
     </div>
 
     
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
     
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/19/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/03/19/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">记一次面试题：excel数据处理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-03-19 16:43:39" itemprop="dateCreated datePublished" datetime="2019-03-19T16:43:39+08:00">2019-03-19</time>
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-03 14:08:27" itemprop="dateModified" datetime="2022-04-03T14:08:27+08:00">2022-04-03</time>
-              </span>
-
-          
-
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Sales表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.42u5kgldrn0g.png"
-                     
-                ></p>
-<p>Institution表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hsivqtazg0o.png"
-                     
-                ></p>
-<p>Product表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.57axgsalziio.png"
-                     
-                ></p>
-<p>Price表：</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3hfa2v3xoukg.png"
-                     
-                ></p>
-<p>Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import openpyxl </span><br><span class="line">path = r&#x27;C:\Users\supermanzwg\Desktop\Excel能力测试解答.xlsx&#x27;</span><br><span class="line">df = pd.read_excel(path,sheet_name= &#x27;Sales&#x27;)</span><br><span class="line">df = df[pd.to_datetime(df.SalesDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df2 = pd.read_excel(path,sheet_name= &#x27;Institution&#x27;)</span><br><span class="line"># print(df2.info())</span><br><span class="line">#检查并发现两表之间连接键出现不一致</span><br><span class="line">for i in range(len(df)):</span><br><span class="line">    if df.loc[i,&#x27;InstitutionCode&#x27;]== &#x27;F6302 &#x27;:</span><br><span class="line">        df.loc[i,&#x27;InstitutionCode&#x27;] = &#x27;F6302&#x27;</span><br><span class="line">    else:</span><br><span class="line">        pass</span><br><span class="line">df_12 = pd.merge(df,df2,on=&#x27;InstitutionCode&#x27;,how=&#x27;left&#x27;)</span><br><span class="line"># print(df_12.info())</span><br><span class="line"># a = df_12[df_12.Province.isnull()] 检查是否还存在缺失值</span><br><span class="line"># a.InstitutionCode.unique()</span><br><span class="line">df4 = pd.read_excel(path,sheet_name= &#x27;Price&#x27;)</span><br><span class="line">df4 = df4[pd.to_datetime(df4.EffectiveDate,format=&#x27;%Y-%m-%d&#x27;).dt.year==2017]</span><br><span class="line">df4 = df4.drop_duplicates([&#x27;SKU&#x27;])#删去重复SKU值</span><br><span class="line">ddff = pd.merge(df_12,df4,on=&#x27;SKU&#x27;)</span><br><span class="line">ddff[&#x27;money&#x27;] = ddff[&#x27;Quantity&#x27;]*ddff[&#x27;Price&#x27;]</span><br><span class="line"># print(ddff.money.sum())#销售额总和</span><br><span class="line">groupby_ddff = ddff.groupby([&#x27;Province&#x27;,&#x27;InstitutionName&#x27;])[&#x27;money&#x27;].sum().reset_index()</span><br><span class="line">groupby_ddff[&#x27;group_sort&#x27;]=groupby_ddff[&#x27;money&#x27;].groupby(groupby_ddff[&#x27;Province&#x27;]).rank(ascending=False,method=&#x27;first&#x27;)</span><br><span class="line">groupby_ddff_top1 = groupby_ddff[groupby_ddff[&#x27;group_sort&#x27;]==1]</span><br><span class="line">groupby_ddff_top1</span><br></pre></td></tr></table></figure>
-<p>写入到原excel</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># import xlwings as xw</span><br><span class="line">book = openpyxl.load_workbook(path)   #读取你要写入的workbook</span><br><span class="line">#和pd.read_excel() 用于将Dataframe写入excel。xls用xlwt。xlsx用openpyxl</span><br><span class="line">writer = pd.ExcelWriter(path, engine=&#x27;openpyxl&#x27;)   </span><br><span class="line">##此时的writer里还只是读写器. 然后将上面读取的book复制给writer  </span><br><span class="line">writer.book = book</span><br><span class="line">#转化为字典的形式</span><br><span class="line">writer.sheets = dict((ws.title, ws) for ws in book.worksheets)</span><br><span class="line">#将data写入writer</span><br><span class="line">groupby_ddff_top1.to_excel(writer,sheet_name=&quot;Answer_Python&quot;,index=False)</span><br><span class="line">writer.save()</span><br></pre></td></tr></table></figure>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6qq9z1446rs.png"
-                     
-                ></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/11/19/%E5%A4%A7%E5%AD%A6%E4%B8%89%E5%B9%B4%EF%BC%8C%E5%86%99%E7%BB%99%E9%82%A3%E4%B8%AA%E8%BF%9F%E5%88%B0%E7%9A%84%E4%BA%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/11/19/%E5%A4%A7%E5%AD%A6%E4%B8%89%E5%B9%B4%EF%BC%8C%E5%86%99%E7%BB%99%E9%82%A3%E4%B8%AA%E8%BF%9F%E5%88%B0%E7%9A%84%E4%BA%BA/" class="post-title-link" itemprop="url">大学三年，写给那个迟到的人</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-11-19 16:28:23" itemprop="dateCreated datePublished" datetime="2018-11-19T16:28:23+08:00">2018-11-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-19 17:26:42" itemprop="dateModified" datetime="2021-12-19T17:26:42+08:00">2021-12-19</time>
-              </span>
-
-          
-
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>亲爱的X姑娘：</p>
-<p>你好！给你写这封信的时候，我正在学校的机电楼B301上第一节课。看了简书里好多给异性朋友写信的文章，我也心血来潮，忍不住想要和你说说话了。</p>
-<p>—1—</p>
-<p>早上醒的很早，在床上平躺到闹铃声响起，依旧照常的起床，洗漱，整理好出门。</p>
-<p>没有胃口，不太想吃饭。但想到将来要在你面前呈现一个健康阳光的自己，还是买了一份豆浆和两个早餐包。</p>
-<p>吃完走进教室，已经零零散散的坐满了一些人，我打开耳机里的纯音乐，想着舒缓下情绪，来迎接这节并不怎么让我心动的课程。</p>
-<p>邻桌有一对情侣坐得很近，我看着老师走进教室，紧接着用余光一瞥到他们有说有笑的样子，顿时心生怅惘。</p>
-<p>如果，我想说是如果，你在后面轻轻地拍一下我的肩膀，我回头看到一个嘴角微微上扬的弧度，那这节课我一定带着满满的能量。</p>
-<p>或者，你就只是静静地坐在我的前面，我看着你，心生欢喜，脸上也应该会不自觉的泛起笑容……</p>
-<p>有时候我会一个人坐在三个座位的中间，就好像潜意识里给你留了一个位置一样。</p>
-<p>其实，一个人，一个座位，一支沙沙作响的笔，一个低下视线的背影。总是会显得孤零零的，在周围整齐的人群背景下，不免会有些格格不入…</p>
-<p>—2—</p>
-<p>你知道吗，我已经习惯了一个人走在去图书馆的路上，我听着音乐，看着一路沿途的风景，为了包裹住心中的孤独，我昂首挺胸，略显悠闲、惬意的走着。</p>
-<p>但是，如果是你和我一起，我可能会满含笑意地和你谈天说地，像个孩子一样大大方方的走着…</p>
-<p>又或是，你挽着我的手，不需要讲太多话，一起慢悠悠的走在石头小路上。就像《成都》里描绘的意境那样：”你会挽着我的衣袖，我会把手揣进裤兜……”</p>
-<p>有一个秘密要告诉你，我会用吉他弹唱这首歌了，不知道在你面前的时候，我能不能饱含深情的唱出来带给你浪漫的感觉。</p>
-<p>从图书馆出来，我们一起去食堂买饭，我会想先去你喜欢的窗口排队，你是想拿着书包去寻找空着的座位，还是想和我走在一起呢…</p>
-<p>你知道吗，平时都是和舍友一起吃饭，聊的也都是各自的事情。但是如果是和你一起，我想不但胃口会大涨，我们还可以有更多的故事一起回忆…</p>
-<p>吃完饭，我们坐在图书馆旁林荫小道的长凳上，听微风拂过耳边的声音，看那阳光沐浴下的一片绿林。</p>
-<p>你慢慢地把头靠在我的臂弯，我低头捕捉你眸底似海一般的温柔…</p>
-<p>我会想调皮地刮你的鼻子，你会闭上眼睛满意地笑吗，还是轻轻的戳我一下。</p>
-<p>你知道吗，就这样一个简单的动作，也会让我的整个世界都开满了花。</p>
-<p>—3—</p>
-<p>﻿假期的时候你会去哪玩呢！是在宿舍刷刷剧，和朋友聊聊天，还是出去旅游，拍照，发朋友圈，或是和我一样会去商业街兼职呢！﻿</p>
-<p>﻿我也会想着挣钱去买自己喜欢的东西呀，或是旅游去一个心驰神往的地方呢，又或者是，和我爱的人一起去吃顿火锅怎么样！oh！ that’s a good idea!﻿</p>
-<p>﻿当然，有时候他也会把握不好分寸，甚至不愿意安排自己学习的时间，逃课去做一些他感兴趣的东西呢。﻿</p>
-<p>﻿他觉得，要是有个心思细腻的你在身边的话，他们一起，一定能过着更有节奏、充实的生活！﻿</p>
-<p>﻿节日的时候我们去看场电影吧！要是去的比较早，那就在休息区玩一个超级有趣的双人小游戏怎么样！你知道怎么玩吗，不会？那我教你好了…﻿</p>
-<p>﻿我会宠爱地喂你爆米花，你会不会依偎在我的肩膀呢！不然的话我可能会把送到你嘴边的零食马上缩回到我嘴边哦！啊！你别生气，还是给你吃好了…</p>
-<p>﻿你知道吗，从这个时候起，在他期待的未来里，全都将是你……</p>
-<p>—4—</p>
-<p>晚上你喜欢出去逛逛吗！下自习后我常常会去超市，即便只买那几样东西，我也会在里面多逛一小会儿，可能是因为那里有浓浓的生活气息吧。</p>
-<p>愿在将来的某一天，我推着购物车，你牵着我的手，走在喧闹的商场。我悄悄把你喜欢的零食放进车里，你认真地挑着我爱吃的水果，然后我们拎着这简单而平凡的幸福，满载而归。</p>
-<p>我还有个夜跑的小习惯，我也希望和你一起，趁着夜幕降临，去草坪上繁星点点的操场。戴上耳机，跟着音乐的节奏，在皎洁的月光下挥洒汗水。</p>
-<p>一圈一圈的轮回，甩掉心中所有的不愉快，接着再去澡堂，冲去一天中纷乱的小情绪…</p>
-<p>又或是，我带着吉他，你当我的专属观众，在柔软舒适的草坪席地而坐，弹唱那些为你学过的歌好不好呢！</p>
-<p>你和我一起唱怎么样，可不能放过你那被天使吻过的嗓子，还有我可能会跑调哦，你会笑吗，还是大声一点，带回我跑偏的部分呢…</p>
-<p>想到这个唯美的画面，也会让我感动的红了眼。</p>
-<p>忙着为下一段人生做准备，好久都不去KTV了，好像也没有那种想在人前表现的冲动了，只希望现在的拼搏能为余生发掘出与众不凡的核心竞争力。</p>
-<p>不知道你是不是也正处于人生的某一个风口浪尖呢，你是不是已经完成蜕变了呢，你憧憬的未来里有没有一个像我这样的人呢。</p>
-<p>我相信，你肯定正走在和我相遇的路上呢。而我，也正在寻找着那一份懂你的资格呀。</p>
-<p>﻿突然间，清晨的一缕阳光掠过窗帘的缝隙撞到我的手上，照在这些热烈而又抽象的文字上，我顿下笔来，多想能永远保存此刻心里正诞生的阵阵暖意…</p>
-<p>他多么希望可以有一个人陪他看陌生城市里的每一个落日，他们一起去听喜欢的课程。一起规划未来，一起带着足够的知识，去闯荡这色彩斑斓的平凡世界。</p>
-<p>——你东半球官方指定唯一的男朋友</p>
-
-      
     </div>
+</div>
 
     
+
+</main>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
     
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/10/19/%E8%87%B3%E5%B0%91%E4%BD%A0%EF%BC%8C%E5%AD%98%E5%9C%A8%E8%BF%87%E6%88%91%E7%9A%84%E8%AE%B0%E5%BF%86/" class="post-title-link" itemprop="url">至少你，存在过我的记忆</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-10-19 16:31:17" itemprop="dateCreated datePublished" datetime="2018-10-19T16:31:17+08:00">2018-10-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-19 17:26:02" itemprop="dateModified" datetime="2021-12-19T17:26:02+08:00">2021-12-19</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>人海中错过的那个人，至少，在我失眠梦呓间，脑海里还是会依稀浮现出你的容颜。</p>
-<p>贝蒂，我是里克。最近你的城市下雨了吗，我这里的温度有些难过，不知道你过得怎么样。</p>
-<p>济南的天照旧那样调皮，就像世界末日里的那句歌词，Why dose the sun go on shining一样，一次又一次地挑战着我出门的勇气，还好我坐的地方阳光有所收敛，不然我炽热的内心暴露在烈日下，真不知道会发生什么化学反应。</p>
-<p>家庭生活的原因，我很早就开始了一个人的生活，可能除了自己，没有谁能左右我的想法了。一个人无拘无束，一个人天马行空，一个人桀骜不驯，一个人胆怯如鼠。</p>
-<p>周国平说，在多数场合，我不是觉得对方乏味，就是害怕对方觉得我乏味，我既不愿意忍受对方的乏味，又不愿意费劲使自己有趣，所以我选择独处，那就自己承受自己的乏味，不累及他人。我大概就是这样一种人吧，得意的时候手舞足蹈，逢场作戏，可稍不如意就黯然失色，冷若冰霜，你说乏味不乏味。</p>
-<p>浮躁的生活中让人有太多无法控制的遐想，也许，我应该找到一个更好的娱乐方式，以至于不会在休息的时候，不由自主的沦陷。</p>
-<p>每次听到廖俊涛的那首《谁》，特别想拿起吉他练琴，弹着弹着，就忘记了后天还要考试的束缚感。有时候真希望时间定格在这一刻，不用去想其他任何事情。</p>
-<p>当然也好羡慕那些在架子鼓上不可一世的乐手们，想学习打鼓，一直追求这样的发泄方式，可是生活总归会有些小遗憾，习惯了时光静好，心情似乎一直都波澜不惊。</p>
-<p>最近经历了一连串的考核，带着满满的用心，和一丁点慌张，完成着之前感觉惊天动地的事情。</p>
-<p>前段时间帮驾校招生，拿到了辛苦换来的一点小回报。不过贝蒂，很多次的社会经验使我觉得，人们好像都不愿意看到别人变好的样子，他们尽可能与遭遇苦难的人找到共鸣，要么保持缄默，要么施以怜悯。当他们发现别人的好时，它们立刻感到毛骨悚然。</p>
-<p>贝蒂，你说像我这样的人，会活成自己想要成为的样子吗，我要学习的东西在需要通过考试拿到的学分面前，已经搁浅了一阵时间。我想，过完这一阵，我会继续坚持。因为，在这场游戏中，并没有什么其他的角色供我选择。</p>
-<p>当然我相信，这些很快就会过去的。时间总是这样无情地切割我们的生命，夜里想着心事，第二天的闹铃就响了；下几次雨，夏天也结束了；等反应过来的时候，那个穿着开裆裤在邻居家乱跑的小屁孩，都长这么大了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/10/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="WenGe Zhang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="弦好想断">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/10/18/%E5%A4%A7%E5%AD%A6%E9%87%8C%EF%BC%8C%E6%9C%80%E4%B8%A7%E7%9A%84%E6%97%B6%E5%80%99/" class="post-title-link" itemprop="url">大学里，最丧的时候</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-10-18 11:12:12" itemprop="dateCreated datePublished" datetime="2018-10-18T11:12:12+08:00">2018-10-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-19 17:26:51" itemprop="dateModified" datetime="2021-12-19T17:26:51+08:00">2021-12-19</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>—1—</p>
-<p>看到香港大学孙教授的一段话：</p>
-<p>﻿﻿“大学，就应该是早起吃点早餐；跑跑步；专业课认真听；公共课看看自己喜欢的杂志；中午小睡一会儿；下午参加个社团活动或打打篮球；晚上陪着喜欢的人散散步；或去自习室安静地看看书……  社会不需要学霸，也不认什么学生会主席，更不希望看到学生放弃学业去创业。你只要能平稳完整地读完大学，寻找到自己所爱的人和兴趣，多去没有目的的看些能丰富自己思想的书，认识几个好的不成样子的朋友，锻炼或是塑造自己的身体，学精自己想要从事事业的专业知识…… 做到这些，平淡地度过大学这几年你就已经足够优秀了。 ”</p>
-<p>可为什么今年大三的我，感觉这辈子算是完了。</p>
-<p>—2—</p>
-<p>大学，是一段没有烟火气的生活，是一个比毕业后舒服的状态。</p>
-<p>调剂到一个一眼无缘的理科专业，而你做的最无力的抗拒，就是在课上看自己感兴趣的东西，在宿舍听歌，看电影，打游戏，一日三餐，南来北往。渐渐，这成了一个司空见惯的事情。失落的时候练下吉他，你也曾想活在音乐的小世界里无人问津…</p>
-<p>每天坚持吃早饭，天气暖和会去操场跑步，中午很难睡着，晚上精力旺盛到连开玩笑都尤其认真，每一次赶作业都是一场和时间赛跑的特殊行动，当然你还可以在期末的时候完成一些感觉惊天动地的事情﻿…</p>
-<p>你慢慢疏远书本理论里面的成就感，开始厌倦众口一词的最佳答案，逃避一次又一次选择中的唯唯诺诺，沉醉在自己对于儿时梦境的美好想往里…</p>
-<p>你不是学霸也没进学生会，你总是庆幸地以为低分通过就是比那个挂了科的室友强，你甚至想着在学校待上四年然后发财，慢慢地，你变得不愿意参加带着利益性质炫耀嘲讽的社团活动，没有能力去美化人家的游戏体验…</p>
-<p>这是一个记忆稍纵即逝的年纪，你读的那些感觉挺有意思的书，随着旋转的时间轴忘得所剩无几。你做了一些兼职，挣了一点小钱，在同学面前过得洋洋洒洒。你去过几个地方，认识了好少好少可以交心的人，每次吃饭想说心里话的时候，你总害怕别人抓住你的软肋而欲言又止。你还考了几个希望能给未来生活带来惊喜的证书……</p>
-<p>做到这些，平淡的度过大学，你也很害怕平凡的你一无所成。﻿﻿</p>
-<p>—3—</p>
-<p>这是一个花里胡哨的时代，你可能永远都不会知道，那个在朋友圈里高大上的陌生人，在真实里，究竟是怎样的际遇。﻿﻿</p>
-<p>你尽可能的在人前把自己装点得光鲜亮丽，绅士般的接受所有的缘行渐远。你变得害怕承诺，躲避爱情，却又不愿意享受孤独，独当一面…﻿﻿</p>
-<p>你见识到的世界的确比父辈要大，可是对自我的认知却很浅。</p>
-<p>你每天在爆炸的信息中学习各种道理，通过网络你知道了身边好多人赢，于是你变得更加不甘平凡，时而凝神聚气的笃定，时而云淡风轻的随意，在对比中渐渐迷失﻿…﻿﻿</p>
-<p>﻿你感觉自己变成了一台机器，可以不对生活付诸任何情感，他能一直工作，只是会越来越慢。﻿﻿</p>
-<p>如果现在有一个可以看到的决定，未来你会在世界的某一个角落，从事一份称心如意的职业，可能你就不会在错过一节专业课的时候坐立不安，更不会因为身边的人活的体面潇洒而心惊胆战了。﻿﻿</p>
-<p>也许正是因为这种人生的不确定性，才愈加增大了人们对未来五彩缤纷的构想吧。﻿﻿</p>
-<p>克莱顿在《你要如何衡量你的人生》中提到，人对自己一生的规划，无非是周密战略和意外机遇相结合的产物，关键是要走出去，并行动起来，直到你明白应该将自己的聪明才智，兴趣和重点放在哪里，再将应急战略转化为周密战略。</p>
-<p>我希望你，在试图跳出规则之前，能做出关于自己本心的选择，愿你强大到能冲破社会的桎梏，以自己愿意的姿态生活下去。﻿﻿﻿</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+</div>
 
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
-
-
-          </div>
-          
-
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
     });
-  }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">WenGe Zhang</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">WenGe Zhang</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
 
 </body>
 </html>
