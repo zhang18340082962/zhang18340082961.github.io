@@ -739,7 +739,247 @@ rules_movies[(rules_movies.lift&gt;4)].sort_values(by&#x3D;[&#39;lift&#39;], asc
     <url>//post/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html</url>
     <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a href="https://www.bilibili.com/video/BV177411j7qJ">https://www.bilibili.com/video/BV177411j7qJ</a> 大佬的视频，做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"></p>
+<h4 id="flask部分"><a href="#flask部分" class="headerlink" title="flask部分"></a>flask部分</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">from flask import Flask,request,render_template,jsonify
+import time
+import utils
+import pandas as pd
+from yiqin_data import update_history,update_details
+from selenium import webdriver
+import threading
+import webbrowser
+
+
+app &#x3D; Flask(__name__)
+
+@app.route(&#39;&#x2F;&#39;)
+def index():
+    task  &#x3D; pd.DataFrame(utils.get_r2_data(),columns &#x3D;[&#39;省份&#39;,&#39;现存&#39;,&#39;累计&#39;,&#39;相比上日&#39;,&#39;治愈占比&#39;,&#39;死亡占比&#39;])
+    task[&#39;治愈占比&#39;] &#x3D; task[&#39;治愈占比&#39;].map(lambda x: format(x, &#39;.2%&#39;))
+    task[&#39;死亡占比&#39;] &#x3D; task[&#39;死亡占比&#39;].map(lambda x: format(x, &#39;.2%&#39;))
+    task &#x3D; task.to_html(index&#x3D;False,border&#x3D;0,max_cols&#x3D;8, max_rows&#x3D;7)
+    return render_template(&quot;main.html&quot;, task&#x3D; task)
+
+@app.route(&#39;&#x2F;time&#39;)
+def gettime():
+    time_str &#x3D; time.strftime(&quot;%Y&#123;&#125;%m&#123;&#125;%d&#123;&#125; %X&quot;)
+    return time_str.format(&quot;年&quot;, &quot;月&quot;, &quot;日&quot;)
+
+@app.route(&#39;&#x2F;c1&#39;, methods&#x3D;[&#39;get&#39;,&#39;post&#39;])
+def get_c1_data():
+    data &#x3D; utils.get_c1_data()
+    return jsonify(&#123;&quot;cumulative&quot;: str(data[1]),&quot;current&quot;: str(data[2]), &quot;overseas&quot;: str(data[3]), &quot;death&quot;: str(data[4]),
+                    &#39;新增确诊&#39;: str(data[5]), &#39;新增治愈&#39;: str(data[6]), &#39;新增境外&#39;: str(data[7]),&#39;新增死亡&#39;: str(data[8])&#125;)
+
+@app.route(&quot;&#x2F;c2&quot;, methods&#x3D;[&#39;get&#39;,&#39;post&#39;])
+def get_c2_data():
+    res &#x3D; []
+    for tup in utils.get_c2_data():
+        res.append(&#123;&#39;name&#39;: tup[0],&#39;value&#39;: int(tup[1])&#125;)
+    return jsonify(&#123;&#39;data&#39;: res&#125;)
+
+@app.route(&quot;&#x2F;l1&quot;, methods&#x3D;[&#39;get&#39;,&#39;post&#39;])
+def get_l1_data():
+    data &#x3D; utils.get_l1_data()
+    date, cumulative,current, overseas, death &#x3D; [], [], [], [], []
+    for a, b, c, d, e in data[:]:
+        date.append(pd.to_datetime(a,format &#x3D; &quot;%Y-%m-%d&quot;).strftime(&quot;%m-%d&quot;))
+        cumulative.append(b)
+        current.append(c)
+        overseas.append(d)
+        death.append(e)
+    return jsonify(&#123;&quot;date&quot;: date[-100:], &quot;cumulative&quot;: cumulative[-100:], &quot;current&quot;: current[-100:],
+                    &quot;overseas&quot;: overseas[-100:],&quot;death&quot;: death[-100:]&#125;)
+
+@app.route(&quot;&#x2F;l2&quot;, methods&#x3D;[&#39;get&#39;,&#39;post&#39;])
+def get_l2_data():
+    data &#x3D; utils.get_l2_data()
+    date, cumulative, current, overseas, death  &#x3D; [], [], [], [], []
+    for a, b, c, d, e in data[:]:
+        date.append(pd.to_datetime(a,format &#x3D; &quot;%Y-%m-%d&quot;).strftime(&quot;%m-%d&quot;))
+        cumulative.append(b)
+        current.append(c)
+        overseas.append(d)
+        death.append(e)
+    return jsonify(&#123;&quot;date&quot;:date[-100:],&quot;cumulative&quot;:cumulative[-100:],&quot;current&quot;:current[-100:],
+                    &quot;overseas&quot;:overseas[-100:],&quot;death&quot;:death[-100:]&#125;)
+
+@app.route(&quot;&#x2F;r1&quot;, methods&#x3D;[&#39;get&#39;,&#39;post&#39;])
+def get_r1_data():
+    data &#x3D; utils.get_r1_data()
+    city, confirm &#x3D; [], []
+    for a, b in data:
+        if a !&#x3D; &quot;地区待确认&quot; and  a !&#x3D;&quot;境外输入&quot;:
+            city.append(a)
+            confirm.append(int(b))
+    return jsonify(&#123;&quot;city&quot;:city[0:5],&quot;confirm&quot;:confirm[0:5]&#125;)
+
+
+# @app.route(&quot;&#x2F;r2&quot;, methods&#x3D;[&#39;get&#39;,&#39;post&#39;])
+# def get_r2_data():
+#     data &#x3D; utils.get_r2_data()
+#     d &#x3D; []
+#     for i in data:
+#         k &#x3D; i[0].rstrip(string.digits) # 移除热搜数字,从右边
+#         v &#x3D; i[0][len(k):] # 获取关键字
+#         ks &#x3D; extract_tags(k) # 使用结巴提取关键字
+#         for j in ks:
+#             if not j.isdigit():
+#                 d.append(&#123;&quot;name&quot;:j, &quot;value&quot;:v&#125;)
+#
+#     return jsonify(&#123;&quot;kws&quot;:d&#125;)
+
+def start_web():
+    try:
+        browser &#x3D; webdriver.Chrome()
+        browser.maximize_window()
+        browser.get(f&#39;http:&#x2F;&#x2F;127.0.0.1:5000&#x2F;&#39;)
+    except Exception as e:
+        print(e)
+        pass
+
+def start_web2():
+    webbrowser.open(&#39;http:&#x2F;&#x2F;127.0.0.1:5000&#x2F;&#39;)
+
+def yiqing_run():
+    # app.run(host&#x3D;&#39;0.0.0.0&#39;,port&#x3D;8638)    #debug&#x3D;True,host&#x3D;&#39;0.0.0.0&#39;,port&#x3D;
+    app.run()
+
+if __name__&#x3D;&#x3D;&quot;__main__&quot;:
+    update_history()
+    update_details()
+    try:
+        t1 &#x3D; threading.Thread(target&#x3D;yiqing_run, )
+        t2 &#x3D; threading.Thread(target&#x3D;start_web2, )
+        t1.start()
+        time.sleep(1)
+        t2.start()
+    except Exception as e:
+        print(e)
+</code></pre>
+
+<h4 id="mysql部分"><a href="#mysql部分" class="headerlink" title="mysql部分"></a>mysql部分</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">import time
+import pymysql
+import string
+
+
+# 连接数据库
+def get_conn():
+    conn &#x3D; pymysql.connect(
+        host&#x3D;&quot;localhost&quot;,
+        user&#x3D;&quot;&quot;,
+        password&#x3D;&quot;&quot;,
+        db&#x3D;&quot;supermanzwg&quot;,
+        charset&#x3D;&quot;utf8&quot;,
+        port&#x3D;3306,
+    )
+    # 创建游标：
+    cursor &#x3D; conn.cursor()
+    return conn, cursor
+
+def close_conn(conn, cursor):
+    if cursor:
+        cursor.close()
+    if conn:
+        conn.close()
+
+def query(sql, *args):
+    &#39;&#39;&#39;
+    :param sql:
+    :param args:
+    :return:返回结果，((),())形式
+    &#39;&#39;&#39;
+    conn, cursor&#x3D; get_conn()
+    cursor.execute(sql)
+    res &#x3D; cursor.fetchall() # 获取结果
+    close_conn(conn, cursor)
+    return res
+
+def get_c1_data():
+    sql &#x3D; &quot;&quot;&quot;
+        select a.date,a.cumulative,a.current,a.Overseas,a.death,b.&#96;新增确诊&#96;,b.&#96;新增治愈&#96;,b.&#96;新增境外&#96;,b.&#96;新增死亡&#96; 
+        from 
+        (select date,cumulative,current,Overseas,death 
+        from  &#96;history&#96; 
+        order by date desc limit 1) a 
+        inner join 
+        (SELECT b.date 日期,(b.cumulative-a.cumulative) 新增确诊,
+            -(a.cumulative-a.current-b.cumulative+b.current) 新增治愈,
+            (b.Overseas-a.Overseas) 新增境外,
+            (b.death-a.death) 新增死亡 
+            FROM &#96;history&#96; a, &#96;history&#96; b 
+            where a.date &#x3D; DATE_SUB(str_to_date(b.date,&#39;%Y-%m-%d&#39;),interval 1 day)
+            order by 日期 desc limit 1) b
+        where a.date &#x3D; b.&#96;日期&#96;; &quot;&quot;&quot;
+    res &#x3D; query(sql)
+    return res[0]
+
+def get_c2_data():
+    sql &#x3D; &quot;&quot;&quot;
+    select 
+    province,current
+    from &#96;details&#96; 
+    order by date  desc limit 34;&quot;&quot;&quot;
+    res &#x3D; query(sql)
+    return res
+
+def get_l1_data():
+    sql &#x3D; &quot;&quot;&quot;
+    select *
+    from 
+    (select date,cumulative,current,Overseas,death 
+        from  &#96;history&#96; 
+        order by date desc limit 10) a
+		order by a.date asc;&quot;&quot;&quot;
+    res &#x3D; query(sql)
+    return res
+
+def get_l2_data():
+    sql &#x3D; &quot;&quot;&quot;
+    select *
+    from 
+    (SELECT b.date &#96;日期&#96;,(b.cumulative-a.cumulative) 新增确诊,
+        -(a.cumulative-a.current-b.cumulative+b.current) 新增治愈,
+        (b.Overseas-a.Overseas) 新增境外,
+        (b.death-a.death) 新增死亡 
+        FROM &#96;history&#96; a, &#96;history&#96; b 
+        where a.date &#x3D; DATE_SUB(str_to_date(b.date,&#39;%Y-%m-%d&#39;),interval 1 day)
+        group by b.date  order by b.date desc limit 10) c
+		order by c.&#96;日期&#96; asc&quot;&quot;&quot;
+    res &#x3D; query(sql)
+    return res
+
+def get_r1_data():
+    # union_all 两块相加
+    sql &#x3D;&quot;&quot;&quot;select 
+    province,current 
+    from  &#96;details&#96;
+    where date &#x3D; (select max(date) max_date
+    from &#96;details&#96;) 
+    order by date,current  desc limit 5; &quot;&quot;&quot;
+    res &#x3D; query(sql)
+    return res
+
+# 词云图没有
+def get_r2_data():
+    sql &#x3D; &quot;&quot;&quot;SELECT 
+	province as &#96;省份&#96;,current as &#96;现存确诊&#96;,cumulative as &#96;累计确诊&#96;,
+	by_yesterday as  &#96;相比上日&#96; ,round(heal&#x2F;cumulative,4) as &#96;治愈占比&#96;,round(death&#x2F;cumulative,4) as &#96;死亡占比&#96; 
+    FROM &#96;details&#96;
+    where date  &#x3D;(select max(date) from &#96;details&#96;) 
+    order by current desc limit 7;&quot;&quot;&quot;
+    res &#x3D; query(sql)
+    return res
+if __name__&#x3D;&#x3D;&#39;__main__&#39;:
+    print(get_l2_data())
+    pass</code></pre>
+
+<h4 id="selenium部分"><a href="#selenium部分" class="headerlink" title="selenium部分"></a>selenium部分</h4><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;python-selenium-zh.readthedocs.io&#x2F;zh_CN&#x2F;latest&#x2F;</code></pre>
+
+
+
 <p>关于flask：<br><a href="https://www.cnblogs.com/songboriceboy/category/1867414.html">https://www.cnblogs.com/songboriceboy/category/1867414.html</a><br><a href="https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482">https://blog.csdn.net/u014793102/category_9285123.html?spm=1001.2014.3001.5482</a></p>
+<p>关于selenium：</p>
+<p><a href="https://python-selenium-zh.readthedocs.io/zh_CN/latest/">https://python-selenium-zh.readthedocs.io/zh_CN/latest/</a></p>
 ]]></content>
       <categories>
         <category>python</category>
