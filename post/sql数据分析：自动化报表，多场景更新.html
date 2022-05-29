@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="WenGe Zhang">
+    
+    <title>
+        
+            sql数据分析：自动化报表，多场景持续更新 |
+        
+        弦好想断
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":"true# shadow effect when the mouse hover","scale":"true# scale effect when the mouse hover"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"毋庸置疑，好的事情总会到来，而当它来晚的时候，也不失为一种惊喜。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                弦好想断
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">sql数据分析：自动化报表，多场景持续更新</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">WenGe Zhang</span>
+                        
+                            <span class="author-label">干饭分析师</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-08-06 23:19:59
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>4.2k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>21 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE &#96;cd_20210414&#96; (
+  &#96;id&#96; int(11) NOT NULL AUTO_INCREMENT,
+  &#96;platform&#96; varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT &#39;&#39; COMMENT &#39;平台&#39;,
+  &#96;platform_id&#96; varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT &#39;0&#39; COMMENT &#39;平台id 即storeid&#39;,
+  &#96;product_id&#96; varchar(255) CHARACTER SET utf8mb4 DEFAULT &#39;0&#39; COMMENT &#39;商品id&#39;,
+  &#96;barcode&#96; varchar(50) CHARACTER SET utf8mb4 DEFAULT &#39;0&#39; COMMENT &#39;商品upc编码&#39;,	
+  &#96;sort_id&#96; int(11) DEFAULT &#39;0&#39; COMMENT &#39;商品排序&#39;,
+  &#96;title&#96; varchar(255) COLLATE utf8mb4_general_ci DEFAULT &#39;&#39; COMMENT &#39;商品名称&#39;,
+  &#96;promotion_price&#96; float(10,2)  DEFAULT null COMMENT &#39;促销价&#39;,
+  &#96;full_price&#96;  float(10,2)  DEFAULT null COMMENT &#39;商品原价&#39;,
+  &#96;product_month_sale&#96; varchar(10) DEFAULT null COMMENT &#39;月销&#39;,
+  &#96;promotion&#96; varchar(255)  CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci COMMENT &#39;促销活动&#39;,
+  &#96;image_url&#96; text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  &#96;catname1&#96; varchar(50) CHARACTER SET utf8mb4 DEFAULT &#39; &#39;,
+&#96;brand&#96; varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT &#39;品牌&#39;,
+  &#96;time&#96; datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (&#96;id&#96;),
+  KEY &#96;a&#96; (&#96;platform&#96;,&#96;platform_id&#96;)
+) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8mb4 COLLATE&#x3D;utf8mb4_general_ci;</code></pre>
+<h3 id="新增标签列，加索引"><a href="#新增标签列，加索引" class="headerlink" title="新增标签列，加索引"></a>新增标签列，加索引</h3><pre class="line-numbers language-none"><code class="language-none">alter table cd_20210414 add COLUMN crawler_id VARCHAR(30);
+alter table cd_20210414 add COLUMN detail_full_price float(12,2);
+alter table cd_20210414 add index a(sku);
+alter table cd_20210414 add index b(platform,platform_id);</code></pre>
+<h3 id="查询当月日期及对应上月日期"><a href="#查询当月日期及对应上月日期" class="headerlink" title="查询当月日期及对应上月日期"></a>查询当月日期及对应上月日期</h3><p>mysql</p>
+<pre class="line-numbers language-none"><code class="language-none">#当月日期
+select DATE_ADD(DATE_SUB(CURDATE(),INTERVAL 1 DAY),interval -day(DATE_SUB(CURDATE(),INTERVAL 1 DAY))+1 day),
+DATE_SUB(CURDATE(),INTERVAL 1 DAY);
+#对应上月日期
+select DATE_SUB(DATE_ADD(DATE_SUB(CURDATE(),INTERVAL 1 DAY),interval -day(DATE_SUB(CURDATE(),INTERVAL 1 DAY))+1 day),INTERVAL 1 MONTH),
+DATE_SUB(DATE_SUB(CURDATE(),INTERVAL 1 DAY),INTERVAL 1 MONTH);</code></pre>
+
+<p>hive</p>
+<pre class="line-numbers language-none"><code class="language-none">#昨天
+select date_format(date_sub(current_date(),1), &#39;yyyyMMdd&#39;);
+#当月月初
+select concat(from_unixtime(unix_timestamp(), &#39;yyyyMM&#39;),&#39;01&#39;);
+#上月同期
+select date_format(add_months(from_unixtime(unix_timestamp(), &#39;yyyy-MM-dd&#39;),-1),&#39;yyyyMMdd&#39;);
+#昨天环比上月同期
+select date_format(date_sub(add_months(from_unixtime(unix_timestamp(), &#39;yyyy-MM-dd&#39;),-1),1),&#39;yyyyMMdd&#39;);
+#上月月初
+select concat(date_format(add_months(from_unixtime(unix_timestamp(), &#39;yyyy-MM-dd&#39;),-1),&#39;yyyyMM&#39;),&#39;01&#39;);</code></pre>
+
+<h3 id="每个部门薪水最高的员工-包含部门名称"><a href="#每个部门薪水最高的员工-包含部门名称" class="headerlink" title="每个部门薪水最高的员工(包含部门名称)"></a>每个部门薪水最高的员工(包含部门名称)</h3><ul>
+<li>员工表和部门表进行连接，对部门id进行组内分组根据薪资降序排序，这里使用rank()并列也算</li>
+<li>筛选排序序号为1的部门，并查询员工薪资</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">select * 
+from 
+    (SELECT 
+    employee_id
+    ,first_name
+    ,e.department_id
+    ,department_name
+    ,salary 
+    ,rank() over(partition by department_id order by salary desc) as salary_rank 
+    FROM &#96;employees&#96; e 
+    inner join 
+    &#96;departments&#96; d 
+    on e.department_id &#x3D; d.department_id
+    ) a 
+where a.salary_rank&#x3D;1;</code></pre>
+<h3 id="众数、平均数、中位数"><a href="#众数、平均数、中位数" class="headerlink" title="众数、平均数、中位数"></a>众数、平均数、中位数</h3><pre class="line-numbers language-none"><code class="language-none">-- 求员工工资的众数
+
+SELECT salary,count(1) AS cnt
+FROM employees
+GROUP BY salary
+HAVING count(*) &gt;&#x3D; ALL(SELECT COUNT(*) FROM employees GROUP BY salary)
+
+-- 求员工工资的平均数
+select AVG(salary) from employees
+
+select sum(salary)&#x2F;count(0) as avg_salary 
+from employees 
+
+-- 求员工工资的中位数
+-- 中位数定义：将数从小到大排列，若总数为奇数，取中间位置的数值。若总数为偶数，取中间位置两个数的平均值
+
+select avg(emp_salary)
+from
+(#排位次
+select salary,
+ row_number() over(order by salary) as rn,
+count(*) over() as n
+from employees
+) t 
+where rn in (floor(n&#x2F;2)+1,if(mod(n,2) &#x3D; 0,floor(n&#x2F;2),floor(n&#x2F;2)+1))</code></pre>
+
+<h3 id="上、下四分位数"><a href="#上、下四分位数" class="headerlink" title="上、下四分位数"></a>上、下四分位数</h3><ul>
+<li>全部玩家人数的中位数、上下四分位数</li>
+<li>再根据人数总量细拆 排序好的玩家在线时长表</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">select round(count(distinct user_id)&#x2F;4) as 下四分位数,
+round(count(distinct user_id)&#x2F;2) as 中位数,
+round(count(distinct user_id)&#x2F;4*3) as 上四分位数
+from tap_fun_test;
+下四分位数：207234 中位数：414467 上四分位数：621701
+SELECT min(avg_online_minutes) 最小值,
+(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 207233,1) as 下四分位数,
+(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 414466,1) as 中位数,
+(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 621700,1) as 上四分位数,
+max( avg_online_minutes) 最大值
+FROM &#96;tap_fun_test&#96;	
+最小值0.0,下四分位数:0.5,中位数:1.666667，上四分位数：5，最大值：1605.833333</code></pre>
+
+<h3 id="截至当前，每个用户已经连续签到的天数"><a href="#截至当前，每个用户已经连续签到的天数" class="headerlink" title="截至当前，每个用户已经连续签到的天数"></a>截至当前，每个用户已经连续签到的天数</h3><ul>
+<li>查出最后一次不登录的日期（即未登录时间的最大值）</li>
+<li>与当前日期进行比较，二者差值为几就是连续登录几天</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">select 
+user_id ,
+max(date),
+DATEDIFF(&#39;2021-02-19&#39;,max(date)) as max_con_days 
+from user_attendence 
+where is_sign &#x3D; 0 
+group by user_id;</code></pre>
+<h3 id="计算有史以来用户最大连续签到天数；"><a href="#计算有史以来用户最大连续签到天数；" class="headerlink" title="计算有史以来用户最大连续签到天数；"></a>计算有史以来用户最大连续签到天数；</h3><ul>
+<li>对用户分组，按日期进行row_number()over()排序，排序序号为rank;（一个用户一天只能签到一次）</li>
+<li>如果日期与序号的差值为相等，按这个差值进行分组并计数，取最大值</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">select 
+user_id 
+,max(次数) &#96;最大连续登录天数&#96;
+from 
+    (select user_id 
+    ,subdate(a.&#96;date&#96;,a.rn) diff 
+    ,count(*) 次数
+    from 
+        (select 
+        user_id 
+        ,date,
+        row_number() over(partition by user_id order by date asc) rn
+        from user_attendence  
+        where is_sign &#x3D; 1
+        ) a 
+    group by user_id,diff
+    ) b 
+group by user_id;</code></pre>
+<h3 id="用户最大连续购买天数及次数"><a href="#用户最大连续购买天数及次数" class="headerlink" title="用户最大连续购买天数及次数"></a>用户最大连续购买天数及次数</h3><p>最里面子查询先对日期进行聚合，将购买次数求和，然后类比连续签到</p>
+<pre class="line-numbers language-none"><code class="language-none">select 
+user_id 
+,max(count_days) &#96;天数&#96;
+,sum(sum_user_counts) &#96;次数&#96;
+from 
+    (select user_id 
+    ,subdate(a.&#96;date&#96;,a.rn) diff 
+    ,count(*) count_days
+	,sum(user_counts) sum_user_counts
+    from 
+        (select 
+        user_id 
+        ,&#96;date&#96;
+        ,row_number() over(partition by user_id order by &#96;date&#96; asc) rn
+		,user_counts
+        from (
+				select user_id
+				,DATE_FORMAT(pur_dt,&quot;%Y-%m-%d&quot;) &#96;date&#96;
+				,count(&#96;month&#96;) user_counts 
+				from cd_now 
+				group by user_id,DATE_FORMAT(pur_dt,&quot;%Y-%m-%d&quot;)
+				) m 
+        ) a 
+    group by user_id,diff
+    ) b 
+group by user_id;</code></pre>
+
+<h3 id="某一天以及近七天新增用户数"><a href="#某一天以及近七天新增用户数" class="headerlink" title="某一天以及近七天新增用户数"></a>某一天以及近七天新增用户数</h3><ul>
+<li>指定当前日期为1998-02-10，使用date_sub确定前七天日期</li>
+<li>使用if判定用户是否当日注册，DISTINCT进行去重</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">set @date_day &#x3D; &quot;1998-02-10&quot;;
+
+select 
+count(DISTINCT if(DATE_FORMAT(pur_dt,&quot;%Y-%m-%d&quot;)&#x3D;@date_day,user_id,null)) as new_id
+,count(DISTINCT user_id) as user_7
+,count(DISTINCT user_id)&#x2F;7 as avg7_id
+from 
+cd_now 
+where 
+DATE_FORMAT(pur_dt,&quot;%Y-%m-%d&quot;) between DATE_SUB(@date_day,INTERVAL 7 day) and @date_day</code></pre>
+<h3 id="支付金额在前-20-的用户"><a href="#支付金额在前-20-的用户" class="headerlink" title="支付金额在前 20%的用户"></a>支付金额在前 20%的用户</h3><pre class="line-numbers language-none"><code class="language-none">-- 问题：求支付金额在前 20%的用户
+select 
+a.user_name 
+,a.sum_amount 
+from 
+(select 
+user_name 
+,sum(pay_amount) sum_amount 
+,ntile(5) over(order by sum(pay_amount) desc) sum_amount_rank 
+-- ,sum(pay_amount) over(order by user_name) cumsum
+-- ,round(sum(pay_amount) over(order by user_name)&#x2F;sum(pay_amount) over(),4) cumsum_rate
+from user_sales_table 
+group by user_name ) a 
+where a.sum_amount_rank &#x3D; 1 </code></pre>
+<h3 id="每月最受欢迎的前三名"><a href="#每月最受欢迎的前三名" class="headerlink" title="每月最受欢迎的前三名"></a>每月最受欢迎的前三名</h3><pre class="line-numbers language-none"><code class="language-none">select 
+*
+from 
+	(select 
+	a.品牌
+	,a.mon
+	,a.num
+	,row_number()over(PARTITION by a.mon order by a.num desc) as num_rank	
+	from 
+		(SELECT 
+		*
+		,date_format(日期,&quot;%Y-%m-01&quot;) mon
+		,count(orser_id) num
+		FROM &#96;alcohol&#96;
+		group by 
+		date_format(日期,&quot;%Y-%m-01&quot;) ,品牌) a
+	) b 
+where b.num_rank&lt;4 
+order by b.mon asc </code></pre>
+<h3 id="用户留存"><a href="#用户留存" class="headerlink" title="用户留存"></a>用户留存</h3><ul>
+<li>用户第一次购买时间和最后一次购买时间，根据user_id进行连接，计算购买时间间隔</li>
+<li>使用case when 进行判定</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">select 
+(case when t3.day_value&#x3D;1 then &quot;次日留存&quot;
+when t3.day_value &#x3D; 3 then &quot;三日留存&quot;
+when t3.day_value &#x3D; 7 then &quot;七日留存&quot;
+else &quot;其他&quot;
+end
+) as type
+,count(t3.user_id) &quot;用户个数&quot;
+from 
+	(select 
+	t1.user_id
+	,t1.first_time
+	,t2.last_time
+	,datediff(t2.last_time,t1.first_time) day_value
+	from
+		(select 
+		user_id
+		,date(min(pur_dt)) first_time
+		from cd_now 
+		group by 
+		user_id) t1
+		left join 
+		(select 
+		user_id
+		,date(max(pur_dt)) last_time
+		from cd_now
+		group by 
+		user_id
+		) t2
+	on t1.user_id&#x3D;t2.user_id
+	) t3
+group by 
+(case when t3.day_value&#x3D;1 then &quot;次日留存&quot;
+when t3.day_value &#x3D; 3 then &quot;三日留存&quot;
+when t3.day_value &#x3D; 7 then &quot;七日留存&quot;
+else &quot;其他&quot;
+end
+) </code></pre>
+<h3 id="产品留存"><a href="#产品留存" class="headerlink" title="产品留存"></a>产品留存</h3><p>一共三个字段：下单日期，产品名称，用户id；</p>
+<p>前7天的购买用户作为新客，后24天无购买的为流失；后24天有购买为复购：购买相同产品的为留存，购买其他的为替换；</p>
+<p>先查total全量数据temp1，然后前7天购买和后24天购买数据，接着依次查询新客、复购、留存。</p>
+<pre class="line-numbers language-none"><code class="language-none">with temp1 as (
+	SELECT 
+	pt
+	,spec_name
+	,user_id
+	FROM &#96;order_item&#96; 
+	where pt between &#39;20211001&#39; and &#39;20211031&#39; 
+),
+temp07 as (
+	select 
+	pt
+	,spec_name
+	,user_id
+	from temp1
+	where pt between &#39;20211001&#39; and &#39;20211007&#39;
+),
+temp24 as (
+	select 
+	pt
+	,spec_name
+	,user_id
+	from temp1
+	where pt between &#39;20211008&#39; and &#39;20211031&#39;
+),
+temp_xinke as (
+	select 
+	spec_name
+	,count(distinct user_id) &#96;user_xinke&#96;
+	from temp07
+	group by spec_name
+),
+temp_fugou as (
+	select 
+	temp07.spec_name 
+	,count(distinct temp07.user_id) &#96;user_fugou&#96;
+	from temp07 
+	inner join temp24
+	on temp07.user_id&#x3D;temp24.user_id 
+	group by temp07.spec_name
+),
+temp_liucun as (
+	select 
+	temp07.spec_name 
+	,count(distinct temp07.user_id) &#96;user_liucun&#96;
+	from temp07 
+	inner join temp24
+	on temp07.user_id&#x3D;temp24.user_id and temp07.spec_name&#x3D;temp24.spec_name 
+	group by temp07.spec_name
+),
+temp_total as (
+	select 
+	temp_xinke.spec_name &#96;产品名称&#96;
+	,temp_xinke.&#96;user_xinke&#96; &#96;新客人数&#96;
+	,temp_fugou.&#96;user_fugou&#96; &#96;复购人数&#96;
+	,temp_liucun.&#96;user_liucun&#96; &#96;留存人数&#96;
+	,temp_xinke.&#96;user_xinke&#96;-temp_fugou.&#96;user_fugou&#96; &#96;流失人数&#96;
+	,temp_fugou.&#96;user_fugou&#96;-temp_liucun.&#96;user_liucun&#96; &#96;替换人数&#96;
+	from temp_xinke 
+	inner join temp_fugou on temp_xinke.spec_name&#x3D; temp_fugou.spec_name
+	inner join temp_liucun on temp_xinke.spec_name &#x3D; temp_liucun.spec_name
+) select * from temp_total;</code></pre>
+
+
+
+<h3 id="新老客-amp-复购"><a href="#新老客-amp-复购" class="headerlink" title="新老客&amp;复购"></a>新老客&amp;复购</h3><pre class="line-numbers language-none"><code class="language-none">with temp1 as ( # 1、找出每个用户第一次下单的时间和年月
+select user_id,min(pur_dt),date_format(min(pur_dt),&#39;%Y-%m&#39;) &#96;年月&#96;
+from cd_now 
+group by user_id 
+),
+ temp2 as(# 2、找出每月的新客户数目 
+select user_id,&#96;年月&#96;,count(user_id) as &#96;新客户数&#96; 
+from 
+ temp1 
+group by &#96;年月&#96; 
+ ),
+ temp3 as( # 3.1、找出当月有复购的新客户数目，第一步找出用户在第一次下单的那个月的购买次数
+select n.user_id,count(n.order_id) as &#96;次数&#96;,&#96;年月&#96; 
+from cd_now n 
+ inner join temp1 
+on n.user_id &#x3D; temp1.user_id and temp1.&#96;年月&#96; &#x3D; date_format(pur_dt,&quot;%Y-%m&quot;)
+group by temp1.user_id
+ ),
+ temp4 as ( # 3.2、找出当月有复购的新客户数目,第二步是将有复购的新客筛选出来（购买次数&gt;&#x3D;2）
+select &#96;年月&#96;,temp3.user_id,count(temp3.user_id) as &#96;有复购的新客户数目&#96;
+from temp3 
+where &#96;次数&#96;&gt;&#x3D;2
+group by temp3.&#96;年月&#96;
+ ),
+ temp5 as ( # 计算复购率
+select temp2.&#96;年月&#96;,temp2.&#96;新客户数&#96;,ifnull(temp4.&#96;有复购的新客户数目&#96;,0) &#96;老客户数&#96;,
+ ifnull(temp4.&#96;有复购的新客户数目&#96;&#x2F;temp2.&#96;新客户数&#96;,0) &#96;复购率&#96;
+ from temp2
+ left join temp4
+on temp2.&#96;年月&#96; &#x3D; temp4.&#96;年月&#96;
+ ) select * from temp5</code></pre>
+<h3 id="rfm模型"><a href="#rfm模型" class="headerlink" title="rfm模型"></a>rfm模型</h3><pre class="line-numbers language-none"><code class="language-none">-- 用户id,下单次数,最近下单时间,顾客实付,下单间隔,实付客单,rfm类型,
+select 
+a.user_id
+,a.&#96;下单次数&#96;
+,a.&#96;最近下单时间&#96;
+,a.&#96;顾客实付&#96;
+,a.&#96;下单间隔&#96;
+,a.&#96;实付客单&#96;
+,case 
+when a.&#96;下单间隔&#96; &gt; 45 and a.&#96;下单次数&#96; &lt;&#x3D; 1 and a.&#96;实付客单&#96; &lt;&#x3D;50 then &#39;111&#39; 
+when a.&#96;下单间隔&#96; &gt; 45 and a.&#96;下单次数&#96; &lt;&#x3D; 1 and a.&#96;实付客单&#96; &gt;50 then &#39;112&#39; 
+when a.&#96;下单间隔&#96; &gt; 45 and a.&#96;下单次数&#96; &gt; 1 and a.&#96;实付客单&#96; &lt;&#x3D;50 then &#39;121&#39; 
+when a.&#96;下单间隔&#96; &lt;&#x3D; 45 and a.&#96;下单次数&#96; &lt;&#x3D; 1 and a.&#96;实付客单&#96; &lt;&#x3D;50 then &#39;211&#39; 
+when a.&#96;下单间隔&#96; &lt;&#x3D; 45 and a.&#96;下单次数&#96; &gt; 1 and a.&#96;实付客单&#96; &lt;&#x3D;50 then &#39;221&#39; 
+when a.&#96;下单间隔&#96; &lt;&#x3D; 45 and a.&#96;下单次数&#96; &lt;&#x3D; 1 and a.&#96;实付客单&#96; &gt; 50 then &#39;212&#39; 
+when a.&#96;下单间隔&#96; &lt;&#x3D; 45 and a.&#96;下单次数&#96; &gt; 1 and a.&#96;实付客单&#96; &gt; 50 then &#39;222&#39; 
+when a.&#96;下单间隔&#96; &gt; 45 and a.&#96;下单次数&#96; &gt; 1 and a.&#96;实付客单&#96; &gt; 50 then &#39;122&#39; 
+end as &#39;rfm_type&#39;
+from 
+(select 
+user_id 
+,count(pur_dt) &#96;下单次数&#96;
+,date_format(max(pur_dt),&quot;%Y-%m-%d&quot;) &#96;最近下单时间&#96;
+,sum(pur_amount) &#96;顾客实付&#96;
+,datediff(&quot;1998-03-31&quot;,date_format(max(pur_dt),&quot;%Y-%m-%d&quot;)) &#96;下单间隔&#96;
+,avg(pur_amount) as &#96;实付客单&#96;
+from supermanzwg.cd_now 
+where date_format(month,&quot;%Y-%m-%d&quot;) between &quot;1998-01-01&quot; and &quot;1998-03-01&quot;
+group by 
+user_id ) a ;</code></pre>
+
+<h3 id="用户行为"><a href="#用户行为" class="headerlink" title="用户行为"></a>用户行为</h3><ul>
+<li><p>有订单事务表、收藏事务表,要求：请用一句SQL取出所有用户对商品的行为特征，特征分为已购买、</p>
+</li>
+<li><p>购买未收藏、收藏未购买、收藏且购买</p>
+<pre class="line-numbers language-none"><code class="language-none"># 数据准备
+create table redbk_orders(
+ &#96;id&#96; int(5),
+ &#96;user_id&#96; varchar(10),
+ &#96;item_id&#96; int(5),
+ &#96;par_time&#96; varchar(30),
+ &#96;item_num&#96; int(5)
+);
+insert into redbk_orders values(1,&#39;001&#39;,&#39;201&#39;,&#39;2018-08-31 00:00:01&#39;,1);
+insert into redbk_orders values(2,&#39;002&#39;,&#39;203&#39;,&#39;2018-09-02 12:00:02&#39;,2);
+insert into redbk_orders values(3,&#39;003&#39;,&#39;203&#39;,&#39;2018-09-01 00:00:01&#39;,1);
+insert into redbk_orders values(4,&#39;003&#39;,&#39;203&#39;,&#39;2018-09-04 09:10:30&#39;,1);
+create table redbk_favorites(
+ &#96;id&#96; int(5),
+ &#96;user_id&#96; varchar(10),
+ &#96;item_id&#96; INT(5),
+ &#96;fav_time&#96; varchar(30)
+);
+insert into redbk_favorites values(1,&#39;001&#39;,201,&#39;2018-08-31 00:00:01&#39;);
+insert into redbk_favorites values(2,&#39;002&#39;,202,&#39;2018-09-02 12:00:02&#39;);
+insert into redbk_favorites values(3,&#39;003&#39;,204,&#39;2018-09-01 00:00:01&#39;);</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">select 
+o.user_id 
+,o.item_id 
+,1 as &quot;已购买&quot; 
+,case when f.item_id is null then 1 else 0 end as &quot;购买未收藏&quot;
+,0 as &quot;收藏未购买&quot; 
+,case when f.item_id is not null then 1 else 0 end as &quot;收藏且购买&quot;
+from myemployees.redbk_orders o 
+left join myemployees.redbk_favorites f 
+on o.user_id &#x3D; f.user_id and o.item_id &#x3D; f.item_id 
+where o.user_id is not null 
+union 
+select 
+o.user_id 
+,o.item_id 
+,case when o.item_id is not null then 1 else 0 end as &quot;已购买&quot; 
+,0 as &quot;购买未收藏&quot;
+,case when o.item_id is null then 1 else 0 end as &quot;收藏未购买&quot; 
+,case when o.item_id is not null then 1 else 0 end as &quot;收藏且购买&quot;
+from myemployees.redbk_favorites f 
+left join myemployees.redbk_orders o 
+on o.user_id &#x3D; f.user_id and o.item_id &#x3D; f.item_id
+where o.user_id is not null;</code></pre></li>
+<li><p>某购物APP最近上线了一个新功能，用户签到后可以跳转到大转盘抽奖，抽奖获得的奖金可以抵消购物的费用，以此来培养用户使用app的习惯。</p>
+</li>
+<li><p>现有一张用户行为表user_log，主要字段如下，记录了用户在app上的所有行为日志，即何人user_id在何时event_time进行了什么操作event_id。</p>
+</li>
+</ul>
+<h3 id="贡献度-累计求和"><a href="#贡献度-累计求和" class="headerlink" title="贡献度-累计求和"></a>贡献度-累计求和</h3><ul>
+<li>计算各个用户的消费金额综合</li>
+<li>对用户消费金额进行累加，并计算累计占比，就是贡献度<pre class="line-numbers language-none"><code class="language-none">select 
+t.*
+from
+	(select 
+	user_id 
+	,round(amount,2) amount
+	,round(sum(amount)over(order by amount desc) ,2) cum_amount
+	,round(sum(amount)over(order by amount desc)&#x2F;(select sum(pur_amount) from cd_now),4) as cum_rate
+	from 
+		(select 
+		user_id 
+		,sum(pur_amount) amount
+		from 
+		cd_now 
+		where pur_amount &gt;0
+		group by 
+		user_id ) user_table
+	) t
+where t.cum_rate&lt;0.8</code></pre></li>
+</ul>
+<h3 id="电商类"><a href="#电商类" class="headerlink" title="电商类"></a>电商类</h3><ul>
+<li><p>商品活动流水表，表名为event，字段：goods_id， time；</p>
+</li>
+<li><p>求参加活动次数最多的商品的最近一次参加活动的时间</p>
+</li>
+</ul>
+<p>数据准备：</p>
+<pre class="line-numbers language-none"><code class="language-none">#创建 event 表
+CREATE TABLE &#96;event&#96; (
+ &#96;goods_id&#96; varchar(255),
+ &#96;time&#96; varchar(255)
+ );
+#插入数据
+INSERT INTO &#96;event&#96; VALUES (&#39;可口可乐&#39;, &#39;2021-02-22&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;雪碧&#39;, &#39;2021-03-01&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;可口可乐&#39;, &#39;2021-03-04&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;东鹏特饮&#39;, &#39;2021-03-06&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;雪碧&#39;, &#39;2021-03-07&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;红牛&#39;, &#39;2021-03-07&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;东鹏特饮&#39;, &#39;2021-03-08&#39;);
+INSERT INTO &#96;event&#96; VALUES (&#39;雪碧&#39;, &#39;2021-03-08&#39;);</code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">-- 求参加活动次数最多的商品的最近一次参加活动的时间
+-- 统计每种商品参加活动的次数，以及最近一次参与活动的时间
+select 
+*
+from 
+(select 
+goods_id
+,count(*) goods_num
+,max(time) max_time
+from event 
+group by goods_id) a 
+order by goods_num desc limit 1</code></pre>
+
+<ul>
+<li>新老客 <code>trans</code>和<code>profile</code></li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">-- 请计算每一类客户在2019年每月产生的销售(即购买金额大于0，及发生购买的人数(客户类型分为:新客，老客；新客:2019年产生第一次购买；老客:2019年之前已经购买过)
+-- 先分清新老客,在分类统计
+select 
+month(purchase_date) &#96;月份&#96;
+,customer_type  
+,sum(Quantity*Unit_price) &#96;金额&#96;
+,count(*)
+from 
+(select 
+t.*
+,case when year(p.FIRST_PUR_DATE)&#x3D;2019 then &#39;新客&#39; else &#39;老客&#39; end as &#96;customer_type&#96;
+from &#96;trans&#96; t 
+left join &#96;profile&#96; p
+on t.Customer_ID &#x3D; p.Customer_ID
+where year(purchase_date)&#x3D;2019) a
+group by month(purchase_date),customer_type;</code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">-- 现要给2019年新客发送A、B小样，线上新客发放A小样，线下新客发放B小样，请编写程序抽取相应的名单
+-- 字段 COUNTERID : offline 线下，online 线上
+select 
+*
+,case when COUNTER_ID like &#39;online%&#39; then &#39;A&#39; else &#39;B&#39; end as &#39;demo_type&#39;
+from 
+(select 
+t.*
+,case when year(p.FIRST_PUR_DATE)&#x3D;2019 then &#39;新客&#39; else &#39;老客&#39; end as &#96;customer_type&#96;
+from &#96;trans&#96; t 
+left join &#96;profile&#96; p
+on t.Customer_ID &#x3D; p.Customer_ID
+where year(purchase_date)&#x3D;2019) a
+where &#96;customer_type&#96;&#x3D;&#39;新客&#39;;</code></pre>
+
+<h3 id="相邻座位互换"><a href="#相邻座位互换" class="headerlink" title="相邻座位互换"></a>相邻座位互换</h3><pre class="line-numbers language-none"><code class="language-none">create TABLE 
+&#96;Seat&#96; (
+	&#96;id&#96; VARCHAR(255),
+	&#96;employee&#96; VARCHAR(255)
+);
+insert INTO &#96;Seat&#96; VALUES (&#39;1&#39;, &#39;Jack&#39;);
+INSERT INTO &#96;Seat&#96; VALUES (&#39;2&#39;, &#39;Scott&#39;);
+INSERT INTO &#96;Seat&#96; VALUES (&#39;3&#39;, &#39;Emery&#39;);
+INSERT INTO &#96;Seat&#96; VALUES (&#39;4&#39;, &#39;Green&#39;);
+INSERT INTO &#96;Seat&#96; VALUES (&#39;5&#39;, &#39;Linda&#39;);
+INSERT INTO &#96;Seat&#96; VALUES (&#39;6&#39;, &#39;Jane&#39;);
+
+#查询每两个相邻的座位互换（可以看作是两两相邻奇数和偶数呼唤，奇数下移，偶数上移）
+select 
+(case 
+when mod(id,2)!&#x3D;0 and id!&#x3D;a.counts then id+1 
+when mod(id,2)!&#x3D;0 and id&#x3D;a.counts then id 
+else id-1 end) as id 
+,employee
+from 
+&#96;Seat&#96;,(select count(*) counts from &#96;Seat&#96;) a
+order by id;</code></pre>
+
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/post/python%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%9Apdf%E5%92%8Cword.html"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python办公自动化：pdf和word</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/post/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python-flask疫情数据可视化</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">WenGe Zhang</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">建表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%A0%87%E7%AD%BE%E5%88%97%EF%BC%8C%E5%8A%A0%E7%B4%A2%E5%BC%95"><span class="nav-number">2.</span> <span class="nav-text">新增标签列，加索引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%BD%93%E6%9C%88%E6%97%A5%E6%9C%9F%E5%8F%8A%E5%AF%B9%E5%BA%94%E4%B8%8A%E6%9C%88%E6%97%A5%E6%9C%9F"><span class="nav-number">3.</span> <span class="nav-text">查询当月日期及对应上月日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AA%E9%83%A8%E9%97%A8%E8%96%AA%E6%B0%B4%E6%9C%80%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5-%E5%8C%85%E5%90%AB%E9%83%A8%E9%97%A8%E5%90%8D%E7%A7%B0"><span class="nav-number">4.</span> <span class="nav-text">每个部门薪水最高的员工(包含部门名称)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%97%E6%95%B0%E3%80%81%E5%B9%B3%E5%9D%87%E6%95%B0%E3%80%81%E4%B8%AD%E4%BD%8D%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">众数、平均数、中位数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E3%80%81%E4%B8%8B%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">上、下四分位数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%AA%E8%87%B3%E5%BD%93%E5%89%8D%EF%BC%8C%E6%AF%8F%E4%B8%AA%E7%94%A8%E6%88%B7%E5%B7%B2%E7%BB%8F%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0%E7%9A%84%E5%A4%A9%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">截至当前，每个用户已经连续签到的天数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%89%E5%8F%B2%E4%BB%A5%E6%9D%A5%E7%94%A8%E6%88%B7%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0%E5%A4%A9%E6%95%B0%EF%BC%9B"><span class="nav-number">8.</span> <span class="nav-text">计算有史以来用户最大连续签到天数；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E8%B4%AD%E4%B9%B0%E5%A4%A9%E6%95%B0%E5%8F%8A%E6%AC%A1%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">用户最大连续购买天数及次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%90%E4%B8%80%E5%A4%A9%E4%BB%A5%E5%8F%8A%E8%BF%91%E4%B8%83%E5%A4%A9%E6%96%B0%E5%A2%9E%E7%94%A8%E6%88%B7%E6%95%B0"><span class="nav-number">10.</span> <span class="nav-text">某一天以及近七天新增用户数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E9%87%91%E9%A2%9D%E5%9C%A8%E5%89%8D-20-%E7%9A%84%E7%94%A8%E6%88%B7"><span class="nav-number">11.</span> <span class="nav-text">支付金额在前 20%的用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E6%9C%88%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E5%89%8D%E4%B8%89%E5%90%8D"><span class="nav-number">12.</span> <span class="nav-text">每月最受欢迎的前三名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E7%95%99%E5%AD%98"><span class="nav-number">13.</span> <span class="nav-text">用户留存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E7%95%99%E5%AD%98"><span class="nav-number">14.</span> <span class="nav-text">产品留存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E8%80%81%E5%AE%A2-amp-%E5%A4%8D%E8%B4%AD"><span class="nav-number">15.</span> <span class="nav-text">新老客&amp;复购</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rfm%E6%A8%A1%E5%9E%8B"><span class="nav-number">16.</span> <span class="nav-text">rfm模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA"><span class="nav-number">17.</span> <span class="nav-text">用户行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%A1%E7%8C%AE%E5%BA%A6-%E7%B4%AF%E8%AE%A1%E6%B1%82%E5%92%8C"><span class="nav-number">18.</span> <span class="nav-text">贡献度-累计求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E5%95%86%E7%B1%BB"><span class="nav-number">19.</span> <span class="nav-text">电商类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E9%82%BB%E5%BA%A7%E4%BD%8D%E4%BA%92%E6%8D%A2"><span class="nav-number">20.</span> <span class="nav-text">相邻座位互换</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

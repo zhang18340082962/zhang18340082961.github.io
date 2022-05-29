@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="WenGe Zhang">
+    
+    <title>
+        
+            sql互联网游戏数据分析 |
+        
+        弦好想断
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":"true# shadow effect when the mouse hover","scale":"true# scale effect when the mouse hover"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"毋庸置疑，好的事情总会到来，而当它来晚的时候，也不失为一种惊喜。"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                弦好想断
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">sql互联网游戏数据分析</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">WenGe Zhang</span>
+                        
+                            <span class="author-label">干饭分析师</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-04-20 01:45:16
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>6 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="一、数据概览"><a href="#一、数据概览" class="headerlink" title="一、数据概览"></a>一、数据概览</h1><p>数据共有828934条，108列标签</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.14j5jvjer19c.png"
+                     
+                ></p>
+<p>本文主要对以下10个字段进行分析</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.15fg7qqjowkg.png"
+                     
+                ></p>
+<p>使用工具：Navicat Premium ，jupyter notebook<br>技能要求：SQL掌握到子查询，Python连接数据库（不连也可以）</p>
+<h1 id="二、提出问题："><a href="#二、提出问题：" class="headerlink" title="二、提出问题："></a>二、提出问题：</h1><p>1、新增玩家分析：从玩家数量、玩家占比、每日新增玩家数展开分析<br>2、玩家活跃度分析：从不同用户在线时长、分布特征展开分析<br>3、玩家付费情况分析：从PUR（付费比率）、ARPPU（活跃付费用户平均消费金额）等关键指标展开分析<br>4、玩家游戏习惯分析：从不同玩家类型、游戏模式（PVP与PVE）得出的情况来展开分析</p>
+<h1 id="三、新增玩家分析"><a href="#三、新增玩家分析" class="headerlink" title="三、新增玩家分析"></a>三、新增玩家分析</h1><p>新增玩家数量：828934人</p>
+<pre class="line-numbers language-none"><code class="language-none">SELECT count(DISTINCT user_id) 新增玩家数量 FROM &#96;tap_fun_test&#96;</code></pre>
+<p>新增付费玩家数量：19549</p>
+<pre class="line-numbers language-none"><code class="language-none">select count(DISTINCT(user_id))  新增付费玩家数量 from tap_fun_test where pay_price &gt;0;</code></pre>
+<p>付费玩家占比:0.0236</p>
+<pre class="line-numbers language-none"><code class="language-none">select 新增付费玩家&#x2F;新增玩家数 as 付费玩家占比 from 
+(SELECT count(distinct user_id) 新增玩家数 from tap_fun_test) as t1 ,
+(SELECT count(DISTINCT user_id)  新增付费玩家 from tap_fun_test where pay_price&gt;0) as t2 ;</code></pre>
+<p>每日新增用户数量</p>
+<pre class="line-numbers language-none"><code class="language-none">select date(register_time) 日期,count(DISTINCT(user_id)) from tap_fun_test GROUP BY 日期;</code></pre>
+
+<p>每日新增付费用户数</p>
+<pre class="line-numbers language-none"><code class="language-none">select date(register_time) 日期,count(DISTINCT(user_id)) from tap_fun_test where pay_price&gt;0 GROUP BY 日期;</code></pre>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.1w7wlbjdniow.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.4v3ad1gpu2v4.png"
+                     
+                ></p>
+<p>每日新增玩家在3月10日有一次大高峰增长，可能举办活动，但活动一过后续新增玩家数并没有显著提升，可见活动没有游戏的人气带来实质性的帮助。<br>活动需要力度加强并保持一定时间维度，给玩家充分时间了解游戏，才能提高秀逸热度。</p>
+<p>全部玩家平均在线时长:11.741103057664969</p>
+<pre class="line-numbers language-none"><code class="language-none">SELECT avg(avg_online_minutes)  as 全部玩家平均在线时长 from tap_fun_test;</code></pre>
+<p>付费玩家平均在线时长:135.8732415946089</p>
+<pre class="line-numbers language-none"><code class="language-none">select avg(avg_online_minutes) from tap_fun_test where pay_price&gt;0;</code></pre>
+<h1 id="四、玩家活跃度分析"><a href="#四、玩家活跃度分析" class="headerlink" title="四、玩家活跃度分析"></a>四、玩家活跃度分析</h1><p>平均在线时长的分布特点<br>###全部玩家人数的中位数、上下四分位数</p>
+<pre class="line-numbers language-none"><code class="language-none">select round(count(distinct user_id)&#x2F;4) as 下四分位数,
+round(count(distinct user_id)&#x2F;2) as 中位数,
+round(count(distinct user_id)&#x2F;4*3) as 上四分位数
+from tap_fun_test;</code></pre>
+<h4 id="下四分位数：207234-中位数：414467-上四分位数：621701"><a href="#下四分位数：207234-中位数：414467-上四分位数：621701" class="headerlink" title="下四分位数：207234    中位数：414467    上四分位数：621701"></a>下四分位数：207234    中位数：414467    上四分位数：621701</h4><h3 id="全部玩家在线时长箱线图关键值"><a href="#全部玩家在线时长箱线图关键值" class="headerlink" title="全部玩家在线时长箱线图关键值"></a>全部玩家在线时长箱线图关键值</h3><pre class="line-numbers language-none"><code class="language-none">SELECT min(avg_online_minutes) 最小值,
+(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 207233,1) as 下四分位数,
+(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 414466,1) as 中位数,
+(select avg_online_minutes from tap_fun_test ORDER BY avg_online_minutes LIMIT 621700,1) as 上四分位数,
+max( avg_online_minutes) 最大值
+FROM &#96;tap_fun_test&#96;	</code></pre>
+<h4 id="最小值0-0-下四分位数-0-5-中位数-1-666667，上四分位数：5，最大值：1605-833333"><a href="#最小值0-0-下四分位数-0-5-中位数-1-666667，上四分位数：5，最大值：1605-833333" class="headerlink" title="最小值0.0,下四分位数:0.5,中位数:1.666667，上四分位数：5，最大值：1605.833333"></a>最小值0.0,下四分位数:0.5,中位数:1.666667，上四分位数：5，最大值：1605.833333</h4><h3 id="付费玩家的人数最大值最小值、中位数、上下四分位数"><a href="#付费玩家的人数最大值最小值、中位数、上下四分位数" class="headerlink" title="付费玩家的人数最大值最小值、中位数、上下四分位数"></a>付费玩家的人数最大值最小值、中位数、上下四分位数</h3><pre class="line-numbers language-none"><code class="language-none">select round(count(distinct user_id)&#x2F;4) as 下四分位数,
+round(count(distinct user_id)&#x2F;2) as 中位数,
+round(count(distinct user_id)&#x2F;4*3) as 上四分位数
+from tap_fun_test 
+WHERE pay_price&gt;0;</code></pre>
+<h4 id="下四分位数：4887，-中位数：9775-上四分位数：14662"><a href="#下四分位数：4887，-中位数：9775-上四分位数：14662" class="headerlink" title="下四分位数：4887，    中位数：9775    上四分位数：14662"></a>下四分位数：4887，    中位数：9775    上四分位数：14662</h4><h1 id="付费玩家在线时长箱线图关键值"><a href="#付费玩家在线时长箱线图关键值" class="headerlink" title="付费玩家在线时长箱线图关键值"></a>付费玩家在线时长箱线图关键值</h1><pre class="line-numbers language-none"><code class="language-none">SELECT min(avg_online_minutes) 最小值,
+(select avg_online_minutes from tap_fun_test where pay_price&gt;0 ORDER BY avg_online_minutes LIMIT 4886,1) as 下四分位数,
+(select avg_online_minutes from tap_fun_test where pay_price&gt;0 ORDER BY avg_online_minutes LIMIT 9774,1) as 中位数,
+(select avg_online_minutes from tap_fun_test where pay_price&gt;0 ORDER BY avg_online_minutes LIMIT 14661,1) as 上四分位数,
+max( avg_online_minutes) 最大值
+FROM &#96;tap_fun_test&#96; 
+where pay_price&gt;0;</code></pre>
+<h4 id="最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5"><a href="#最小值：0-3333-下四分位数-30-6667-中位数-84-5，上四分位数：191-1667，最大值：1081-5" class="headerlink" title="最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5"></a>最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.25066jtzv1vk.png"
+                     
+                ></p>
+<p>全部玩家的在线时长箱线图中向下压缩的很厉害，全部玩家上四分位数为5，说明75%的玩家平均在线只有大约5分钟，可能一局游戏都没有玩完，可见玩家流失情况比较严重。<br>付费用户的箱型图中下四分位数为30，中位数84，上四分位数为191，说明付费用户中75%以上的用户在线时长都超过了30分钟。</p>
+<h1 id="五、玩家付费情况分析"><a href="#五、玩家付费情况分析" class="headerlink" title="五、玩家付费情况分析"></a>五、玩家付费情况分析</h1><h3 id="关键指标"><a href="#关键指标" class="headerlink" title="关键指标"></a>关键指标</h3><p>AU（active users）活跃用户：游戏时长超过15分钟<br> PU（Paying users）付费用户<br>APA（Active Paying Account）:活跃付费用户数<br>ARPU：平均每个活跃用户的收入，总收入/AU<br> ARPPU：平均活跃付费用户收入,总收入/APU<br> PUR(付费比率)：APA/AU</p>
+<h2 id="每个活跃玩家的收入"><a href="#每个活跃玩家的收入" class="headerlink" title="每个活跃玩家的收入"></a>每个活跃玩家的收入</h2><pre class="line-numbers language-none"><code class="language-none">select count(DISTINCT user_id) as AU,
+(select sum(pay_price) from tap_fun_test as 总收入),
+(select sum(pay_price) from tap_fun_test) &#x2F;count(DISTINCT user_id) as 每个活跃玩家收入 
+from tap_fun_test 
+where avg_online_minutes &gt; 15;
+#and pay_price&gt;0;每个活跃付费玩家的收入</code></pre>
+<h5 id="AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989"><a href="#AU：99846，总收入：556900-04，每个活跃玩家收入ARPU：5-57758989" class="headerlink" title="AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989"></a>AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989</h5><h2 id="每个活跃付费玩家的收入"><a href="#每个活跃付费玩家的收入" class="headerlink" title="每个活跃付费玩家的收入"></a>每个活跃付费玩家的收入</h2><h5 id="APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846"><a href="#APA：16982，总收入：556900-04，每个活跃付费玩家收入ARPPU：32-79354846" class="headerlink" title="APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846"></a>APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.19kx2qgrrty8.png"
+                     
+                ></p>
+<h1 id="付费比率"><a href="#付费比率" class="headerlink" title="付费比率"></a>付费比率</h1><pre class="line-numbers language-none"><code class="language-none">select count(DISTINCT user_id) as APA ,
+(SELECT count(DISTINCT user_id) from tap_fun_test WHERE avg_online_minutes&gt;&#x3D;15) as AU ,
+count(DISTINCT user_id)&#x2F;(select count(DISTINCT user_id) from tap_fun_test 
+where avg_online_minutes&gt;&#x3D;15) as PUR
+from tap_fun_test 
+where avg_online_minutes&gt;&#x3D;15 and pay_price &gt;0;</code></pre>
+<h5 id="APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021"><a href="#APA：17005；AU：100649；活跃玩家的付费率PUR：0-169，全部玩家的付费比率：0-021" class="headerlink" title="APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021"></a>APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021</h5><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.7esl7b48tf28.png"
+                     
+                ></p>
+<p>该游戏的PUR（人均付费率）为0.169较低，且ARPU（活跃玩家平均消费额）为5.58，说明收入表现差；相对于ARPPU，活跃付费用户消费很高，是ARPU的6倍左右，针对这点我们可以做首次消费门槛和专属大V玩家的福利与活动进行调整与优化。</p>
+<h1 id="六、玩家游戏习惯分析"><a href="#六、玩家游戏习惯分析" class="headerlink" title="六、玩家游戏习惯分析"></a>六、玩家游戏习惯分析</h1><pre class="line-numbers language-none"><code class="language-none">select AVG(pvp_battle_count) as 平均PVP次数 ,
+sum(pvp_lanch_count)&#x2F;sum(pvp_battle_count) as 主动发起PVP概率,
+sum(pvp_win_count)&#x2F;sum(pvp_battle_count) as PVP获胜概率
+from tap_fun_test
+where avg_online_minutes&gt;&#x3D;15;
+PVP活跃玩家
+平均PVP次数：15.164651412333953；主动发起PVP概率：0.5688357584679884；PVP获胜概率：0.532222547626395
+PVP活跃付费玩家(加一个pay_price&gt;0)
+平均PVP次数：27.301911202587473；主动发起PVP概率：0.6553937480210826；PVP获胜概率：0.6872459716242092</code></pre>
+
+<p>PVE活跃玩家<br>平均PVE次数：28；主动发起PVE概率：0.9967；PVE获胜概率：0.9041<br>PVE活跃付费玩家<br>平均PVE次数：52；主动发起PVE概率：0.9957；PVE获胜概率：0.9110</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.qcf66hymhfk.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.5z2txq9ht3wg.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6ycbt2l7v340.png"
+                     
+                ></p>
+<p>APA（付费活跃用户）玩家的平均PVE和PVP次数都是AU（活跃）玩家次数的两倍左右，显然APA玩家是重要的发展对象。<br>PVP活动中，APA玩家主动发起和胜利的概率都明显高于AU玩家。<br>PVE活动中，APA玩家主动发起和胜利的概率与AU玩家都基本持平，其中主动发起PVE的概率非常高，且二者的PVE胜率高达90%，游戏体验较好。</p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/post/python%E9%85%92%E7%B1%BB%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python酒类数据分析</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/post/python%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">python电影数据分析</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">WenGe Zhang</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88"><span class="nav-number">1.</span> <span class="nav-text">一、数据概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%8F%90%E5%87%BA%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">二、提出问题：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%96%B0%E5%A2%9E%E7%8E%A9%E5%AE%B6%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">三、新增玩家分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%8E%A9%E5%AE%B6%E6%B4%BB%E8%B7%83%E5%BA%A6%E5%88%86%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text">四、玩家活跃度分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0%EF%BC%9A207234-%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%9A414467-%E4%B8%8A%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0%EF%BC%9A621701"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">下四分位数：207234    中位数：414467    上四分位数：621701</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E9%83%A8%E7%8E%A9%E5%AE%B6%E5%9C%A8%E7%BA%BF%E6%97%B6%E9%95%BF%E7%AE%B1%E7%BA%BF%E5%9B%BE%E5%85%B3%E9%94%AE%E5%80%BC"><span class="nav-number">4.0.1.</span> <span class="nav-text">全部玩家在线时长箱线图关键值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%80%BC0-0-%E4%B8%8B%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0-0-5-%E4%B8%AD%E4%BD%8D%E6%95%B0-1-666667%EF%BC%8C%E4%B8%8A%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0%EF%BC%9A5%EF%BC%8C%E6%9C%80%E5%A4%A7%E5%80%BC%EF%BC%9A1605-833333"><span class="nav-number">4.0.1.1.</span> <span class="nav-text">最小值0.0,下四分位数:0.5,中位数:1.666667，上四分位数：5，最大值：1605.833333</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%98%E8%B4%B9%E7%8E%A9%E5%AE%B6%E7%9A%84%E4%BA%BA%E6%95%B0%E6%9C%80%E5%A4%A7%E5%80%BC%E6%9C%80%E5%B0%8F%E5%80%BC%E3%80%81%E4%B8%AD%E4%BD%8D%E6%95%B0%E3%80%81%E4%B8%8A%E4%B8%8B%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0"><span class="nav-number">4.0.2.</span> <span class="nav-text">付费玩家的人数最大值最小值、中位数、上下四分位数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0%EF%BC%9A4887%EF%BC%8C-%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%9A9775-%E4%B8%8A%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0%EF%BC%9A14662"><span class="nav-number">4.0.2.1.</span> <span class="nav-text">下四分位数：4887，    中位数：9775    上四分位数：14662</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%98%E8%B4%B9%E7%8E%A9%E5%AE%B6%E5%9C%A8%E7%BA%BF%E6%97%B6%E9%95%BF%E7%AE%B1%E7%BA%BF%E5%9B%BE%E5%85%B3%E9%94%AE%E5%80%BC"><span class="nav-number">5.</span> <span class="nav-text">付费玩家在线时长箱线图关键值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%80%BC%EF%BC%9A0-3333-%E4%B8%8B%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0-30-6667-%E4%B8%AD%E4%BD%8D%E6%95%B0-84-5%EF%BC%8C%E4%B8%8A%E5%9B%9B%E5%88%86%E4%BD%8D%E6%95%B0%EF%BC%9A191-1667%EF%BC%8C%E6%9C%80%E5%A4%A7%E5%80%BC%EF%BC%9A1081-5"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">最小值：0.3333 ,下四分位数:30.6667,中位数:84.5，上四分位数：191.1667，最大值：1081.5</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%8E%A9%E5%AE%B6%E4%BB%98%E8%B4%B9%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90"><span class="nav-number">6.</span> <span class="nav-text">五、玩家付费情况分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E6%8C%87%E6%A0%87"><span class="nav-number">6.0.1.</span> <span class="nav-text">关键指标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AA%E6%B4%BB%E8%B7%83%E7%8E%A9%E5%AE%B6%E7%9A%84%E6%94%B6%E5%85%A5"><span class="nav-number">6.1.</span> <span class="nav-text">每个活跃玩家的收入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#AU%EF%BC%9A99846%EF%BC%8C%E6%80%BB%E6%94%B6%E5%85%A5%EF%BC%9A556900-04%EF%BC%8C%E6%AF%8F%E4%B8%AA%E6%B4%BB%E8%B7%83%E7%8E%A9%E5%AE%B6%E6%94%B6%E5%85%A5ARPU%EF%BC%9A5-57758989"><span class="nav-number">6.1.0.0.1.</span> <span class="nav-text">AU：99846，总收入：556900.04，每个活跃玩家收入ARPU：5.57758989</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AA%E6%B4%BB%E8%B7%83%E4%BB%98%E8%B4%B9%E7%8E%A9%E5%AE%B6%E7%9A%84%E6%94%B6%E5%85%A5"><span class="nav-number">6.2.</span> <span class="nav-text">每个活跃付费玩家的收入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#APA%EF%BC%9A16982%EF%BC%8C%E6%80%BB%E6%94%B6%E5%85%A5%EF%BC%9A556900-04%EF%BC%8C%E6%AF%8F%E4%B8%AA%E6%B4%BB%E8%B7%83%E4%BB%98%E8%B4%B9%E7%8E%A9%E5%AE%B6%E6%94%B6%E5%85%A5ARPPU%EF%BC%9A32-79354846"><span class="nav-number">6.2.0.0.1.</span> <span class="nav-text">APA：16982，总收入：556900.04，每个活跃付费玩家收入ARPPU：32.79354846</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%98%E8%B4%B9%E6%AF%94%E7%8E%87"><span class="nav-number">7.</span> <span class="nav-text">付费比率</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#APA%EF%BC%9A17005%EF%BC%9BAU%EF%BC%9A100649%EF%BC%9B%E6%B4%BB%E8%B7%83%E7%8E%A9%E5%AE%B6%E7%9A%84%E4%BB%98%E8%B4%B9%E7%8E%87PUR%EF%BC%9A0-169%EF%BC%8C%E5%85%A8%E9%83%A8%E7%8E%A9%E5%AE%B6%E7%9A%84%E4%BB%98%E8%B4%B9%E6%AF%94%E7%8E%87%EF%BC%9A0-021"><span class="nav-number">7.0.0.0.1.</span> <span class="nav-text">APA：17005；AU：100649；活跃玩家的付费率PUR：0.169，全部玩家的付费比率：0.021</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%8E%A9%E5%AE%B6%E6%B8%B8%E6%88%8F%E4%B9%A0%E6%83%AF%E5%88%86%E6%9E%90"><span class="nav-number">8.</span> <span class="nav-text">六、玩家游戏习惯分析</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
