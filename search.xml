@@ -4314,4 +4314,524 @@ writer.save()</code></pre>
         <tag>数据分析</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python实现鼠标键盘自动化——pyautogui、opencv</title>
+    <url>//post/python%E5%AE%9E%E7%8E%B0%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%87%AA%E5%8A%A8%E5%8C%96.html</url>
+    <content><![CDATA[<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
+<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> xlrd 回车</p>
+<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyautogui==0.9.50 回车</p>
+<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> opencv-python 回车</p>
+<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pillow 回车</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import pyautogui
+import xlrd
+import pyperclip
+import time
+import os
+import shutil
+import sys
+
+# pyautogui.PAUSE &#x3D; 1 # 调用在执行动作后暂停的秒数，只能在执行一些pyautogui动作后才能使用，建议用time.sleep
+pyautogui.FAILSAFE &#x3D; False # 启用自动防故障功能，左上角的坐标为（0，0），将鼠标移到屏幕的左上角，来抛出failSafeException异常
+
+def resource_path(relative_path):
+    if getattr(sys, &#39;frozen&#39;, False):  # 是否Bundle Resource
+        base_path &#x3D; sys._MEIPASS
+    else:
+        base_path &#x3D; os.path.abspath(&quot;.&quot;)
+    return os.path.join(base_path, relative_path)
+
+def ClearTemp():
+    MEIpath &#x3D; &quot;C:\\Users\\&quot; + os.getlogin() + &quot;\\AppData\\Local\\Temp&quot;
+    # mylog(&quot;当前临时文件位置&quot;, MEIpath)
+    # print(os.getlogin()) #获取计算机使用对象
+    for root, dirs, files in os.walk(MEIpath):
+        if &quot;_MEI&quot; in root:
+            try:
+                print(&quot;正在清理:&quot;,root)
+                shutil.rmtree(root)
+            except:
+                pass
+        else:
+            pass
+
+
+# 定义鼠标事件
+
+# pyautogui库其他用法 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qingfengxd1&#x2F;article&#x2F;details&#x2F;108270159
+
+def mouseClick(clickTimes, lOrR, img, reTry,fail_retry,retry_interval):
+    try:
+        time.sleep(retry_interval&#x2F;1000000)
+        fail_retry &#x3D; int(fail_retry)
+    except:
+        fail_retry&#x3D;10
+        retry_interval&#x3D;0.1
+    f &#x3D; open(f&quot;日志文件\&#123;time.strftime(&#39;%Y-%m-%d&#39;, time.localtime())&#125;.txt&quot;,&quot;a+&quot;)
+    global pic_exist
+    pic_exist&#x3D; False
+    if reTry &#x3D;&#x3D; 1:
+        fail_retry_num&#x3D; 1
+        while True:
+            location &#x3D; pyautogui.locateCenterOnScreen(img, confidence&#x3D;0.98)
+            if location is not None:
+                pyautogui.click(location.x, location.y, clicks&#x3D;clickTimes, interval&#x3D;0.2, duration&#x3D;0.2, button&#x3D;lOrR)
+                break
+
+            print(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试&quot;)
+            f.write(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试\n&quot;)
+            time.sleep(retry_interval)
+            fail_retry_num+&#x3D;1
+            if fail_retry_num&gt;fail_retry:
+                print(f&quot;已重试&#123;fail_retry&#125;次&quot;)
+                f.write(f&quot;已重试&#123;fail_retry&#125;次\n&quot;)
+                pic_exist &#x3D; True
+                break
+    elif reTry &#x3D;&#x3D; -1:
+        #不建议这么搞
+        fail_retry_num&#x3D;1
+        while True:
+            location &#x3D; pyautogui.locateCenterOnScreen(img, confidence&#x3D;0.98)
+            if location is not None:
+                pyautogui.click(location.x, location.y, clicks&#x3D;clickTimes, interval&#x3D;0.2, duration&#x3D;0.2, button&#x3D;lOrR)
+            else:
+                print(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试&quot;)
+                f.write(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试\n&quot;)
+
+            time.sleep(retry_interval)
+            fail_retry_num +&#x3D; 1
+            if fail_retry_num &gt; fail_retry:
+                print(f&quot;已重试&#123;fail_retry&#125;次，无限重复且找不到图,你这是在玩火啊！&quot;)
+                f.write(f&quot;已重试&#123;fail_retry&#125;次，无限重复且找不到图!你这是在玩火啊！\n&quot;)
+                pic_exist &#x3D; True
+                break
+
+
+    elif reTry &gt; 1:
+        i &#x3D; 1
+        fail_retry_num&#x3D;1
+        while i &lt; reTry + 1:
+            location &#x3D; pyautogui.locateCenterOnScreen(img, confidence&#x3D;0.98)
+            if location is not None:
+                pyautogui.click(location.x, location.y, clicks&#x3D;clickTimes, interval&#x3D;0.2, duration&#x3D;0.2, button&#x3D;lOrR)
+                print(&quot;重复&quot;)
+                i +&#x3D; 1
+            else:
+                print(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试&quot;)
+                f.write(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试\n&quot;)
+            time.sleep(retry_interval)
+            fail_retry_num +&#x3D; 1
+            if fail_retry_num &gt; fail_retry:
+                print(f&quot;已重试&#123;fail_retry&#125;次&quot;)
+                f.write(f&quot;已重试&#123;fail_retry&#125;次\n&quot;)
+                pic_exist &#x3D; True
+                break
+
+
+# 定义热键事件
+
+# hotkey_get方法用来判断热键组合个数,还是文字输入。此方法由B站up主 尔茄无双 提供。
+def hotkey_get(hk_g_inputValue):
+    try:
+        newinput &#x3D; hk_g_inputValue.split(&#39;,&#39;)
+        pyautogui.hotkey(*tuple(newinput))
+    except:
+        pyperclip.copy(hk_g_inputValue)
+        pyautogui.hotkey(&#39;ctrl&#39;, &#39;v&#39;)
+
+
+# hotkey_get方法用来判断热键组合个数，并把热键传到对应的变量上newinput[0],[1],[2],[3]……[9]只写了10个后续可以添加。【老方法弃用】
+# newinput &#x3D; hk_g_inputValue.split(&#39;,&#39;)
+#         if len(newinput)&#x3D;&#x3D;1:
+#                 pyautogui.hotkey(hk_g_inputValue)
+#         elif len(newinput)&#x3D;&#x3D;2:
+#                 pyautogui.hotkey(newinput[0],newinput[1])
+#         elif len(newinput)&#x3D;&#x3D;3:
+#                 pyautogui.hotkey(newinput[0],newinput[1],newinput[2])
+#         elif len(newinput)&#x3D;&#x3D;4:
+#                 pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3])
+#         elif len(newinput)&#x3D;&#x3D;4:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3])
+#         elif len(newinput)&#x3D;&#x3D;5:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4])
+#         elif len(newinput)&#x3D;&#x3D;6:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4],newinput[5])
+#         elif len(newinput)&#x3D;&#x3D;7:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4],newinput[5],newinput[6])
+#         elif len(newinput)&#x3D;&#x3D;8:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4],newinput[5],newinput[6],newinput[7])
+#         elif len(newinput)&#x3D;&#x3D;9:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4],newinput[5],newinput[6],newinput[7],newinput[8])
+#         elif len(newinput)&#x3D;&#x3D;10:
+#                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4],newinput[5],newinput[6],newinput[7],newinput[8],newinput[9])
+
+# hotkey_Group方法调用hotkey_get方法，并判断其热键内容是否需要循环。
+
+#键盘热键
+def hotkeyGroup(reTry, hkg_inputValue):
+    if reTry &#x3D;&#x3D; 1:
+        hotkey_get(hkg_inputValue)
+        print(&quot;执行了：&quot;, hkg_inputValue)
+        time.sleep(0.1)
+    elif reTry &#x3D;&#x3D; -1:
+        while True:
+            hotkey_get(hkg_inputValue)
+            print(&quot;执行了：&quot;, hkg_inputValue)
+            time.sleep(0.1)
+    elif reTry &gt; 1:
+        i &#x3D; 1
+        while i &lt; reTry + 1:
+            hotkey_get(hkg_inputValue)
+            print(&quot;执行了：&quot;, hkg_inputValue)
+            i +&#x3D; 1
+            time.sleep(0.1)
+
+
+# 数据检查
+# cmdType.value  1.0 左键单击    2.0 左键双击  3.0 右键单击  4.0 输入  5.0 等待  6.0 滚轮
+# 7.0 热键组合（最多4个）
+# 8.0 粘贴当前时间
+# 9.0 系统命令集
+# ctype     空：0
+#           字符串：1
+#           数字：2
+#           日期：3
+#           布尔：4
+#           error：5
+def dataCheck(sheet1):
+    checkCmd &#x3D; True
+    # 行数检查
+    if sheet1.nrows &lt; 2:
+        print(&quot;没数据啊哥&quot;)
+        checkCmd &#x3D; False
+    # 每行数据检查
+    i &#x3D; 1
+    while i &lt; sheet1.nrows:
+        # 第1列 操作类型检查
+        cmdType &#x3D; sheet1.row(i)[0]
+        if cmdType.ctype !&#x3D; 2 or (cmdType.value !&#x3D; 1.0 and cmdType.value !&#x3D; 2.0 and cmdType.value !&#x3D; 3.0
+                                  and cmdType.value !&#x3D; 4.0 and cmdType.value !&#x3D; 5.0 and cmdType.value !&#x3D; 6.0
+                                  and cmdType.value !&#x3D; 7.0 and cmdType.value !&#x3D; 8.0 and cmdType.value !&#x3D; 9.0):
+            print(&#39;第&#39;, i + 1, &quot;行,第1列数据有毛病&quot;)
+            checkCmd &#x3D; False
+        # 第2列 内容检查
+        cmdValue &#x3D; sheet1.row(i)[1]
+        # 读图点击类型指令，内容必须为字符串类型
+        if cmdType.value &#x3D;&#x3D; 1.0 or cmdType.value &#x3D;&#x3D; 2.0 or cmdType.value &#x3D;&#x3D; 3.0:
+            if cmdValue.ctype !&#x3D; 1:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        # 输入类型，内容不能为空
+        if cmdType.value &#x3D;&#x3D; 4.0:
+            if cmdValue.ctype &#x3D;&#x3D; 0:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        # 等待类型，内容必须为数字
+        if cmdType.value &#x3D;&#x3D; 5.0:
+            if cmdValue.ctype !&#x3D; 2:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        # 滚轮事件，内容必须为数字
+        if cmdType.value &#x3D;&#x3D; 6.0:
+            if cmdValue.ctype !&#x3D; 2:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        # 7.0 热键组合，内容不能为空
+        if cmdType.value &#x3D;&#x3D; 7.0:
+            if cmdValue.ctype &#x3D;&#x3D; 0:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        # 8.0 时间，内容不能为空
+        if cmdType.value &#x3D;&#x3D; 8.0:
+            if cmdValue.ctype &#x3D;&#x3D; 0:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        # 9.0 系统命令集模式，内容不能为空
+        if cmdType.value &#x3D;&#x3D; 9.0:
+            if cmdValue.ctype &#x3D;&#x3D; 0:
+                print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
+                checkCmd &#x3D; False
+        i +&#x3D; 1
+    return checkCmd
+
+
+# 任务
+def mainWork(img):
+    # cur_path &#x3D; os.getcwd()
+    i &#x3D; 1
+    f &#x3D; open(f&quot;日志文件\&#123;time.strftime(&#39;%Y-%m-%d&#39;, time.localtime())&#125;.txt&quot;,&quot;a+&quot;)
+    # f.write(f&quot;\n当前时间：&#123;time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;, time.localtime())&#125;\n&quot;)
+    while i &lt; sheet1.nrows:
+        try:
+            # 取本行指令的操作类型
+            cmdType &#x3D; sheet1.row(i)[0]
+
+            if cmdType.value &#x3D;&#x3D; 1.0:
+                # 取图片名称
+                img &#x3D; sheet1.row(i)[1].value
+                reTry &#x3D; 1# 取重试次数
+                fail_retry &#x3D;sheet1.row(i)[3].value # 取查找图片失败重试次数
+                retry_interval &#x3D; sheet1.row(i)[4].value #取重试间隔
+                if sheet1.row(i)[2].ctype &#x3D;&#x3D; 2 and sheet1.row(i)[2].value !&#x3D; 0:
+                    reTry &#x3D; sheet1.row(i)[2].value
+                mouseClick(1, &quot;left&quot;, img, reTry,fail_retry,retry_interval)
+                if sheet1.row(i)[5].value&#x3D;&#x3D;1:
+                    print(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将跳过\n&quot;)
+                    f.write(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将跳过\n&quot;)
+                    pass
+                else:
+                    if pic_exist:
+                        #查找图片已超时
+                        print(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将终止\n&quot;)
+                        f.write(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将终止\n&quot;)
+                        break
+                    else:
+                        #查找未超时
+                        f.write(f&quot;第&#123;i&#125;步，单击左键&#123;reTry&#125;次，&#123;img&#125;\n&quot;)
+                print(&quot;单击左键&quot;, img)
+
+            # 2代表双击左键
+            elif cmdType.value &#x3D;&#x3D; 2.0:
+                # 取图片名称
+                img &#x3D; sheet1.row(i)[1].value
+                # 取重试次数
+                reTry &#x3D; 1
+                fail_retry &#x3D; sheet1.row(i)[3].value  # 取查找图片失败重试次数
+                retry_interval &#x3D; sheet1.row(i)[4].value  # 取重试间隔
+
+                if sheet1.row(i)[2].ctype &#x3D;&#x3D; 2 and sheet1.row(i)[2].value !&#x3D; 0:
+                    reTry &#x3D; sheet1.row(i)[2].value
+                mouseClick(2, &quot;left&quot;, img, reTry,fail_retry,retry_interval)
+                if sheet1.row(i)[5].value&#x3D;&#x3D;1:
+                    print(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将跳过\n&quot;)
+                    f.write(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将跳过\n&quot;)
+                    pass
+                else:
+                    if pic_exist:
+                        #查找图片已超时
+                        print(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将终止\n&quot;)
+                        f.write(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将终止\n&quot;)
+                        break
+                    else:
+                        #查找未超时
+                        f.write(f&quot;第&#123;i&#125;步，双击左键&#123;reTry&#125;次，&#123;img&#125;\n&quot;)
+                print(&quot;双击左键&quot;, img)
+                # f.write(f&quot;第&#123;i&#125;步，双击左键&#123;reTry&#125;次，&#123;img&#125;\n&quot;)
+            # 3代表右键
+            elif cmdType.value &#x3D;&#x3D; 3.0:
+                # 取图片名称
+                img &#x3D; sheet1.row(i)[1].value
+                # 取重试次数
+                reTry &#x3D; 1
+                fail_retry &#x3D; sheet1.row(i)[3].value  # 取查找图片失败重试次数
+                retry_interval &#x3D; sheet1.row(i)[4].value  # 取重试间隔
+
+                if sheet1.row(i)[2].ctype &#x3D;&#x3D; 2 and sheet1.row(i)[2].value !&#x3D; 0:
+                    reTry &#x3D; sheet1.row(i)[2].value
+                mouseClick(1, &quot;right&quot;, img, reTry,fail_retry,retry_interval)
+                if sheet1.row(i)[5].value &#x3D;&#x3D; 1:
+                    print(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将跳过\n&quot;)
+                    f.write(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将跳过\n&quot;)
+                    pass
+                else:
+                    if pic_exist:
+                        # 查找图片已超时
+                        print(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将终止\n&quot;)
+                        f.write(f&quot;第&#123;i&#125;步，查找&#123;img&#125;超时将终止\n&quot;)
+                        break
+                    else:
+                        #查找未超时
+                        f.write(f&quot;第&#123;i&#125;步，单击右键&#123;reTry&#125;次，&#123;img&#125;\n&quot;)
+                print(&quot;右键&quot;, img)
+                # f.write(f&quot;第&#123;i&#125;步，单击右键&#123;reTry&#125;次，&#123;img&#125;\n&quot;)
+                # 4代表输入
+            elif cmdType.value &#x3D;&#x3D; 4.0:
+                inputValue &#x3D; sheet1.row(i)[1].value
+                pyperclip.copy(inputValue)
+                pyautogui.hotkey(&#39;ctrl&#39;, &#39;v&#39;)
+                print(f&quot;第&#123;i&#125;步，输入&#123;inputValue&#125;&quot;)
+                f.write(f&quot;第&#123;i&#125;步，输入&#123;inputValue&#125;\n&quot;)
+                time.sleep(0.5)
+            # 5代表等待
+            elif cmdType.value &#x3D;&#x3D; 5.0:
+                #取等待时间
+                waitTime &#x3D; sheet1.row(i)[1].value
+                time.sleep(waitTime)
+                print(f&quot;第&#123;i&#125;步，等待&quot;, waitTime, &quot;秒&quot;)
+                f.write(f&quot;第&#123;i&#125;步，等待&#123;waitTime&#125;秒\n&quot;)
+            # 6代表滚轮
+            elif cmdType.value &#x3D;&#x3D; 6.0:
+                #取滚动距离
+                scroll &#x3D; sheet1.row(i)[1].value
+                pyautogui.scroll(int(scroll))
+                print(f&quot;第&#123;i&#125;步，滚轮滑动,&#123;int(scroll)&#125;, 距离&quot;)
+                f.write(f&quot;第&#123;i&#125;步，滚轮滑动&#123;int(scroll)&#125;距离\n&quot;)
+            # 7代表_热键组合
+            elif cmdType.value &#x3D;&#x3D; 7.0:
+                # 取重试次数,并循环。
+                reTry &#x3D; 1
+                if sheet1.row(i)[2].ctype &#x3D;&#x3D; 2 and sheet1.row(i)[2].value !&#x3D; 0:
+                    reTry &#x3D; sheet1.row(i)[2].value
+                inputValue &#x3D; sheet1.row(i)[1].value
+                hotkeyGroup(reTry, inputValue)
+                print(f&quot;第&#123;i&#125;步，执行了&#123;reTry&#125;次热键组合&#123;inputValue&#125;&quot;)
+                f.write(f&quot;第&#123;i&#125;步，执行了&#123;reTry&#125;次热键组合&#123;inputValue&#125;\n&quot;)
+                time.sleep(0.5)
+            # 8代表_粘贴当前时间
+            elif cmdType.value &#x3D;&#x3D; 8.0:
+                # 设置本机当前时间。
+                localtime &#x3D; time.strftime(&quot;%Y-%m-%d %H：%M：%S&quot;, time.localtime())
+                pyperclip.copy(localtime)
+                pyautogui.hotkey(&#39;ctrl&#39;, &#39;v&#39;)
+                print(f&quot;第&#123;i&#125;步，粘贴了本机时间:&quot;, localtime)
+                f.write(f&quot;第&#123;i&#125;步，粘贴了本机时间: &#123;localtime&#125;\n&quot;)
+                time.sleep(0.5)
+            # 9代表_系统命令集模式
+            elif cmdType.value &#x3D;&#x3D; 9.0:
+                wincmd &#x3D; sheet1.row(i)[1].value
+                os.system(wincmd)
+                print(f&quot;第&#123;i&#125;步，运行系统命令:&quot;, wincmd)
+                f.write(f&quot;第&#123;i&#125;步，运行系统命令 &#123;wincmd&#125;\n&quot;)
+                time.sleep(0.5)
+
+        except Exception as error:
+            print(f&quot;执行第&#123;i&#125;条步骤发生报错&#123;error&#125;,将中断当前流程，请解决错误后重新执行！&quot;)
+            f.write(f&quot;执行第&#123;i&#125;条步骤发生报错:\n&#123;error&#125;,\n将中断当前流程，请解决错误后重新执行！\n&quot;)
+            # time.sleep(10)
+            break
+        i +&#x3D; 1
+    #关闭日志文件
+    f.write(f&quot;当前时间：&#123;time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;, time.localtime())&#125;\n&quot;)
+    f.write(&quot;-----------本次流程执行日志记录完毕-----------\n&quot;)
+    f.close()
+
+# 主程序
+while True:
+    if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+        file &#x3D; &#39;cmd.xls&#39;
+        # 打开文件
+        wb &#x3D; xlrd.open_workbook(filename&#x3D;file)
+        print(&#39;-----欢迎使用傻妞RPA~-----\n&#39;)
+        try:
+            sheet_names &#x3D; wb.sheet_names()
+            sheet_name &#x3D; input(f&#39;请准确输入自动化流程sheet表名或位置序号(从1开始):  (输入0直接退出)\n现有的sheet表名称有：&#39;
+                               f&#39;&#123;sheet_names&#125;\nPS：执行包含“-0“的流程完毕后会自动退出\n———————————————————————————————————————\n&#39;)
+            if sheet_name&#x3D;&#x3D; &#39;0&#39;:
+                print(&quot;正清理缓存文件...&quot;)
+                # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
+                ClearTemp()
+                # exit(&quot;正在退出程序...&quot;)
+                break
+            elif type(int(sheet_name))&#x3D;&#x3D;int:
+                sheet_name &#x3D; sheet_names[int(sheet_name)-1]
+
+            # 通过索引获取表格sheet页
+            sheet1 &#x3D; wb.sheet_by_name(sheet_name)  # 这里选择你配置的工作表名称
+            f &#x3D; open(f&quot;日志文件\&#123;time.strftime(&#39;%Y-%m-%d&#39;, time.localtime())&#125;.txt&quot;,&quot;a+&quot;)
+            f.write(f&quot;\n当前时间：&#123;time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;, time.localtime())&#125;，即开始执行流程——&#123;sheet_name&#125;\n&quot;)
+            f.close()
+        except Exception as e:
+            print(e,&quot;\nsheet名输错了,没这个文件啊，重新输入吧(输入0可直接退出)\n&quot;)
+            continue
+        # 避免多次循环导致的ctrl+v导入到，按ESC进行取消。
+        pyautogui.hotkey(&#39;esc&#39;)
+        # 数据检查
+        checkCmd &#x3D; dataCheck(sheet1)
+
+        # 输入选项实现功能
+        if checkCmd:
+            key &#x3D; input(f&#39;即将开始执行流程：&#123;sheet_name&#125;\n选择功能: 1.做一次 2.循环几次 0.退出程序\n特殊功能：c.清理屏幕显示（请输入后最小化当前页面）\n———————————————————————————————————————\n&#39;)
+            if key &#x3D;&#x3D; &#39;1&#39; or key &#x3D;&#x3D;&quot;&quot;:
+                # 循环拿出每一行指令
+                print(&quot;正在执行第1次流程\n&quot;)
+                mainWork(sheet1)
+                print(&quot;本次命令执行完了.&quot;)
+                print(&quot;正清理缓存文件...&quot;)
+                ClearTemp()
+                # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
+                # exit(&quot;正在退出程序...快去成为你想要的样子！&quot;)
+                print(&quot;清理缓存完毕，快去成为你想要的样子！&quot;)
+                print(&quot;——————————————————分割线——————————————————&quot;)
+                if &quot;-0&quot; in sheet_name:
+                    print(&quot;正清理缓存文件...&quot;)
+                    # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
+                    ClearTemp()
+                    exit(&quot;正在退出程序...&quot;)
+
+            elif key &#x3D;&#x3D; &#39;2&#39;:
+                print(&quot;&quot;)
+                count &#x3D; 0
+                times &#x3D; input(&#39;想要执行几次呢? 最高执行10次喔\n&#39;)
+                times &#x3D; int(times)
+                if count &lt; times and times&lt;&#x3D;10:
+                    while count &lt; times:
+                        count +&#x3D; 1
+                        print(&quot;正在执行第&quot;, count, &quot;次流程&quot;)
+                        mainWork(sheet1)
+                        time.sleep(0.1)
+                        print(&quot;等待0.1秒&quot;)
+                        print(&quot;已经完成第&quot;, count, &quot;次&quot;, &quot;命令&quot;)
+                        print(&quot;——————————————————分割线——————————————————&quot;)
+                if &quot;-0&quot; in sheet_name:
+                    print(&quot;正清理缓存文件...&quot;)
+                    # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
+                    ClearTemp()
+                    exit(&quot;正在退出程序...&quot;)
+                else:
+                    print(&#39;输入有误或者已经退出!&#39;)
+                    os.system(&#39;pause&#39;)
+                    print(&quot;——————————————————————————————————————————&quot;)
+
+            # elif key &#x3D;&#x3D; &#39;3&#39;:
+            #     count &#x3D; 0
+            #     while True:
+            #         count +&#x3D; 1
+            #         print(&quot;正在执行第&quot;, count, &quot;次&quot;, &quot;命令&quot;)
+            #         print(&quot;&quot;)
+            #         mainWork(sheet1)
+            #         time.sleep(0.1)
+            #         print(&quot;等待0.1秒&quot;)
+            #         print(&quot;&quot;)
+            #         print(&quot;已经完成第&quot;, count, &quot;次&quot;, &quot;命令&quot;)
+            #         print(&quot;——————————————————分割线——————————————————&quot;)
+            #         print(&quot;&quot;)
+
+            elif key &#x3D;&#x3D; &#39;0&#39;:
+                print(&quot;正清理缓存文件...&quot;)
+                # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
+                ClearTemp()
+                exit(&quot;正在退出程序...&quot;)
+
+            elif key &#x3D;&#x3D; &#39;c&#39;:
+                os.system(&#39;cls&#39;)
+
+            else:
+                print(&#39;输入有误或者已经退出!&#39;)
+                os.system(&#39;pause&#39;)
+                print(&quot;——————————————————————————————————————————&quot;)</code></pre>
+
+<p><strong>大致的操作说明：</strong></p>
+<p>\1.   双击exe文件执行开始时请输入表名称；按照提示输入后回车即可；在cmd.xls 的每个sheet中，一个sheet对应一个自动化流程，自己新建命名即可配置每一步的指令，如：</p>
+<p>\2.   指令类型1、2、3是操作鼠标单击、双击、右击，对应的内容在第二列填 截图文件路径（例如“./pic/chrome.png”；这里最前面有个点别忘了），把每一步要操作的图标、区域截图保存至pics文件夹图片为png格式，截图名称必须为英文，中文不行。（注意：如果同屏有多个相同图标，会默认找到最左上的一个，因此怎么截图，截多大的区域，是个学问，如输入框只截中间空白部分肯定是不行的，宗旨就是“唯一”）</p>
+<p>\3.   指令5是等待时长（单位秒） ，建议每配置一步都加上一定等待时间，否则可能会容易卡顿；</p>
+<p>\4.   指令6是滚轮的距离，正数表示向上滚，负数表示向下滚，滚动距离不确定的话可自己进行测试，可从50或100开始；</p>
+<p>\5.   指令4是输入，实际实现逻辑为复制粘贴，会占用粘贴板资源。</p>
+<p>\6.   指令7是热键，第二列将需要的组合的热键以英文半角逗号（”,”）分隔填写即可。例如：win,r,ctrl,shift,esc,1,2,3,4,del（del删除这类热键要慎用）</p>
+<p>当然单个的按键也是可以，单个按键时后面必须加”,” (例如：9, 按一下9这个键。)注意：英文中的逗号”,”无法作为热键被单独被识别，原因是这个符号被用来分隔其他按键组合了。</p>
+<p>\7.   第三列，重复次数；不填写则默认为执行1次，填写的话只能填写正整数，-1为无限循环；目前重复次数仅支持 第一列为 1,2,3,7 的指令（分别为：鼠标单击，双击，右键，热键组合。）但不建议填-1可能会卡死喔。</p>
+<p>\8.   第四列，失败重试次数（正整数，否则默认重试10次）</p>
+<p>\9.   第五列，重试间隔（秒，默认间隔0.1秒）</p>
+<p>\10. 第六列，失败后是否跳过（为1将跳过，其他或不填将中断；仅对指令1/2/3生效）</p>
+<p>\11. 指令8是本机时间粘贴，获取当前系统时间。此指令也会使用粘贴板，实际为复制粘贴。第一列填写8，第二列<strong>填写</strong>“当前时间”（一定要填写，否者不执行），第三列重复次数无效。</p>
+<p>\12. 指令9是执行系统指令，第二列填写系统指令，第三列重复次数无效。</p>
+<p>例如：start c:（在新窗口中打开C盘）；start cmd （打开CMD程序）</p>
+<p>\13. 开始程序后请将程序框最小化，不然程序框挡住的区域是无法识别和操作的。</p>
+<p>\14. 双击exe文件打开程序（目前只能win10/11使用，<strong>如果<strong><strong>win7</strong></strong>使用报错：需要安装<strong><strong>kb2533623</strong></strong>补丁，这里不提供。</strong>），根据提示输入相关指令后敲回车；如果不能运行或者开始后立马关闭；说明流程有问题，可检查cmd表格文件中的数据是否有错；一般都是图片路径填写错误，指令数据填写错误这类问题；如果实在无法解决那就关掉吧~</p>
+<p>\15. 执行开始时或完毕后都会有退出选项；尽量使用这个选项（输入0之后回车）退出程序，（可以避免出现exe执行文件会产生临时文件，长久累积可能会占满C盘（这是python可执行文件的一个特性））；如果程序开始后因为你选择了多次重复而键鼠被占用但是想要停下来，关闭Dos控制台即可。点击右上角的x 或者ctrl+c或者alt+F4 都可以。</p>
+<p>参考B站大佬（不高兴就喝水）的源码</p>
+<p><a href="https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0</a></p>
+]]></content>
+      <tags>
+        <tag>自动化</tag>
+      </tags>
+  </entry>
 </search>
