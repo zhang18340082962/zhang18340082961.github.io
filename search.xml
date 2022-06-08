@@ -4760,7 +4760,7 @@ while True:
   </entry>
   <entry>
     <title>python常用功能代码整理，持续更新</title>
-    <url>//post/python%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-md.html</url>
+    <url>//post/python%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0.html</url>
     <content><![CDATA[<p>部分参考，实测后有改动<br><a href="https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw">https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw</a></p>
 <h1 id="本地文件整理-将本地多个-CSV-文件整合成一个文件"><a href="#本地文件整理-将本地多个-CSV-文件整合成一个文件" class="headerlink" title="本地文件整理   将本地多个 CSV 文件整合成一个文件"></a>本地文件整理   将本地多个 CSV 文件整合成一个文件</h1><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
 import os
