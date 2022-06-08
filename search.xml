@@ -4748,7 +4748,7 @@ while True:
 <p>\13. 开始程序后请将程序框最小化，不然程序框挡住的区域是无法识别和操作的。</p>
 <p>\14. 双击exe文件打开程序（目前只能win10/11使用，<strong>如果<strong><strong>win7</strong></strong>使用报错：需要安装<strong><strong>kb2533623</strong></strong>补丁，这里不提供。</strong>），根据提示输入相关指令后敲回车；如果不能运行或者开始后立马关闭；说明流程有问题，可检查cmd表格文件中的数据是否有错；一般都是图片路径填写错误，指令数据填写错误这类问题；如果实在无法解决那就关掉吧~</p>
 <p>\15. 执行开始时或完毕后都会有退出选项；尽量使用这个选项（输入0之后回车）退出程序，（可以避免出现exe执行文件会产生临时文件，长久累积可能会占满C盘（这是python可执行文件的一个特性））；如果程序开始后因为你选择了多次重复而键鼠被占用但是想要停下来，关闭Dos控制台即可。点击右上角的x 或者ctrl+c或者alt+F4 都可以。</p>
-<p>参考B站大佬（不高兴就喝水）的源码</p>
+<p>代码参考B站大佬（不高兴就喝水）的源码 进行二次开发，加入查找失败重试，超时查找，快捷键组合，dos命令，实时日志记录等功能；（有些自动化操作受windows系统安全限制可能会失效，这里不一一列举了）一直想做个图形化界面客户端，还有些地方没有打通。。。</p>
 <p><a href="https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0</a></p>
 ]]></content>
       <categories>
@@ -4756,6 +4756,308 @@ while True:
       </categories>
       <tags>
         <tag>自动化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python常用功能代码整理，持续更新</title>
+    <url>//post/python%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-md.html</url>
+    <content><![CDATA[<p>部分参考，实测后有改动<br><a href="https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw">https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw</a></p>
+<h1 id="本地文件整理-将本地多个-CSV-文件整合成一个文件"><a href="#本地文件整理-将本地多个-CSV-文件整合成一个文件" class="headerlink" title="本地文件整理   将本地多个 CSV 文件整合成一个文件"></a>本地文件整理   将本地多个 CSV 文件整合成一个文件</h1><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
+import os
+
+df_list &#x3D; []
+for i in os.listdir():
+    if &quot;csv&quot; in i:
+        day &#x3D; i.split(&#39;.&#39;)[0].split(&#39;_&#39;)[-1]
+        df &#x3D; pd.read_csv(i)
+        df[&#39;day&#39;] &#x3D; day
+        df_list.append(df)
+df &#x3D; pd.concat(df_list, axis&#x3D;0)
+df.to_csv(&quot;total.txt&quot;, index&#x3D;0)</code></pre>
+
+<h1 id="多线程代码"><a href="#多线程代码" class="headerlink" title="多线程代码"></a>多线程代码</h1><pre class="line-numbers language-none"><code class="language-none">import threading
+import time
+
+exitFlag &#x3D; 0
+
+class myThread (threading.Thread):
+    def __init__(self, threadID, name, delay):
+        threading.Thread.__init__(self)
+        self.threadID &#x3D; threadID
+        self.name &#x3D; name
+        self.delay &#x3D; delay
+    def run(self):
+        print (&quot;开始线程：&quot; + self.name)
+        print_time(self.name, self.delay, 5)
+        print (&quot;退出线程：&quot; + self.name)
+
+def print_time(threadName, delay, counter):
+    while counter:
+        if exitFlag:
+            threadName.exit()
+        time.sleep(delay)
+        print (&quot;%s: %s&quot; % (threadName, time.ctime(time.time())))
+        counter -&#x3D; 1
+
+# 创建新线程
+thread1 &#x3D; myThread(1, &quot;Thread-1&quot;, 1)
+thread2 &#x3D; myThread(2, &quot;Thread-2&quot;, 2)
+
+# 开启新线程
+thread1.start()
+thread2.start()
+thread1.join()
+thread2.join()
+print (&quot;退出主线程&quot;)</code></pre>
+
+<h1 id="异步编程代码-异步爬取网站"><a href="#异步编程代码-异步爬取网站" class="headerlink" title="异步编程代码  异步爬取网站"></a>异步编程代码  异步爬取网站</h1><pre class="line-numbers language-none"><code class="language-none">import asyncio
+import aiohttp
+import aiofiles
+
+async def get_html(session, url):
+    try:
+        async with session.get(url&#x3D;url, timeout&#x3D;8) as resp:
+            if not resp.status &#x2F;&#x2F; 100 &#x3D;&#x3D; 2:
+                print(resp.status)
+                print(&quot;爬取&quot;, url, &quot;出现错误&quot;)
+            else:
+                resp.encoding &#x3D; &#39;utf-8&#39;
+                text &#x3D; await resp.text()
+                return text
+    except Exception as e:
+        print(&quot;出现错误&quot;, e)
+        await get_html(session, url)
+        #使用异步请求之后，对应的文件保存也需要使用异步，即是一处异步，处处异步
+async def download(title_list, content_list):
+    async with aiofiles.open(&#39;&#123;&#125;.txt&#39;.format(title_list[0]), &#39;a&#39;,
+                             encoding&#x3D;&#39;utf-8&#39;) as f:
+        await f.write(&#39;&#123;&#125;&#39;.format(str(content_list)))
+</code></pre>
+<h1 id="requests-库调用"><a href="#requests-库调用" class="headerlink" title="requests 库调用"></a>requests 库调用</h1><pre class="line-numbers language-none"><code class="language-none">import requests
+
+#发送 GET 请求
+headers &#x3D; &#123;
+    &#39;user-agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;96.0.4664.110 Safari&#x2F;537.36&#39;,
+  &#39;cookie&#39;: &#39;some_cookie&#39;
+&#125;
+response &#x3D; requests.request(&quot;GET&quot;, url, headers&#x3D;headers)
+#发送 POST 请求
+import requests
+
+payload&#x3D;&#123;&#125;
+files&#x3D;[]
+headers &#x3D; &#123;
+    &#39;user-agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;96.0.4664.110 Safari&#x2F;537.36&#39;,
+  &#39;cookie&#39;: &#39;some_cookie&#39;
+&#125;
+response &#x3D; requests.request(&quot;POST&quot;, url, headers&#x3D;headers, data&#x3D;payload, files&#x3D;files)
+
+
+#保存数据到CSV
+import os
+def save_data(data, date):
+    if not os.path.exists(r&#39;2021_data_%s.csv&#39; % date):
+        with open(&quot;2021_data_%s.csv&quot; % date, &quot;a+&quot;, encoding&#x3D;&#39;utf-8&#39;) as f:
+            f.write(&quot;标题,热度,时间,url\n&quot;)
+            for i in data:
+                title &#x3D; i[&quot;title&quot;]
+                extra &#x3D; i[&quot;extra&quot;]
+                time &#x3D; i[&#39;time&#39;]
+                url &#x3D; i[&quot;url&quot;]
+                row &#x3D; &#39;&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&#39;.format(title,extra,time,url)
+                f.write(row)
+                f.write(&#39;\n&#39;)
+    else:
+        with open(&quot;2021_data_%s.csv&quot; % date, &quot;a+&quot;, encoding&#x3D;&#39;utf-8&#39;) as f:
+            for i in data:
+                title &#x3D; i[&quot;title&quot;]
+                extra &#x3D; i[&quot;extra&quot;]
+                time &#x3D; i[&#39;time&#39;]
+                url &#x3D; i[&quot;url&quot;]
+                row &#x3D; &#39;&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&#39;.format(title,extra,time,url)
+                f.write(row)
+                f.write(&#39;\n&#39;)</code></pre>
+
+<h1 id="IP代理池搭建"><a href="#IP代理池搭建" class="headerlink" title="IP代理池搭建"></a>IP代理池搭建</h1><pre class="line-numbers language-none"><code class="language-none">import requests # python基础爬虫库
+from lxml import etree # 可以将网页转换为Elements对象
+import time # 防止爬取过快可以睡眠一秒
+
+# 第一步：构造主页url地址，发送请求获取响应
+# 第二步：解析数据，将数据分组
+# 第三步：将数组的数据提取出来
+# 第四步：检测代理IP的可用性
+# 第五步：保存到文件中
+# https:&#x2F;&#x2F;blog.csdn.net&#x2F;yuan2019035055&#x2F;article&#x2F;details&#x2F;121334216
+
+class daili():
+
+    # 1.发送请求，获取响应
+    def send_request(self, page):
+        print(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;正在抓取第&#123;&#125;页&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;.format(page))
+        # 目标网页，添加headers参数
+        base_url &#x3D; &#39;https:&#x2F;&#x2F;www.kuaidaili.com&#x2F;free&#x2F;inha&#x2F;&#123;&#125;&#x2F;&#39;.format(page)
+        headers &#x3D; &#123;
+            &#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;95.0.4638.69 Safari&#x2F;537.36&#39;&#125;
+
+        # 发送请求：模拟浏览器发送请求，获取响应数据
+        response &#x3D; requests.get(base_url, headers&#x3D;headers)
+        data &#x3D; response.content.decode()
+        time.sleep(1)
+
+        return data
+
+    # 2.解析数据
+    def parse_data(self, data):
+
+        # 数据转换
+        html_data &#x3D; etree.HTML(data)
+        # 分组数据
+        parse_list &#x3D; html_data.xpath(&#39;&#x2F;&#x2F;table[@class&#x3D;&quot;table table-bordered table-striped&quot;]&#x2F;tbody&#x2F;tr&#39;)
+        return parse_list
+
+    # 4.检测代理IP
+    def check_ip(self, proxies_list):
+        headers &#x3D; &#123;
+            &#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;95.0.4638.69 Safari&#x2F;537.36&#39;&#125;
+
+        can_use &#x3D; []
+        for proxies in proxies_list:
+            try:
+                response &#x3D; requests.get(&#39;https:&#x2F;&#x2F;www.baidu.com&#x2F;&#39;, headers&#x3D;headers, proxies&#x3D;proxies, timeout&#x3D;0.1)
+                if response.status_code &#x3D;&#x3D; 200:
+                    can_use.append(proxies)
+            except Exception as e:
+                print(e)
+        return can_use
+
+    # 5.保存到文件
+    def save(self, can_use):
+
+        file &#x3D; open(&#39;..\data\IP.txt&#39;, &#39;w&#39;)
+        for i in range(len(can_use)):
+            s &#x3D; str(can_use[i]) + &#39;\n&#39;
+            file.write(s)
+        file.close()
+
+    # 实现主要逻辑
+    def run(self):
+        proxies_list &#x3D; []
+        # 实现翻页，我这里只爬取了四页（可以修改5所在的数字）
+        for page in range(1, 3):
+            data &#x3D; self.send_request(page)
+            parse_list &#x3D; self.parse_data(data)
+            # 3.获取数据
+            for tr in parse_list:
+                proxies_dict &#x3D; &#123;&#125;
+                http_type &#x3D; tr.xpath(&#39;.&#x2F;td[4]&#x2F;text()&#39;)
+                ip_num &#x3D; tr.xpath(&#39;.&#x2F;td[1]&#x2F;text()&#39;)
+                port_num &#x3D; tr.xpath(&#39;.&#x2F;td[2]&#x2F;text()&#39;)
+
+                http_type &#x3D; &#39; &#39;.join(http_type)
+                ip_num &#x3D; &#39; &#39;.join(ip_num)
+                port_num &#x3D; &#39; &#39;.join(port_num)
+
+                proxies_dict[http_type] &#x3D; ip_num + &quot;:&quot; + port_num
+
+                proxies_list.append(proxies_dict)
+
+        print(&quot;获取到的代理IP数量：&quot;, len(proxies_list))
+
+        can_use &#x3D; self.check_ip(proxies_list)
+
+        print(&quot;能用的代理IP数量：&quot;, len(can_use))
+        print(&quot;能用的代理IP:&quot;, can_use)
+        self.save(can_use)
+
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    dl &#x3D; daili()
+    dl.run()
+
+    # 从文件中随机取出一个IP去访问网址
+    import random
+    import requests
+    # 打开文件，换行读取
+    f&#x3D;open(&quot;..\data\IP.txt&quot;,&quot;r&quot;)
+    file &#x3D; f.readlines()
+
+    # 遍历并分别存入列表，方便随机选取IP
+    item &#x3D; []
+    for proxies in file:
+        proxies &#x3D; eval(proxies.replace(&#39;\n&#39;,&#39;&#39;)) # 以换行符分割，转换为dict对象
+        item.append(proxies)
+
+    proxies &#x3D; random.choice(item)  # 随机选取一个IP
+
+    url &#x3D; &#39;https:&#x2F;&#x2F;www.baidu.com&#x2F;&#39;
+    headers &#x3D; &#123;&#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;95.0.4638.69 Safari&#x2F;537.36&#39;&#125;
+
+    response &#x3D; requests.get(url,headers&#x3D;headers,proxies&#x3D;proxies)
+    print(response.status_code) # 输出状态码 200，表示访问成功
+    </code></pre>
+
+
+
+<h1 id="生成一段时间区间内的日期"><a href="#生成一段时间区间内的日期" class="headerlink" title="生成一段时间区间内的日期"></a>生成一段时间区间内的日期</h1><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
+print([str(i) for i in pd.date_range(&#39;2020-02-03&#39;,&#39;2020-03-05&#39;,freq&#x3D;&quot;D&quot;).strftime(&quot;%Y-%m-%d&quot;).tolist()])</code></pre>
+
+<h1 id="获取过去-N-天的日期"><a href="#获取过去-N-天的日期" class="headerlink" title="获取过去 N 天的日期"></a>获取过去 N 天的日期</h1><pre class="line-numbers language-none"><code class="language-none">import datetime
+
+def get_nday_list(n):
+    before_n_days &#x3D; []
+    for i in range(1, n + 1)[::-1]:
+        before_n_days.append(str(datetime.date.today() - datetime.timedelta(days&#x3D;i)))
+    return before_n_days
+
+a &#x3D; get_nday_list(30)
+print(a)</code></pre>
+
+<h1 id="生成xmind"><a href="#生成xmind" class="headerlink" title="生成xmind"></a>生成xmind</h1><pre class="line-numbers language-none"><code class="language-none">import xmind
+
+w &#x3D; xmind.load(&quot;test.xmind&quot;)
+s1 &#x3D; w.getPrimarySheet()  # 获取此工作表
+s1.setTitle(&quot;first sheet&quot;)  # 设置标题
+a &#x3D; &#123;&quot;h1&quot;: &#39;Python 技术学习&#39;, &#39;h2&#39;: [&#39;Python基础&#39;, &#39;Python 爬虫&#39;],
+     &#39;h3&#39;: [[&#39;Python环境安装&#39;, &#39;Python基础语法&#39;, &#39;Python数据结构&#39;], [&#39;Python爬虫基础知识详解&#39;, &#39;Python爬虫相关模块详解&#39;]]&#125;
+r1 &#x3D; s1.getRootTopic()  # 获取此工作表的根主题
+r1.setTitle(a[&#39;h1&#39;])  # 设置标题
+c &#x3D; a[&#39;h2&#39;]
+c2 &#x3D; a[&#39;h3&#39;]
+for i, val in enumerate(c):
+    print(i, val)
+    a &#x3D; &#39;b&#39; + str(i)
+    a &#x3D; r1.addSubTopic()
+    a.setTitle(val)  # 设置标题
+    for i2, val2 in enumerate(c2):
+        if i &#x3D;&#x3D; i2:
+            a2 &#x3D; &#39;b2&#39; + str(i)
+            a2 &#x3D; a.addSubTopic()
+            #        if isinstance(val, list):
+            for i3, val3 in enumerate(val2):
+                a3 &#x3D; &#39;b3&#39; + str(i3)
+                a3 &#x3D; a2.addSubTopic()
+                a3.setTitle(val3)
+
+xmind.save(w, &quot;Python_detail.xmind&quot;)</code></pre>
+<h1 id="【python】如何提取本机连接过的wifi密码（亲测好用"><a href="#【python】如何提取本机连接过的wifi密码（亲测好用" class="headerlink" title="【python】如何提取本机连接过的wifi密码（亲测好用"></a>【python】如何提取本机连接过的wifi密码（亲测好用</h1><pre class="line-numbers language-none"><code class="language-none">import subprocess
+# 获取wifi列表
+output &#x3D; subprocess.run([&#39;netsh&#39;,&#39;wlan&#39;,&#39;show&#39;,&#39;profiles&#39;],capture_output &#x3D; True).stdout.decode(&#39;gbk&#39;).split(&#39;\n&#39;)
+wifis &#x3D; [line.split(&#39;:&#39;)[1][1:-1] for line in output if &quot;所有用户配置文件&quot; in line]
+
+#查看每个wifi对应的密码
+for wifi in wifis:
+    results &#x3D; subprocess.run([&#39;netsh&#39;,&#39;wlan&#39;,&#39;show&#39;,&#39;profile&#39;,wifi,&#39;key&#x3D;clear&#39;],capture_output &#x3D; True).stdout.decode(&#39;gbk&#39;,errors &#x3D; &#39;ignore&#39;).split(&#39;\n&#39;)
+    results &#x3D; [line.split(&#39;:&#39;)[1][1:-1] for line in results if &quot;关键内容&quot; in line]
+    try:
+        print(f&#39;wifi账号：&#123;wifi&#125;，密码:&#123;results[0]&#125;&#39;)
+    except IndexError:
+        print(f&#39;wifi账号：&#123;wifi&#125;，密码:提取失败！&#39;)
+</code></pre>
+
+]]></content>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>
