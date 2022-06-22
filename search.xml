@@ -421,7 +421,7 @@ json_values &#x3D; data.to_json(orient &#x3D; &quot;values&quot;)  # 返回结�
   <entry>
     <title>python-学生信息管理系统（学的是思维）</title>
     <url>//post/python-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%AD%A6%E7%9A%84%E6%98%AF%E6%80%9D%E7%BB%B4%EF%BC%89.html</url>
-    <content><![CDATA[<h3 id="学生管理系统应具备的功能"><a href="#学生管理系统应具备的功能" class="headerlink" title="学生管理系统应具备的功能"></a>学生管理系统应具备的功能</h3><ul>
+    <content><![CDATA[<h1 id="学生管理系统应具备的功能"><a href="#学生管理系统应具备的功能" class="headerlink" title="学生管理系统应具备的功能"></a>学生管理系统应具备的功能</h1><ul>
 <li>添加学生及成绩信息</li>
 <li>将学生信息保存到文件中</li>
 <li>修改和删除学生信息</li>
@@ -430,7 +430,7 @@ json_values &#x3D; data.to_json(orient &#x3D; &quot;values&quot;)  # 返回结�
 <li>统计学生的总分</li>
 </ul>
 <p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/image-20211219123240293.1zbrdjhj57ts.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">import os
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><pre class="line-numbers language-none"><code class="language-none">import os
 filename &#x3D; &#39;student.txt&#39;
 def main():
     while True:
@@ -469,17 +469,16 @@ def menum():
     print(&quot;\t\t\t\t\t\t6.统计学生总人数&quot;)
     print(&quot;\t\t\t\t\t\t7.显示所有学生信息&quot;)
     print(&quot;\t\t\t\t\t\t0.退出&quot;)
-    print(&quot;----------------------------------------------------------------------------&quot;)
-
-def save(lst):
+    print(&quot;----------------------------------------------------------------------------&quot;)</code></pre>
+<h1 id="保存数据"><a href="#保存数据" class="headerlink" title="保存数据"></a>保存数据</h1><pre class="line-numbers language-none"><code class="language-none">def save(lst):
     try:
         stu_txt &#x3D; open(filename,&#39;a&#39;,encoding&#x3D;&#39;utf-8&#39;)#以追加的模式进行打开
     except:
         stu_txt &#x3D; open(filename,&#39;w&#39;,encoding &#x3D; &#39;utf-8&#39;)
     for item in lst:
         stu_txt.write(str(item)+&#39;\n&#39;)
-    stu_txt.close()
-
+    stu_txt.close()</code></pre>
+<h1 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h1><pre class="line-numbers language-none"><code class="language-none">
 def insert():
     student_list &#x3D; []
     while True:
@@ -507,9 +506,8 @@ def insert():
             break
     #调用save()函数
     save(student_list)
-    print(&quot;学生信息录入完毕！！！&quot;)
-
-def search():
+    print(&quot;学生信息录入完毕！！！&quot;)</code></pre>
+<h1 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h1><pre class="line-numbers language-none"><code class="language-none">def search():
     student_query &#x3D; []
     while True:
         id &#x3D; &#39;&#39;
@@ -562,9 +560,8 @@ def show_student(lst):
                                   item.get(&#39;python&#39;),
                                   item.get(&#39;java&#39;),
                                  int(item.get(&#39;english&#39;))+int(item.get(&#39;python&#39;))+int(item.get(&#39;java&#39;))
-                                 ))
-
-def delete():
+                                 ))</code></pre>
+<h1 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h1><pre class="line-numbers language-none"><code class="language-none">def delete():
     while True:
         student_id &#x3D; input(&quot;请输入要删除的学生的ID：&quot;)
         if student_id !&#x3D;&#39;&#39;:
@@ -595,9 +592,8 @@ def delete():
             if answer&#x3D;&#x3D;&#39;y&#39; or answer &#x3D;&#x3D; &quot;Y&quot;:
                 continue
             else:
-                break
-
-def modify():
+                break</code></pre>
+<h1 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h1><pre class="line-numbers language-none"><code class="language-none">def modify():
     show()
     if os.path.exists(filename):
         with open(filename,&#39;r&#39;,encoding&#x3D;&#39;utf-8&#39;) as rfile:
@@ -625,9 +621,8 @@ def modify():
                 wfile.write(str(d)+&quot;\n&quot;)
         answer &#x3D; input(&quot;是否继续修改其他学校信息？y&#x2F;n\n&quot;)
         if answer&#x3D;&#x3D;&#39;y&#39; or answer &#x3D;&#x3D;&#39;Y&#39;:
-            modify()
-
-def sort():
+            modify()</code></pre>
+<h1 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h1><pre class="line-numbers language-none"><code class="language-none">def sort():
     if os.path.exists(filename):
         with open(filename, &#39;r&#39;, encoding&#x3D;&#39;utf-8&#39;) as rfile:
             student &#x3D; rfile.readlines()
@@ -659,9 +654,8 @@ def sort():
     else:
         print(&quot;你的输入有误，请重新输入&quot;)
         sort()
-    show_student(student_new)
-
-def total():
+    show_student(student_new)</code></pre>
+<h1 id="显示数据"><a href="#显示数据" class="headerlink" title="显示数据"></a>显示数据</h1><pre class="line-numbers language-none"><code class="language-none">def total():
     if os.path.exists(filename):
         with open(filename,&#39;r&#39;,encoding&#x3D;&#39;utf-8&#39;) as rfile:
             students &#x3D; rfile.readlines()
@@ -688,7 +682,7 @@ def show():
 
 if __name__ &#x3D;&#x3D;&#39;__main__&#39;:
     main()</code></pre>
-<ul>
+<h1 id="写在结尾"><a href="#写在结尾" class="headerlink" title="写在结尾"></a>写在结尾</h1><ul>
 <li>打包成exe需要在终端激活环境后运行 pip install PyIntaller<br>下载好之后再执行 pyinstaller -F D:\Studentsys\stusystem.py  </li>
 </ul>
 <p>-F后面是完整路径以及文件名<br><a href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1wD4y1o7AS?p=135&amp;spm_id_from=pageDriver</a><br>娟姐yyds! </p>
@@ -739,7 +733,7 @@ rules_movies[(rules_movies.lift&gt;4)].sort_values(by&#x3D;[&#39;lift&#39;], asc
     <url>//post/python-flask%E7%96%AB%E6%83%85%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html</url>
     <content><![CDATA[<p>Flask是一个轻量级的web框架，看了<a href="https://www.bilibili.com/video/BV177411j7qJ">https://www.bilibili.com/video/BV177411j7qJ</a> 大佬的视频，做的一个疫情可视化项目,（电脑屏幕小看着有点拥挤。大屏展示还是挺好看的），热搜词云的数据找不到网站了，就弄了个表格；自己修改了一些部分，感兴趣的可以去康康视频，后续有时间再写点总结。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3zeoic47abi8.png"></p>
-<h4 id="flask部分"><a href="#flask部分" class="headerlink" title="flask部分"></a>flask部分</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">from flask import Flask,request,render_template,jsonify
+<h4 id="flask-前端部分"><a href="#flask-前端部分" class="headerlink" title="flask 前端部分"></a>flask 前端部分</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">from flask import Flask,request,render_template,jsonify
 import time
 import utils
 import pandas as pd
@@ -857,7 +851,7 @@ if __name__&#x3D;&#x3D;&quot;__main__&quot;:
         print(e)
 </code></pre>
 
-<h4 id="mysql部分"><a href="#mysql部分" class="headerlink" title="mysql部分"></a>mysql部分</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">import time
+<h4 id="mysql-后台数据部分"><a href="#mysql-后台数据部分" class="headerlink" title="mysql 后台数据部分"></a>mysql 后台数据部分</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">import time
 import pymysql
 import string
 
@@ -973,7 +967,7 @@ if __name__&#x3D;&#x3D;&#39;__main__&#39;:
     print(get_l2_data())
     pass</code></pre>
 
-<h4 id="selenium部分"><a href="#selenium部分" class="headerlink" title="selenium部分"></a>selenium部分</h4><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;python-selenium-zh.readthedocs.io&#x2F;zh_CN&#x2F;latest&#x2F;</code></pre>
+<h4 id="selenium数据抓取部分"><a href="#selenium数据抓取部分" class="headerlink" title="selenium数据抓取部分"></a>selenium数据抓取部分</h4><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;python-selenium-zh.readthedocs.io&#x2F;zh_CN&#x2F;latest&#x2F;</code></pre>
 
 
 
@@ -2049,7 +2043,7 @@ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av64421994&#x2F;?p&#x3D;1简�
         <category>python</category>
       </categories>
       <tags>
-        <tag>数据分析</tag>
+        <tag>自动化</tag>
       </tags>
   </entry>
   <entry>
@@ -2090,7 +2084,7 @@ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;av64421994&#x2F;?p&#x3D;1简�
 <p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.26kanvogyxwg.png"></p>
 <p>两家公司制作的主要电影类型几乎一致，戏剧类（Drama）、喜剧类（Comedy）、惊悚类（Thriller）、动作类（Action）占据了两家公司制作总量的60%左右，这与总的各类型电影数量分布也是相似的，可供其他公司参考其布局策略。</p>
 <h1 id="十、结论"><a href="#十、结论" class="headerlink" title="十、结论"></a>十、结论</h1><p>目前电影市场成熟，产量和票房都处于较高的水平；<br>电影的预算、评价会直接影响电影票房，故一定的电影预算是电影票房成功的基础；<br>(Animation)与(Family)、(Adventure, Thriller)与(Action)、(Fantasy) 与(Family)、(Thriller, Drama)与(Crime) 在给定阈值下有较强的关联性。<br>最受欢迎的电影类型是comedy和drama，投资这两个类型的电影是不错的选择；<br>(Universal Pictures)的电影数量多于(Paramount Pictures)，两者票房表现不相上下。<br>原创电影在电影工业中占绝对主导地位，因此应重视编剧和剧本的选择；<br>电影时长应控制在90～200分钟，最符合观众的观影习惯，也最易获得成功。</p>
-<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
+<h1 id="十一、Python代码"><a href="#十一、Python代码" class="headerlink" title="十一、Python代码"></a>十一、Python代码</h1><h4 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -2100,7 +2094,7 @@ from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 plt.rcParams[&#39;font.sans-serif&#39;] &#x3D; [&#39;SimHei&#39;]#显示中文
 plt.style.use(&#39;ggplot&#39;)</code></pre>
-<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><pre class="line-numbers language-none"><code class="language-none">path &#x3D; &#39;D:&#x2F;python_data_file&#x2F;based_on_novel.csv&#39;
+<h5 id="使用apriori算法进行关联规则挖掘"><a href="#使用apriori算法进行关联规则挖掘" class="headerlink" title="使用apriori算法进行关联规则挖掘"></a>使用apriori算法进行关联规则挖掘</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">path &#x3D; &#39;D:&#x2F;python_data_file&#x2F;based_on_novel.csv&#39;
 data &#x3D; pd.read_csv(path)
 
 movie_genres &#x3D; pd.DataFrame(data,columns&#x3D;[&#39;original_title&#39;,&#39;genres&#39;])
@@ -2114,7 +2108,7 @@ result &#x3D; [i for i in frequent_itemsets_movies.itemsets if len(i)&gt;1]
 rules_movies &#x3D;  association_rules(frequent_itemsets_movies, metric&#x3D;&#39;lift&#39;, min_threshold&#x3D;1.25)
 # print(rules_movies)
 rules_movies[(rules_movies.lift&gt;3)].sort_values(by&#x3D;[&#39;lift&#39;], ascending&#x3D;False)</code></pre>
-<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><pre class="line-numbers language-none"><code class="language-none">xdata &#x3D; data[[&#39;id&#39;,&#39;popularity&#39;,&#39;production_companies&#39;,
+<h5 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h5><pre class="line-numbers language-python" data-language="python"><code class="language-python">xdata &#x3D; data[[&#39;id&#39;,&#39;popularity&#39;,&#39;production_companies&#39;,
               &#39;budget&#39;,&#39;revenue&#39;,&#39;original_title&#39;,&#39;runtime&#39;,&#39;release_date&#39;,&#39;genres&#39;,&#39;vote_count&#39;,&#39;vote_average&#39;,&#39;based on novel&#39;]]
 #要求制造商和电影类型不能为空
 clean_xdata &#x3D; xdata[xdata.production_companies.notnull()&amp;xdata.genres.notnull()].reset_index(drop&#x3D;True)
@@ -2139,7 +2133,7 @@ def pic_pie(data,val,gby,tit):
     plt.pie(data[val],labels&#x3D;data[gby],autopct&#x3D;&#39;%.1f%%&#39;)
     plt.title(tit,fontsize &#x3D; 15)
 pic_pie(year_count,&#39;id&#39;,&#39;year&#39;,&#39;每年上映电影数量&#39;)</code></pre>
-<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><pre class="line-numbers language-none"><code class="language-none"># 随时间推移如何发生变化的
+<h4 id="画走势图"><a href="#画走势图" class="headerlink" title="画走势图"></a>画走势图</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"># 随时间推移如何发生变化的
 genre_df &#x3D; clean_xdata.genres.str.get_dummies()#构建虚拟变量，相当于把各电影类型作为列名展开为一个稀疏矩阵
 genre_df[&#39;release_date&#39;] &#x3D; clean_xdata[&#39;year&#39;]
 genre_by_year &#x3D; genre_df.groupby(&#39;release_date&#39;).sum()
@@ -2159,7 +2153,7 @@ plt.title(&#39;电影类型数量分布图&#39;,fontsize &#x3D; 20)
 plt.xlabel(&#39;数量&#39;,fontsize&#x3D;20)
 plt.ylabel(&#39;电影类型&#39;,fontsize&#x3D;20)
 plt.show()</code></pre>
-<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><pre class="line-numbers language-none"><code class="language-none"># （二）不同类型电影的盈利能力如何？
+<h4 id="计算指标"><a href="#计算指标" class="headerlink" title="计算指标"></a>计算指标</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"># （二）不同类型电影的盈利能力如何？
 # 建立电影类型-利润数据框，计算各电影类型平均收益：
 a &#x3D; clean_xdata.revenue - clean_xdata.budget
 profit_df &#x3D; genre_df.join(pd.DataFrame(a,columns&#x3D;[&#39;profit&#39;]))
@@ -2177,7 +2171,7 @@ plt.xlabel(&#39;利润&#39;,fontsize&#x3D;20)
 plt.ylabel(&#39;电影类型&#39;,fontsize&#x3D;20)
 plt.show()</code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">original_recompose &#x3D; pd.DataFrame(clean_xdata[&#39;budget&#39;])
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">original_recompose &#x3D; pd.DataFrame(clean_xdata[&#39;budget&#39;])
 original_recompose.loc[:,&#39;profit&#39;] &#x3D; profit_df.profit
 original_recompose[&#39;type&#39;] &#x3D; clean_xdata[&#39;based on novel&#39;].map(lambda x :1 if x&#x3D;&#x3D;&#39;based on novel&#39; else 0)
 #原创或改编电影的预算与利润
@@ -2218,8 +2212,7 @@ ax2.yaxis.set_major_formatter(yticks)#次纵坐标标签设置为百分比显示
 plt.yticks(fontsize &#x3D; 15)
 ax2.set_ylabel(&#39;利润率&#39;,fontsize &#x3D; 18)
 ax2.legend(loc&#x3D;4,labels &#x3D; &#39;profit_rate&#39;)#传递labels参数避免警告</code></pre>
-<p>#####生成词云</p>
-<pre class="line-numbers language-none"><code class="language-none">keywords_data &#x3D; data[[&#39;id&#39;,&#39;popularity&#39;,&#39;production_companies&#39;,&#39;budget&#39;,&#39;revenue&#39;,&#39;original_title&#39;,&#39;runtime&#39;,&#39;release_date&#39;,&#39;genres&#39;,&#39;vote_count&#39;,&#39;vote_average&#39;,&#39;based on novel&#39;,&#39;keywords&#39;]]
+<h4 id="生成词云"><a href="#生成词云" class="headerlink" title="生成词云"></a>生成词云</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">keywords_data &#x3D; data[[&#39;id&#39;,&#39;popularity&#39;,&#39;production_companies&#39;,&#39;budget&#39;,&#39;revenue&#39;,&#39;original_title&#39;,&#39;runtime&#39;,&#39;release_date&#39;,&#39;genres&#39;,&#39;vote_count&#39;,&#39;vote_average&#39;,&#39;based on novel&#39;,&#39;keywords&#39;]]
 keywords_data &#x3D; data[data.production_companies.notnull()&amp;data.genres.notnull()].reset_index(drop&#x3D;True)#得到 包含关键字keywords数据的列表
 keywords_list1 &#x3D; []
 for x in keywords_data.keywords.dropna():
@@ -2232,7 +2225,7 @@ plt.figure(figsize&#x3D;(14,8))
 plt.imshow(wordcloud)
 plt.axis(&#39;off&#39;)
 plt.show()</code></pre>
-<pre class="line-numbers language-none"><code class="language-none">popular_genre_df &#x3D; pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis&#x3D;1)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">popular_genre_df &#x3D; pd.concat([genre_df.iloc[:,:-1],clean_xdata.popularity],axis&#x3D;1)
 #计算各类型电影受欢迎度均值
 list &#x3D; []
 for genre in genre_set:
@@ -2257,7 +2250,7 @@ plt.title(&#39;评分与欢迎度散点图&#39;,fontsize&#x3D;20)
 plt.xlabel(&#39;电影评分&#39;,fontsize&#x3D;20)
 plt.ylabel(&#39;受欢迎度&#39;,fontsize&#x3D;20)
 plt.show()</code></pre>
-<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><pre class="line-numbers language-none"><code class="language-none">companies_list &#x3D;[&#39;Universal Pictures&#39;,&#39;Paramount Pictures&#39;]
+<h4 id="Universal-Pictures与Paramount-Pictures"><a href="#Universal-Pictures与Paramount-Pictures" class="headerlink" title="Universal Pictures与Paramount Pictures"></a>Universal Pictures与Paramount Pictures</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">companies_list &#x3D;[&#39;Universal Pictures&#39;,&#39;Paramount Pictures&#39;]
 companies_df &#x3D; pd.DataFrame()
 for company in companies_list:#各电影的电影商是否包含两者中其中一个，是则返回1，否则返回0
     companies_df[company] &#x3D;clean_xdata.production_companies.str.contains(company).map(lambda x :1 if x else 0)
@@ -2289,7 +2282,7 @@ plt.title(&#39;Universal Pictures&#39;,fontsize &#x3D; 15)
 ax2 &#x3D; fig.add_subplot(122)
 plt.pie(company_genre_df[&#39;Paramount Pictures&#39;],labels&#x3D;company_genre_df.index,autopct&#x3D;&#39;%.1f%%&#39;)
 plt.title(&#39;Paramount Pictures&#39;,fontsize&#x3D;15)</code></pre>
-<pre class="line-numbers language-none"><code class="language-none"># 电影票房与哪些因素最相关？
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># 电影票房与哪些因素最相关？
 clean_xdata[[&#39;budget&#39;,&#39;popularity&#39;,&#39;release_date&#39;,&#39;runtime&#39;,&#39;vote_average&#39;,&#39;vote_count&#39;,&#39;revenue&#39;]].corr()
 import seaborn as sns
 revenue_corr &#x3D; clean_xdata[[&#39;budget&#39;,&#39;popularity&#39;,&#39;vote_count&#39;,&#39;revenue&#39;]]
@@ -2583,7 +2576,7 @@ c.tell()</code></pre>
 <ul>
 <li>自己挑了一些碰到的坑记了一下，分享一些自己学习过程中发现的资源，其他看文档就够了</li>
 </ul>
-<h1 id="基础柱状图"><a href="#基础柱状图" class="headerlink" title="基础柱状图"></a>基础柱状图</h1><pre class="line-numbers language-none"><code class="language-none">from pyecharts import options as opts
+<h1 id="基础柱状图"><a href="#基础柱状图" class="headerlink" title="基础柱状图"></a>基础柱状图</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">from pyecharts import options as opts
 from pyecharts.charts import Bar
 from pyecharts.faker import Faker
 c &#x3D; (
@@ -2630,7 +2623,7 @@ c</code></pre>
 <li><p>Y轴数据单位：在set_globel_opts()中加入 yaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(formatter=”{value} /月”)),  ；</p>
 </li>
 <li><p>加入标记线</p>
-<pre class="line-numbers language-none"><code class="language-none">    .set_series_opts(
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">    .set_series_opts(
         label_opts&#x3D;opts.LabelOpts(is_show&#x3D;False),
         markline_opts&#x3D;opts.MarkLineOpts(
             data&#x3D;[opts.MarkLineItem(y&#x3D;50, name&#x3D;&quot;yAxis&#x3D;50&quot;)]
@@ -2638,13 +2631,13 @@ c</code></pre>
     )
 #set_global_opts()后加入set_series_opts，加入标记线，这里是y&#x3D;50；</code></pre></li>
 <li><p>标记线的维度（当然可以是横轴）</p>
-<pre class="line-numbers language-none"><code class="language-none">.set_series_opts(
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">.set_series_opts(
 	markline_opts&#x3D;opts.MarkLineOpts(
                 data&#x3D;[opts.MarkLineItem(type_&#x3D;&quot;average&quot;,value_dim&#x3D;&quot;x&quot;, name&#x3D;&quot;xAxis&quot;),
                      opts.MarkLineItem(type_&#x3D;&quot;average&quot;,value_dim&#x3D;&quot;y&quot;, name&#x3D;&quot;xAxis&quot;)
                      ]</code></pre></li>
 <li><p>加入标记值</p>
-<pre class="line-numbers language-none"><code class="language-none">#set_series_opts中加入，表示传入标记，最大、最小、平均值。
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#set_series_opts中加入，表示传入标记，最大、最小、平均值。
         markpoint_opts&#x3D;opts.MarkPointOpts(
             data&#x3D;[
                 opts.MarkPointItem(type_&#x3D;&quot;max&quot;, name&#x3D;&quot;最大值&quot;),
@@ -2652,14 +2645,14 @@ c</code></pre>
                 opts.MarkPointItem(type_&#x3D;&quot;average&quot;, name&#x3D;&quot;平均值&quot;),
             ]</code></pre></li>
 <li><p>xy轴互换</p>
-<pre class="line-numbers language-none"><code class="language-none">#设置完add_yaxis后接着
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#设置完add_yaxis后接着
     .reversal_axis()#xy轴互换
     .set_series_opts(label_opts&#x3D;opts.LabelOpts(position&#x3D;&quot;right&quot;))#显示数据在柱子右边</code></pre></li>
 <li><p>x轴名字标签过长，旋转角度</p>
-<pre class="line-numbers language-none"><code class="language-none">在set_global_opts（）中传入
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">在set_global_opts（）中传入
 xaxis_opts&#x3D;opts.AxisOpts(axislabel_opts&#x3D;opts.LabelOpts(rotate&#x3D;-15)),</code></pre></li>
 <li><p>连接空数据 </p>
-<pre class="line-numbers language-none"><code class="language-none">import pyecharts.options as opts
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import pyecharts.options as opts
 from pyecharts.charts import Line
 from pyecharts.faker import Faker
 
@@ -2673,7 +2666,7 @@ c &#x3D; (
     .render(&quot;line_connect_null.html&quot;)
 )</code></pre></li>
 <li><p>自定义标记点</p>
-<pre class="line-numbers language-none"><code class="language-none">import pyecharts.options as opts
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import pyecharts.options as opts
 from pyecharts.charts import Line
 from pyecharts.faker import Faker
 
@@ -2692,13 +2685,13 @@ c &#x3D; (
     .render(&quot;line_markpoint_custom.html&quot;)
 )</code></pre></li>
 <li><p>作条形图时由于有时候座标轴文字过长，缩放后导致无法完全显示，此时则需要调整座标轴与图像的边距。调整边距是采用grid（）方法。在图形设置完成后，使用grid设置座标轴与图像边界的距离。</p>
-<pre class="line-numbers language-none"><code class="language-none">report_day_line &#x3D; Grid()
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">report_day_line &#x3D; Grid()
 report_day_line.add(report_day_line1,opts.GridOpts(pos_left&#x3D;&quot;10%&quot;,pos_top &#x3D;&quot;10%&quot;), is_control_axis_index&#x3D;True)
 report_day_line.render_notebook()</code></pre></li>
 <li><p>指定chart_id时要将写好的图形定义成函数，这样子可以复用后面的page中图片位置，方便更改</p>
 </li>
 <li><p>jscode的妙用 <a href="https://zhuanlan.zhihu.com/p/133533187">https://zhuanlan.zhihu.com/p/133533187</a></p>
-<pre class="line-numbers language-none"><code class="language-none">tooltip_opts&#x3D;opts.TooltipOpts(
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">tooltip_opts&#x3D;opts.TooltipOpts(
                 formatter&#x3D;JsCode(
                 &quot;function (params) &#123;return params.value[2] + &#39; ：复购率：&#39; +(Number(params.value[0])* 100).toFixed(2) + &#39;%&#39;+&#39;，销售额：&#39;+ params.value[1];&#125;&quot;
                 )
@@ -2706,7 +2699,7 @@ report_day_line.render_notebook()</code></pre></li>
             ),</code></pre>
 <h3 id="pyecharts画时间排序图"><a href="#pyecharts画时间排序图" class="headerlink" title="pyecharts画时间排序图"></a>pyecharts画时间排序图</h3></li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">from pyecharts import options as opts
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">from pyecharts import options as opts
 from pyecharts.charts import Bar,Timeline
 from pyecharts.faker import Faker
 import random
@@ -2718,7 +2711,7 @@ data &#x3D; np.array([random.randint(30,150) for i in range(52*7) ]).reshape(52,
 df &#x3D; pd.DataFrame(data,index&#x3D;[i for i in range(1969,2021)],columns &#x3D; random.sample(attr, len(attr)))
 df</code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">df_sorted &#x3D; [r[:].sort_values() for i,r in df.iterrows()]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df_sorted &#x3D; [r[:].sort_values() for i,r in df.iterrows()]
 df_sorted[0].values
 t1  &#x3D; Timeline()# 创建 Timeline对象
 
@@ -2762,7 +2755,7 @@ linestyle_opts &#x3D; opts.LineStyleOpts(width &#x3D; 5,
 )
 t1.render_notebook()</code></pre>
 
-<h1 id="pyecharts画地理图-geo-map"><a href="#pyecharts画地理图-geo-map" class="headerlink" title="pyecharts画地理图-geo,map"></a>pyecharts画地理图-geo,map</h1><pre class="line-numbers language-none"><code class="language-none">def my_geo(city, city_value):
+<h1 id="pyecharts画地理图-geo-map"><a href="#pyecharts画地理图-geo-map" class="headerlink" title="pyecharts画地理图-geo,map"></a>pyecharts画地理图-geo,map</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">def my_geo(city, city_value):
     c &#x3D; (
         Geo(init_opts&#x3D;opts.InitOpts(theme&#x3D;ThemeType.DARK,chart_id&#x3D;1))
             .add_schema(maptype&#x3D;&quot;china&quot;)
@@ -2774,7 +2767,7 @@ t1.render_notebook()</code></pre>
     )
     return c</code></pre>
 <p>is_piecewise参数：在 set_global_opts()中的visualmap_opts=opts.VisualMapOpts(is_piecewise=True),表示分段显示；</p>
-<pre class="line-numbers language-none"><code class="language-none">def my_map(province, num):
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def my_map(province, num):
     c &#x3D; (
         Map(init_opts&#x3D;opts.InitOpts(theme&#x3D;ThemeType.DARK,chart_id&#x3D;2))
             .add(&quot;map&quot;, [list(z) for z in zip(province, num)], &quot;china&quot;)
@@ -2782,7 +2775,7 @@ t1.render_notebook()</code></pre>
             .set_global_opts(visualmap_opts&#x3D;opts.VisualMapOpts(), title_opts&#x3D;opts.TitleOpts(title&#x3D;&quot;用户省份分布&quot;))
     )  # .render(&quot;map_base.html&quot;)
     return c</code></pre>
-<h1 id="pyecharts画内层嵌套饼图"><a href="#pyecharts画内层嵌套饼图" class="headerlink" title="pyecharts画内层嵌套饼图"></a>pyecharts画内层嵌套饼图</h1><pre class="line-numbers language-none"><code class="language-none">c &#x3D; (
+<h1 id="pyecharts画内层嵌套饼图"><a href="#pyecharts画内层嵌套饼图" class="headerlink" title="pyecharts画内层嵌套饼图"></a>pyecharts画内层嵌套饼图</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">c &#x3D; (
     Pie()
     .add(&quot;&quot;, [list(z) for z in zip(Faker.choose(), Faker.values())])#center&#x3D;[&quot;35%&quot;, &quot;50%&quot;],
     .set_global_opts(title_opts&#x3D;opts.TitleOpts(title&#x3D;&quot;Pie-基本示例&quot;))#legend_opts&#x3D;opts.LegendOpts(pos_left&#x3D;&quot;15%&quot;),
@@ -2791,7 +2784,7 @@ t1.render_notebook()</code></pre>
 )
 c.render_notebook()</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-109a65be286830ab.wpn8qntfni8.png"></p>
-<h1 id="内嵌饼图nested-pies"><a href="#内嵌饼图nested-pies" class="headerlink" title="内嵌饼图nested_pies"></a>内嵌饼图nested_pies</h1><pre class="line-numbers language-none"><code class="language-none">inner_x_data &#x3D; [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;]
+<h1 id="内嵌饼图nested-pies"><a href="#内嵌饼图nested-pies" class="headerlink" title="内嵌饼图nested_pies"></a>内嵌饼图nested_pies</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">inner_x_data &#x3D; [&quot;直达&quot;, &quot;营销广告&quot;, &quot;搜索引擎&quot;]
 inner_y_data &#x3D; [335, 679, 1548]
 inner_data_pair &#x3D; [list(z) for z in zip(inner_x_data, inner_y_data)]
 
@@ -2853,7 +2846,7 @@ outer_data_pair &#x3D; [list(z) for z in zip(outer_x_data, outer_y_data)]
 ).render_notebook()</code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/6460608-85a5b5d8ee7790a8.5qowy1o8a20.png"></p>
 <p>那个formatter配置项可以在这里了解：<br>{a}（系列名称），{b}（数据项名称），{c}（数值）, {d}（百分比）<br><a href="https://echarts.apache.org/zh/option.html#grid.tooltip.formatter">https://echarts.apache.org/zh/option.html#grid.tooltip.formatter</a></p>
-<h1 id="pyecharts中page的使用类似BI大屏展示"><a href="#pyecharts中page的使用类似BI大屏展示" class="headerlink" title="pyecharts中page的使用类似BI大屏展示"></a>pyecharts中page的使用类似BI大屏展示</h1><pre class="line-numbers language-none"><code class="language-none">page &#x3D; Page(layout&#x3D; Page.DraggablePageLayout, page_title&#x3D; &quot;大屏展示&quot;)
+<h1 id="pyecharts中page的使用类似BI大屏展示"><a href="#pyecharts中page的使用类似BI大屏展示" class="headerlink" title="pyecharts中page的使用类似BI大屏展示"></a>pyecharts中page的使用类似BI大屏展示</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">page &#x3D; Page(layout&#x3D; Page.DraggablePageLayout, page_title&#x3D; &quot;大屏展示&quot;)
 # page &#x3D; Page()
 page.add(
     bar_datazoom_slider(),
@@ -2867,7 +2860,7 @@ page.render(&quot;temp.html&quot;)</code></pre>
 <p>然后自己点那开个temp.html文件进行拖拽，缩放，布局称自己想要的样子，最后点击save_config按钮，下载那个chart_config.json文件。</p>
 <h3 id="不带标题，修改配置文件为百分比"><a href="#不带标题，修改配置文件为百分比" class="headerlink" title="不带标题，修改配置文件为百分比"></a>不带标题，修改配置文件为百分比</h3><ul>
 <li><p>修改json配置文件，改成百分比主要是为了页面自适应屏幕大小。</p>
-<pre class="line-numbers language-none"><code class="language-none">df &#x3D; pd.read_json(&quot;chart_config.json&quot;)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df &#x3D; pd.read_json(&quot;chart_config.json&quot;)
 df[&quot;width&quot;] &#x3D; df.width.apply(lambda x: x[:-2])
 df[&quot;height&quot;] &#x3D; df.height.apply(lambda x: x[:-2])
 df[&quot;top&quot;] &#x3D; df.top.apply(lambda x: x[:-2])
@@ -2879,12 +2872,12 @@ df[&quot;top&quot;] &#x3D; df.top.apply(lambda x: str(round(float(x)&#x2F;640*10
 df[&quot;left&quot;] &#x3D; df.left.apply(lambda x: str(round(float(x)&#x2F;1256*100,4))+&quot;%&quot;)
 df.to_json(&quot;chart_config2.json&quot;,orient &#x3D; &quot;records&quot;)</code></pre></li>
 <li><p>修改好json数据之后，再运行这行代码</p>
-<pre class="line-numbers language-none"><code class="language-none">#第一个字段是前面拖拽的html文件名，cfg_file就是你刚save的json文件名，dest是你要生成的文件名
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">#第一个字段是前面拖拽的html文件名，cfg_file就是你刚save的json文件名，dest是你要生成的文件名
 page.save_resize_html( &#39;temp.html&#39;, cfg_file&#x3D; &#39;chart_config2.json&#39;,dest&#x3D; &#39;设置好位置后的BI看板.html&#39;)</code></pre>
 <h3 id="加上标题，可自定义html"><a href="#加上标题，可自定义html" class="headerlink" title="加上标题，可自定义html"></a>加上标题，可自定义html</h3></li>
 </ul>
 <p>这样弄完有点问题就是背景页面可能和图片背景有违和感，你可以使用BeautifulSoup再修改下页面背景颜色啥的,相关网课链接<a href="https://www.bilibili.com/video/BV1KT4y1c7pb?p=22">https://www.bilibili.com/video/BV1KT4y1c7pb?p=22</a></p>
-<pre class="line-numbers language-none"><code class="language-none">from bs4 import BeautifulSoup
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">from bs4 import BeautifulSoup
 import os
 
 #这里要先读取那个json文件
@@ -2911,7 +2904,7 @@ with open(os.path.join(os.path.abspath(&quot;.&quot;), &quot;设置好位置后�
     html.close()</code></pre>
 <p>当然也可以把那个json文件里面的值传到对应的样式代码中在HTML页面中进行布局，需要注意的是画图时指定好每个图表的chart_id,便于通过字符串格式进行指定对应图表位置。</p>
 <p>注意点：（来自<a href="https://www.jianshu.com/p/47e8f056e5cf%EF%BC%89">https://www.jianshu.com/p/47e8f056e5cf）</a><br>1.由于图片的布局是根据chart_config.json中图片id的对应关系进行布局，因此每张图片均需要指定其id；<br>如：<br>Bar(init_opts=opts.InitOpts(chart_id=1))<br>2.在本次操作工程中，发现Table类中不包含init_opts参数，可以通过修改源码，在D:\Anaconda3\Lib\site-packages\pyecharts\component\table指定char_id,具体修改的代码如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">class Table(ChartMixin):
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Table(ChartMixin):
     def __init__(self, page_title: str &#x3D; CurrentConfig.PAGE_TITLE, js_host: str &#x3D; &quot;&quot;,chart_id&#x3D;None):
         self.page_title &#x3D; page_title
         self.js_host &#x3D; js_host or CurrentConfig.ONLINE_HOST
@@ -2924,7 +2917,7 @@ with open(os.path.join(os.path.abspath(&quot;.&quot;), &quot;设置好位置后�
             self.chart_id: str &#x3D; chart_id
         else:
             self.chart_id: str &#x3D; uuid.uuid4().hex</code></pre>
-<p><a href="https://www.bilibili.com/video/BV1KT4y1c7pb">https://www.bilibili.com/video/BV1KT4y1c7pb</a> 网课里有资源自己去取</p>
+<p><a href="https://www.bilibili.com/video/BV1KT4y1c7pb">https://www.bilibili.com/video/BV1KT4y1c7pb</a> 网课里有学习资源自己去看</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -3427,13 +3420,13 @@ pic_barh(df_brand_sum.vote_count,&#39;各品牌产品评论数对比&#39;,&#39;�
     <title>sql查询连续签到天数</title>
     <url>//post/sql%E6%9F%A5%E8%AF%A2%E8%BF%9E%E7%BB%AD%E7%AD%BE%E5%88%B0%E5%A4%A9%E6%95%B0.html</url>
     <content><![CDATA[<p>先建表</p>
-<pre class="line-numbers language-none"><code class="language-none">create table user_attendence(
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">create table user_attendence(
 user_id bigint comment &#39;用户名&#39;, 
 date TIMESTAMP comment &#39;日期&#39; ,
 is_sign bigint comment &#39;是否登录，0为否，1为是&#39;);
 -- delete from user_attendence;</code></pre>
 <p>接下来用python自己导入随机数据,500个用户、时间2021-1-1~2021-5-5。</p>
-<pre class="line-numbers language-none"><code class="language-none">import pymysql
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">import pymysql
 import pandas as pd
 from sqlalchemy import create_engine
 import numpy as np
@@ -3448,8 +3441,8 @@ con &#x3D; &#39;mysql+pymysql:&#x2F;&#x2F;root:3333@localhost:3306&#x2F;superman
 #如果出现字符串编码错误记得在Navicat运行alter table 表名 convert to character set utf8mb4;
 df.to_sql(name&#x3D;&#39;user_attendence&#39;,con&#x3D;con,if_exists&#x3D;&#39;append&#39;,index &#x3D; False)</code></pre>
 <p>#截至当前，每个用户已经连续签到的天数<br>查出最后一次不登录的日期，与当前日期进行比较，二者差值为几就是连续登录几天</p>
-<pre class="line-numbers language-none"><code class="language-none">select max(date) from user_attendence;</code></pre>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select max(date) from user_attendence;</code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 user_id ,
 max(date),
 DATEDIFF(&#39;2021-02-19&#39;,max(date)) as max_con_days
@@ -3457,7 +3450,7 @@ from user_attendence
 where is_sign &#x3D; 0 
 group by user_id;</code></pre>
 <p>#计算有史以来用户最大连续签到天数；<br>对用户分组，按日期进行排序，排序序号为rank;<br>如果日期与序号的差值为相等，按这个差值进行分组并计数，取最大值</p>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 user_id
 ,max(&#96;次数&#96;)  &#96;最大连续登陆天数&#96;
 from 
@@ -3475,7 +3468,9 @@ from
         ) a 
     group by user_id,diff
     ) b 
-group by user_id order by max(&#96;次数&#96;) desc;</code></pre>]]></content>
+group by user_id order by max(&#96;次数&#96;) desc;</code></pre>
+
+]]></content>
       <categories>
         <category>sql</category>
       </categories>
@@ -3574,7 +3569,7 @@ group by user_id order by max(&#96;次数&#96;) desc;</code></pre>]]></content>
   <entry>
     <title>sql数据分析：自动化报表，多场景持续更新</title>
     <url>//post/sql%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%9A%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8A%A5%E8%A1%A8%EF%BC%8C%E5%A4%9A%E5%9C%BA%E6%99%AF%E6%9B%B4%E6%96%B0.html</url>
-    <content><![CDATA[<h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE &#96;cd_20210414&#96; (
+    <content><![CDATA[<h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">CREATE TABLE &#96;cd_20210414&#96; (
   &#96;id&#96; int(11) NOT NULL AUTO_INCREMENT,
   &#96;platform&#96; varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT &#39;&#39; COMMENT &#39;平台&#39;,
   &#96;platform_id&#96; varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT &#39;0&#39; COMMENT &#39;平台id 即storeid&#39;,
@@ -3593,12 +3588,12 @@ group by user_id order by max(&#96;次数&#96;) desc;</code></pre>]]></content>
   PRIMARY KEY (&#96;id&#96;),
   KEY &#96;a&#96; (&#96;platform&#96;,&#96;platform_id&#96;)
 ) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8mb4 COLLATE&#x3D;utf8mb4_general_ci;</code></pre>
-<h3 id="新增标签列，加索引"><a href="#新增标签列，加索引" class="headerlink" title="新增标签列，加索引"></a>新增标签列，加索引</h3><pre class="line-numbers language-none"><code class="language-none">alter table cd_20210414 add COLUMN crawler_id VARCHAR(30);
+<h3 id="新增标签列，加索引"><a href="#新增标签列，加索引" class="headerlink" title="新增标签列，加索引"></a>新增标签列，加索引</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">alter table cd_20210414 add COLUMN crawler_id VARCHAR(30);
 alter table cd_20210414 add COLUMN detail_full_price float(12,2);
 alter table cd_20210414 add index a(sku);
 alter table cd_20210414 add index b(platform,platform_id);</code></pre>
 <h3 id="查询当月日期及对应上月日期"><a href="#查询当月日期及对应上月日期" class="headerlink" title="查询当月日期及对应上月日期"></a>查询当月日期及对应上月日期</h3><p>mysql</p>
-<pre class="line-numbers language-none"><code class="language-none">#当月日期
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#当月日期
 select DATE_ADD(DATE_SUB(CURDATE(),INTERVAL 1 DAY),interval -day(DATE_SUB(CURDATE(),INTERVAL 1 DAY))+1 day),
 DATE_SUB(CURDATE(),INTERVAL 1 DAY);
 #对应上月日期
@@ -3606,7 +3601,7 @@ select DATE_SUB(DATE_ADD(DATE_SUB(CURDATE(),INTERVAL 1 DAY),interval -day(DATE_S
 DATE_SUB(DATE_SUB(CURDATE(),INTERVAL 1 DAY),INTERVAL 1 MONTH);</code></pre>
 
 <p>hive</p>
-<pre class="line-numbers language-none"><code class="language-none">#昨天
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#昨天
 select date_format(date_sub(current_date(),1), &#39;yyyyMMdd&#39;);
 #当月月初
 select concat(from_unixtime(unix_timestamp(), &#39;yyyyMM&#39;),&#39;01&#39;);
@@ -3621,7 +3616,7 @@ select concat(date_format(add_months(from_unixtime(unix_timestamp(), &#39;yyyy-M
 <li>员工表和部门表进行连接，对部门id进行组内分组根据薪资降序排序，这里使用rank()并列也算</li>
 <li>筛选排序序号为1的部门，并查询员工薪资</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">select * 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select * 
 from 
     (SELECT 
     employee_id
@@ -3636,7 +3631,7 @@ from
     on e.department_id &#x3D; d.department_id
     ) a 
 where a.salary_rank&#x3D;1;</code></pre>
-<h3 id="众数、平均数、中位数"><a href="#众数、平均数、中位数" class="headerlink" title="众数、平均数、中位数"></a>众数、平均数、中位数</h3><pre class="line-numbers language-none"><code class="language-none">-- 求员工工资的众数
+<h3 id="众数、平均数、中位数"><a href="#众数、平均数、中位数" class="headerlink" title="众数、平均数、中位数"></a>众数、平均数、中位数</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 求员工工资的众数
 
 SELECT salary,count(1) AS cnt
 FROM employees
@@ -3666,7 +3661,7 @@ where rn in (floor(n&#x2F;2)+1,if(mod(n,2) &#x3D; 0,floor(n&#x2F;2),floor(n&#x2F
 <li>全部玩家人数的中位数、上下四分位数</li>
 <li>再根据人数总量细拆 排序好的玩家在线时长表</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">select round(count(distinct user_id)&#x2F;4) as 下四分位数,
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select round(count(distinct user_id)&#x2F;4) as 下四分位数,
 round(count(distinct user_id)&#x2F;2) as 中位数,
 round(count(distinct user_id)&#x2F;4*3) as 上四分位数
 from tap_fun_test;
@@ -3683,7 +3678,7 @@ FROM &#96;tap_fun_test&#96;
 <li>查出最后一次不登录的日期（即未登录时间的最大值）</li>
 <li>与当前日期进行比较，二者差值为几就是连续登录几天</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 user_id ,
 max(date),
 DATEDIFF(&#39;2021-02-19&#39;,max(date)) as max_con_days 
@@ -3694,7 +3689,7 @@ group by user_id;</code></pre>
 <li>对用户分组，按日期进行row_number()over()排序，排序序号为rank;（一个用户一天只能签到一次）</li>
 <li>如果日期与序号的差值为相等，按这个差值进行分组并计数，取最大值</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 user_id 
 ,max(次数) &#96;最大连续登录天数&#96;
 from 
@@ -3713,7 +3708,7 @@ from
     ) b 
 group by user_id;</code></pre>
 <h3 id="用户最大连续购买天数及次数"><a href="#用户最大连续购买天数及次数" class="headerlink" title="用户最大连续购买天数及次数"></a>用户最大连续购买天数及次数</h3><p>最里面子查询先对日期进行聚合，将购买次数求和，然后类比连续签到</p>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 user_id 
 ,max(count_days) &#96;天数&#96;
 ,sum(sum_user_counts) &#96;次数&#96;
@@ -3744,7 +3739,7 @@ group by user_id;</code></pre>
 <li>指定当前日期为1998-02-10，使用date_sub确定前七天日期</li>
 <li>使用if判定用户是否当日注册，DISTINCT进行去重</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">set @date_day &#x3D; &quot;1998-02-10&quot;;
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">set @date_day &#x3D; &quot;1998-02-10&quot;;
 
 select 
 count(DISTINCT if(DATE_FORMAT(pur_dt,&quot;%Y-%m-%d&quot;)&#x3D;@date_day,user_id,null)) as new_id
@@ -3754,7 +3749,7 @@ from
 cd_now 
 where 
 DATE_FORMAT(pur_dt,&quot;%Y-%m-%d&quot;) between DATE_SUB(@date_day,INTERVAL 7 day) and @date_day</code></pre>
-<h3 id="支付金额在前-20-的用户"><a href="#支付金额在前-20-的用户" class="headerlink" title="支付金额在前 20%的用户"></a>支付金额在前 20%的用户</h3><pre class="line-numbers language-none"><code class="language-none">-- 问题：求支付金额在前 20%的用户
+<h3 id="支付金额在前-20-的用户"><a href="#支付金额在前-20-的用户" class="headerlink" title="支付金额在前 20%的用户"></a>支付金额在前 20%的用户</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 问题：求支付金额在前 20%的用户
 select 
 a.user_name 
 ,a.sum_amount 
@@ -3768,7 +3763,7 @@ user_name
 from user_sales_table 
 group by user_name ) a 
 where a.sum_amount_rank &#x3D; 1 </code></pre>
-<h3 id="每月最受欢迎的前三名"><a href="#每月最受欢迎的前三名" class="headerlink" title="每月最受欢迎的前三名"></a>每月最受欢迎的前三名</h3><pre class="line-numbers language-none"><code class="language-none">select 
+<h3 id="每月最受欢迎的前三名"><a href="#每月最受欢迎的前三名" class="headerlink" title="每月最受欢迎的前三名"></a>每月最受欢迎的前三名</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 *
 from 
 	(select 
@@ -3791,7 +3786,7 @@ order by b.mon asc </code></pre>
 <li>用户第一次购买时间和最后一次购买时间，根据user_id进行连接，计算购买时间间隔</li>
 <li>使用case when 进行判定</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 (case when t3.day_value&#x3D;1 then &quot;次日留存&quot;
 when t3.day_value &#x3D; 3 then &quot;三日留存&quot;
 when t3.day_value &#x3D; 7 then &quot;七日留存&quot;
@@ -3832,7 +3827,7 @@ end
 <h3 id="产品留存"><a href="#产品留存" class="headerlink" title="产品留存"></a>产品留存</h3><p>一共三个字段：下单日期，产品名称，用户id；</p>
 <p>前7天的购买用户作为新客，后24天无购买的为流失；后24天有购买为复购：购买相同产品的为留存，购买其他的为替换；</p>
 <p>先查total全量数据temp1，然后前7天购买和后24天购买数据，接着依次查询新客、复购、留存。</p>
-<pre class="line-numbers language-none"><code class="language-none">with temp1 as (
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">with temp1 as (
 	SELECT 
 	pt
 	,spec_name
@@ -3896,7 +3891,7 @@ temp_total as (
 
 
 
-<h3 id="新老客-amp-复购"><a href="#新老客-amp-复购" class="headerlink" title="新老客&amp;复购"></a>新老客&amp;复购</h3><pre class="line-numbers language-none"><code class="language-none">with temp1 as ( # 1、找出每个用户第一次下单的时间和年月
+<h3 id="新老客-amp-复购"><a href="#新老客-amp-复购" class="headerlink" title="新老客&amp;复购"></a>新老客&amp;复购</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">with temp1 as ( # 1、找出每个用户第一次下单的时间和年月
 select user_id,min(pur_dt),date_format(min(pur_dt),&#39;%Y-%m&#39;) &#96;年月&#96;
 from cd_now 
 group by user_id 
@@ -3927,7 +3922,7 @@ select temp2.&#96;年月&#96;,temp2.&#96;新客户数&#96;,ifnull(temp4.&#96;有
  left join temp4
 on temp2.&#96;年月&#96; &#x3D; temp4.&#96;年月&#96;
  ) select * from temp5</code></pre>
-<h3 id="rfm模型"><a href="#rfm模型" class="headerlink" title="rfm模型"></a>rfm模型</h3><pre class="line-numbers language-none"><code class="language-none">-- 用户id,下单次数,最近下单时间,顾客实付,下单间隔,实付客单,rfm类型,
+<h3 id="rfm模型"><a href="#rfm模型" class="headerlink" title="rfm模型"></a>rfm模型</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 用户id,下单次数,最近下单时间,顾客实付,下单间隔,实付客单,rfm类型,
 select 
 a.user_id
 ,a.&#96;下单次数&#96;
@@ -3962,7 +3957,7 @@ user_id ) a ;</code></pre>
 <li><p>有订单事务表、收藏事务表,要求：请用一句SQL取出所有用户对商品的行为特征，特征分为已购买、</p>
 </li>
 <li><p>购买未收藏、收藏未购买、收藏且购买</p>
-<pre class="line-numbers language-none"><code class="language-none"># 数据准备
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"># 数据准备
 create table redbk_orders(
  &#96;id&#96; int(5),
  &#96;user_id&#96; varchar(10),
@@ -3983,7 +3978,7 @@ create table redbk_favorites(
 insert into redbk_favorites values(1,&#39;001&#39;,201,&#39;2018-08-31 00:00:01&#39;);
 insert into redbk_favorites values(2,&#39;002&#39;,202,&#39;2018-09-02 12:00:02&#39;);
 insert into redbk_favorites values(3,&#39;003&#39;,204,&#39;2018-09-01 00:00:01&#39;);</code></pre>
-<pre class="line-numbers language-none"><code class="language-none">select 
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 o.user_id 
 ,o.item_id 
 ,1 as &quot;已购买&quot; 
@@ -4013,7 +4008,7 @@ where o.user_id is not null;</code></pre></li>
 </ul>
 <h3 id="贡献度-累计求和"><a href="#贡献度-累计求和" class="headerlink" title="贡献度-累计求和"></a>贡献度-累计求和</h3><ul>
 <li>计算各个用户的消费金额综合</li>
-<li>对用户消费金额进行累加，并计算累计占比，就是贡献度<pre class="line-numbers language-none"><code class="language-none">select 
+<li>对用户消费金额进行累加，并计算累计占比，就是贡献度<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">select 
 t.*
 from
 	(select 
@@ -4040,7 +4035,7 @@ where t.cum_rate&lt;0.8</code></pre></li>
 </li>
 </ul>
 <p>数据准备：</p>
-<pre class="line-numbers language-none"><code class="language-none">#创建 event 表
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">#创建 event 表
 CREATE TABLE &#96;event&#96; (
  &#96;goods_id&#96; varchar(255),
  &#96;time&#96; varchar(255)
@@ -4055,7 +4050,7 @@ INSERT INTO &#96;event&#96; VALUES (&#39;红牛&#39;, &#39;2021-03-07&#39;);
 INSERT INTO &#96;event&#96; VALUES (&#39;东鹏特饮&#39;, &#39;2021-03-08&#39;);
 INSERT INTO &#96;event&#96; VALUES (&#39;雪碧&#39;, &#39;2021-03-08&#39;);</code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">-- 求参加活动次数最多的商品的最近一次参加活动的时间
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 求参加活动次数最多的商品的最近一次参加活动的时间
 -- 统计每种商品参加活动的次数，以及最近一次参与活动的时间
 select 
 *
@@ -4071,7 +4066,7 @@ order by goods_num desc limit 1</code></pre>
 <ul>
 <li>新老客 <code>trans</code>和<code>profile</code></li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">-- 请计算每一类客户在2019年每月产生的销售(即购买金额大于0，及发生购买的人数(客户类型分为:新客，老客；新客:2019年产生第一次购买；老客:2019年之前已经购买过)
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 请计算每一类客户在2019年每月产生的销售(即购买金额大于0，及发生购买的人数(客户类型分为:新客，老客；新客:2019年产生第一次购买；老客:2019年之前已经购买过)
 -- 先分清新老客,在分类统计
 select 
 month(purchase_date) &#96;月份&#96;
@@ -4088,7 +4083,7 @@ on t.Customer_ID &#x3D; p.Customer_ID
 where year(purchase_date)&#x3D;2019) a
 group by month(purchase_date),customer_type;</code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">-- 现要给2019年新客发送A、B小样，线上新客发放A小样，线下新客发放B小样，请编写程序抽取相应的名单
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">-- 现要给2019年新客发送A、B小样，线上新客发放A小样，线下新客发放B小样，请编写程序抽取相应的名单
 -- 字段 COUNTERID : offline 线下，online 线上
 select 
 *
@@ -4103,7 +4098,7 @@ on t.Customer_ID &#x3D; p.Customer_ID
 where year(purchase_date)&#x3D;2019) a
 where &#96;customer_type&#96;&#x3D;&#39;新客&#39;;</code></pre>
 
-<h3 id="相邻座位互换"><a href="#相邻座位互换" class="headerlink" title="相邻座位互换"></a>相邻座位互换</h3><pre class="line-numbers language-none"><code class="language-none">create TABLE 
+<h3 id="相邻座位互换"><a href="#相邻座位互换" class="headerlink" title="相邻座位互换"></a>相邻座位互换</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">create TABLE 
 &#96;Seat&#96; (
 	&#96;id&#96; VARCHAR(255),
 	&#96;employee&#96; VARCHAR(255)
@@ -4174,76 +4169,15 @@ order by id;</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>记一次面试题：excel数据处理</title>
-    <url>//post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9Aexcel%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.html</url>
-    <content><![CDATA[<p>Sales表：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.42u5kgldrn0g.png"></p>
-<p>Institution表：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.hsivqtazg0o.png"></p>
-<p>Product表：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.57axgsalziio.png"></p>
-<p>Price表：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.3hfa2v3xoukg.png"></p>
-<p>Question：求各省份2017全年销售金额(全部产品)Top1的医院；(请保留计算过程)</p>
-<pre class="line-numbers language-none"><code class="language-none">import pandas as pd
-import openpyxl 
-path &#x3D; r&#39;C:\Users\supermanzwg\Desktop\Excel能力测试解答.xlsx&#39;
-df &#x3D; pd.read_excel(path,sheet_name&#x3D; &#39;Sales&#39;)
-df &#x3D; df[pd.to_datetime(df.SalesDate,format&#x3D;&#39;%Y-%m-%d&#39;).dt.year&#x3D;&#x3D;2017]
-df2 &#x3D; pd.read_excel(path,sheet_name&#x3D; &#39;Institution&#39;)
-# print(df2.info())
-#检查并发现两表之间连接键出现不一致
-for i in range(len(df)):
-    if df.loc[i,&#39;InstitutionCode&#39;]&#x3D;&#x3D; &#39;F6302 &#39;:
-        df.loc[i,&#39;InstitutionCode&#39;] &#x3D; &#39;F6302&#39;
-    else:
-        pass
-df_12 &#x3D; pd.merge(df,df2,on&#x3D;&#39;InstitutionCode&#39;,how&#x3D;&#39;left&#39;)
-# print(df_12.info())
-# a &#x3D; df_12[df_12.Province.isnull()] 检查是否还存在缺失值
-# a.InstitutionCode.unique()
-df4 &#x3D; pd.read_excel(path,sheet_name&#x3D; &#39;Price&#39;)
-df4 &#x3D; df4[pd.to_datetime(df4.EffectiveDate,format&#x3D;&#39;%Y-%m-%d&#39;).dt.year&#x3D;&#x3D;2017]
-df4 &#x3D; df4.drop_duplicates([&#39;SKU&#39;])#删去重复SKU值
-ddff &#x3D; pd.merge(df_12,df4,on&#x3D;&#39;SKU&#39;)
-ddff[&#39;money&#39;] &#x3D; ddff[&#39;Quantity&#39;]*ddff[&#39;Price&#39;]
-# print(ddff.money.sum())#销售额总和
-groupby_ddff &#x3D; ddff.groupby([&#39;Province&#39;,&#39;InstitutionName&#39;])[&#39;money&#39;].sum().reset_index()
-groupby_ddff[&#39;group_sort&#39;]&#x3D;groupby_ddff[&#39;money&#39;].groupby(groupby_ddff[&#39;Province&#39;]).rank(ascending&#x3D;False,method&#x3D;&#39;first&#39;)
-groupby_ddff_top1 &#x3D; groupby_ddff[groupby_ddff[&#39;group_sort&#39;]&#x3D;&#x3D;1]
-groupby_ddff_top1</code></pre>
-<p>写入到原excel</p>
-<pre class="line-numbers language-none"><code class="language-none"># import xlwings as xw
-book &#x3D; openpyxl.load_workbook(path)   #读取你要写入的workbook
-#和pd.read_excel() 用于将Dataframe写入excel。xls用xlwt。xlsx用openpyxl
-writer &#x3D; pd.ExcelWriter(path, engine&#x3D;&#39;openpyxl&#39;)   
-##此时的writer里还只是读写器. 然后将上面读取的book复制给writer  
-writer.book &#x3D; book
-#转化为字典的形式
-writer.sheets &#x3D; dict((ws.title, ws) for ws in book.worksheets)
-#将data写入writer
-groupby_ddff_top1.to_excel(writer,sheet_name&#x3D;&quot;Answer_Python&quot;,index&#x3D;False)
-writer.save()</code></pre>
-
-<p><img src="https://cdn.jsdelivr.net/gh/zhang18340082962/image-rick@master/image-rick/%E5%9B%BE%E7%89%87.6qq9z1446rs.png"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>数据分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python实现鼠标键盘自动化——pyautogui、opencv</title>
     <url>//post/python%E5%AE%9E%E7%8E%B0%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%87%AA%E5%8A%A8%E5%8C%96.html</url>
-    <content><![CDATA[<p>总的来说这是一个通过个人自定义流程（cmd表格文件中一个sheet为一套流程），在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</p>
-<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
+    <content><![CDATA[<h1 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h1><p><strong>总的来说这是一个通过个人自定义流程（cmd表格文件中一个sheet为一套流程），在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</strong></p>
+<h2 id="所需环境："><a href="#所需环境：" class="headerlink" title="所需环境："></a>所需环境：</h2><p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> xlrd 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyautogui==0.9.50 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> opencv-python 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pillow 回车</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">import pyautogui
+<h1 id="初始化操作"><a href="#初始化操作" class="headerlink" title="初始化操作"></a>初始化操作</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import pyautogui
 import xlrd
 import pyperclip
 import time
@@ -4274,12 +4208,9 @@ def ClearTemp():
                 pass
         else:
             pass
+</code></pre>
 
-
-# 定义鼠标事件
-
-# pyautogui库其他用法 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qingfengxd1&#x2F;article&#x2F;details&#x2F;108270159
-
+<h1 id="定义鼠标事件"><a href="#定义鼠标事件" class="headerlink" title="定义鼠标事件"></a>定义鼠标事件</h1><pre class="line-numbers language-none"><code class="language-none"># pyautogui库其他用法 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qingfengxd1&#x2F;article&#x2F;details&#x2F;108270159
 def mouseClick(clickTimes, lOrR, img, reTry,fail_retry,retry_interval):
     try:
         time.sleep(retry_interval&#x2F;1000000)
@@ -4317,7 +4248,7 @@ def mouseClick(clickTimes, lOrR, img, reTry,fail_retry,retry_interval):
             else:
                 print(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试&quot;)
                 f.write(f&quot;未找到匹配图片&#123;img&#125;,我将在&#123;retry_interval&#125;秒后重试\n&quot;)
-
+    
             time.sleep(retry_interval)
             fail_retry_num +&#x3D; 1
             if fail_retry_num &gt; fail_retry:
@@ -4345,22 +4276,17 @@ def mouseClick(clickTimes, lOrR, img, reTry,fail_retry,retry_interval):
                 print(f&quot;已重试&#123;fail_retry&#125;次&quot;)
                 f.write(f&quot;已重试&#123;fail_retry&#125;次\n&quot;)
                 pic_exist &#x3D; True
-                break
+                break</code></pre>
 
-
-# 定义热键事件
-
-# hotkey_get方法用来判断热键组合个数,还是文字输入。此方法由B站up主 尔茄无双 提供。
+<h1 id="定义热键事件"><a href="#定义热键事件" class="headerlink" title="定义热键事件"></a>定义热键事件</h1><pre class="line-numbers language-none"><code class="language-none"># hotkey_get方法用来判断热键组合个数,还是文字输入。此方法由B站up主 尔茄无双 提供。
 def hotkey_get(hk_g_inputValue):
     try:
         newinput &#x3D; hk_g_inputValue.split(&#39;,&#39;)
         pyautogui.hotkey(*tuple(newinput))
     except:
         pyperclip.copy(hk_g_inputValue)
-        pyautogui.hotkey(&#39;ctrl&#39;, &#39;v&#39;)
-
-
-# hotkey_get方法用来判断热键组合个数，并把热键传到对应的变量上newinput[0],[1],[2],[3]……[9]只写了10个后续可以添加。【老方法弃用】
+        pyautogui.hotkey(&#39;ctrl&#39;, &#39;v&#39;)</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># hotkey_get方法用来判断热键组合个数，并把热键传到对应的变量上newinput[0],[1],[2],[3]……[9]只写了10个后续可以添加。【老方法弃用】
 # newinput &#x3D; hk_g_inputValue.split(&#39;,&#39;)
 #         if len(newinput)&#x3D;&#x3D;1:
 #                 pyautogui.hotkey(hk_g_inputValue)
@@ -4385,10 +4311,9 @@ def hotkey_get(hk_g_inputValue):
 #         elif len(newinput)&#x3D;&#x3D;10:
 #                     pyautogui.hotkey(newinput[0],newinput[1],newinput[2],newinput[3],newinput[4],newinput[5],newinput[6],newinput[7],newinput[8],newinput[9])
 
-# hotkey_Group方法调用hotkey_get方法，并判断其热键内容是否需要循环。
-
-#键盘热键
-def hotkeyGroup(reTry, hkg_inputValue):
+# hotkey_Group方法调用hotkey_get方法，并判断其热键内容是否需要循环。</code></pre>
+<p>#键盘热键</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def hotkeyGroup(reTry, hkg_inputValue):
     if reTry &#x3D;&#x3D; 1:
         hotkey_get(hkg_inputValue)
         print(&quot;执行了：&quot;, hkg_inputValue)
@@ -4404,11 +4329,9 @@ def hotkeyGroup(reTry, hkg_inputValue):
             hotkey_get(hkg_inputValue)
             print(&quot;执行了：&quot;, hkg_inputValue)
             i +&#x3D; 1
-            time.sleep(0.1)
+            time.sleep(0.1)</code></pre>
 
-
-# 数据检查
-# cmdType.value  1.0 左键单击    2.0 左键双击  3.0 右键单击  4.0 输入  5.0 等待  6.0 滚轮
+<h1 id="数据检查"><a href="#数据检查" class="headerlink" title="数据检查"></a>数据检查</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"># cmdType.value  1.0 左键单击    2.0 左键双击  3.0 右键单击  4.0 输入  5.0 等待  6.0 滚轮
 # 7.0 热键组合（最多4个）
 # 8.0 粘贴当前时间
 # 9.0 系统命令集
@@ -4472,11 +4395,9 @@ def dataCheck(sheet1):
                 print(&#39;第&#39;, i + 1, &quot;行,第2列数据有毛病&quot;)
                 checkCmd &#x3D; False
         i +&#x3D; 1
-    return checkCmd
+    return checkCmd</code></pre>
 
-
-# 任务
-def mainWork(img):
+<h1 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">def mainWork(img):
     # cur_path &#x3D; os.getcwd()
     i &#x3D; 1
     f &#x3D; open(f&quot;日志文件\&#123;time.strftime(&#39;%Y-%m-%d&#39;, time.localtime())&#125;.txt&quot;,&quot;a+&quot;)
@@ -4509,7 +4430,7 @@ def mainWork(img):
                         #查找未超时
                         f.write(f&quot;第&#123;i&#125;步，单击左键&#123;reTry&#125;次，&#123;img&#125;\n&quot;)
                 print(&quot;单击左键&quot;, img)
-
+    
             # 2代表双击左键
             elif cmdType.value &#x3D;&#x3D; 2.0:
                 # 取图片名称
@@ -4518,7 +4439,7 @@ def mainWork(img):
                 reTry &#x3D; 1
                 fail_retry &#x3D; sheet1.row(i)[3].value  # 取查找图片失败重试次数
                 retry_interval &#x3D; sheet1.row(i)[4].value  # 取重试间隔
-
+    
                 if sheet1.row(i)[2].ctype &#x3D;&#x3D; 2 and sheet1.row(i)[2].value !&#x3D; 0:
                     reTry &#x3D; sheet1.row(i)[2].value
                 mouseClick(2, &quot;left&quot;, img, reTry,fail_retry,retry_interval)
@@ -4545,7 +4466,7 @@ def mainWork(img):
                 reTry &#x3D; 1
                 fail_retry &#x3D; sheet1.row(i)[3].value  # 取查找图片失败重试次数
                 retry_interval &#x3D; sheet1.row(i)[4].value  # 取重试间隔
-
+    
                 if sheet1.row(i)[2].ctype &#x3D;&#x3D; 2 and sheet1.row(i)[2].value !&#x3D; 0:
                     reTry &#x3D; sheet1.row(i)[2].value
                 mouseClick(1, &quot;right&quot;, img, reTry,fail_retry,retry_interval)
@@ -4613,7 +4534,7 @@ def mainWork(img):
                 print(f&quot;第&#123;i&#125;步，运行系统命令:&quot;, wincmd)
                 f.write(f&quot;第&#123;i&#125;步，运行系统命令 &#123;wincmd&#125;\n&quot;)
                 time.sleep(0.5)
-
+    
         except Exception as error:
             print(f&quot;执行第&#123;i&#125;条步骤发生报错&#123;error&#125;,将中断当前流程，请解决错误后重新执行！&quot;)
             f.write(f&quot;执行第&#123;i&#125;条步骤发生报错:\n&#123;error&#125;,\n将中断当前流程，请解决错误后重新执行！\n&quot;)
@@ -4623,10 +4544,9 @@ def mainWork(img):
     #关闭日志文件
     f.write(f&quot;当前时间：&#123;time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;, time.localtime())&#125;\n&quot;)
     f.write(&quot;-----------本次流程执行日志记录完毕-----------\n&quot;)
-    f.close()
+    f.close()</code></pre>
 
-# 主程序
-while True:
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">while True:
     if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
         file &#x3D; &#39;cmd.xls&#39;
         # 打开文件
@@ -4657,7 +4577,7 @@ while True:
         pyautogui.hotkey(&#39;esc&#39;)
         # 数据检查
         checkCmd &#x3D; dataCheck(sheet1)
-
+    
         # 输入选项实现功能
         if checkCmd:
             key &#x3D; input(f&#39;即将开始执行流程：&#123;sheet_name&#125;\n选择功能: 1.做一次 2.循环几次 0.退出程序\n特殊功能：c.清理屏幕显示（请输入后最小化当前页面）\n———————————————————————————————————————\n&#39;)
@@ -4677,7 +4597,7 @@ while True:
                     # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
                     ClearTemp()
                     exit(&quot;正在退出程序...&quot;)
-
+    
             elif key &#x3D;&#x3D; &#39;2&#39;:
                 print(&quot;&quot;)
                 count &#x3D; 0
@@ -4701,7 +4621,7 @@ while True:
                     print(&#39;输入有误或者已经退出!&#39;)
                     os.system(&#39;pause&#39;)
                     print(&quot;——————————————————————————————————————————&quot;)
-
+    
             # elif key &#x3D;&#x3D; &#39;3&#39;:
             #     count &#x3D; 0
             #     while True:
@@ -4715,23 +4635,22 @@ while True:
             #         print(&quot;已经完成第&quot;, count, &quot;次&quot;, &quot;命令&quot;)
             #         print(&quot;——————————————————分割线——————————————————&quot;)
             #         print(&quot;&quot;)
-
+    
             elif key &#x3D;&#x3D; &#39;0&#39;:
                 print(&quot;正清理缓存文件...&quot;)
                 # os.system(&#39;@echo off &amp; for &#x2F;d %i in (%temp%\^_MEI*) do (rd &#x2F;s &#x2F;q &quot;%i&quot;)&gt;nul&#39;)
                 ClearTemp()
                 exit(&quot;正在退出程序...&quot;)
-
+    
             elif key &#x3D;&#x3D; &#39;c&#39;:
                 os.system(&#39;cls&#39;)
-
+    
             else:
                 print(&#39;输入有误或者已经退出!&#39;)
                 os.system(&#39;pause&#39;)
                 print(&quot;——————————————————————————————————————————&quot;)</code></pre>
 
-<p><strong>大致的操作说明：</strong></p>
-<p>\1.   双击exe文件执行开始时请输入表名称；按照提示输入后回车即可；在cmd.xls 的每个sheet中，一个sheet对应一个自动化流程，自己新建命名即可配置每一步的指令，如：</p>
+<h1 id="大致的操作说明"><a href="#大致的操作说明" class="headerlink" title="大致的操作说明"></a>大致的操作说明</h1><p>\1.   双击exe文件执行开始时请输入表名称；按照提示输入后回车即可；在cmd.xls 的每个sheet中，一个sheet对应一个自动化流程，自己新建命名即可配置每一步的指令，如：</p>
 <p>\2.   指令类型1、2、3是操作鼠标单击、双击、右击，对应的内容在第二列填 截图文件路径（例如“./pic/chrome.png”；这里最前面有个点别忘了），把每一步要操作的图标、区域截图保存至pics文件夹图片为png格式，截图名称必须为英文，中文不行。（注意：如果同屏有多个相同图标，会默认找到最左上的一个，因此怎么截图，截多大的区域，是个学问，如输入框只截中间空白部分肯定是不行的，宗旨就是“唯一”）</p>
 <p>\3.   指令5是等待时长（单位秒） ，建议每配置一步都加上一定等待时间，否则可能会容易卡顿；</p>
 <p>\4.   指令6是滚轮的距离，正数表示向上滚，负数表示向下滚，滚动距离不确定的话可自己进行测试，可从50或100开始；</p>
@@ -4750,7 +4669,7 @@ while True:
 <p>\15. 执行开始时或完毕后都会有退出选项；尽量使用这个选项（输入0之后回车）退出程序，（可以避免出现exe执行文件会产生临时文件，长久累积可能会占满C盘（这是python可执行文件的一个特性））；如果程序开始后因为你选择了多次重复而键鼠被占用但是想要停下来，关闭Dos控制台即可。点击右上角的x 或者ctrl+c或者alt+F4 都可以。</p>
 <p>代码参考B站大佬（不高兴就喝水）的源码 进行二次开发，加入查找失败重试，超时查找，快捷键组合，dos命令，实时日志记录等功能；（有些自动化操作受windows系统安全限制可能会失效，这里不一一列举了）一直想做个图形化界面客户端，还有些地方没有打通。。。</p>
 <p><a href="https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0</a></p>
-]]></content>
+<pre class="line-numbers language-none"><code class="language-none"></code></pre>]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -4762,7 +4681,7 @@ while True:
     <title>python常用功能代码整理，持续更新</title>
     <url>//post/python%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0.html</url>
     <content><![CDATA[<p>部分参考，实测后有改动<br><a href="https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw">https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw</a></p>
-<h1 id="本地文件整理-将本地多个-CSV-文件整合成一个文件"><a href="#本地文件整理-将本地多个-CSV-文件整合成一个文件" class="headerlink" title="本地文件整理   将本地多个 CSV 文件整合成一个文件"></a>本地文件整理   将本地多个 CSV 文件整合成一个文件</h1><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
+<h1 id="本地文件整理-将本地多个-CSV-文件整合成一个文件"><a href="#本地文件整理-将本地多个-CSV-文件整合成一个文件" class="headerlink" title="本地文件整理   将本地多个 CSV 文件整合成一个文件"></a>本地文件整理   将本地多个 CSV 文件整合成一个文件</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import pandas as pd
 import os
 
 df_list &#x3D; []
@@ -4775,7 +4694,7 @@ for i in os.listdir():
 df &#x3D; pd.concat(df_list, axis&#x3D;0)
 df.to_csv(&quot;total.txt&quot;, index&#x3D;0)</code></pre>
 
-<h1 id="多线程代码"><a href="#多线程代码" class="headerlink" title="多线程代码"></a>多线程代码</h1><pre class="line-numbers language-none"><code class="language-none">import threading
+<h1 id="多线程代码"><a href="#多线程代码" class="headerlink" title="多线程代码"></a>多线程代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import threading
 import time
 
 exitFlag &#x3D; 0
@@ -4810,7 +4729,7 @@ thread1.join()
 thread2.join()
 print (&quot;退出主线程&quot;)</code></pre>
 
-<h1 id="异步编程代码-异步爬取网站"><a href="#异步编程代码-异步爬取网站" class="headerlink" title="异步编程代码  异步爬取网站"></a>异步编程代码  异步爬取网站</h1><pre class="line-numbers language-none"><code class="language-none">import asyncio
+<h1 id="异步编程代码-异步爬取网站"><a href="#异步编程代码-异步爬取网站" class="headerlink" title="异步编程代码  异步爬取网站"></a>异步编程代码  异步爬取网站</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import asyncio
 import aiohttp
 import aiofiles
 
@@ -4833,7 +4752,7 @@ async def download(title_list, content_list):
                              encoding&#x3D;&#39;utf-8&#39;) as f:
         await f.write(&#39;&#123;&#125;&#39;.format(str(content_list)))
 </code></pre>
-<h1 id="requests-库调用"><a href="#requests-库调用" class="headerlink" title="requests 库调用"></a>requests 库调用</h1><pre class="line-numbers language-none"><code class="language-none">import requests
+<h1 id="requests-库调用"><a href="#requests-库调用" class="headerlink" title="requests 库调用"></a>requests 库调用</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import requests
 
 #发送 GET 请求
 headers &#x3D; &#123;
@@ -4878,7 +4797,7 @@ def save_data(data, date):
                 f.write(row)
                 f.write(&#39;\n&#39;)</code></pre>
 
-<h1 id="IP代理池搭建"><a href="#IP代理池搭建" class="headerlink" title="IP代理池搭建"></a>IP代理池搭建</h1><pre class="line-numbers language-none"><code class="language-none">import requests # python基础爬虫库
+<h1 id="IP代理池搭建"><a href="#IP代理池搭建" class="headerlink" title="IP代理池搭建"></a>IP代理池搭建</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import requests # python基础爬虫库
 from lxml import etree # 可以将网页转换为Elements对象
 import time # 防止爬取过快可以睡眠一秒
 
@@ -4999,10 +4918,10 @@ if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
 
 
 
-<h1 id="生成一段时间区间内的日期"><a href="#生成一段时间区间内的日期" class="headerlink" title="生成一段时间区间内的日期"></a>生成一段时间区间内的日期</h1><pre class="line-numbers language-none"><code class="language-none">import pandas as pd
+<h1 id="生成一段时间区间内的日期"><a href="#生成一段时间区间内的日期" class="headerlink" title="生成一段时间区间内的日期"></a>生成一段时间区间内的日期</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import pandas as pd
 print([str(i) for i in pd.date_range(&#39;2020-02-03&#39;,&#39;2020-03-05&#39;,freq&#x3D;&quot;D&quot;).strftime(&quot;%Y-%m-%d&quot;).tolist()])</code></pre>
 
-<h1 id="获取过去-N-天的日期"><a href="#获取过去-N-天的日期" class="headerlink" title="获取过去 N 天的日期"></a>获取过去 N 天的日期</h1><pre class="line-numbers language-none"><code class="language-none">import datetime
+<h1 id="获取过去-N-天的日期"><a href="#获取过去-N-天的日期" class="headerlink" title="获取过去 N 天的日期"></a>获取过去 N 天的日期</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import datetime
 
 def get_nday_list(n):
     before_n_days &#x3D; []
@@ -5013,7 +4932,7 @@ def get_nday_list(n):
 a &#x3D; get_nday_list(30)
 print(a)</code></pre>
 
-<h1 id="生成xmind"><a href="#生成xmind" class="headerlink" title="生成xmind"></a>生成xmind</h1><pre class="line-numbers language-none"><code class="language-none">import xmind
+<h1 id="生成xmind"><a href="#生成xmind" class="headerlink" title="生成xmind"></a>生成xmind</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import xmind
 
 w &#x3D; xmind.load(&quot;test.xmind&quot;)
 s1 &#x3D; w.getPrimarySheet()  # 获取此工作表
@@ -5040,7 +4959,7 @@ for i, val in enumerate(c):
                 a3.setTitle(val3)
 
 xmind.save(w, &quot;Python_detail.xmind&quot;)</code></pre>
-<h1 id="【python】如何提取本机连接过的wifi密码（亲测好用"><a href="#【python】如何提取本机连接过的wifi密码（亲测好用" class="headerlink" title="【python】如何提取本机连接过的wifi密码（亲测好用"></a>【python】如何提取本机连接过的wifi密码（亲测好用</h1><pre class="line-numbers language-none"><code class="language-none">import subprocess
+<h1 id="【python】如何提取本机连接过的wifi密码（亲测好用"><a href="#【python】如何提取本机连接过的wifi密码（亲测好用" class="headerlink" title="【python】如何提取本机连接过的wifi密码（亲测好用"></a>【python】如何提取本机连接过的wifi密码（亲测好用</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import subprocess
 # 获取wifi列表
 output &#x3D; subprocess.run([&#39;netsh&#39;,&#39;wlan&#39;,&#39;show&#39;,&#39;profiles&#39;],capture_output &#x3D; True).stdout.decode(&#39;gbk&#39;).split(&#39;\n&#39;)
 wifis &#x3D; [line.split(&#39;:&#39;)[1][1:-1] for line in output if &quot;所有用户配置文件&quot; in line]
@@ -5056,6 +4975,9 @@ for wifi in wifis:
 </code></pre>
 
 ]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
       <tags>
         <tag>python</tag>
       </tags>
