@@ -4171,7 +4171,7 @@ order by id;</code></pre>
   <entry>
     <title>python实现鼠标键盘自动化——pyautogui、opencv</title>
     <url>//post/python%E5%AE%9E%E7%8E%B0%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%87%AA%E5%8A%A8%E5%8C%96.html</url>
-    <content><![CDATA[<h1 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h1><p><strong>总的来说这是一个通过个人自定义流程（cmd表格文件中一个sheet为一套流程），在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</strong></p>
+    <content><![CDATA[<h1 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h1><p><strong>总的来说这是一个通过个人自定义流程，在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</strong></p>
 <h2 id="所需环境："><a href="#所需环境：" class="headerlink" title="所需环境："></a>所需环境：</h2><p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> xlrd 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyautogui==0.9.50 回车</p>
@@ -4210,7 +4210,7 @@ def ClearTemp():
             pass
 </code></pre>
 
-<h1 id="定义鼠标事件"><a href="#定义鼠标事件" class="headerlink" title="定义鼠标事件"></a>定义鼠标事件</h1><pre class="line-numbers language-none"><code class="language-none"># pyautogui库其他用法 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qingfengxd1&#x2F;article&#x2F;details&#x2F;108270159
+<h1 id="定义鼠标事件"><a href="#定义鼠标事件" class="headerlink" title="定义鼠标事件"></a>定义鼠标事件</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"># pyautogui库其他用法 https:&#x2F;&#x2F;blog.csdn.net&#x2F;qingfengxd1&#x2F;article&#x2F;details&#x2F;108270159
 def mouseClick(clickTimes, lOrR, img, reTry,fail_retry,retry_interval):
     try:
         time.sleep(retry_interval&#x2F;1000000)
@@ -4278,7 +4278,7 @@ def mouseClick(clickTimes, lOrR, img, reTry,fail_retry,retry_interval):
                 pic_exist &#x3D; True
                 break</code></pre>
 
-<h1 id="定义热键事件"><a href="#定义热键事件" class="headerlink" title="定义热键事件"></a>定义热键事件</h1><pre class="line-numbers language-none"><code class="language-none"># hotkey_get方法用来判断热键组合个数,还是文字输入。此方法由B站up主 尔茄无双 提供。
+<h1 id="定义热键事件"><a href="#定义热键事件" class="headerlink" title="定义热键事件"></a>定义热键事件</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"># hotkey_get方法用来判断热键组合个数,还是文字输入。此方法由B站up主 尔茄无双 提供。
 def hotkey_get(hk_g_inputValue):
     try:
         newinput &#x3D; hk_g_inputValue.split(&#39;,&#39;)
@@ -4669,7 +4669,7 @@ def dataCheck(sheet1):
 <p>\15. 执行开始时或完毕后都会有退出选项；尽量使用这个选项（输入0之后回车）退出程序，（可以避免出现exe执行文件会产生临时文件，长久累积可能会占满C盘（这是python可执行文件的一个特性））；如果程序开始后因为你选择了多次重复而键鼠被占用但是想要停下来，关闭Dos控制台即可。点击右上角的x 或者ctrl+c或者alt+F4 都可以。</p>
 <p>代码参考B站大佬（不高兴就喝水）的源码 进行二次开发，加入查找失败重试，超时查找，快捷键组合，dos命令，实时日志记录等功能；（有些自动化操作受windows系统安全限制可能会失效，这里不一一列举了）一直想做个图形化界面客户端，还有些地方没有打通。。。</p>
 <p><a href="https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1T34y1o73U?spm_id_from=333.999.0.0</a></p>
-<pre class="line-numbers language-none"><code class="language-none"></code></pre>]]></content>
+]]></content>
       <categories>
         <category>python</category>
       </categories>
