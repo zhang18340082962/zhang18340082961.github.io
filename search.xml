@@ -4171,7 +4171,7 @@ order by id;</code></pre>
   <entry>
     <title>python实现鼠标键盘自动化——pyautogui、opencv</title>
     <url>//post/python%E5%AE%9E%E7%8E%B0%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98%E8%87%AA%E5%8A%A8%E5%8C%96.html</url>
-    <content><![CDATA[<h1 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h1><p><strong>总的来说这是一个通过个人自定义流程，在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</strong></p>
+    <content><![CDATA[<h1 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h1><p>总的来说这是一个通过个人自定义流程，在python环境下通过自定义鼠标键盘操作来实现自动化办公的RPA工具~</p>
 <h2 id="所需环境："><a href="#所需环境：" class="headerlink" title="所需环境："></a>所需环境：</h2><p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyperclip 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> xlrd 回车</p>
 <p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> pyautogui==0.9.50 回车</p>
@@ -4681,6 +4681,21 @@ def dataCheck(sheet1):
     <title>python常用功能代码整理，持续更新</title>
     <url>//post/python%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%A3%E7%A0%81%E6%95%B4%E7%90%86%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0.html</url>
     <content><![CDATA[<p>部分参考，实测后有改动<br><a href="https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw">https://mp.weixin.qq.com/s/A0NYVPaNclMkKgie2swClw</a></p>
+<h1 id="【python】如何提取本机连接过的wifi密码（亲测好用"><a href="#【python】如何提取本机连接过的wifi密码（亲测好用" class="headerlink" title="【python】如何提取本机连接过的wifi密码（亲测好用"></a>【python】如何提取本机连接过的wifi密码（亲测好用</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import subprocess
+# 获取wifi列表
+output &#x3D; subprocess.run([&#39;netsh&#39;,&#39;wlan&#39;,&#39;show&#39;,&#39;profiles&#39;],capture_output &#x3D; True).stdout.decode(&#39;gbk&#39;).split(&#39;\n&#39;)
+wifis &#x3D; [line.split(&#39;:&#39;)[1][1:-1] for line in output if &quot;所有用户配置文件&quot; in line]
+
+#查看每个wifi对应的密码
+for wifi in wifis:
+    results &#x3D; subprocess.run([&#39;netsh&#39;,&#39;wlan&#39;,&#39;show&#39;,&#39;profile&#39;,wifi,&#39;key&#x3D;clear&#39;],capture_output &#x3D; True).stdout.decode(&#39;gbk&#39;,errors &#x3D; &#39;ignore&#39;).split(&#39;\n&#39;)
+    results &#x3D; [line.split(&#39;:&#39;)[1][1:-1] for line in results if &quot;关键内容&quot; in line]
+    try:
+        print(f&#39;wifi账号：&#123;wifi&#125;，密码:&#123;results[0]&#125;&#39;)
+    except IndexError:
+        print(f&#39;wifi账号：&#123;wifi&#125;，密码:提取失败！&#39;)
+</code></pre>
+
 <h1 id="本地文件整理-将本地多个-CSV-文件整合成一个文件"><a href="#本地文件整理-将本地多个-CSV-文件整合成一个文件" class="headerlink" title="本地文件整理   将本地多个 CSV 文件整合成一个文件"></a>本地文件整理   将本地多个 CSV 文件整合成一个文件</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import pandas as pd
 import os
 
@@ -4959,7 +4974,7 @@ for i, val in enumerate(c):
                 a3.setTitle(val3)
 
 xmind.save(w, &quot;Python_detail.xmind&quot;)</code></pre>
-<h1 id="【python】如何提取本机连接过的wifi密码（亲测好用"><a href="#【python】如何提取本机连接过的wifi密码（亲测好用" class="headerlink" title="【python】如何提取本机连接过的wifi密码（亲测好用"></a>【python】如何提取本机连接过的wifi密码（亲测好用</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import subprocess
+<h1 id="【python】如何提取本机连接过的wifi密码（亲测好用-1"><a href="#【python】如何提取本机连接过的wifi密码（亲测好用-1" class="headerlink" title="【python】如何提取本机连接过的wifi密码（亲测好用"></a>【python】如何提取本机连接过的wifi密码（亲测好用</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python">import subprocess
 # 获取wifi列表
 output &#x3D; subprocess.run([&#39;netsh&#39;,&#39;wlan&#39;,&#39;show&#39;,&#39;profiles&#39;],capture_output &#x3D; True).stdout.decode(&#39;gbk&#39;).split(&#39;\n&#39;)
 wifis &#x3D; [line.split(&#39;:&#39;)[1][1:-1] for line in output if &quot;所有用户配置文件&quot; in line]
