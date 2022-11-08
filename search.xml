@@ -73,6 +73,8 @@ df.reset_index(level&#x3D;0) 将0级索引转化为column
 df.reset_index(drop&#x3D;True) 删除原有索引</code></pre></li>
 <li><p>多列合并为一行<br>df = pd.DataFrame({‘id_part’:[‘a’,’b’,’c’,’d’], ‘pred’:[0.1,0.2,0.3,0.4], ‘pred_class’:[‘women’,’man’,’cat’,’dog’], ‘v_id’:[‘d1’,’d2’,’d3’,’d1’]})<br>df.groupby([‘v_id’]).agg({‘pred_class’: [‘, ‘.join],’pred’: lambda x: list(x),’id_part’: ‘first’}).reset_index()</p>
 </li>
+<li><p>【某个字段按逗号分隔，并递增拆为多行】<br>df[“PackageNameCN”] = df[“PackageNameCN”].str.split(‘，’)<br>df = df.explode(“PackageNameCN”,ignore_index=True)</p>
+</li>
 <li><p>字符串转换为数值<br>df = pd.DataFrame({‘列1’:[‘1.1’,’2.2’,’3.3’],’列2’:[‘4.4’,’5.5’,’6.6’],’列3’:[‘7.7’,’8.8’,’-‘]})<br>df.astype({‘列1’:’float’,’列2’:’float’}).dtypes<br>用这种方式转换第三列会出错，因为这列里包含一个代表 0 的下划线，pandas 无法自动判断这个下划线。为了解决这个问题，可以使用 to_numeric() 函数来处理第三列，让 pandas 把任意无效输入转为 NaN。<br>df = df.apply(pd.to_numeric, errors=’coerce’).fillna(0)</p>
 </li>
 <li><p>优化 DataFrame 对内存的占用<br>方法一：只读取切实所需的列，使用usecols参数<br>cols = [‘beer_servings’,’continent’]<br>small_drinks = pd.read_csv(‘data/drinks.csv’, usecols=cols)<br>方法二：把包含类别型数据的 object 列转换为 Category 数据类型，通过指定 dtype 参数实现。<br>dtypes ={‘continent’:’category’}<br>smaller_drinks = pd.read_csv(‘data/drinks.csv’,usecols=cols, dtype=dtypes)</p>
